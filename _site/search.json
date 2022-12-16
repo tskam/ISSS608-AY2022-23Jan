@@ -117,5 +117,40 @@
     "title": "DataViz Makeover",
     "section": "For your reference",
     "text": "For your reference\n\nFrom seniors\n\nDataViz Makeover Blog Link AY2020-2021 Term 2\n\nDataViz Makeover 1 handout, sample web article and Tableau Public submission.\n\nDataViz Makeover AY2020-2021 Term 3\n\nDataViz Makeover 1\n\nDataViz Makeover AY2021-22 January Term\n\nDataViz Makeover 1:\n\nLIN SHUYAN Best make-over design, simple but yet functional.\nSUN SHENGMEI Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.\n\nDataViz Makeover 2\n\nAng Bi Lian Effective used of Tableau Story.\nLin Shuyan Creative implementation of linked views.\nMin Xiaoqi Effective used of interactive tooltip.\n\n\n\n\n\nFrom external sources\n\nMakeover Monday, especially:\n\nGallery\nOur Makeover\nWebinars\nblog\n\nStory Telling with Data, especially:\n\nCommunity\nBlog"
+  },
+  {
+    "objectID": "take-home.html",
+    "href": "take-home.html",
+    "title": "Take-home Exercise",
+    "section": "",
+    "text": "The take-home exercise provides students the opportunity to revise and practice the R packages and programming skills they learnt in-class at home. It is a weekly exercise. Students are expected to spend not more than an hour a day to work of the exercise instead of complete the exercise at one go.\nThe exercise is not a repetition of the in-class exercise but it requires students to be innovative and creative by applying appropriate R packages to design enlightening and yet functional data visualisation for analytics purposes. Students are encouraged to create multiple data visualisation and compare their pros and cons before finalising the best design."
+  },
+  {
+    "objectID": "take-home.html#take-home-exercises",
+    "href": "take-home.html#take-home-exercises",
+    "title": "Take-home Exercise",
+    "section": "Take-home Exercises",
+    "text": "Take-home Exercises\n\nTake-home Exercise 1\nTake-home Exercise 2\nTake-home Exercise 3\nTake-home Exercise 4\nTake-home Exercise 5\nTake-home Exercise 6"
+  },
+  {
+    "objectID": "take-home.html#submission-instructions",
+    "href": "take-home.html#submission-instructions",
+    "title": "Take-home Exercise",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nThis is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.\n\nThe take-home exercise submission must be written by using distill for R Markdown. It can be in either distill article or distill blog format. You are required to publish the assignment report on Netlify and provide the link on the take-home exercise submission page on elearn.\nYou are also required to push the take-home exercise folder and data onto your individual Github repository and provide the link on the take-home exercise submission page on eLearn."
+  },
+  {
+    "objectID": "take-home.html#submission-date",
+    "href": "take-home.html#submission-date",
+    "title": "Take-home Exercise",
+    "section": "Submission date",
+    "text": "Submission date\nYour completed take-home exercise is due at 11:59pm on every Friday."
+  },
+  {
+    "objectID": "take-home.html#learning-from-seniors",
+    "href": "take-home.html#learning-from-seniors",
+    "title": "Take-home Exercise",
+    "section": "Learning from seniors",
+    "text": "Learning from seniors\n\nAY2021-22 April Term\n\nTake-home Exercise 1\n\nAng Bi Lian\nTAN HUI QI RANICE"
   }
 ]

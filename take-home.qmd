@@ -1,0 +1,43 @@
+---
+title: "Take-home Exercise"
+description: "The only way to learn a new programming language is by writing programs in it. *- Dennis Ritchie*"
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Overview
+
+The take-home exercise provides students the opportunity to revise and practice the R packages and programming skills they learnt in-class at home. It is a weekly exercise. Students are expected to spend not more than an hour a day to work of the exercise instead of complete the exercise at one go.
+
+The exercise is not a repetition of the in-class exercise but it requires students to be innovative and creative by applying appropriate R packages to design enlightening and yet functional data visualisation for analytics purposes. Students are encouraged to create multiple data visualisation and compare their pros and cons before finalising the best design.
+
+## Take-home Exercises
+
+-   [Take-home Exercise 1]()
+-   [Take-home Exercise 2]()
+-   [Take-home Exercise 3]()
+-   [Take-home Exercise 4]()
+-   [Take-home Exercise 5]()
+-   [Take-home Exercise 6]()
+
+## Submission Instructions
+
+This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.
+
+-   The take-home exercise submission must be written by using **distill for R Markdown**. It can be in either [distill article](https://distill.pub/guide/) or [distill blog](https://rstudio.github.io/distill/blog.html) format. You are required to publish the assignment report on [Netlify](https://www.netlify.com/) and provide the link on the take-home exercise submission page on elearn.
+-   You are also required to push the take-home exercise folder and data onto your individual Github repository and provide the link on the take-home exercise submission page on eLearn.
+
+## Submission date
+
+Your completed take-home exercise is due at **11:59pm on every Friday**.
+
+## Learning from seniors
+
+### AY2021-22 April Term
+
+#### Take-home Exercise 1
+
+-   [Ang Bi Lian](https://bilian-mitb2021.netlify.app/th_ex/th_ex01/take-home_ex01)
+-   [TAN HUI QI RANICE](https://isss608-ranice.netlify.app/th_ex/th_ex01/th_ex01)
+
