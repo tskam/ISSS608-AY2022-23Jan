@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2022-12-16">
+<meta name="description" content="Explore different perspectives and approaches to create more truthful and enlightening data visualisation">
+
+<title>ISSS608-AY2022-23Jan - DataViz Makeover</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ISSS608-AY2022-23Jan</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lesson.html">Lesson Plan</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./DataViz.html" aria-current="page">DataViz Makeover</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./take-home.html">Take-home Exercise</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./VAproject.html">Visual Analytics Project</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-shiny-workshop" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shiny Workshop</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-shiny-workshop">    
+        <li>
+    <a class="dropdown-item" href="./ShinyWorkshop/Shiny1/Shiny1.html">
+ <span class="dropdown-text">R Shiny basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ShinyWorkshop/Shiny2/Shiny2.html">
+ <span class="dropdown-text">Beyond the basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ShinyWorkshop/Shiny3/Shiny3.html">
+ <span class="dropdown-text">Customising Shiny</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./Tableau.html">Tableau Resources</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-about-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">All About R</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-all-about-r">    
+        <li>
+    <a class="dropdown-item" href="./R.html">
+ <span class="dropdown-text">R Resouces</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Rt.html">
+ <span class="dropdown-text">R tips &amp; tricks</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#dataviz-makeover-topics" id="toc-dataviz-makeover-topics" class="nav-link" data-scroll-target="#dataviz-makeover-topics">DataViz Makeover Topics</a></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
+  <li><a href="#for-your-reference" id="toc-for-your-reference" class="nav-link" data-scroll-target="#for-your-reference">For your reference</a>
+  <ul class="collapse">
+  <li><a href="#from-seniors" id="toc-from-seniors" class="nav-link" data-scroll-target="#from-seniors">From seniors</a></li>
+  <li><a href="#from-external-sources" id="toc-from-external-sources" class="nav-link" data-scroll-target="#from-external-sources">From external sources</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">DataViz Makeover</h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>Explore different perspectives and approaches to create more truthful and enlightening data visualisation</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 16, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>There are two dataviz makeover exercises that are due throughout the term. I will post one or two data visualisation and you are required to critic, suggest ways for improvement and rework the data visualisation. Maybe you retell the story more effectively, or find a new story in the data. I am curious to see the different approaches you all take.</p>
+<p>The purpose of the makeover is to improve on the original visualisation. Focus on what works, what doesn’t work, why those things don’t work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. However, if supplementing the data helps you tell a better story, go for it!</p>
+</section>
+<section id="dataviz-makeover-topics" class="level2">
+<h2 class="anchored" data-anchor-id="dataviz-makeover-topics">DataViz Makeover Topics</h2>
+<ul>
+<li><a href="">DataViz Makeover 1</a></li>
+<li><a href="">DataViz Makeover 2</a></li>
+</ul>
+</section>
+<section id="submission-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="submission-instructions">Submission Instructions</h2>
+<ul>
+<li>The write-up of the DataViz Makeover must be in Quarto html document format. You are required to publish the write-up on <a href="https://www.netlify.com/"><strong>Netlify</strong></a>.</li>
+<li>The R project of the DataViz Makeover must be pushed onto your <a href="https://github.com/">Github</a> repository.</li>
+<li>The DataViz Makeover must be prepared by using <strong>Tableau Desktop</strong>. The final workbook must be uploaded onto <a href="https://public.tableau.com/en-us/s/">Tableau Public</a>.</li>
+<li>All DataViz Makeover have to be completed by <strong>Sunday before mid-night 11.59pm</strong>. You are required to provide the links to the DataViz Makeover write-up, github repository and Tableau Public onto eLearn (i.e.&nbsp;DataViz Makeover section) as shown in the screenshot below:</li>
+</ul>
+<p><img src="img/image2.jpg" class="img-fluid"></p>
+</section>
+<section id="for-your-reference" class="level2">
+<h2 class="anchored" data-anchor-id="for-your-reference">For your reference</h2>
+<section id="from-seniors" class="level3">
+<h3 class="anchored" data-anchor-id="from-seniors">From seniors</h3>
+<ul>
+<li>DataViz Makeover Blog Link <a href="https://wiki.smu.edu.sg/2021t2isss608/DataViz#DataViz_Makeover_Blog_Link">AY2020-2021 Term 2</a>
+<ul>
+<li><a href="others/ISSS608_AY2020-21T2_DataViz1.pdf">DataViz Makeover 1 handout</a>, <a href="https://kaichinlim.netlify.app/posts/2021-01-24-dataviz-makeover-1/">sample web article</a> and <a href="https://public.tableau.com/profile/kai.chin#!/vizhome/DataViz1_16113674336320/Sheet1?publish=yes">Tableau Public</a> submission.</li>
+</ul></li>
+<li>DataViz Makeover AY2020-2021 Term 3
+<ul>
+<li><a href="DataViz-AY2020-21T3/DataViz1.html">DataViz Makeover 1</a></li>
+</ul></li>
+<li>DataViz Makeover AY2021-22 January Term
+<ul>
+<li>DataViz Makeover 1:
+<ul>
+<li><a href="https://lins-92-isss608.netlify.app/data_viz/data_viz_1/data_viz_1">LIN SHUYAN</a> Best make-over design, simple but yet functional.</li>
+<li><a href="https://isss608visualanalyticssun.netlify.app/dataviz/dataviz1/dataviz1">SUN SHENGMEI</a> Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.</li>
+</ul></li>
+<li>DataViz Makeover 2
+<ul>
+<li><a href="https://bilian-mitb2021.netlify.app/th_ex/dataviz2/dataviz2">Ang Bi Lian</a> Effective used of Tableau Story.</li>
+<li><a href="https://lins-92-isss608.netlify.app/data_viz/data_viz_2/data_viz_2">Lin Shuyan</a> Creative implementation of linked views.</li>
+<li><a href="https://mxqvisual.netlify.app/dataviz/dataviz2/dataviz2">Min Xiaoqi</a> Effective used of interactive tooltip.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="from-external-sources" class="level3">
+<h3 class="anchored" data-anchor-id="from-external-sources">From external sources</h3>
+<ul>
+<li><a href="https://www.makeovermonday.co.uk/">Makeover Monday</a>, especially:
+<ul>
+<li><a href="https://www.makeovermonday.co.uk/gallery/">Gallery</a></li>
+<li><a href="https://www.makeovermonday.co.uk/makeovers/">Our Makeover</a></li>
+<li><a href="https://www.makeovermonday.co.uk/webinars/">Webinars</a></li>
+<li><a href="https://www.makeovermonday.co.uk/blog/">blog</a></li>
+</ul></li>
+<li><a href="http://www.storytellingwithdata.com/">Story Telling with Data</a>, especially:
+<ul>
+<li><a href="https://community.storytellingwithdata.com/">Community</a></li>
+<li><a href="http://www.storytellingwithdata.com/blog">Blog</a></li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

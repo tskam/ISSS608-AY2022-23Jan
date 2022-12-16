@@ -1,0 +1,56 @@
+---
+title: "DataViz Makeover"
+description: |
+  Explore different perspectives and approaches to create more truthful and enlightening data visualisation
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Overview
+
+There are two dataviz makeover exercises that are due throughout the term. I will post one or two data visualisation and you are required to critic, suggest ways for improvement and rework the data visualisation. Maybe you retell the story more effectively, or find a new story in the data. I am curious to see the different approaches you all take.
+
+The purpose of the makeover is to improve on the original visualisation. Focus on what works, what doesn't work, why those things don't work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. However, if supplementing the data helps you tell a better story, go for it!
+
+## DataViz Makeover Topics
+
+-   [DataViz Makeover 1]()
+-   [DataViz Makeover 2]()
+
+## Submission Instructions
+
+-   The write-up of the DataViz Makeover must be in Quarto html document format. You are required to publish the write-up on [**Netlify**](https://www.netlify.com/).
+-   The R project of the DataViz Makeover must be pushed onto your [Github](https://github.com/) repository.
+-   The DataViz Makeover must be prepared by using **Tableau Desktop**. The final workbook must be uploaded onto [Tableau Public](https://public.tableau.com/en-us/s/).
+-   All DataViz Makeover have to be completed by **Sunday before mid-night 11.59pm**. You are required to provide the links to the DataViz Makeover write-up, github repository and Tableau Public onto eLearn (i.e. DataViz Makeover section) as shown in the screenshot below:
+
+![](img/image2.jpg)
+
+## For your reference
+
+### From seniors
+
+-   DataViz Makeover Blog Link [AY2020-2021 Term 2](https://wiki.smu.edu.sg/2021t2isss608/DataViz#DataViz_Makeover_Blog_Link)
+    -   [DataViz Makeover 1 handout](others/ISSS608_AY2020-21T2_DataViz1.pdf), [sample web article](https://kaichinlim.netlify.app/posts/2021-01-24-dataviz-makeover-1/) and [Tableau Public](https://public.tableau.com/profile/kai.chin#!/vizhome/DataViz1_16113674336320/Sheet1?publish=yes) submission.
+-   DataViz Makeover AY2020-2021 Term 3
+    -   [DataViz Makeover 1](DataViz-AY2020-21T3/DataViz1.html)
+-   DataViz Makeover AY2021-22 January Term
+    -   DataViz Makeover 1:
+        -   [LIN SHUYAN](https://lins-92-isss608.netlify.app/data_viz/data_viz_1/data_viz_1) Best make-over design, simple but yet functional.
+        -   [SUN SHENGMEI](https://isss608visualanalyticssun.netlify.app/dataviz/dataviz1/dataviz1) Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.
+    -   DataViz Makeover 2
+        -   [Ang Bi Lian](https://bilian-mitb2021.netlify.app/th_ex/dataviz2/dataviz2) Effective used of Tableau Story.
+        -   [Lin Shuyan](https://lins-92-isss608.netlify.app/data_viz/data_viz_2/data_viz_2) Creative implementation of linked views.
+        -   [Min Xiaoqi](https://mxqvisual.netlify.app/dataviz/dataviz2/dataviz2) Effective used of interactive tooltip.
+
+### From external sources
+
+-   [Makeover Monday](https://www.makeovermonday.co.uk/), especially:
+    -   [Gallery](https://www.makeovermonday.co.uk/gallery/)
+    -   [Our Makeover](https://www.makeovermonday.co.uk/makeovers/)
+    -   [Webinars](https://www.makeovermonday.co.uk/webinars/)
+    -   [blog](https://www.makeovermonday.co.uk/blog/)
+-   [Story Telling with Data](http://www.storytellingwithdata.com/), especially:
+    -   [Community](https://community.storytellingwithdata.com/)
+    -   [Blog](http://www.storytellingwithdata.com/blog)

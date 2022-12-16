@@ -89,5 +89,33 @@
     "title": "Lesson Plan",
     "section": "",
     "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nGeoVisual Analytics\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
+  },
+  {
+    "objectID": "DataViz.html",
+    "href": "DataViz.html",
+    "title": "DataViz Makeover",
+    "section": "",
+    "text": "There are two dataviz makeover exercises that are due throughout the term. I will post one or two data visualisation and you are required to critic, suggest ways for improvement and rework the data visualisation. Maybe you retell the story more effectively, or find a new story in the data. I am curious to see the different approaches you all take.\nThe purpose of the makeover is to improve on the original visualisation. Focus on what works, what doesn’t work, why those things don’t work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. However, if supplementing the data helps you tell a better story, go for it!"
+  },
+  {
+    "objectID": "DataViz.html#dataviz-makeover-topics",
+    "href": "DataViz.html#dataviz-makeover-topics",
+    "title": "DataViz Makeover",
+    "section": "DataViz Makeover Topics",
+    "text": "DataViz Makeover Topics\n\nDataViz Makeover 1\nDataViz Makeover 2"
+  },
+  {
+    "objectID": "DataViz.html#submission-instructions",
+    "href": "DataViz.html#submission-instructions",
+    "title": "DataViz Makeover",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\n\nThe write-up of the DataViz Makeover must be in Quarto html document format. You are required to publish the write-up on Netlify.\nThe R project of the DataViz Makeover must be pushed onto your Github repository.\nThe DataViz Makeover must be prepared by using Tableau Desktop. The final workbook must be uploaded onto Tableau Public.\nAll DataViz Makeover have to be completed by Sunday before mid-night 11.59pm. You are required to provide the links to the DataViz Makeover write-up, github repository and Tableau Public onto eLearn (i.e. DataViz Makeover section) as shown in the screenshot below:"
+  },
+  {
+    "objectID": "DataViz.html#for-your-reference",
+    "href": "DataViz.html#for-your-reference",
+    "title": "DataViz Makeover",
+    "section": "For your reference",
+    "text": "For your reference\n\nFrom seniors\n\nDataViz Makeover Blog Link AY2020-2021 Term 2\n\nDataViz Makeover 1 handout, sample web article and Tableau Public submission.\n\nDataViz Makeover AY2020-2021 Term 3\n\nDataViz Makeover 1\n\nDataViz Makeover AY2021-22 January Term\n\nDataViz Makeover 1:\n\nLIN SHUYAN Best make-over design, simple but yet functional.\nSUN SHENGMEI Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.\n\nDataViz Makeover 2\n\nAng Bi Lian Effective used of Tableau Story.\nLin Shuyan Creative implementation of linked views.\nMin Xiaoqi Effective used of interactive tooltip.\n\n\n\n\n\nFrom external sources\n\nMakeover Monday, especially:\n\nGallery\nOur Makeover\nWebinars\nblog\n\nStory Telling with Data, especially:\n\nCommunity\nBlog"
   }
 ]
