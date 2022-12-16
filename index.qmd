@@ -1,5 +1,5 @@
 ---
-title: "ISSS608"
+title: "ISSS608 AY2022-23 Jan Term"
 ---
 
 Welcome to the home page for **ISSS608 Visual Analytics and Applications**. All course materials will be posted on this site.
