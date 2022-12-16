@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "ISSS608-AY2022-23Jan"
+  title: "ISSS608"
   navbar:
     left:
     - text: "Syllabus"
