@@ -201,5 +201,40 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
+  },
+  {
+    "objectID": "Tableau.html",
+    "href": "Tableau.html",
+    "title": "Tableau Resources",
+    "section": "",
+    "text": "Tableau home page\nTraining and Tutorials\nTableau Desktop User Guide\nTableau Prep Builder User Guide\nVisual Gallery\nTableau Public"
+  },
+  {
+    "objectID": "Tableau.html#white-papers",
+    "href": "Tableau.html#white-papers",
+    "title": "Tableau Resources",
+    "section": "White papers",
+    "text": "White papers\n\n10 Best Practices for Building Effective Dashboards\nTips for creating effective, engaging data visualizations"
+  },
+  {
+    "objectID": "Tableau.html#blogs-that-inspired",
+    "href": "Tableau.html#blogs-that-inspired",
+    "title": "Tableau Resources",
+    "section": "Blogs that inspired",
+    "text": "Blogs that inspired\n\nThe Information Lab\nDataRemixed\nPlayfairData\nData Revelations, especially Visualizing Survey Data and Steven’s Blog"
+  },
+  {
+    "objectID": "Tableau.html#from-data-to-tada",
+    "href": "Tableau.html#from-data-to-tada",
+    "title": "Tableau Resources",
+    "section": "From data to tada",
+    "text": "From data to tada\n\nUsing data visualization to make better decisions—faster\n17 key traits of data literacy\nInspiring change with data visualization\n5 important elements of dashboard design"
+  },
+  {
+    "objectID": "Tableau.html#tableau-tips-and-tricks",
+    "href": "Tableau.html#tableau-tips-and-tricks",
+    "title": "Tableau Resources",
+    "section": "Tableau Tips and Tricks",
+    "text": "Tableau Tips and Tricks\n\nRelationships, Joins and Unions in Tableau 2020.2, this Youtube video explains selected data management features introduced in Tableau 2020.2. (updated on 8th Feb 2021)."
   }
 ]
