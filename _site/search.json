@@ -236,5 +236,61 @@
     "title": "Tableau Resources",
     "section": "Tableau Tips and Tricks",
     "text": "Tableau Tips and Tricks\n\nRelationships, Joins and Unions in Tableau 2020.2, this Youtube video explains selected data management features introduced in Tableau 2020.2. (updated on 8th Feb 2021)."
+  },
+  {
+    "objectID": "R.html",
+    "href": "R.html",
+    "title": "R Resources",
+    "section": "",
+    "text": "R for Data Science by Garrett Grolemund and Hadley Wickham.\nModern R with the tidyverse by Bruno Rodrigues. Chapter 2 provides a detail discussion on R data objects.\nBrendan R. E. Ansell Introduction to R - tidyverse\nThe Comprehensive Guide to Installing R Packages from CRAN, Bioconductor, GitHub and Co.. This article provides useful tips on how to install R packages from different sources."
+  },
+  {
+    "objectID": "R.html#ggplot2",
+    "href": "R.html#ggplot2",
+    "title": "R Resources",
+    "section": "ggplot2",
+    "text": "ggplot2\n\nggplot2 Core\n\nggplot2\nggplot2 – The R graph Gallery\nIntroduction to R Graphics with ggplot2\nggplot2 - A Short Tutorial\nggplot2 介紹\n\n\n\nBooks\n\nHadley Wickham, Danielle Navarro, and Thomas Lin Pedersen (2020)ggplot2: Elegant Graphics for Data Analysis (3rd Edition, online version).\nKieran Healy (2019) Data Visualization: A practical introduction. This is the online version.\nAravind Hebbali (2020) Data Visualization with ggplot2\nWinston Chang (2020) R Graphics Cookbook (2nd edition, online version)\nRob Kabacoff (2020) Data Visualization with R\nZuguang Gu Circular Visualization in R. Last visit: 27/12/2020.\nZach Bogart & Joyce Robbins (2020) Exploratory Data Analysis & Visualization\nBBC Visual and Data Journalism cookbook for R graphics\nNordmann, E., McAleer, P., Toivo, W., Paterson, H. & DeBruine, L. Data visualisation using R, for researchers who don’t use R\n\n\n\nArticles/Blog posts\n\nHow to make any plot in ggplot2?\nThe Complete ggplot2 Tutorial - Part1 | Introduction To ggplot2 (Full R code)\nThe Complete ggplot2 Tutorial - Part 2 | How To Customize ggplot2 (Full R code)\nTop 50 ggplot2 Visualizations - The Master List (With Full R Code)\nggplot2 Quickref\nData visualization with ggplot2\nggplot Wizardary\n\n\n\nWebminers\n\nggplot2 workshop part 1\nggplot2 workshop part 2\nMake Beautiful Graphs in R: 5 Quick Ways to Improve ggplot2 Graphs\nOutlier 2021—ggplot wizardy: my favorite tricks and secrets for beautiful plots in R by Cédric Scherer\n\n\n\nggplots Extension\n\nggVis\nggmap\nggtern, an extension to ggplot2 specifically for the plotting of ternary diagrams.\nggExtra, a collection of functions and layers to enhance ggplot2. The main function is ggMarginal, which can be used to add marginal histograms/boxplots/density plots to ggplot2 scatterplots.\nggthemes, some extra themes, geoms, and scales for ‘ggplot2’. Provides ‘ggplot2’ themes and scales that replicate the look of plots by Edward Tufte, Stephen Few, ‘Fivethirtyeight’, ‘The Economist’, ‘Stata’, ‘Excel’, and ‘The Wall Street Journal’, among others. Provides ‘geoms’ for Tufte’s box plot and range frame.\nGGally extends ‘ggplot2’ by adding several functions to reduce the complexity of combining geometric objects with transformed data. Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks.\nsjPlot:Data Visualization for Statistics in Social Science\nggstatsplot is an extension of ggplot2 package for creating graphics with details from statistical tests included in the plots themselves and targeted primarily at behavioral sciences community to provide a one-line code to produce information-rich plots.\nggside allows the user to add graphical information about one of the main panel’s axis. This is particularly useful for metadata for discrete axis, or summary graphics on a continuous axis such as a boxplot or a density distribution. These vignette and article provide useful introduction.\nPatchwork is a package designed to make plot composition in R extremely simple and powerful. It is mainly intended for users of ggplot2 and goes to great lengths to make sure ggplots are properly aligned no matter the complexity of your composition. The Getting Started page explains the main features of the package.\ngganimate extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time.\nggdist is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualizing distributions and uncertainty. It is designed for both frequentist and [https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html] visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization: for frequentist models, one visualizes confidence distributions or bootstrap distributions (see vignette(“freq-uncertainty-vis”)); for Bayesian models, one visualizes probability distributions (see the tidybayes package, which builds on top of ggdist)."
+  },
+  {
+    "objectID": "R.html#interactive-data-visualisation-with-r",
+    "href": "R.html#interactive-data-visualisation-with-r",
+    "title": "R Resources",
+    "section": "Interactive Data Visualisation with R",
+    "text": "Interactive Data Visualisation with R\n\nplotly R\n\nplotly: Create Interactive Web Graphics via ‘plotly.js’\nInteractive web-based data visualization with R, plotly, and shiny\nPlotly R Open Source Graphing Library\nGetting Started with Plotly and ggplot2\n\n\n\nggigraph\n\nggigraph lets R users to make ggplot interactive."
+  },
+  {
+    "objectID": "R.html#other-r-graphics-packages",
+    "href": "R.html#other-r-graphics-packages",
+    "title": "R Resources",
+    "section": "Other R graphics packages",
+    "text": "Other R graphics packages\n\ncorrplot. A graphical display of a correlation matrix or general matrix. It also contains some algorithms to do matrix reordering. In addition, corrplot is good at details, including choosing color, text labels, color labels, layout, etc.\ncorrgram calculates correlation of variables and displays the results graphically. Included panel functions can display points, shading, ellipses, and correlation values with confidence intervals. [https://cran.r-project.org/web/packages/corrgram/index.html]\nvcd, Visualization techniques, data sets, summary and inference procedures aimed particularly at categorical data. Special emphasis is given to highly extensible grid graphics.\ntmap offers a flexible, layer-based, and easy to use approach to create thematic maps, such as choropleths and bubble maps."
+  },
+  {
+    "objectID": "R.html#shiny-web-based-visual-analytics-development-tool-in-r",
+    "href": "R.html#shiny-web-based-visual-analytics-development-tool-in-r",
+    "title": "R Resources",
+    "section": "Shiny: Web-based Visual Analytics Development tool in R",
+    "text": "Shiny: Web-based Visual Analytics Development tool in R\n\nGetting Started\n\nHadley Wickham (2020) Mastering Shiny. Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.\nShiny from R Studio\nLearn Shiny\nFunction reference\nThe Shiny Cheat sheet\nColin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) Engineering Production-Grade Shiny Apps\nDavid Granjon (2020) Outstanding User Interfaces with Shiny\nHow to Build a Shiny Application from Scratch\nShiny 入門\n\n\n\nShiny Applications\n\nGallery\nShiny Contest Winners 2019 - Full List\nFifteen New Zealand government Shiny web apps\nIntroducing the New Zealand Trade Intelligence Dashboard"
+  },
+  {
+    "objectID": "R.html#r-markdown",
+    "href": "R.html#r-markdown",
+    "title": "R Resources",
+    "section": "R Markdown",
+    "text": "R Markdown\n\nR Markdown: The Definitive Guide. Highly recommended to beginners.\nMarkdown from R Studio\nR Markdown Cookbook\nRMarkdown for Scientists\nTen awesome R Markdown tricks"
+  },
+  {
+    "objectID": "R.html#creating-coursework-blog",
+    "href": "R.html#creating-coursework-blog",
+    "title": "R Resources",
+    "section": "Creating coursework blog",
+    "text": "Creating coursework blog\n\nDistill\n\ndistill for R Markdown\nThe distill for R Markdown website gives a live demonstration of the usage of distill’s features and functions.\nExample websites\n(Re-)introducing Distill for R Markdown\nCreating a Blog\nBlog Post Workflow\nPublishing Websites\n\n\n\nBlogdown\n\nBook\n\nblogdown: Creating Websites with R Markdown. Highly recommended to beginners.\nblogdown\n3.1 Netlify\n\n\n\nblog articles\n\nUp & Running with blogdown\nA Spoonful of Hugo: The netlify.toml File\nA Spoonful of Hugo: Archetypes\nA Spoonful of Hugo: Page Bundles\nA Spoonful of Hugo: Troubleshooting Your Build\nA Spoonful of Hugo: How much Hugo do I need to know?\nHow to build a website with Blogdown in R\nSetting up our blog with RStudio and blogdown I: Creating the blog\nSetting up your blog with RStudio and blogdown II: Workflow\nSetting up your blog with RStudio and blogdown III: modify your theme"
+  },
+  {
+    "objectID": "R.html#github",
+    "href": "R.html#github",
+    "title": "R Resources",
+    "section": "github",
+    "text": "github\n\nHappy Git and GitHub for the useR. Highly recommended to beginners.\nGitHub and RStudio\nGetting starting with git and GitHub using RStudio\nUsing Git within RStudio\ngithub doc\nTransform a folder as git project synchronized on Github or Gitlab"
   }
 ]
