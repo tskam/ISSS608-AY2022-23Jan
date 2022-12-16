@@ -152,5 +152,54 @@
     "title": "Take-home Exercise",
     "section": "Learning from seniors",
     "text": "Learning from seniors\n\nAY2021-22 April Term\n\nTake-home Exercise 1\n\nAng Bi Lian\nTAN HUI QI RANICE"
+  },
+  {
+    "objectID": "VAProject.html",
+    "href": "VAProject.html",
+    "title": "Visual Analytics Project",
+    "section": "",
+    "text": "The purpose of the project is to provide students first hand experience on building web-enabled visual analytics application by using R Shiny. It aims to democratize data and analytics. Hence, the application focuses and emphasises on interactivity and effective integration of techniques from data analytics and data visualization.\nA project may involve developing new methods or implementing visual analytics system to support analytic tasks in specific domains. Alternatively, a project may be in the form of application development by integrating analytical tools within a visual analytics environment. Students are encouraged to focus on research topics that are relevant to their field of study. It should address a concrete visual analytics problem and should propose a novel and creative solution."
+  },
+  {
+    "objectID": "VAProject.html#project-topic",
+    "href": "VAProject.html#project-topic",
+    "title": "Visual Analytics Project",
+    "section": "Project Topic",
+    "text": "Project Topic\nTo be confirmed!"
+  },
+  {
+    "objectID": "VAProject.html#project-management",
+    "href": "VAProject.html#project-management",
+    "title": "Visual Analytics Project",
+    "section": "Project Management",
+    "text": "Project Management\nThe project is team work. Students are required to form a project team of 2-3 members by the first week of the academic term.\nA good group project is a system consisting of a collection of well defined sub-modules. Each sub-module should be the responsibility of one person and be clearly identified as their project. A good criteria for whether you should work in a group is whether the system as a whole is greater than the sum of its parts!\nEach project team are required to maintain a comprehensive Minutes of Meeting from the beginning of the project until the end of the project. Each minutes of meeting should include but not limit to the discussion, disagreements, and consensus made and action items agreed within the team. The Minutes of Meeting should also record the division of labour and the considerations involved in the decision made.\nThe following links provided useful guides on how to prepare the minutes of a meeting:\n\nHow to Write Meeting Minutes: Examples + Best Practices\nHow To Write Effective Meeting Minutes(with Templates and Samples)\n\nThe Minutes of Meeting must be uploaded on eLearn within 24hrs after the meeting ended."
+  },
+  {
+    "objectID": "VAProject.html#project-milestone",
+    "href": "VAProject.html#project-milestone",
+    "title": "Visual Analytics Project",
+    "section": "Project Milestone",
+    "text": "Project Milestone\n\nBrainstorming project ideas and consulting with course instructor anytime from week 1 onward.\nEditing and publishing project proposal on Netlify latest by the end of week 5.\nSubmission of final application, user guide, project poster and artifacts: 2nd April 2023 by 11:59pm (mid-night)"
+  },
+  {
+    "objectID": "VAProject.html#project-deliverables",
+    "href": "VAProject.html#project-deliverables",
+    "title": "Visual Analytics Project",
+    "section": "Project Deliverables",
+    "text": "Project Deliverables\n\nProject Github\nAt the beginning of the project, project teams are required to create a project Github. The project Github should include all the materials used to develop the project and the written materials such as proposal, poster and practice research paper. It must be used to maintain a complete project version control including the application and project documents. The Github link must be included in the project proposal. By the end of the project, the project team must pack the final version of the Github repository and upload onto eLearn for final submission. The Github link also must be provided on eLearn.\n\n\nProject Website\nEach project team are required to create the project website by using Quarto. It will be disseminated by using webserver such as Netfity.\nAs a first step, you should create a project summary at the project website that includes:\n\nThe title of your project,\nA short description of not more than 350 word summarising the motivation, objectives, main features of the application your team are going to build, and\nThe project proposal. This should in a webpage (remember to provide a link at the wiki).\n\n\n\nProject proposal\nEach project teams must start thinking about their project ideas after the Shiny Workshop. They are expected to discuss their project topic and scope of works with the instructor from week 1 onward. A project proposal in the form of website edited using Quarto will be prepared and the link must be provided on eLearn by 12th Feb 2023.\nThe project proposal should describe the motivation of the project, problems or issues that the project will address, the relevant related work, the approach the team plans to take to solve the problem, and early prototypes or storyboards. The project teams should take advantage of this proposal as a chance to get feedback on the direction of the project from their peers.\nStudents are required to update their project websites with all the details including the final application, user guide and poster by 2nd April 2023.\n\n\nPoster\nThe project poster should provide an overview of your project. It should include, but not limited to the following information:\n\nIssues and problems - A clear statement of the issues or/and problems your project addresses.\nMotivation - An explanation of why the issues and/or problems are interesting and what make them difficult to solve.\nApproach - A description of the techniques or algorithms you used to solve the problem.\nResults - Screenshots and a working demo of the system you built.\nFuture Work - An explanation of how the work could be extended.\n\nThe dimensions for the poster must conform to the International Standards Organization (ISO) poster size format (A1).\n\nSize = ISO A1 (594 × 841mm or 23.39 × 33.11inci)\nResolution = 300dpi or above\nFile format = jpeg or pdf\n\nPlease ensure that the poster is in high resolution.\nNote: The poster will be considered a final deliverable, so don’t forget to apply good visual design and data visualisation principles and best practice to your poster.\n\n\nFinal Deliverables\nThe final deliverable will include:\n\nDeployment of the Web-enabled Visual Analytics Application on shinyapps.io by RStudio.\nartifact including the ShinyApp codes, data and all r modules.\nUser Guide - Step-by-step guide on how to use the data visualisation functions designed.\n\nSample UserGuide 1\nSample UserGuide 2\n\nProject poster\nMinutes of Meeting\n\nThe final deliverable must be uploaded into the Dropbox of e-Learn (e.g. LMS). It must in a single zip file format."
+  },
+  {
+    "objectID": "VAProject.html#grading",
+    "href": "VAProject.html#grading",
+    "title": "Visual Analytics Project",
+    "section": "Grading",
+    "text": "Grading\nThe visual analytics project will account for 30% of your final grade in the course. The distribution of marks for each stage of the project are as follows:\n\nProject website 20%\nPoster 15%\nMinutes of Meeting 15%\nShinyApp 50%\n\nThe course instructor will consider strongly the novelty of the idea (If it has never been done before, you will get lots of credit!), how it addresses the problem at hand, the methodology you employ in doing the research, and your technical skill in implementing the idea.\n\nGrading criteria for poster\nThe poster will be graded based on the following criteria:\n\nClear communication of key aspects of solution\nClear communication of design approaches\nClear communication of arguments for proposed solution\nCraft quality of the solution"
+  },
+  {
+    "objectID": "VAProject.html#sample-projects",
+    "href": "VAProject.html#sample-projects",
+    "title": "Visual Analytics Project",
+    "section": "Sample Projects",
+    "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
   }
 ]
