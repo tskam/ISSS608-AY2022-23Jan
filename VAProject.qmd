@@ -46,7 +46,7 @@ At the beginning of the project, project teams are required to create a project 
 
 #### Project Website
 
-Each project team are required to create the project website by using [Quarto](https://quarto.org/docs/websites/).  It will be disseminated by using webserver such as [Netfity](https://www.netlify.com/).
+Each project team are required to create the project website by using [Quarto](https://quarto.org/docs/websites/). It will be disseminated by using webserver such as [Netfity](https://www.netlify.com/).
 
 As a first step, you should create a project summary at the project website that includes:
 
@@ -188,4 +188,3 @@ Note that the following examples are for references purposes. You are urge to us
 -   [Group 12](https://group12-va-project.netlify.app/)
 
 # Q & A
-
