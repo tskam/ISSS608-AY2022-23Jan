@@ -4,6 +4,7 @@ project:
 website:
   title: "ISSS608"
   navbar:
+    background: "#f5c31d"
     left:
     - text: "Syllabus"
       href: syllabus.html
