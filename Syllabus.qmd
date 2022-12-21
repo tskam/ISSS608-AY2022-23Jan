@@ -98,7 +98,7 @@ There will be no mid-term test and final examination for this course.
 
 ## Words of Encouragement
 
-For the next 12 weeks, your learning journey will be very bumpy, especially come to R programming
+For the next 10 weeks, your learning journey will be very bumpy, especially come to R programming
 
 ![](img/image4.png)
 
@@ -145,4 +145,3 @@ SMU strives to make learning experiences accessible for all. If you anticipate o
 ### Emergency Preparedness for Teaching and Learning (EPTL)
 
 As part of emergency preparedness, Instructors may conduct lessons online via the WebEx platform during the term, to prepare students for online learning. During an actual emergency, students will be notified to access the WebEx platform for their online lessons. The class schedule will mirror the current face-to-face class timetable unless otherwise stated.
-
