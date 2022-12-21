@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ISSS608 AY2022-23 Jan Term",
-    "section": "",
-    "text": "Welcome to the home page for ISSS608 Visual Analytics and Applications. All course materials will be posted on this site.\nInstructor: Dr. Kam Tin Seong, Associate Professor of Information Systems (Practice)\nLesson (day/time): Saturday 12:00pm to 3:15pm\nVenue: Refer to Lesson Plan\nConsultation booking link.\nVirtual Meeting Room: Zoom"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,11 +7,109 @@
     "text": "1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "DataViz.html",
+    "href": "DataViz.html",
+    "title": "DataViz Makeover",
+    "section": "",
+    "text": "There are two dataviz makeover exercises that are due throughout the term. I will post one or two data visualisation and you are required to critic, suggest ways for improvement and rework the data visualisation. Maybe you retell the story more effectively, or find a new story in the data. I am curious to see the different approaches you all take.\nThe purpose of the makeover is to improve on the original visualisation. Focus on what works, what doesn’t work, why those things don’t work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. However, if supplementing the data helps you tell a better story, go for it!"
+  },
+  {
+    "objectID": "DataViz.html#dataviz-makeover-topics",
+    "href": "DataViz.html#dataviz-makeover-topics",
+    "title": "DataViz Makeover",
+    "section": "DataViz Makeover Topics",
+    "text": "DataViz Makeover Topics\n\nDataViz Makeover 1\nDataViz Makeover 2"
+  },
+  {
+    "objectID": "DataViz.html#submission-instructions",
+    "href": "DataViz.html#submission-instructions",
+    "title": "DataViz Makeover",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\n\nThe write-up of the DataViz Makeover must be in Quarto html document format. You are required to publish the write-up on Netlify.\nThe R project of the DataViz Makeover must be pushed onto your Github repository.\nThe DataViz Makeover must be prepared by using Tableau Desktop. The final workbook must be uploaded onto Tableau Public.\nAll DataViz Makeover have to be completed by Sunday before mid-night 11.59pm. You are required to provide the links to the DataViz Makeover write-up, github repository and Tableau Public onto eLearn (i.e. DataViz Makeover section) as shown in the screenshot below:"
+  },
+  {
+    "objectID": "DataViz.html#for-your-reference",
+    "href": "DataViz.html#for-your-reference",
+    "title": "DataViz Makeover",
+    "section": "For your reference",
+    "text": "For your reference\n\nFrom seniors\n\nDataViz Makeover Blog Link AY2020-2021 Term 2\n\nDataViz Makeover 1 handout, sample web article and Tableau Public submission.\n\nDataViz Makeover AY2020-2021 Term 3\n\nDataViz Makeover 1\n\nDataViz Makeover AY2021-22 January Term\n\nDataViz Makeover 1:\n\nLIN SHUYAN Best make-over design, simple but yet functional.\nSUN SHENGMEI Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.\n\nDataViz Makeover 2\n\nAng Bi Lian Effective used of Tableau Story.\nLin Shuyan Creative implementation of linked views.\nMin Xiaoqi Effective used of interactive tooltip.\n\n\n\n\n\nFrom external sources\n\nMakeover Monday, especially:\n\nGallery\nOur Makeover\nWebinars\nblog\n\nStory Telling with Data, especially:\n\nCommunity\nBlog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ISSS608 AY2022-23 Jan Term",
+    "section": "",
+    "text": "Welcome to the home page for ISSS608 Visual Analytics and Applications. All course materials will be posted on this site.\nInstructor: Dr. Kam Tin Seong, Associate Professor of Information Systems (Practice)\nLesson (day/time): Saturday 12:00pm to 3:15pm\nVenue: Refer to Lesson Plan\nConsultation booking link.\nVirtual Meeting Room: Zoom"
+  },
+  {
     "objectID": "index.html#other-important-information",
     "href": "index.html#other-important-information",
     "title": "ISSS608 AY2022-23 Jan Term",
     "section": "Other Important Information",
     "text": "Other Important Information\n\nAcademic Integrity:\nAll acts of academic dishonesty (including, but not limited to, plagiarism, cheating, fabrication, facilitation of acts of academic dishonesty by others, unauthorized possession of exam questions, or tampering with the academic work of other students) are serious offences. All work (whether oral or written) submitted for purposes of assessment must be the student’s own work. Penalties for violation of the policy range from zero marks for the component assessment to expulsion, depending on the nature of the offense. When in doubt, students should consult the instructors of the course. Details on the SMU Code of Academic Integrity may be accessed at http://www.smuscd.org/resources.html\n\n\nHandling of Course Materials:\nCourse materials obtained during your course of study at SMU are meant for personal use only, namely, for the purposes of studying and research. You are strictly not permitted to make copies of or print additional copies or distribute such copies of the course materials or any parts thereof, for commercial gain or exchange. For example, offering such materials on the Internet through CourseHero, Carousell and the like, is strictly prohibited.\nThe selling of these materials and/or any copies thereof are strictly prohibited under Singapore copyright laws. Printed materials and electronic materials are both protected by copyright laws. All students are subject to Singapore copyright laws and must strictly adhere to SMU’s procedures and requirements relating to copyright.\nPlease also note that for some materials, the publishers may specifically state that each copy is for the personal use of one individual only and no further reprographic reproduction is allowed, including for personal use. These restrictions are spelt out clearly on these specific sets of resources and students are required to adhere to these rules.\nStudents who infringe any of the aforesaid rules, laws and requirements shall be liable to disciplinary action by SMU. In addition, such students may also leave themselves open to suits by copyright owners who are entitled to take legal action against persons who infringe their copyright.\nWe strongly urge all students to respect the copyright laws and abide by SMU’s procedures and requirements relating to copyright.\n\n\nAccessibility and Accommodations:\nSMU strives to make learning experiences accessible for all. If you anticipate or experience physical or academic barriers due to disability, please let the instructor know immediately. You are also welcome to contact the university’s disability support team if you have questions or concerns about academic accommodations:included@smu.edu.sg\nPlease be aware that the accessible tables in our seminar room should remain available for students who require them. Emergency Preparedness for Teaching and Learning (EPTL): As part of emergency preparedness, Instructors may conduct lessons online via the WebEx platform during the term, to prepare students for online learning. During an actual emergency, students will be notified to access the WebEx platform for their online lessons. The class schedule will mirror the current face-to-face class timetable unless otherwise stated."
+  },
+  {
+    "objectID": "lesson.html",
+    "href": "lesson.html",
+    "title": "Lesson Plan",
+    "section": "",
+    "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nGeoVisual Analytics\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
+  },
+  {
+    "objectID": "R.html",
+    "href": "R.html",
+    "title": "R Resources",
+    "section": "",
+    "text": "R for Data Science by Garrett Grolemund and Hadley Wickham.\nModern R with the tidyverse by Bruno Rodrigues. Chapter 2 provides a detail discussion on R data objects.\nBrendan R. E. Ansell Introduction to R - tidyverse\nThe Comprehensive Guide to Installing R Packages from CRAN, Bioconductor, GitHub and Co.. This article provides useful tips on how to install R packages from different sources."
+  },
+  {
+    "objectID": "R.html#ggplot2",
+    "href": "R.html#ggplot2",
+    "title": "R Resources",
+    "section": "ggplot2",
+    "text": "ggplot2\n\nggplot2 Core\n\nggplot2\nggplot2 – The R graph Gallery\nIntroduction to R Graphics with ggplot2\nggplot2 - A Short Tutorial\nggplot2 介紹\n\n\n\nBooks\n\nHadley Wickham, Danielle Navarro, and Thomas Lin Pedersen (2020)ggplot2: Elegant Graphics for Data Analysis (3rd Edition, online version).\nKieran Healy (2019) Data Visualization: A practical introduction. This is the online version.\nAravind Hebbali (2020) Data Visualization with ggplot2\nWinston Chang (2020) R Graphics Cookbook (2nd edition, online version)\nRob Kabacoff (2020) Data Visualization with R\nZuguang Gu Circular Visualization in R. Last visit: 27/12/2020.\nZach Bogart & Joyce Robbins (2020) Exploratory Data Analysis & Visualization\nBBC Visual and Data Journalism cookbook for R graphics\nNordmann, E., McAleer, P., Toivo, W., Paterson, H. & DeBruine, L. Data visualisation using R, for researchers who don’t use R\n\n\n\nArticles/Blog posts\n\nHow to make any plot in ggplot2?\nThe Complete ggplot2 Tutorial - Part1 | Introduction To ggplot2 (Full R code)\nThe Complete ggplot2 Tutorial - Part 2 | How To Customize ggplot2 (Full R code)\nTop 50 ggplot2 Visualizations - The Master List (With Full R Code)\nggplot2 Quickref\nData visualization with ggplot2\nggplot Wizardary\n\n\n\nWebminers\n\nggplot2 workshop part 1\nggplot2 workshop part 2\nMake Beautiful Graphs in R: 5 Quick Ways to Improve ggplot2 Graphs\nOutlier 2021—ggplot wizardy: my favorite tricks and secrets for beautiful plots in R by Cédric Scherer\n\n\n\nggplots Extension\n\nggVis\nggmap\nggtern, an extension to ggplot2 specifically for the plotting of ternary diagrams.\nggExtra, a collection of functions and layers to enhance ggplot2. The main function is ggMarginal, which can be used to add marginal histograms/boxplots/density plots to ggplot2 scatterplots.\nggthemes, some extra themes, geoms, and scales for ‘ggplot2’. Provides ‘ggplot2’ themes and scales that replicate the look of plots by Edward Tufte, Stephen Few, ‘Fivethirtyeight’, ‘The Economist’, ‘Stata’, ‘Excel’, and ‘The Wall Street Journal’, among others. Provides ‘geoms’ for Tufte’s box plot and range frame.\nGGally extends ‘ggplot2’ by adding several functions to reduce the complexity of combining geometric objects with transformed data. Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks.\nsjPlot:Data Visualization for Statistics in Social Science\nggstatsplot is an extension of ggplot2 package for creating graphics with details from statistical tests included in the plots themselves and targeted primarily at behavioral sciences community to provide a one-line code to produce information-rich plots.\nggside allows the user to add graphical information about one of the main panel’s axis. This is particularly useful for metadata for discrete axis, or summary graphics on a continuous axis such as a boxplot or a density distribution. These vignette and article provide useful introduction.\nPatchwork is a package designed to make plot composition in R extremely simple and powerful. It is mainly intended for users of ggplot2 and goes to great lengths to make sure ggplots are properly aligned no matter the complexity of your composition. The Getting Started page explains the main features of the package.\ngganimate extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time.\nggdist is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualizing distributions and uncertainty. It is designed for both frequentist and [https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html] visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization: for frequentist models, one visualizes confidence distributions or bootstrap distributions (see vignette(“freq-uncertainty-vis”)); for Bayesian models, one visualizes probability distributions (see the tidybayes package, which builds on top of ggdist)."
+  },
+  {
+    "objectID": "R.html#interactive-data-visualisation-with-r",
+    "href": "R.html#interactive-data-visualisation-with-r",
+    "title": "R Resources",
+    "section": "Interactive Data Visualisation with R",
+    "text": "Interactive Data Visualisation with R\n\nplotly R\n\nplotly: Create Interactive Web Graphics via ‘plotly.js’\nInteractive web-based data visualization with R, plotly, and shiny\nPlotly R Open Source Graphing Library\nGetting Started with Plotly and ggplot2\n\n\n\nggigraph\n\nggigraph lets R users to make ggplot interactive."
+  },
+  {
+    "objectID": "R.html#other-r-graphics-packages",
+    "href": "R.html#other-r-graphics-packages",
+    "title": "R Resources",
+    "section": "Other R graphics packages",
+    "text": "Other R graphics packages\n\ncorrplot. A graphical display of a correlation matrix or general matrix. It also contains some algorithms to do matrix reordering. In addition, corrplot is good at details, including choosing color, text labels, color labels, layout, etc.\ncorrgram calculates correlation of variables and displays the results graphically. Included panel functions can display points, shading, ellipses, and correlation values with confidence intervals. [https://cran.r-project.org/web/packages/corrgram/index.html]\nvcd, Visualization techniques, data sets, summary and inference procedures aimed particularly at categorical data. Special emphasis is given to highly extensible grid graphics.\ntmap offers a flexible, layer-based, and easy to use approach to create thematic maps, such as choropleths and bubble maps."
+  },
+  {
+    "objectID": "R.html#shiny-web-based-visual-analytics-development-tool-in-r",
+    "href": "R.html#shiny-web-based-visual-analytics-development-tool-in-r",
+    "title": "R Resources",
+    "section": "Shiny: Web-based Visual Analytics Development tool in R",
+    "text": "Shiny: Web-based Visual Analytics Development tool in R\n\nGetting Started\n\nHadley Wickham (2020) Mastering Shiny. Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.\nShiny from R Studio\nLearn Shiny\nFunction reference\nThe Shiny Cheat sheet\nColin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) Engineering Production-Grade Shiny Apps\nDavid Granjon (2020) Outstanding User Interfaces with Shiny\nHow to Build a Shiny Application from Scratch\nShiny 入門\n\n\n\nShiny Applications\n\nGallery\nShiny Contest Winners 2019 - Full List\nFifteen New Zealand government Shiny web apps\nIntroducing the New Zealand Trade Intelligence Dashboard"
+  },
+  {
+    "objectID": "R.html#r-markdown",
+    "href": "R.html#r-markdown",
+    "title": "R Resources",
+    "section": "R Markdown",
+    "text": "R Markdown\n\nR Markdown: The Definitive Guide. Highly recommended to beginners.\nMarkdown from R Studio\nR Markdown Cookbook\nRMarkdown for Scientists\nTen awesome R Markdown tricks"
+  },
+  {
+    "objectID": "R.html#creating-coursework-blog",
+    "href": "R.html#creating-coursework-blog",
+    "title": "R Resources",
+    "section": "Creating coursework blog",
+    "text": "Creating coursework blog\n\nDistill\n\ndistill for R Markdown\nThe distill for R Markdown website gives a live demonstration of the usage of distill’s features and functions.\nExample websites\n(Re-)introducing Distill for R Markdown\nCreating a Blog\nBlog Post Workflow\nPublishing Websites\n\n\n\nBlogdown\n\nBook\n\nblogdown: Creating Websites with R Markdown. Highly recommended to beginners.\nblogdown\n3.1 Netlify\n\n\n\nblog articles\n\nUp & Running with blogdown\nA Spoonful of Hugo: The netlify.toml File\nA Spoonful of Hugo: Archetypes\nA Spoonful of Hugo: Page Bundles\nA Spoonful of Hugo: Troubleshooting Your Build\nA Spoonful of Hugo: How much Hugo do I need to know?\nHow to build a website with Blogdown in R\nSetting up our blog with RStudio and blogdown I: Creating the blog\nSetting up your blog with RStudio and blogdown II: Workflow\nSetting up your blog with RStudio and blogdown III: modify your theme"
+  },
+  {
+    "objectID": "R.html#github",
+    "href": "R.html#github",
+    "title": "R Resources",
+    "section": "github",
+    "text": "github\n\nHappy Git and GitHub for the useR. Highly recommended to beginners.\nGitHub and RStudio\nGetting starting with git and GitHub using RStudio\nUsing Git within RStudio\ngithub doc\nTransform a folder as git project synchronized on Github or Gitlab"
   },
   {
     "objectID": "Syllabus.html",
@@ -84,39 +175,39 @@
     "text": "Other Important Information\n\nAcademic Integrity\nAll acts of academic dishonesty (including, but not limited to, plagiarism, cheating, fabrication, facilitation of acts of academic dishonesty by others, unauthorized possession of exam questions, or tampering with the academic work of other students) are serious offences. All work (whether oral or written) submitted for purposes of assessment must be the student’s own work. Penalties for violation of the policy range from zero marks for the component assessment to expulsion, depending on the nature of the offense. When in doubt, students should consult the instructors of the course. Details on the SMU Code of Academic Integrity may be accessed at http://www.smuscd.org/resources.html\n\n\nAccessibility and Accommodations\nSMU strives to make learning experiences accessible for all. If you anticipate or experience physical or academic barriers due to disability, please let the instructor know immediately. You are also welcome to contact the university’s disability support team if you have questions or concerns about academic accommodations: included@smu.edu.sg Please be aware that the accessible tables in our seminar room should remain available for students who require them.\n\n\nEmergency Preparedness for Teaching and Learning (EPTL)\nAs part of emergency preparedness, Instructors may conduct lessons online via the WebEx platform during the term, to prepare students for online learning. During an actual emergency, students will be notified to access the WebEx platform for their online lessons. The class schedule will mirror the current face-to-face class timetable unless otherwise stated."
   },
   {
-    "objectID": "lesson.html",
-    "href": "lesson.html",
-    "title": "Lesson Plan",
+    "objectID": "Tableau.html",
+    "href": "Tableau.html",
+    "title": "Tableau Resources",
     "section": "",
-    "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nGeoVisual Analytics\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
+    "text": "Tableau home page\nTraining and Tutorials\nTableau Desktop User Guide\nTableau Prep Builder User Guide\nVisual Gallery\nTableau Public"
   },
   {
-    "objectID": "DataViz.html",
-    "href": "DataViz.html",
-    "title": "DataViz Makeover",
-    "section": "",
-    "text": "There are two dataviz makeover exercises that are due throughout the term. I will post one or two data visualisation and you are required to critic, suggest ways for improvement and rework the data visualisation. Maybe you retell the story more effectively, or find a new story in the data. I am curious to see the different approaches you all take.\nThe purpose of the makeover is to improve on the original visualisation. Focus on what works, what doesn’t work, why those things don’t work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. However, if supplementing the data helps you tell a better story, go for it!"
+    "objectID": "Tableau.html#white-papers",
+    "href": "Tableau.html#white-papers",
+    "title": "Tableau Resources",
+    "section": "White papers",
+    "text": "White papers\n\n10 Best Practices for Building Effective Dashboards\nTips for creating effective, engaging data visualizations"
   },
   {
-    "objectID": "DataViz.html#dataviz-makeover-topics",
-    "href": "DataViz.html#dataviz-makeover-topics",
-    "title": "DataViz Makeover",
-    "section": "DataViz Makeover Topics",
-    "text": "DataViz Makeover Topics\n\nDataViz Makeover 1\nDataViz Makeover 2"
+    "objectID": "Tableau.html#blogs-that-inspired",
+    "href": "Tableau.html#blogs-that-inspired",
+    "title": "Tableau Resources",
+    "section": "Blogs that inspired",
+    "text": "Blogs that inspired\n\nThe Information Lab\nDataRemixed\nPlayfairData\nData Revelations, especially Visualizing Survey Data and Steven’s Blog"
   },
   {
-    "objectID": "DataViz.html#submission-instructions",
-    "href": "DataViz.html#submission-instructions",
-    "title": "DataViz Makeover",
-    "section": "Submission Instructions",
-    "text": "Submission Instructions\n\nThe write-up of the DataViz Makeover must be in Quarto html document format. You are required to publish the write-up on Netlify.\nThe R project of the DataViz Makeover must be pushed onto your Github repository.\nThe DataViz Makeover must be prepared by using Tableau Desktop. The final workbook must be uploaded onto Tableau Public.\nAll DataViz Makeover have to be completed by Sunday before mid-night 11.59pm. You are required to provide the links to the DataViz Makeover write-up, github repository and Tableau Public onto eLearn (i.e. DataViz Makeover section) as shown in the screenshot below:"
+    "objectID": "Tableau.html#from-data-to-tada",
+    "href": "Tableau.html#from-data-to-tada",
+    "title": "Tableau Resources",
+    "section": "From data to tada",
+    "text": "From data to tada\n\nUsing data visualization to make better decisions—faster\n17 key traits of data literacy\nInspiring change with data visualization\n5 important elements of dashboard design"
   },
   {
-    "objectID": "DataViz.html#for-your-reference",
-    "href": "DataViz.html#for-your-reference",
-    "title": "DataViz Makeover",
-    "section": "For your reference",
-    "text": "For your reference\n\nFrom seniors\n\nDataViz Makeover Blog Link AY2020-2021 Term 2\n\nDataViz Makeover 1 handout, sample web article and Tableau Public submission.\n\nDataViz Makeover AY2020-2021 Term 3\n\nDataViz Makeover 1\n\nDataViz Makeover AY2021-22 January Term\n\nDataViz Makeover 1:\n\nLIN SHUYAN Best make-over design, simple but yet functional.\nSUN SHENGMEI Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.\n\nDataViz Makeover 2\n\nAng Bi Lian Effective used of Tableau Story.\nLin Shuyan Creative implementation of linked views.\nMin Xiaoqi Effective used of interactive tooltip.\n\n\n\n\n\nFrom external sources\n\nMakeover Monday, especially:\n\nGallery\nOur Makeover\nWebinars\nblog\n\nStory Telling with Data, especially:\n\nCommunity\nBlog"
+    "objectID": "Tableau.html#tableau-tips-and-tricks",
+    "href": "Tableau.html#tableau-tips-and-tricks",
+    "title": "Tableau Resources",
+    "section": "Tableau Tips and Tricks",
+    "text": "Tableau Tips and Tricks\n\nRelationships, Joins and Unions in Tableau 2020.2, this Youtube video explains selected data management features introduced in Tableau 2020.2. (updated on 8th Feb 2021)."
   },
   {
     "objectID": "take-home.html",
@@ -201,96 +292,5 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
-  },
-  {
-    "objectID": "Tableau.html",
-    "href": "Tableau.html",
-    "title": "Tableau Resources",
-    "section": "",
-    "text": "Tableau home page\nTraining and Tutorials\nTableau Desktop User Guide\nTableau Prep Builder User Guide\nVisual Gallery\nTableau Public"
-  },
-  {
-    "objectID": "Tableau.html#white-papers",
-    "href": "Tableau.html#white-papers",
-    "title": "Tableau Resources",
-    "section": "White papers",
-    "text": "White papers\n\n10 Best Practices for Building Effective Dashboards\nTips for creating effective, engaging data visualizations"
-  },
-  {
-    "objectID": "Tableau.html#blogs-that-inspired",
-    "href": "Tableau.html#blogs-that-inspired",
-    "title": "Tableau Resources",
-    "section": "Blogs that inspired",
-    "text": "Blogs that inspired\n\nThe Information Lab\nDataRemixed\nPlayfairData\nData Revelations, especially Visualizing Survey Data and Steven’s Blog"
-  },
-  {
-    "objectID": "Tableau.html#from-data-to-tada",
-    "href": "Tableau.html#from-data-to-tada",
-    "title": "Tableau Resources",
-    "section": "From data to tada",
-    "text": "From data to tada\n\nUsing data visualization to make better decisions—faster\n17 key traits of data literacy\nInspiring change with data visualization\n5 important elements of dashboard design"
-  },
-  {
-    "objectID": "Tableau.html#tableau-tips-and-tricks",
-    "href": "Tableau.html#tableau-tips-and-tricks",
-    "title": "Tableau Resources",
-    "section": "Tableau Tips and Tricks",
-    "text": "Tableau Tips and Tricks\n\nRelationships, Joins and Unions in Tableau 2020.2, this Youtube video explains selected data management features introduced in Tableau 2020.2. (updated on 8th Feb 2021)."
-  },
-  {
-    "objectID": "R.html",
-    "href": "R.html",
-    "title": "R Resources",
-    "section": "",
-    "text": "R for Data Science by Garrett Grolemund and Hadley Wickham.\nModern R with the tidyverse by Bruno Rodrigues. Chapter 2 provides a detail discussion on R data objects.\nBrendan R. E. Ansell Introduction to R - tidyverse\nThe Comprehensive Guide to Installing R Packages from CRAN, Bioconductor, GitHub and Co.. This article provides useful tips on how to install R packages from different sources."
-  },
-  {
-    "objectID": "R.html#ggplot2",
-    "href": "R.html#ggplot2",
-    "title": "R Resources",
-    "section": "ggplot2",
-    "text": "ggplot2\n\nggplot2 Core\n\nggplot2\nggplot2 – The R graph Gallery\nIntroduction to R Graphics with ggplot2\nggplot2 - A Short Tutorial\nggplot2 介紹\n\n\n\nBooks\n\nHadley Wickham, Danielle Navarro, and Thomas Lin Pedersen (2020)ggplot2: Elegant Graphics for Data Analysis (3rd Edition, online version).\nKieran Healy (2019) Data Visualization: A practical introduction. This is the online version.\nAravind Hebbali (2020) Data Visualization with ggplot2\nWinston Chang (2020) R Graphics Cookbook (2nd edition, online version)\nRob Kabacoff (2020) Data Visualization with R\nZuguang Gu Circular Visualization in R. Last visit: 27/12/2020.\nZach Bogart & Joyce Robbins (2020) Exploratory Data Analysis & Visualization\nBBC Visual and Data Journalism cookbook for R graphics\nNordmann, E., McAleer, P., Toivo, W., Paterson, H. & DeBruine, L. Data visualisation using R, for researchers who don’t use R\n\n\n\nArticles/Blog posts\n\nHow to make any plot in ggplot2?\nThe Complete ggplot2 Tutorial - Part1 | Introduction To ggplot2 (Full R code)\nThe Complete ggplot2 Tutorial - Part 2 | How To Customize ggplot2 (Full R code)\nTop 50 ggplot2 Visualizations - The Master List (With Full R Code)\nggplot2 Quickref\nData visualization with ggplot2\nggplot Wizardary\n\n\n\nWebminers\n\nggplot2 workshop part 1\nggplot2 workshop part 2\nMake Beautiful Graphs in R: 5 Quick Ways to Improve ggplot2 Graphs\nOutlier 2021—ggplot wizardy: my favorite tricks and secrets for beautiful plots in R by Cédric Scherer\n\n\n\nggplots Extension\n\nggVis\nggmap\nggtern, an extension to ggplot2 specifically for the plotting of ternary diagrams.\nggExtra, a collection of functions and layers to enhance ggplot2. The main function is ggMarginal, which can be used to add marginal histograms/boxplots/density plots to ggplot2 scatterplots.\nggthemes, some extra themes, geoms, and scales for ‘ggplot2’. Provides ‘ggplot2’ themes and scales that replicate the look of plots by Edward Tufte, Stephen Few, ‘Fivethirtyeight’, ‘The Economist’, ‘Stata’, ‘Excel’, and ‘The Wall Street Journal’, among others. Provides ‘geoms’ for Tufte’s box plot and range frame.\nGGally extends ‘ggplot2’ by adding several functions to reduce the complexity of combining geometric objects with transformed data. Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks.\nsjPlot:Data Visualization for Statistics in Social Science\nggstatsplot is an extension of ggplot2 package for creating graphics with details from statistical tests included in the plots themselves and targeted primarily at behavioral sciences community to provide a one-line code to produce information-rich plots.\nggside allows the user to add graphical information about one of the main panel’s axis. This is particularly useful for metadata for discrete axis, or summary graphics on a continuous axis such as a boxplot or a density distribution. These vignette and article provide useful introduction.\nPatchwork is a package designed to make plot composition in R extremely simple and powerful. It is mainly intended for users of ggplot2 and goes to great lengths to make sure ggplots are properly aligned no matter the complexity of your composition. The Getting Started page explains the main features of the package.\ngganimate extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time.\nggdist is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualizing distributions and uncertainty. It is designed for both frequentist and [https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html] visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization: for frequentist models, one visualizes confidence distributions or bootstrap distributions (see vignette(“freq-uncertainty-vis”)); for Bayesian models, one visualizes probability distributions (see the tidybayes package, which builds on top of ggdist)."
-  },
-  {
-    "objectID": "R.html#interactive-data-visualisation-with-r",
-    "href": "R.html#interactive-data-visualisation-with-r",
-    "title": "R Resources",
-    "section": "Interactive Data Visualisation with R",
-    "text": "Interactive Data Visualisation with R\n\nplotly R\n\nplotly: Create Interactive Web Graphics via ‘plotly.js’\nInteractive web-based data visualization with R, plotly, and shiny\nPlotly R Open Source Graphing Library\nGetting Started with Plotly and ggplot2\n\n\n\nggigraph\n\nggigraph lets R users to make ggplot interactive."
-  },
-  {
-    "objectID": "R.html#other-r-graphics-packages",
-    "href": "R.html#other-r-graphics-packages",
-    "title": "R Resources",
-    "section": "Other R graphics packages",
-    "text": "Other R graphics packages\n\ncorrplot. A graphical display of a correlation matrix or general matrix. It also contains some algorithms to do matrix reordering. In addition, corrplot is good at details, including choosing color, text labels, color labels, layout, etc.\ncorrgram calculates correlation of variables and displays the results graphically. Included panel functions can display points, shading, ellipses, and correlation values with confidence intervals. [https://cran.r-project.org/web/packages/corrgram/index.html]\nvcd, Visualization techniques, data sets, summary and inference procedures aimed particularly at categorical data. Special emphasis is given to highly extensible grid graphics.\ntmap offers a flexible, layer-based, and easy to use approach to create thematic maps, such as choropleths and bubble maps."
-  },
-  {
-    "objectID": "R.html#shiny-web-based-visual-analytics-development-tool-in-r",
-    "href": "R.html#shiny-web-based-visual-analytics-development-tool-in-r",
-    "title": "R Resources",
-    "section": "Shiny: Web-based Visual Analytics Development tool in R",
-    "text": "Shiny: Web-based Visual Analytics Development tool in R\n\nGetting Started\n\nHadley Wickham (2020) Mastering Shiny. Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.\nShiny from R Studio\nLearn Shiny\nFunction reference\nThe Shiny Cheat sheet\nColin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) Engineering Production-Grade Shiny Apps\nDavid Granjon (2020) Outstanding User Interfaces with Shiny\nHow to Build a Shiny Application from Scratch\nShiny 入門\n\n\n\nShiny Applications\n\nGallery\nShiny Contest Winners 2019 - Full List\nFifteen New Zealand government Shiny web apps\nIntroducing the New Zealand Trade Intelligence Dashboard"
-  },
-  {
-    "objectID": "R.html#r-markdown",
-    "href": "R.html#r-markdown",
-    "title": "R Resources",
-    "section": "R Markdown",
-    "text": "R Markdown\n\nR Markdown: The Definitive Guide. Highly recommended to beginners.\nMarkdown from R Studio\nR Markdown Cookbook\nRMarkdown for Scientists\nTen awesome R Markdown tricks"
-  },
-  {
-    "objectID": "R.html#creating-coursework-blog",
-    "href": "R.html#creating-coursework-blog",
-    "title": "R Resources",
-    "section": "Creating coursework blog",
-    "text": "Creating coursework blog\n\nDistill\n\ndistill for R Markdown\nThe distill for R Markdown website gives a live demonstration of the usage of distill’s features and functions.\nExample websites\n(Re-)introducing Distill for R Markdown\nCreating a Blog\nBlog Post Workflow\nPublishing Websites\n\n\n\nBlogdown\n\nBook\n\nblogdown: Creating Websites with R Markdown. Highly recommended to beginners.\nblogdown\n3.1 Netlify\n\n\n\nblog articles\n\nUp & Running with blogdown\nA Spoonful of Hugo: The netlify.toml File\nA Spoonful of Hugo: Archetypes\nA Spoonful of Hugo: Page Bundles\nA Spoonful of Hugo: Troubleshooting Your Build\nA Spoonful of Hugo: How much Hugo do I need to know?\nHow to build a website with Blogdown in R\nSetting up our blog with RStudio and blogdown I: Creating the blog\nSetting up your blog with RStudio and blogdown II: Workflow\nSetting up your blog with RStudio and blogdown III: modify your theme"
-  },
-  {
-    "objectID": "R.html#github",
-    "href": "R.html#github",
-    "title": "R Resources",
-    "section": "github",
-    "text": "github\n\nHappy Git and GitHub for the useR. Highly recommended to beginners.\nGitHub and RStudio\nGetting starting with git and GitHub using RStudio\nUsing Git within RStudio\ngithub doc\nTransform a folder as git project synchronized on Github or Gitlab"
   }
 ]

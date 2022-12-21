@@ -4,7 +4,7 @@ title: "ISSS608 AY2022-23 Jan Term"
 
 Welcome to the home page for **ISSS608 Visual Analytics and Applications**. All course materials will be posted on this site.
 
-Instructor: [Dr. Kam Tin Seong](https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong), Associate Professor of Information Systems (Practice)  
+Instructor: [Dr. Kam Tin Seong](https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong), Associate Professor of Information Systems (Practice)
 
 Lesson (day/time): Saturday 12:00pm to 3:15pm
 
@@ -37,4 +37,3 @@ We strongly urge all students to respect the copyright laws and abide by SMU's p
 SMU strives to make learning experiences accessible for all. If you anticipate or experience physical or academic barriers due to disability, please let the instructor know immediately. You are also welcome to contact the university's disability support team if you have questions or concerns about academic accommodations:[included\@smu.edu.sg](mailto:included@smu.edu.sg)
 
 Please be aware that the accessible tables in our seminar room should remain available for students who require them. Emergency Preparedness for Teaching and Learning (EPTL): As part of emergency preparedness, Instructors may conduct lessons online via the WebEx platform during the term, to prepare students for online learning. During an actual emergency, students will be notified to access the WebEx platform for their online lessons. The class schedule will mirror the current face-to-face class timetable unless otherwise stated.
-
