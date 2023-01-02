@@ -313,5 +313,33 @@
     "title": "All About Quarto",
     "section": "Authoring Guide",
     "text": "Authoring Guide\n\nMarkdown Basics\nFigures\nTables\nDiagrams\nCitations & Footnotes\nCross References\nArticle Layout"
+  },
+  {
+    "objectID": "git.html",
+    "href": "git.html",
+    "title": "Git and Github",
+    "section": "",
+    "text": "Happy Git and GitHub for the useR. Highly recommended to beginners."
+  },
+  {
+    "objectID": "git.html#gitgithub",
+    "href": "git.html#gitgithub",
+    "title": "Git and Github",
+    "section": "git/github",
+    "text": "git/github\n\ngithub doc\nGitHub and RStudio"
+  },
+  {
+    "objectID": "git.html#blog-post",
+    "href": "git.html#blog-post",
+    "title": "Git and Github",
+    "section": "Blog post",
+    "text": "Blog post\n\nGetting starting with git and GitHub using RStudio\ngit\nTransform a folder as git project synchronized on Github or Gitlab\nRecovering from common Git predicaments"
+  },
+  {
+    "objectID": "ShinyResources.html",
+    "href": "ShinyResources.html",
+    "title": "Shiny Resources",
+    "section": "",
+    "text": "A must view presentation: The Past and Future of Shiny\nA new way to build your Shiny app’s UI\n\n\n\nShiny from R Studio\nLearn Shiny\nFunction reference\nThe Shiny Cheat sheet\n\n\n\n\n\nHadley Wickham (2020) Mastering Shiny. Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.\nColin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) Engineering Production-Grade Shiny Apps\nDavid Granjon (2020) Outstanding User Interfaces with Shiny\nHow to Build a Shiny Application from Scratch\nShiny 入門\n\n\n\n\n\nGallery\nShiny Contest Winners 2019 - Full List\nShiny Contest Winners 2020\nShiny Contest Winners 2021\nFifteen New Zealand government Shiny web apps\nIntroducing the New Zealand Trade Intelligence Dashboard"
   }
 ]

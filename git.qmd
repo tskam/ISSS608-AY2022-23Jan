@@ -1,0 +1,23 @@
+---
+title: "Git and Github"
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Book
+
+-   [Happy Git and GitHub for the useR](https://happygitwithr.com/). Highly recommended to beginners.
+
+## git/github
+
+-   [github doc](https://docs.github.com/en)
+-   [GitHub and RStudio](https://resources.github.com/whitepapers/github-and-rstudio/)
+
+
+## Blog post
+
+-   [Getting starting with git and GitHub using RStudio](https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html)
+-   [git](https://info5940.infosci.cornell.edu/setup/git/)
+-   [Transform a folder as git project synchronized on Github or Gitlab](https://rtask.thinkr.fr/transform-a-folder-as-git-project-synchronized-on-github-or-gitlab/)
+-   [Recovering from common Git predicaments](https://info5940.infosci.cornell.edu/notes/project-management/common-git-problems/)

@@ -26,6 +26,8 @@ website:
           href: "ShinyWorkshop/Shiny2/Shiny2.html"
         - text: "Customising Shiny"
           href: "ShinyWorkshop/Shiny3/Shiny3.html"
+        - text: "Shiny Resources"  
+          href: ShinyResources.html
     - text: "Tableau Resources"
       href: Tableau.html
     - text: "All About R"
@@ -36,6 +38,8 @@ website:
           href: Rt.html
         - text: "Quarto"
           href: Quarto.html
+        - text: "git and github"
+          href: git.html
     - text: "Home"
       href: index.html
 

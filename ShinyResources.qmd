@@ -1,0 +1,44 @@
+---
+title: "Shiny Resources"
+description: |
+  This page provides links to useful R packages and references.
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Shiny: Web-based Visual Analytics Development tool in R
+
+### Getting Started
+
+-   [Shiny from R Studio](https://shiny.rstudio.com/)
+-   [Learn Shiny](https://shiny.rstudio.com/tutorial/)
+-   [Function reference](http://shiny.rstudio.com/reference/shiny/latest/)
+-   [The Shiny Cheat sheet](https://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
+
+### Shiny Video Series
+
+- [The Past and Future of Shiny](https://shiny.rstudio.com/blog/the-past-and-future-of-shiny-joe-cheng.html). A must view presentation.
+- [A new way to build your Shiny app's UI](https://www.rstudio.com/conference/2022/talks/new-way-to-build-shiny/).
+- [Getting Started with {shinytest2} Part I](https://www.youtube.com/watch?v=Gucwz865aqQ&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=15)
+- [Shiny Programming Practices](https://www.youtube.com/watch?v=B2JzHv4FOTU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=5)
+- [Shiny UI Editor Feature Tour](https://www.youtube.com/watch?v=Zac1qdaYNsY&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=6)
+- [Shiny UI Editor Project Walkthrough](https://www.youtube.com/watch?v=gYPnLiudtGU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=7)
+
+
+### Books
+
+-   Hadley Wickham (2020) [Mastering Shiny](https://mastering-shiny.org/). Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.
+-   Colin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) [Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/)
+-   David Granjon (2020) [Outstanding User Interfaces with Shiny](https://divadnojnarg.github.io/outstanding-shiny-ui/index.html)
+-   [How to Build a Shiny Application from Scratch](https://bookdown.org/hadrien/how_to_build_a_shiny_app_from_scratch/)
+-   [Shiny 入門](https://bookdown.org/tpemartin/shiny_intro/shiny-part-i.html)
+
+### Shiny Applications
+
+-   [Gallery](https://shiny.rstudio.com/gallery/)
+-   [Shiny Contest Winners 2019 - Full List](https://community.rstudio.com/t/shiny-contest-winners-2019-full-list/36347)
+-   [Shiny Contest Winners 2020](https://www.rstudio.com/blog/winners-of-the-2nd-shiny-contest/)
+-   [Shiny Contest Winners 2021](https://posit.co/blog/winners-of-the-3rd-annual-shiny-contest/)
+-   [Fifteen New Zealand government Shiny web apps](http://freerangestats.info/blog/2018/05/13/nz-govt-shinyapps)
+-   [Introducing the New Zealand Trade Intelligence Dashboard](https://nzprimarysectortrade.w%20ordpress.com/2018/10/15/introducing-the-new-zealand-trade-intelligence-dashboard/)
