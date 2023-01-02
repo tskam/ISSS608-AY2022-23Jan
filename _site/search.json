@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "DataViz.html",
@@ -35,6 +35,27 @@
     "text": "For your reference\n\nFrom seniors\n\nDataViz Makeover Blog Link AY2020-2021 Term 2\n\nDataViz Makeover 1 handout, sample web article and Tableau Public submission.\n\nDataViz Makeover AY2020-2021 Term 3\n\nDataViz Makeover 1\n\nDataViz Makeover AY2021-22 January Term\n\nDataViz Makeover 1:\n\nLIN SHUYAN Best make-over design, simple but yet functional.\nSUN SHENGMEI Interesting makeover design and very detail step-by-step description especially on how to work with Tableau Data Prep.\n\nDataViz Makeover 2\n\nAng Bi Lian Effective used of Tableau Story.\nLin Shuyan Creative implementation of linked views.\nMin Xiaoqi Effective used of interactive tooltip.\n\n\n\n\n\nFrom external sources\n\nMakeover Monday, especially:\n\nGallery\nOur Makeover\nWebinars\nblog\n\nStory Telling with Data, especially:\n\nCommunity\nBlog"
   },
   {
+    "objectID": "git.html",
+    "href": "git.html",
+    "title": "Git and Github",
+    "section": "",
+    "text": "Happy Git and GitHub for the useR. Highly recommended to beginners."
+  },
+  {
+    "objectID": "git.html#gitgithub",
+    "href": "git.html#gitgithub",
+    "title": "Git and Github",
+    "section": "git/github",
+    "text": "git/github\n\ngithub doc\nGitHub and RStudio"
+  },
+  {
+    "objectID": "git.html#blog-post",
+    "href": "git.html#blog-post",
+    "title": "Git and Github",
+    "section": "Blog post",
+    "text": "Blog post\n\nGetting starting with git and GitHub using RStudio\ngit\nTransform a folder as git project synchronized on Github or Gitlab\nRecovering from common Git predicaments"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ISSS608 AY2022-23 Jan Term",
@@ -54,6 +75,27 @@
     "title": "Lesson Plan",
     "section": "",
     "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nGeoVisual Analytics\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
+  },
+  {
+    "objectID": "Quarto.html",
+    "href": "Quarto.html",
+    "title": "All About Quarto",
+    "section": "",
+    "text": "Getting Started\nRStudio IDE\nUsing R\nHTML Basics"
+  },
+  {
+    "objectID": "Quarto.html#create-websites-and-blogs",
+    "href": "Quarto.html#create-websites-and-blogs",
+    "title": "All About Quarto",
+    "section": "Create websites and blogs",
+    "text": "Create websites and blogs\n\nCreating a Website\nWebsite Navigation\nDocument Listings"
+  },
+  {
+    "objectID": "Quarto.html#authoring-guide",
+    "href": "Quarto.html#authoring-guide",
+    "title": "All About Quarto",
+    "section": "Authoring Guide",
+    "text": "Authoring Guide\n\nMarkdown Basics\nFigures\nTables\nDiagrams\nCitations & Footnotes\nCross References\nArticle Layout"
   },
   {
     "objectID": "R.html",
@@ -110,6 +152,20 @@
     "title": "R Resources",
     "section": "github",
     "text": "github\n\nHappy Git and GitHub for the useR. Highly recommended to beginners.\nGitHub and RStudio\nGetting starting with git and GitHub using RStudio\nUsing Git within RStudio\ngithub doc\nTransform a folder as git project synchronized on Github or Gitlab"
+  },
+  {
+    "objectID": "Rt.html",
+    "href": "Rt.html",
+    "title": "R Tips & Tricks",
+    "section": "",
+    "text": "Importing multiple files into R"
+  },
+  {
+    "objectID": "ShinyResources.html",
+    "href": "ShinyResources.html",
+    "title": "Shiny Resources",
+    "section": "",
+    "text": "Shiny from R Studio\nLearn Shiny\nFunction reference\nThe Shiny Cheat sheet\n\n\n\n\n\nThe Past and Future of Shiny. A must view presentation.\nA new way to build your Shiny app’s UI.\nShiny Programming Practices.\nShiny UI Editor Feature Tour.\nShiny UI Editor Project Walkthrough.\nGetting Started with {shinytest2} Part I.\nGetting Started with {shinytest2} Part 2.\nGetting Started with {shinytest2} Part 3.\n\n\n\n\n\nHadley Wickham (2020) Mastering Shiny. Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.\nColin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) Engineering Production-Grade Shiny Apps\nDavid Granjon (2020) Outstanding User Interfaces with Shiny\nHow to Build a Shiny Application from Scratch\nShiny 入門\n\n\n\n\n\nGallery\nShiny Contest Winners 2019 - Full List\nShiny Contest Winners 2020\nShiny Contest Winners 2021\nFifteen New Zealand government Shiny web apps\nIntroducing the New Zealand Trade Intelligence Dashboard\nShiny for Good: R Shiny Projects with a Positive Impact"
   },
   {
     "objectID": "Syllabus.html",
@@ -292,54 +348,5 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
-  },
-  {
-    "objectID": "Quarto.html",
-    "href": "Quarto.html",
-    "title": "All About Quarto",
-    "section": "",
-    "text": "Getting Started\nRStudio IDE\nUsing R\nHTML Basics"
-  },
-  {
-    "objectID": "Quarto.html#create-websites-and-blogs",
-    "href": "Quarto.html#create-websites-and-blogs",
-    "title": "All About Quarto",
-    "section": "Create websites and blogs",
-    "text": "Create websites and blogs\n\nCreating a Website\nWebsite Navigation\nDocument Listings"
-  },
-  {
-    "objectID": "Quarto.html#authoring-guide",
-    "href": "Quarto.html#authoring-guide",
-    "title": "All About Quarto",
-    "section": "Authoring Guide",
-    "text": "Authoring Guide\n\nMarkdown Basics\nFigures\nTables\nDiagrams\nCitations & Footnotes\nCross References\nArticle Layout"
-  },
-  {
-    "objectID": "git.html",
-    "href": "git.html",
-    "title": "Git and Github",
-    "section": "",
-    "text": "Happy Git and GitHub for the useR. Highly recommended to beginners."
-  },
-  {
-    "objectID": "git.html#gitgithub",
-    "href": "git.html#gitgithub",
-    "title": "Git and Github",
-    "section": "git/github",
-    "text": "git/github\n\ngithub doc\nGitHub and RStudio"
-  },
-  {
-    "objectID": "git.html#blog-post",
-    "href": "git.html#blog-post",
-    "title": "Git and Github",
-    "section": "Blog post",
-    "text": "Blog post\n\nGetting starting with git and GitHub using RStudio\ngit\nTransform a folder as git project synchronized on Github or Gitlab\nRecovering from common Git predicaments"
-  },
-  {
-    "objectID": "ShinyResources.html",
-    "href": "ShinyResources.html",
-    "title": "Shiny Resources",
-    "section": "",
-    "text": "Shiny from R Studio\nLearn Shiny\nFunction reference\nThe Shiny Cheat sheet\n\n\n\n\n\nThe Past and Future of Shiny. A must view presentation.\nA new way to build your Shiny app’s UI.\nShiny Programming Practices.\nShiny UI Editor Feature Tour.\nShiny UI Editor Project Walkthrough.\nGetting Started with {shinytest2} Part I.\nGetting Started with {shinytest2} Part 2.\nGetting Started with {shinytest2} Part 3.\n\n\n\n\n\nHadley Wickham (2020) Mastering Shiny. Everything you need to know about Shiny can be found here. It is not an easy to read book but worth investing time and effort to read.\nColin Fay, Sébastien Rochette, Vincent Guyader, Cervan Girard (2020) Engineering Production-Grade Shiny Apps\nDavid Granjon (2020) Outstanding User Interfaces with Shiny\nHow to Build a Shiny Application from Scratch\nShiny 入門\n\n\n\n\n\nGallery\nShiny Contest Winners 2019 - Full List\nShiny Contest Winners 2020\nShiny Contest Winners 2021\nFifteen New Zealand government Shiny web apps\nIntroducing the New Zealand Trade Intelligence Dashboard\nShiny for Good: R Shiny Projects with a Positive Impact"
   }
 ]
