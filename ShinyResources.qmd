@@ -20,10 +20,12 @@ editor: visual
 
 - [The Past and Future of Shiny](https://shiny.rstudio.com/blog/the-past-and-future-of-shiny-joe-cheng.html). A must view presentation.
 - [A new way to build your Shiny app's UI](https://www.rstudio.com/conference/2022/talks/new-way-to-build-shiny/).
-- [Getting Started with {shinytest2} Part I](https://www.youtube.com/watch?v=Gucwz865aqQ&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=15)
-- [Shiny Programming Practices](https://www.youtube.com/watch?v=B2JzHv4FOTU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=5)
-- [Shiny UI Editor Feature Tour](https://www.youtube.com/watch?v=Zac1qdaYNsY&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=6)
-- [Shiny UI Editor Project Walkthrough](https://www.youtube.com/watch?v=gYPnLiudtGU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=7)
+- [Shiny Programming Practices](https://www.youtube.com/watch?v=B2JzHv4FOTU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=5).
+- [Shiny UI Editor Feature Tour](https://www.youtube.com/watch?v=Zac1qdaYNsY&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=6).
+- [Shiny UI Editor Project Walkthrough](https://www.youtube.com/watch?v=gYPnLiudtGU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=7).
+- [Getting Started with {shinytest2} Part I](https://www.youtube.com/watch?v=Gucwz865aqQ&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=15).
+- [Getting Started with {shinytest2} Part 2](https://www.youtube.com/watch?v=7KLv6HdIxvU&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=18).
+- [Getting Started with {shinytest2} Part 3](https://www.youtube.com/watch?v=xDxa_mDwN04&list=PL9HYL-VRX0oRbLoj3FyL5zeASU5FMDgVe&index=17).
 
 
 ### Books
