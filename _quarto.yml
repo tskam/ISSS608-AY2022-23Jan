@@ -34,6 +34,8 @@ website:
           href: R.html
         - text: "R tips & tricks"
           href: Rt.html
+        - text: "Quarto"
+          href: Quarto.html
     - text: "Home"
       href: index.html
 

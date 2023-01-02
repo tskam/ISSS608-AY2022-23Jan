@@ -1,0 +1,31 @@
+---
+title: "All About Quarto"
+description: |
+  This page provides links to useful R packages and references.
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Overview
+
+-   [Getting Started](https://quarto.org/docs/get-started/)
+-   [RStudio IDE](https://quarto.org/docs/tools/rstudio.html)
+-   [Using R](https://quarto.org/docs/computations/r.html)
+-   [HTML Basics](https://quarto.org/docs/output-formats/html-basics.html)
+
+## Create websites and blogs
+
+-   [Creating a Website](https://quarto.org/docs/websites/)
+-   [Website Navigation](https://quarto.org/docs/websites/website-navigation.html)
+-   [Document Listings](https://quarto.org/docs/websites/website-listings.html)
+
+## Authoring Guide
+
+-   [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
+-   [Figures](https://quarto.org/docs/authoring/figures.html)
+-   [Tables](https://quarto.org/docs/authoring/tables.html)
+-   [Diagrams](https://quarto.org/docs/authoring/diagrams.html)
+-   [Citations & Footnotes](https://quarto.org/docs/authoring/footnotes-and-citations.html)
+-   [Cross References](https://quarto.org/docs/authoring/cross-references.html)
+-   [Article Layout](https://quarto.org/docs/authoring/article-layout.html)
