@@ -14,10 +14,11 @@ editor: visual
 -   [github doc](https://docs.github.com/en)
 -   [GitHub and RStudio](https://resources.github.com/whitepapers/github-and-rstudio/)
 
-
 ## Blog post
 
 -   [Getting starting with git and GitHub using RStudio](https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html)
 -   [git](https://info5940.infosci.cornell.edu/setup/git/)
 -   [Transform a folder as git project synchronized on Github or Gitlab](https://rtask.thinkr.fr/transform-a-folder-as-git-project-synchronized-on-github-or-gitlab/)
 -   [Recovering from common Git predicaments](https://info5940.infosci.cornell.edu/notes/project-management/common-git-problems/)
+-   [git in RStudio](https://r4dsa.netlify.app/posts/2021-05-22-git-in-rstudio/)
+-   [Solving git(GitHub) token issue](https://r4dsa.netlify.app/posts/2021-05-23-git-token/)

@@ -53,7 +53,7 @@
     "href": "git.html#blog-post",
     "title": "Git and Github",
     "section": "Blog post",
-    "text": "Blog post\n\nGetting starting with git and GitHub using RStudio\ngit\nTransform a folder as git project synchronized on Github or Gitlab\nRecovering from common Git predicaments"
+    "text": "Blog post\n\nGetting starting with git and GitHub using RStudio\ngit\nTransform a folder as git project synchronized on Github or Gitlab\nRecovering from common Git predicaments\ngit in RStudio\nSolving git(GitHub) token issue"
   },
   {
     "objectID": "index.html",
@@ -348,5 +348,54 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html",
+    "href": "outline/Lesson01_outline.html",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "",
+    "text": "Course Overview\nMotivation of Visual Analytics\nWhat Visual Analytics is\nVisual Analytics in History\nIntents of Visual Analytics Applications\nVisual Analytics Techniques: basic graphical methods\nVisual Analytics Tools"
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html#lesson-slides-and-hands-on-notes",
+    "href": "outline/Lesson01_outline.html#lesson-slides-and-hands-on-notes",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "Lesson Slides and Hands-on Notes",
+    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nLesson 1 (Supplement): Choosing the Right Visualisation in html and pdf formats. \nHandout of In-class Exercise 1 in html and pdf formats."
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html#in-class-exercise",
+    "href": "outline/Lesson01_outline.html#in-class-exercise",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "In-class Exercise",
+    "text": "In-class Exercise\n\ngit in RStudio\nSolving git(GitHub) token issue\nBuilding a website with distall for RMarkdown"
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html#self-reading-before-lesson",
+    "href": "outline/Lesson01_outline.html#self-reading-before-lesson",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "Self-reading Before Lesson",
+    "text": "Self-reading Before Lesson\n\nWebinars\n\nThe best Hans Rosling talks you’ve ever seen.\nVIVA – What is Visual Analytics?\nWhy Visual Analytics\nVisual Analytics - Mastering the Information Age"
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html#readings",
+    "href": "outline/Lesson01_outline.html#readings",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "Readings",
+    "text": "Readings\n\nThomas, J.J. & Cook, K.A. (2006) “A Visual Analytics Agenda”, ‘’IEEE Computer Graphics and Applications’’, January 2006, Vol.26(1), pp.10-13\nChabot, C (2009) “Demystifying Visual Analytics”, ‘’IEEE Computer Graphics and Applications’’, March 2009, Vol.29(2), pp.84-87.\nThe 5 Most Influential Data Visualizations of All Time\nJ.J. Thomas and K.A. Cook, eds. (2005) Illuminating the Path: The Research and Development Agenda for Visual Analytics, IEEE CS Press.\nJun, Yuan et. al. (2020) “A survey of visual analytics techniques for machine learning”, Computational Visual Media. doi.org/10.1007/s41095-020-0191-7.\nCui, Wenqiang (2019) “Visual Analytics: A Comprehensive Overview”, IEEE Access."
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html#statistical-graphics-methods",
+    "href": "outline/Lesson01_outline.html#statistical-graphics-methods",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "Statistical Graphics Methods",
+    "text": "Statistical Graphics Methods\n\nBoxplot\n\nUnderstanding Boxplots\nRegina L. Nuzzo (2016) “The Box Plots Alternative for Visualizing Quantitative Data”, PR&M, Volume8, Issue3, pp. 268-272.\n\n\n\nViolin Plots\n\nViolin Plot-wikipedia\nHintze, Jerry L.; Nelson, Ray D. (1998). “Violin Plots: A Box Plot-Density Trace Synergism”. The American Statistician. 52 (2): 181–4\nViolin Plot by LondonSODA.\n\n\n\nNotched Box Plots\n\nNotched Box Plots\n\n\n\nDot Plots\n\nDot plots\nDot Plots: A Useful Alternative to Bar Charts\nThe dot plot: A graphical tool for data analysis and presentation\nLeland Wilkinson (1999) “Dot Plot”, Statistical Computing and Graphics, Vol. 53, No. 3, pp. 276-281.\n\n\n\nPie chart and Bar chart\n\nUnderstanding Pie Charts\nTracey L. Weissgerber et. al. (2015) “Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm”, PLoS Biology.\n\n\n\nRaincloud Plots\n\nAllen M, Poggiali D, Whitaker K et al. “Raincloud plots: a multi-platform tool for robust data. visualization” [version 2; peer review: 2 approved]. Welcome Open Res 2021, pp. 4:63.\n\n\n\nTrellis Display\n\nThe Visual Design and Control of Trellis Display\nTrellis display\nTrellis Displays vs. Interactive Graphics"
+  },
+  {
+    "objectID": "outline/Lesson01_outline.html#all-about-tableau",
+    "href": "outline/Lesson01_outline.html#all-about-tableau",
+    "title": "Lesson 1: Introduction to Visual Analytics",
+    "section": "All About Tableau",
+    "text": "All About Tableau\n\nThings about Tableau you must know!\n\nPolaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases\nTableau Technology\nShow Me: Automatic Presentation for Visual Analysis\nWhitepaper: Visual Analysis for Everyone\nAnalytics Best Practices in Tableau\n\n\n\nLearning Tableau\n\nGetting Started\nTableau Interface\nGetting Started with Visual Analytics\nFormatting\nThe Formatting Pane\nReference lines\nGetting Started with Data also self-learn the remaining videos under ’‘’Connecting to Data’’’\nGetting Started with Tableau Prep Builder. This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep here. You are encouraged to view all the 12 videos under ’‘’Tableau Prep’’’."
   }
 ]

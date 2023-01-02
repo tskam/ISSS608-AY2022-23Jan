@@ -1,0 +1,109 @@
+---
+title: "Lesson 1: Introduction to Visual Analytics"
+description: " "
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Content
+
+-   Course Overview
+-   Motivation of Visual Analytics
+-   What Visual Analytics is
+-   Visual Analytics in History
+-   Intents of Visual Analytics Applications
+-   Visual Analytics Techniques: basic graphical methods
+-   Visual Analytics Tools
+
+## Lesson Slides and Hands-on Notes
+
+-   Lesson slides in [html](../lesson/Lesson01/Lesson01-Intro_to_VAA.html) and [pdf](../lesson/Lesson01/Lesson01-Intro_to_VAA.pdf) formats
+
+-   Lesson 1 (Supplement): Choosing the Right Visualisation in [html](../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.html) and [pdf](../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.pdf) formats. ![](img/new1.jpg)
+
+-   Handout of In-class Exercise 1 in [html](../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html) and [pdf](../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.pdf) formats.
+
+## In-class Exercise
+
+-   [git in RStudio](https://r4dsa.netlify.app/posts/2021-05-22-git-in-rstudio/)
+-   [Solving git(GitHub) token issue](https://r4dsa.netlify.app/posts/2021-05-23-git-token/)
+-   [Building a website with distall for RMarkdown](https://r4dsa.netlify.app/posts/2022-01-06-building-a-website-with-distall-for-rmarkdown/)
+
+## Self-reading Before Lesson
+
+### Webinars
+
+-   [The best Hans Rosling talks you've ever seen](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?referrer=playlist-the_best_hans_rosling_talks_yo).
+-   [VIVA -- What is Visual Analytics?](https://www.youtube.com/watch?v=LYKO_6KPZCM/)
+-   [Why Visual Analytics](https://www.youtube.com/watch?v=5uGRGqCFryg/)
+-   [Visual Analytics - Mastering the Information Age](https://www.youtube.com/watch?v=5i3xbitEVfs/)
+
+## Readings
+
+-   Thomas, J.J. & Cook, K.A. (2006) "[A Visual Analytics Agenda](https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2006/01/mcg2006010010/13rRUxBa5ej)", ''IEEE Computer Graphics and Applications'', January 2006, Vol.26(1), pp.10-13
+-   Chabot, C (2009) "[Demystifying Visual Analytics](https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z)", ''IEEE Computer Graphics and Applications'', March 2009, Vol.29(2), pp.84-87.
+-   [The 5 Most Influential Data Visualizations of All Time](https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf)
+-   J.J. Thomas and K.A. Cook, eds. (2005) [Illuminating the Path: The Research and Development Agenda for Visual Analytics](https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf), IEEE CS Press.
+-   Jun, Yuan et. al. (2020) "A survey of visual analytics techniques for machine learning", *Computational Visual Media*. [doi.org/10.1007/s41095-020-0191-7](https://doi.org/10.1007/s41095-020-0191-7). 
+-   Cui, Wenqiang (2019) "[Visual Analytics: A Comprehensive Overview](https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2)", IEEE Access. 
+
+## Statistical Graphics Methods
+
+### Boxplot
+
+-   [Understanding Boxplots](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)
+-   Regina L. Nuzzo (2016) ["The Box Plots Alternative for Visualizing Quantitative Data"](https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001), *PR&M*, Volume8, Issue3, pp. 268-272. 
+
+### Violin Plots
+
+-   [Violin Plot-wikipedia](https://en.wikipedia.org/wiki/Violin_plot)
+-   Hintze, Jerry L.; Nelson, Ray D. (1998). "[Violin Plots: A Box Plot-Density Trace Synergism](https://search.proquest.com/openview/dcd68eb137d2d6b08aa23f37e34e0b01/1?pq-origsite=gscholar)". *The American Statistician*. 52 (2): 181--4
+-   [Violin Plot](https://www.londonsoda.com/articles/violin-plots) by LondonSODA. 
+
+### Notched Box Plots
+
+-   [Notched Box Plots](https://sites.google.com/site/davidsstatistics/davids-statistics/notched-box-plots)
+
+### Dot Plots
+
+-   [Dot plots](https://search-proquest-com.libproxy.smu.edu.sg/docview/228429978?rfr_id=info%3Axri%2Fsid%3Aprimo)
+-   [Dot Plots: A Useful Alternative to Bar Charts](http://www.b-eye-network.com/view/2468)
+-   [The dot plot: A graphical tool for data analysis and presentation](https://d-nb.info/1151959243/34)
+-   Leland Wilkinson (1999) ["Dot Plot"](http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf), *Statistical Computing and Graphics*, Vol. 53, No. 3, pp. 276-281. 
+
+### Pie chart and Bar chart
+
+-   [Understanding Pie Charts](https://eagereyes.org/techniques/pie-charts)
+-   Tracey L. Weissgerber et. al. (2015) ["Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm"](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128), *PLoS Biology*. 
+
+### Raincloud Plots
+
+-   Allen M, Poggiali D, Whitaker K et al. ["Raincloud plots: a multi-platform tool for robust data. visualization"](https://wellcomeopenresearch.org/articles/4-63) \[version 2; peer review: 2 approved\]. *Welcome Open Res* 2021, pp. 4:63.
+
+### Trellis Display
+
+-   [The Visual Design and Control of Trellis Display](https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents)
+-   [Trellis display](https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1002/wics.121)
+-   [Trellis Displays vs. Interactive Graphics](https://www.researchgate.net/publication/2671674_Trellis_Displays_vs_Interactive_Graphics)
+
+## All About Tableau
+
+### Things about Tableau you must know!
+
+-   [Polaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases](https://graphics.stanford.edu/papers/polaris_extended/polaris.pdf)
+-   [Tableau Technology](https://www.tableau.com/products/technology)
+-   [Show Me: Automatic Presentation for Visual Analysis](https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf)
+-   [Whitepaper: Visual Analysis for Everyone](https://www.tableau.com/sites/default/files/whitepapers/TS_WP_VA_F2_new_temp_0.pdf)
+-   [Analytics Best Practices in Tableau](https://help.tableau.com/current/blueprint/en-us/bp_analytics_best_practices_in_tableau.htm)
+
+### Learning Tableau
+
+-   [Getting Started](https://www.tableau.com/learn/tutorials/on-demand/getting-started)
+-   [Tableau Interface](http://www.tableau.com/learn/tutorials/on-demand/tableau-interface)
+-   [Getting Started with Visual Analytics](https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics)
+-   [Formatting](https://www.tableau.com/learn/tutorials/on-demand/formatting)
+-   [The Formatting Pane](https://www.tableau.com/learn/tutorials/on-demand/formatting-pane)
+-   [Reference lines](https://www.tableau.com/learn/tutorials/on-demand/reference-lines)
+-   [Getting Started with Data](https://www.tableau.com/learn/tutorials/on-demand/getting-started-data) also self-learn the remaining videos under '''Connecting to Data'''
+-   [Getting Started with Tableau Prep Builder](https://www.tableau.com/learn/tutorials/on-demand/getting-started-tableau-prep). This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep [here](https://www.tableau.com/about/blog/2018/3/tableau-prep-project-maestro-here-redefining-your-data-prep-experience-84620). You are encouraged to view all the 12 videos under '''Tableau Prep'''.

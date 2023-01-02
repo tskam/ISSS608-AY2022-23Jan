@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-01-02">
+
+<title>ISSS608 - Lesson 1: Introduction to Visual Analytics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ISSS608</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lesson.html">
+ <span class="menu-text">Lesson Plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../DataViz.html">
+ <span class="menu-text">DataViz Makeover</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../take-home.html">
+ <span class="menu-text">Take-home Exercise</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../VAproject.html">
+ <span class="menu-text">Visual Analytics Project</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-shiny-workshop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Shiny Workshop</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-shiny-workshop">    
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny1/Shiny1.html">
+ <span class="dropdown-text">R Shiny basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny2/Shiny2.html">
+ <span class="dropdown-text">Beyond the basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny3/Shiny3.html">
+ <span class="dropdown-text">Customising Shiny</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyResources.html">
+ <span class="dropdown-text">Shiny Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../Tableau.html">
+ <span class="menu-text">Tableau Resources</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-about-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All About R</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-all-about-r">    
+        <li>
+    <a class="dropdown-item" href="../R.html">
+ <span class="dropdown-text">R Resouces</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Rt.html">
+ <span class="dropdown-text">R tips &amp; tricks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Quarto.html">
+ <span class="dropdown-text">Quarto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../git.html">
+ <span class="dropdown-text">git and github</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#content" id="toc-content" class="nav-link active" data-scroll-target="#content">Content</a></li>
+  <li><a href="#lesson-slides-and-hands-on-notes" id="toc-lesson-slides-and-hands-on-notes" class="nav-link" data-scroll-target="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
+  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise">In-class Exercise</a></li>
+  <li><a href="#self-reading-before-lesson" id="toc-self-reading-before-lesson" class="nav-link" data-scroll-target="#self-reading-before-lesson">Self-reading Before Lesson</a>
+  <ul class="collapse">
+  <li><a href="#webinars" id="toc-webinars" class="nav-link" data-scroll-target="#webinars">Webinars</a></li>
+  </ul></li>
+  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
+  <li><a href="#statistical-graphics-methods" id="toc-statistical-graphics-methods" class="nav-link" data-scroll-target="#statistical-graphics-methods">Statistical Graphics Methods</a>
+  <ul class="collapse">
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
+  <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots">Violin Plots</a></li>
+  <li><a href="#notched-box-plots" id="toc-notched-box-plots" class="nav-link" data-scroll-target="#notched-box-plots">Notched Box Plots</a></li>
+  <li><a href="#dot-plots" id="toc-dot-plots" class="nav-link" data-scroll-target="#dot-plots">Dot Plots</a></li>
+  <li><a href="#pie-chart-and-bar-chart" id="toc-pie-chart-and-bar-chart" class="nav-link" data-scroll-target="#pie-chart-and-bar-chart">Pie chart and Bar chart</a></li>
+  <li><a href="#raincloud-plots" id="toc-raincloud-plots" class="nav-link" data-scroll-target="#raincloud-plots">Raincloud Plots</a></li>
+  <li><a href="#trellis-display" id="toc-trellis-display" class="nav-link" data-scroll-target="#trellis-display">Trellis Display</a></li>
+  </ul></li>
+  <li><a href="#all-about-tableau" id="toc-all-about-tableau" class="nav-link" data-scroll-target="#all-about-tableau">All About Tableau</a>
+  <ul class="collapse">
+  <li><a href="#things-about-tableau-you-must-know" id="toc-things-about-tableau-you-must-know" class="nav-link" data-scroll-target="#things-about-tableau-you-must-know">Things about Tableau you must know!</a></li>
+  <li><a href="#learning-tableau" id="toc-learning-tableau" class="nav-link" data-scroll-target="#learning-tableau">Learning Tableau</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lesson 1: Introduction to Visual Analytics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 2, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="content" class="level2">
+<h2 class="anchored" data-anchor-id="content">Content</h2>
+<ul>
+<li>Course Overview</li>
+<li>Motivation of Visual Analytics</li>
+<li>What Visual Analytics is</li>
+<li>Visual Analytics in History</li>
+<li>Intents of Visual Analytics Applications</li>
+<li>Visual Analytics Techniques: basic graphical methods</li>
+<li>Visual Analytics Tools</li>
+</ul>
+</section>
+<section id="lesson-slides-and-hands-on-notes" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
+<ul>
+<li><p>Lesson slides in <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.html">html</a> and <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.pdf">pdf</a> formats</p></li>
+<li><p>Lesson 1 (Supplement): Choosing the Right Visualisation in <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.html">html</a> and <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.pdf">pdf</a> formats. <img src="img/new1.jpg" class="img-fluid"></p></li>
+<li><p>Handout of In-class Exercise 1 in <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.pdf">pdf</a> formats.</p></li>
+</ul>
+</section>
+<section id="in-class-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-exercise">In-class Exercise</h2>
+<ul>
+<li><a href="https://r4dsa.netlify.app/posts/2021-05-22-git-in-rstudio/">git in RStudio</a></li>
+<li><a href="https://r4dsa.netlify.app/posts/2021-05-23-git-token/">Solving git(GitHub) token issue</a></li>
+<li><a href="https://r4dsa.netlify.app/posts/2022-01-06-building-a-website-with-distall-for-rmarkdown/">Building a website with distall for RMarkdown</a></li>
+</ul>
+</section>
+<section id="self-reading-before-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="self-reading-before-lesson">Self-reading Before Lesson</h2>
+<section id="webinars" class="level3">
+<h3 class="anchored" data-anchor-id="webinars">Webinars</h3>
+<ul>
+<li><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?referrer=playlist-the_best_hans_rosling_talks_yo">The best Hans Rosling talks you’ve ever seen</a>.</li>
+<li><a href="https://www.youtube.com/watch?v=LYKO_6KPZCM/">VIVA – What is Visual Analytics?</a></li>
+<li><a href="https://www.youtube.com/watch?v=5uGRGqCFryg/">Why Visual Analytics</a></li>
+<li><a href="https://www.youtube.com/watch?v=5i3xbitEVfs/">Visual Analytics - Mastering the Information Age</a></li>
+</ul>
+</section>
+</section>
+<section id="readings" class="level2">
+<h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<ul>
+<li>Thomas, J.J. &amp; Cook, K.A. (2006) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2006/01/mcg2006010010/13rRUxBa5ej">A Visual Analytics Agenda</a>”, ‘’IEEE Computer Graphics and Applications’’, January 2006, Vol.26(1), pp.10-13</li>
+<li>Chabot, C (2009) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z">Demystifying Visual Analytics</a>”, ‘’IEEE Computer Graphics and Applications’’, March 2009, Vol.29(2), pp.84-87.</li>
+<li><a href="https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf">The 5 Most Influential Data Visualizations of All Time</a></li>
+<li>J.J. Thomas and K.A. Cook, eds.&nbsp;(2005) <a href="https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf">Illuminating the Path: The Research and Development Agenda for Visual Analytics</a>, IEEE CS Press.</li>
+<li>Jun, Yuan et. al.&nbsp;(2020) “A survey of visual analytics techniques for machine learning”, <em>Computational Visual Media</em>. <a href="https://doi.org/10.1007/s41095-020-0191-7">doi.org/10.1007/s41095-020-0191-7</a>.</li>
+<li>Cui, Wenqiang (2019) “<a href="https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2">Visual Analytics: A Comprehensive Overview</a>”, IEEE Access.</li>
+</ul>
+</section>
+<section id="statistical-graphics-methods" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-graphics-methods">Statistical Graphics Methods</h2>
+<section id="boxplot" class="level3">
+<h3 class="anchored" data-anchor-id="boxplot">Boxplot</h3>
+<ul>
+<li><a href="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51">Understanding Boxplots</a></li>
+<li>Regina L. Nuzzo (2016) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001">“The Box Plots Alternative for Visualizing Quantitative Data”</a>, <em>PR&amp;M</em>, Volume8, Issue3, pp.&nbsp;268-272.</li>
+</ul>
+</section>
+<section id="violin-plots" class="level3">
+<h3 class="anchored" data-anchor-id="violin-plots">Violin Plots</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Violin_plot">Violin Plot-wikipedia</a></li>
+<li>Hintze, Jerry L.; Nelson, Ray D. (1998). “<a href="https://search.proquest.com/openview/dcd68eb137d2d6b08aa23f37e34e0b01/1?pq-origsite=gscholar">Violin Plots: A Box Plot-Density Trace Synergism</a>”. <em>The American Statistician</em>. 52 (2): 181–4</li>
+<li><a href="https://www.londonsoda.com/articles/violin-plots">Violin Plot</a> by LondonSODA.</li>
+</ul>
+</section>
+<section id="notched-box-plots" class="level3">
+<h3 class="anchored" data-anchor-id="notched-box-plots">Notched Box Plots</h3>
+<ul>
+<li><a href="https://sites.google.com/site/davidsstatistics/davids-statistics/notched-box-plots">Notched Box Plots</a></li>
+</ul>
+</section>
+<section id="dot-plots" class="level3">
+<h3 class="anchored" data-anchor-id="dot-plots">Dot Plots</h3>
+<ul>
+<li><a href="https://search-proquest-com.libproxy.smu.edu.sg/docview/228429978?rfr_id=info%3Axri%2Fsid%3Aprimo">Dot plots</a></li>
+<li><a href="http://www.b-eye-network.com/view/2468">Dot Plots: A Useful Alternative to Bar Charts</a></li>
+<li><a href="https://d-nb.info/1151959243/34">The dot plot: A graphical tool for data analysis and presentation</a></li>
+<li>Leland Wilkinson (1999) <a href="http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf">“Dot Plot”</a>, <em>Statistical Computing and Graphics</em>, Vol. 53, No.&nbsp;3, pp.&nbsp;276-281.</li>
+</ul>
+</section>
+<section id="pie-chart-and-bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="pie-chart-and-bar-chart">Pie chart and Bar chart</h3>
+<ul>
+<li><a href="https://eagereyes.org/techniques/pie-charts">Understanding Pie Charts</a></li>
+<li>Tracey L. Weissgerber et. al.&nbsp;(2015) <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128">“Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm”</a>, <em>PLoS Biology</em>.</li>
+</ul>
+</section>
+<section id="raincloud-plots" class="level3">
+<h3 class="anchored" data-anchor-id="raincloud-plots">Raincloud Plots</h3>
+<ul>
+<li>Allen M, Poggiali D, Whitaker K et al.&nbsp;<a href="https://wellcomeopenresearch.org/articles/4-63">“Raincloud plots: a multi-platform tool for robust data. visualization”</a> [version 2; peer review: 2 approved]. <em>Welcome Open Res</em> 2021, pp.&nbsp;4:63.</li>
+</ul>
+</section>
+<section id="trellis-display" class="level3">
+<h3 class="anchored" data-anchor-id="trellis-display">Trellis Display</h3>
+<ul>
+<li><a href="https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents">The Visual Design and Control of Trellis Display</a></li>
+<li><a href="https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1002/wics.121">Trellis display</a></li>
+<li><a href="https://www.researchgate.net/publication/2671674_Trellis_Displays_vs_Interactive_Graphics">Trellis Displays vs.&nbsp;Interactive Graphics</a></li>
+</ul>
+</section>
+</section>
+<section id="all-about-tableau" class="level2">
+<h2 class="anchored" data-anchor-id="all-about-tableau">All About Tableau</h2>
+<section id="things-about-tableau-you-must-know" class="level3">
+<h3 class="anchored" data-anchor-id="things-about-tableau-you-must-know">Things about Tableau you must know!</h3>
+<ul>
+<li><a href="https://graphics.stanford.edu/papers/polaris_extended/polaris.pdf">Polaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases</a></li>
+<li><a href="https://www.tableau.com/products/technology">Tableau Technology</a></li>
+<li><a href="https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf">Show Me: Automatic Presentation for Visual Analysis</a></li>
+<li><a href="https://www.tableau.com/sites/default/files/whitepapers/TS_WP_VA_F2_new_temp_0.pdf">Whitepaper: Visual Analysis for Everyone</a></li>
+<li><a href="https://help.tableau.com/current/blueprint/en-us/bp_analytics_best_practices_in_tableau.htm">Analytics Best Practices in Tableau</a></li>
+</ul>
+</section>
+<section id="learning-tableau" class="level3">
+<h3 class="anchored" data-anchor-id="learning-tableau">Learning Tableau</h3>
+<ul>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started">Getting Started</a></li>
+<li><a href="http://www.tableau.com/learn/tutorials/on-demand/tableau-interface">Tableau Interface</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics">Getting Started with Visual Analytics</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting">Formatting</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting-pane">The Formatting Pane</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/reference-lines">Reference lines</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-data">Getting Started with Data</a> also self-learn the remaining videos under ’‘’Connecting to Data’’’</li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-tableau-prep">Getting Started with Tableau Prep Builder</a>. This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep <a href="https://www.tableau.com/about/blog/2018/3/tableau-prep-project-maestro-here-redefining-your-data-prep-experience-84620">here</a>. You are encouraged to view all the 12 videos under ’‘’Tableau Prep’’’.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
