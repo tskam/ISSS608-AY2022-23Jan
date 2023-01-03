@@ -18,7 +18,7 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson01/Lesson01-Intro_to_VAA.html) and [pdf](../lesson/Lesson01/Lesson01-Intro_to_VAA.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson01/Lesson01-VAA.html) and [pdf](../lesson/Lesson01/Lesson01-VAA.pdf) formats
 
 -   Lesson 1 (Supplement): Choosing the Right Visualisation in [html](../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.html) and [pdf](../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.pdf) formats. ![](img/new1.jpg)
 
@@ -28,11 +28,9 @@ editor: visual
 
 By the end of this lesson, you will gain hands-on experience on:
 
-
 -   creating the course website by using Quarto and RStudio,
 -   managing the website by using git/github by using RStudio
--   publishing the website onto Netlify server 
-
+-   publishing the website onto Netlify server
 
 ## Self-reading Before Lesson
 
@@ -49,21 +47,21 @@ By the end of this lesson, you will gain hands-on experience on:
 -   Chabot, C (2009) "[Demystifying Visual Analytics](https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z)", ''IEEE Computer Graphics and Applications'', March 2009, Vol.29(2), pp.84-87.
 -   [The 5 Most Influential Data Visualizations of All Time](https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf)
 -   J.J. Thomas and K.A. Cook, eds. (2005) [Illuminating the Path: The Research and Development Agenda for Visual Analytics](https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf), IEEE CS Press.
--   Jun, Yuan et. al. (2020) "A survey of visual analytics techniques for machine learning", *Computational Visual Media*. [doi.org/10.1007/s41095-020-0191-7](https://doi.org/10.1007/s41095-020-0191-7). 
--   Cui, Wenqiang (2019) "[Visual Analytics: A Comprehensive Overview](https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2)", IEEE Access. 
+-   Jun, Yuan et. al. (2020) "A survey of visual analytics techniques for machine learning", *Computational Visual Media*. [doi.org/10.1007/s41095-020-0191-7](https://doi.org/10.1007/s41095-020-0191-7).
+-   Cui, Wenqiang (2019) "[Visual Analytics: A Comprehensive Overview](https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2)", IEEE Access.
 
 ## Statistical Graphics Methods
 
 ### Boxplot
 
 -   [Understanding Boxplots](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)
--   Regina L. Nuzzo (2016) ["The Box Plots Alternative for Visualizing Quantitative Data"](https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001), *PR&M*, Volume8, Issue3, pp. 268-272. 
+-   Regina L. Nuzzo (2016) ["The Box Plots Alternative for Visualizing Quantitative Data"](https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001), *PR&M*, Volume8, Issue3, pp. 268-272.
 
 ### Violin Plots
 
 -   [Violin Plot-wikipedia](https://en.wikipedia.org/wiki/Violin_plot)
 -   Hintze, Jerry L.; Nelson, Ray D. (1998). "[Violin Plots: A Box Plot-Density Trace Synergism](https://search.proquest.com/openview/dcd68eb137d2d6b08aa23f37e34e0b01/1?pq-origsite=gscholar)". *The American Statistician*. 52 (2): 181--4
--   [Violin Plot](https://www.londonsoda.com/articles/violin-plots) by LondonSODA. 
+-   [Violin Plot](https://www.londonsoda.com/articles/violin-plots) by LondonSODA.
 
 ### Notched Box Plots
 
@@ -74,12 +72,12 @@ By the end of this lesson, you will gain hands-on experience on:
 -   [Dot plots](https://search-proquest-com.libproxy.smu.edu.sg/docview/228429978?rfr_id=info%3Axri%2Fsid%3Aprimo)
 -   [Dot Plots: A Useful Alternative to Bar Charts](http://www.b-eye-network.com/view/2468)
 -   [The dot plot: A graphical tool for data analysis and presentation](https://d-nb.info/1151959243/34)
--   Leland Wilkinson (1999) ["Dot Plot"](http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf), *Statistical Computing and Graphics*, Vol. 53, No. 3, pp. 276-281. 
+-   Leland Wilkinson (1999) ["Dot Plot"](http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf), *Statistical Computing and Graphics*, Vol. 53, No. 3, pp. 276-281.
 
 ### Pie chart and Bar chart
 
 -   [Understanding Pie Charts](https://eagereyes.org/techniques/pie-charts)
--   Tracey L. Weissgerber et. al. (2015) ["Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm"](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128), *PLoS Biology*. 
+-   Tracey L. Weissgerber et. al. (2015) ["Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm"](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128), *PLoS Biology*.
 
 ### Raincloud Plots
 
