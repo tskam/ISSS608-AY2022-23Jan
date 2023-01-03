@@ -1,0 +1,15 @@
+---
+title: "Lesson 1 <br/>Introduction to Visual Analytics and Applications "
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems (Practice)"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    show-notes: true
+    slide-number: true
+    show-slide-number: 'all'
+date-format: "DD MMM YYYY"    
+editor: visual
+---
