@@ -26,9 +26,13 @@ editor: visual
 
 ## In-class Exercise
 
--   [git in RStudio](https://r4dsa.netlify.app/posts/2021-05-22-git-in-rstudio/)
--   [Solving git(GitHub) token issue](https://r4dsa.netlify.app/posts/2021-05-23-git-token/)
--   [Building a website with distall for RMarkdown](https://r4dsa.netlify.app/posts/2022-01-06-building-a-website-with-distall-for-rmarkdown/)
+By the end of this lesson, you will gain hands-on experience on:
+
+
+-   creating the course website by using Quarto and RStudio,
+-   managing the website by using git/github by using RStudio
+-   publishing the website onto Netlify server 
+
 
 ## Self-reading Before Lesson
 

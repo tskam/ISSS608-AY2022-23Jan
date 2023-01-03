@@ -1,0 +1,70 @@
+---
+title: "Lesson 4: Fundamentals of Visual Analytics"
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+## Lesson Outline
+
+-   Visual Analytics for Knowledge Discovery
+-   Visual Analytics Approach for Statistical Testing
+-   Visual Analytics for Building Better Models
+-   Visualising Uncertainty
+    -   Why Visualising Uncertainty?
+    -   Basic Statistical Concepts Related to Uncertainty
+    -   Univariate Graphical Methods for Visualising Uncertainty
+        -   Error bars
+        -   Confidence strips
+        -   Ridge plot
+    -   Bivariate Graphical Methods for Visualising Uncertainty
+        -   Funnel plot
+-   Variation and Its Discontents
+
+## Lesson Slides and Hands-on Notes
+
+-   Lesson slides in [html](../lesson/Lesson04/Lesson04-Fundamentals_of_Visual_Analytics.html) and [pdf](../lesson/Lesson04/Lesson04-Fundamentals_of_Visual_Analytics.pdf) formats
+
+-   Handout of Hands-on Exercise 4
+
+    -   [Hands-on Exercise 4](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04.html).
+    -   [Hands-on Exercise 4: Building Funnel Plot with R](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-FunnelPlot.html)
+
+## Readings on Visualising Uncertainty
+
+-   [Why It's So Hard for Us to Visualize Uncertainty](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty)
+-   [Visualizing the Uncertainty in Data](https://flowingdata.com/2018/01/08/visualizing-the-uncertainty-in-data/)
+-   [Uncertainty + Visualization, Explained](https://medium.com/multiple-views-visualization-research-explained/uncertainty-visualization-explained-67e7a73f031b)
+
+### Error Plots
+
+-   [Error bar](https://en.wikipedia.org/wiki/Error_bar)
+
+### Funnel Plots
+
+-   [Variation and Its Discontents: Funnel Plots for Fair Comparisons](https://www.perceptualedge.com/articles/visual_business_intelligence/variation_and_its_discontents.pdf)
+-   [What are the chances of successful fertility treatment?](https://understandinguncertainty.org/fertility)
+-   [Three-fold variation in UK bowel cancer death rates(?)](https://understandinguncertainty.org/three-fold-variation-uk-bowel-cancer-death-rates)
+-   [Using funnel plots in public health surveillance](https://pophealthmetrics.biomedcentral.com/articles/10.1186/1478-7954-9-58)
+-   [Graph Makeover: Where same-sex couples live in the US](https://community.jmp.com/t5/JMP-Blog/Graph-Makeover-Where-same-sex-couples-live-in-the-US/ba-p/30616)
+-   [Using maps and funnel plots to explore variation in place of death from cancer within London, 2002--2007](https://pdfs.semanticscholar.org/516b/afaccbd9b9bf82c9afdf507121f1a52e3093.pdf)
+
+## All About Tableau
+
+### Visualising Uncertainty
+
+-   [Showing uncertainty in survey results](https://www.datarevelations.com/showing-uncertainty.html)
+-   [Not a funnel cake, nor funnel charts, it's funnel plots!](http://drawingwithnumbers.artisart.org/?s=Not+a+funnel+cake)
+-   [Funnel Plot in Tableau](https://www.youtube.com/watch?v=HgYzplb5XAU)
+-   [Creating Error Bars or CI Bars](https://kb.tableau.com/articles/howto/creating-error-bars)
+-   [Standard errors and confidence intervals in Tableau](https://www.theinformationlab.co.uk/2019/10/25/standard-errors-and-confidence-intervals-in-tableau/)
+
+## All about R
+
+-   [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/): An extension of **ggplot2** package for creating statistical graphics with details from statistical tests.
+
+-   [**ggdist**](https://mjskay.github.io/ggdist/index.html): An R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualising distributions and uncertainty.
+
+-   [performance](https://easystats.github.io/performance/): An R package provides utilities for computing indices of model quality and goodness of fit including provides many functions to check model assumptions visually.
+
+-   [infer](https://infer.netlify.app/index.html): An R package specially designed to perform statistical inference using an expressive statistical grammar that coheres with the tidyverse design framework. The library also includes functions for visualising the distribution of the simulation-based inferential statistics or the theoretical distribution (or both).

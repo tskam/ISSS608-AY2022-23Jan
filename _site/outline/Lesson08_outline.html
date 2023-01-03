@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-01-03">
+
+<title>ISSS608 - Lesswon 8: Network Data Visualisation and Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ISSS608</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lesson.html">
+ <span class="menu-text">Lesson Plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../DataViz.html">
+ <span class="menu-text">DataViz Makeover</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../take-home.html">
+ <span class="menu-text">Take-home Exercise</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../VAproject.html">
+ <span class="menu-text">Visual Analytics Project</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-shiny-workshop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Shiny Workshop</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-shiny-workshop">    
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny1/Shiny1.html">
+ <span class="dropdown-text">R Shiny basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny2/Shiny2.html">
+ <span class="dropdown-text">Beyond the basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny3/Shiny3.html">
+ <span class="dropdown-text">Customising Shiny</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyResources.html">
+ <span class="dropdown-text">Shiny Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../Tableau.html">
+ <span class="menu-text">Tableau Resources</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-about-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All About R</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-all-about-r">    
+        <li>
+    <a class="dropdown-item" href="../R.html">
+ <span class="dropdown-text">R Resouces</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Rt.html">
+ <span class="dropdown-text">R tips &amp; tricks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Quarto.html">
+ <span class="dropdown-text">Quarto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../git.html">
+ <span class="dropdown-text">git and github</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#content" id="toc-content" class="nav-link active" data-scroll-target="#content">Content</a></li>
+  <li><a href="#lesson-slides-and-hands-on-notes" id="toc-lesson-slides-and-hands-on-notes" class="nav-link" data-scroll-target="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
+  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
+  <li><a href="#all-about-r" id="toc-all-about-r" class="nav-link" data-scroll-target="#all-about-r">All About R</a>
+  <ul class="collapse">
+  <li><a href="#wrangling-network-data" id="toc-wrangling-network-data" class="nav-link" data-scroll-target="#wrangling-network-data">Wrangling Network Data</a></li>
+  <li><a href="#visualisation-and-analysis" id="toc-visualisation-and-analysis" class="nav-link" data-scroll-target="#visualisation-and-analysis">Visualisation and Analysis</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lesswon 8: Network Data Visualisation and Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 3, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="content" class="level2">
+<h2 class="anchored" data-anchor-id="content">Content</h2>
+<ul>
+<li>Introduction to Graph Data Visualisation
+<ul>
+<li>Basic principles of network graph</li>
+<li>Graph data visualisation in actions</li>
+</ul></li>
+<li>Network Graph Data
+<ul>
+<li>Network data sets</li>
+<li>Graph data format</li>
+<li>Graph Database</li>
+</ul></li>
+<li>Network Graph Visualisation Tools</li>
+<li>Designer toolkit
+<ul>
+<li>Gephi</li>
+</ul></li>
+<li>Programmer toolkit
+<ul>
+<li>R packages</li>
+</ul></li>
+<li>Graph layouts
+<ul>
+<li>Node-and-link layouts</li>
+<li>Force-directed layout</li>
+<li>Node-only layout</li>
+<li>Adjacency matrix</li>
+</ul></li>
+<li>Visual Attributes
+<ul>
+<li>Key node attributes</li>
+<li>Key edge attributes</li>
+<li>Bundles, shapes, images, and more</li>
+</ul></li>
+<li>Visual Analysis of Network Graphs
+<ul>
+<li>Relationships</li>
+<li>Hierarchies</li>
+<li>Communities</li>
+</ul></li>
+<li>Flows</li>
+<li>Spatial networks</li>
+</ul>
+</section>
+<section id="lesson-slides-and-hands-on-notes" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
+<ul>
+<li><p>Lesson slides in <a href="../lesson/Lesson08/Lesson08-NetworkVA.html">html</a> and <a href="../lesson/Lesson08/Lesson08-NetworkVA.pdf">pdf</a> formats</p></li>
+<li><p>Handout of Hands-on Exercise 8 in <a href="../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.pdf">pdf</a> formats.</p></li>
+</ul>
+</section>
+<section id="readings" class="level2">
+<h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<ul>
+<li><a href="https://hal.archives-ouvertes.fr/hal-00828795/document">Visual Analysis of Complex Networks for Business Intelligence with Gephi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Graph_drawing">Graph Drawing</a></li>
+<li><a href="https://www.cs.umd.edu/users/ben/papers/Wong2011Graph.pdf">Graph Analytics - Lesson Learned and Challenges Ahead</a></li>
+<li><a href="http://noduslabs.com/cases/learn-read-interpret-network-graphs-data-visualization/">Learning to Read and Interpret Network Graph Data Visualizations</a></li>
+<li><a href="http://www.vismaster.eu/news/von/">The Visualization of Networks</a></li>
+<li><a href="http://hci.stanford.edu/jheer/projects/vizster/early_design/">ViZster: Visualizing Online Social Networks</a></li>
+<li>Adam Perer. <a href="http://perer.org/papers/adamPerer-BV_ch10.pdf">“Finding Beautiful Insights in the Chaos of Social Network Visualizations”</a>. In ’‘’Beautiful Visualization’’’. O’Reilly Press.</li>
+<li><a href="http://www.visualcomplexity.com/vc/">Visual Complexity</a></li>
+</ul>
+</section>
+<section id="all-about-r" class="level2">
+<h2 class="anchored" data-anchor-id="all-about-r">All About R</h2>
+<section id="wrangling-network-data" class="level3">
+<h3 class="anchored" data-anchor-id="wrangling-network-data">Wrangling Network Data</h3>
+<ul>
+<li><a href="https://www.data-imaginist.com/2017/introducing-tidygraph/%20Introducing">tidygraph</a></li>
+<li><a href="https://www.data-imaginist.com/2018/tidygraph-1-1-a-tidy-hope/">tidygraph 1.1 – A tidy hope</a></li>
+<li><a href="https://tidygraph.data-imaginist.com/">tidygraph</a></li>
+</ul>
+</section>
+<section id="visualisation-and-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="visualisation-and-analysis">Visualisation and Analysis</h3>
+<p><strong>ggraph</strong></p>
+<ul>
+<li><a href="https://ggraph.data-imaginist.com/">ggraph</a></li>
+<li><a href="https://www.data-imaginist.com/2017/announcing-ggraph/">Announcing ggraph</a></li>
+<li><a href="https://www.data-imaginist.com/2019/1-giraffe-2-giraffe-go/">1 giraffe, 2 giraffe, GO!</a></li>
+<li><a href="https://ggraph.data-imaginist.com/articles/Layouts.html">Layouts</a></li>
+<li><a href="https://ggraph.data-imaginist.com/articles/Nodes.html">Nodes</a></li>
+<li><a href="https://ggraph.data-imaginist.com/articles/Edges.html">Edges</a></li>
+<li><a href="https://ggraph.data-imaginist.com/articles/tidygraph.html">tidygraph and ggraph</a></li>
+</ul>
+<p><strong>vizNetwork</strong></p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/visNetwork/index.html">visNetwork: Network Visualization using ‘vis.js’ Library</a></li>
+<li><a href="https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html">Introduction to visNetwork</a></li>
+<li><a href="http://datastorm-open.github.io/visNetwork/">visNetwork, an R package for interactive network visualization</a></li>
+</ul>
+<p><strong>Circular Plot</strong></p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize: circular visualization in R</a></li>
+<li><a href="https://jokergoo.github.io/circlize_book/book/">Circular Visualization in R</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

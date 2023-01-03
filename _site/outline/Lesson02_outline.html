@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-01-03">
 
-<title>ISSS608 - Lesson 1: Introduction to Visual Analytics</title>
+<title>ISSS608 - Lesson 2: Designing Graphs to Enlighten</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -174,26 +174,23 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#content" id="toc-content" class="nav-link active" data-scroll-target="#content">Content</a></li>
   <li><a href="#lesson-slides-and-hands-on-notes" id="toc-lesson-slides-and-hands-on-notes" class="nav-link" data-scroll-target="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
-  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise">In-class Exercise</a></li>
-  <li><a href="#self-reading-before-lesson" id="toc-self-reading-before-lesson" class="nav-link" data-scroll-target="#self-reading-before-lesson">Self-reading Before Lesson</a>
+  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a>
   <ul class="collapse">
-  <li><a href="#webinars" id="toc-webinars" class="nav-link" data-scroll-target="#webinars">Webinars</a></li>
+  <li><a href="#core-readings" id="toc-core-readings" class="nav-link" data-scroll-target="#core-readings">Core Readings</a></li>
+  <li><a href="#optional-readings" id="toc-optional-readings" class="nav-link" data-scroll-target="#optional-readings">Optional Readings</a></li>
   </ul></li>
-  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
-  <li><a href="#statistical-graphics-methods" id="toc-statistical-graphics-methods" class="nav-link" data-scroll-target="#statistical-graphics-methods">Statistical Graphics Methods</a>
-  <ul class="collapse">
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
-  <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots">Violin Plots</a></li>
-  <li><a href="#notched-box-plots" id="toc-notched-box-plots" class="nav-link" data-scroll-target="#notched-box-plots">Notched Box Plots</a></li>
-  <li><a href="#dot-plots" id="toc-dot-plots" class="nav-link" data-scroll-target="#dot-plots">Dot Plots</a></li>
-  <li><a href="#pie-chart-and-bar-chart" id="toc-pie-chart-and-bar-chart" class="nav-link" data-scroll-target="#pie-chart-and-bar-chart">Pie chart and Bar chart</a></li>
-  <li><a href="#raincloud-plots" id="toc-raincloud-plots" class="nav-link" data-scroll-target="#raincloud-plots">Raincloud Plots</a></li>
-  <li><a href="#trellis-display" id="toc-trellis-display" class="nav-link" data-scroll-target="#trellis-display">Trellis Display</a></li>
-  </ul></li>
+  <li><a href="#learning-from-examples" id="toc-learning-from-examples" class="nav-link" data-scroll-target="#learning-from-examples">Learning from Examples</a></li>
   <li><a href="#all-about-tableau" id="toc-all-about-tableau" class="nav-link" data-scroll-target="#all-about-tableau">All About Tableau</a>
   <ul class="collapse">
-  <li><a href="#things-about-tableau-you-must-know" id="toc-things-about-tableau-you-must-know" class="nav-link" data-scroll-target="#things-about-tableau-you-must-know">Things about Tableau you must know!</a></li>
-  <li><a href="#learning-tableau" id="toc-learning-tableau" class="nav-link" data-scroll-target="#learning-tableau">Learning Tableau</a></li>
+  <li><a href="#white-paper" id="toc-white-paper" class="nav-link" data-scroll-target="#white-paper">White Paper</a></li>
+  <li><a href="#tutorial" id="toc-tutorial" class="nav-link" data-scroll-target="#tutorial">Tutorial</a></li>
+  </ul></li>
+  <li><a href="#visual-analytics-methods-of-the-week" id="toc-visual-analytics-methods-of-the-week" class="nav-link" data-scroll-target="#visual-analytics-methods-of-the-week">Visual Analytics Method(s) of the Week</a>
+  <ul class="collapse">
+  <li><a href="#age-sex-pyramid" id="toc-age-sex-pyramid" class="nav-link" data-scroll-target="#age-sex-pyramid">Age-sex Pyramid</a></li>
+  <li><a href="#pareto-chart" id="toc-pareto-chart" class="nav-link" data-scroll-target="#pareto-chart">Pareto Chart</a></li>
+  <li><a href="#diverging-stacked-bar-chart" id="toc-diverging-stacked-bar-chart" class="nav-link" data-scroll-target="#diverging-stacked-bar-chart">Diverging Stacked Bar Chart</a></li>
+  <li><a href="#packed-bars" id="toc-packed-bars" class="nav-link" data-scroll-target="#packed-bars">Packed Bars</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -203,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lesson 1: Introduction to Visual Analytics</h1>
+<h1 class="title">Lesson 2: Designing Graphs to Enlighten</h1>
 </div>
 
 
@@ -227,132 +224,122 @@ ul.task-list li input[type="checkbox"] {
 <section id="content" class="level2">
 <h2 class="anchored" data-anchor-id="content">Content</h2>
 <ul>
-<li>Course Overview</li>
-<li>Motivation of Visual Analytics</li>
-<li>What Visual Analytics is</li>
-<li>Visual Analytics in History</li>
-<li>Intents of Visual Analytics Applications</li>
-<li>Visual Analytics Techniques: basic graphical methods</li>
-<li>Visual Analytics Tools</li>
+<li>Human perception and information processing</li>
+<li>Perceptual and design principles for effective visual analytics</li>
+<li>Principles of Graphic Design
+<ul>
+<li>Rules for Encoding Values in Graph</li>
+<li>JunkCharts</li>
+<li>Practical Guides for Using Colour in Charts</li>
+<li>Data-ink</li>
+</ul></li>
 </ul>
 </section>
 <section id="lesson-slides-and-hands-on-notes" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
 <ul>
-<li><p>Lesson slides in <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.html">html</a> and <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.pdf">pdf</a> formats</p></li>
-<li><p>Lesson 1 (Supplement): Choosing the Right Visualisation in <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.html">html</a> and <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.pdf">pdf</a> formats. <img src="img/new1.jpg" class="img-fluid"></p></li>
-<li><p>Handout of In-class Exercise 1 in <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.pdf">pdf</a> formats.</p></li>
+<li><p>Lesson 2: Designing Graphs to Enlighten in <a href="../lesson/Lesson02/Lesson02-Designing-Graphs-to-Enlighten.html">html</a> and <a href="../lesson/Lesson02/Lesson02-Designing-Graphs-to-Enlighten.pdf">pdf</a> formats</p></li>
+<li><p>Handout of Hands-on Exercise 2 in <a href="../Hands-on_Ex/Hands-on_Ex02/Hands-on_Ex02.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex02/Hands-on_Ex02.pdf">pdf</a> formats.</p></li>
 </ul>
-</section>
-<section id="in-class-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-exercise">In-class Exercise</h2>
-<p>By the end of this lesson, you will gain hands-on experience on:</p>
-<ul>
-<li>creating the course website by using Quarto and RStudio,</li>
-<li>managing the website by using git/github by using RStudio</li>
-<li>publishing the website onto Netlify server</li>
-</ul>
-</section>
-<section id="self-reading-before-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="self-reading-before-lesson">Self-reading Before Lesson</h2>
-<section id="webinars" class="level3">
-<h3 class="anchored" data-anchor-id="webinars">Webinars</h3>
-<ul>
-<li><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?referrer=playlist-the_best_hans_rosling_talks_yo">The best Hans Rosling talks you’ve ever seen</a>.</li>
-<li><a href="https://www.youtube.com/watch?v=LYKO_6KPZCM/">VIVA – What is Visual Analytics?</a></li>
-<li><a href="https://www.youtube.com/watch?v=5uGRGqCFryg/">Why Visual Analytics</a></li>
-<li><a href="https://www.youtube.com/watch?v=5i3xbitEVfs/">Visual Analytics - Mastering the Information Age</a></li>
-</ul>
-</section>
 </section>
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<section id="core-readings" class="level3">
+<h3 class="anchored" data-anchor-id="core-readings">Core Readings</h3>
 <ul>
-<li>Thomas, J.J. &amp; Cook, K.A. (2006) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2006/01/mcg2006010010/13rRUxBa5ej">A Visual Analytics Agenda</a>”, ‘’IEEE Computer Graphics and Applications’’, January 2006, Vol.26(1), pp.10-13</li>
-<li>Chabot, C (2009) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z">Demystifying Visual Analytics</a>”, ‘’IEEE Computer Graphics and Applications’’, March 2009, Vol.29(2), pp.84-87.</li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf">The 5 Most Influential Data Visualizations of All Time</a></li>
-<li>J.J. Thomas and K.A. Cook, eds.&nbsp;(2005) <a href="https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf">Illuminating the Path: The Research and Development Agenda for Visual Analytics</a>, IEEE CS Press.</li>
-<li>Jun, Yuan et. al.&nbsp;(2020) “A survey of visual analytics techniques for machine learning”, <em>Computational Visual Media</em>. <a href="https://doi.org/10.1007/s41095-020-0191-7">doi.org/10.1007/s41095-020-0191-7</a>.</li>
-<li>Cui, Wenqiang (2019) “<a href="https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2">Visual Analytics: A Comprehensive Overview</a>”, IEEE Access.</li>
+<li>Claus O. Wilke <a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualisation</a>, Chapter 1-5, 17-26.</li>
+<li><a href="http://dataremixed.com/2012/05/data-visualization-clarity-or-aesthetics/">Data Visualization: Clarity or Aesthetics?</a></li>
+<li><a href="http://dataremixed.com/2012/05/clarity-or-aesthetics-part-2-a-tale-of-four-quadrants/">Clarity or Aesthetics? Part 2 – A Tale of Four Quadrants</a></li>
+<li><a href="http://dataremixed.com/2012/06/clarity-or-aesthetics-part-3-tips-for-achieving-both/">Clarity or Aesthetics? Part 3 – Tips for Achieving Both</a></li>
 </ul>
 </section>
-<section id="statistical-graphics-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-graphics-methods">Statistical Graphics Methods</h2>
-<section id="boxplot" class="level3">
-<h3 class="anchored" data-anchor-id="boxplot">Boxplot</h3>
+<section id="optional-readings" class="level3">
+<h3 class="anchored" data-anchor-id="optional-readings">Optional Readings</h3>
 <ul>
-<li><a href="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51">Understanding Boxplots</a></li>
-<li>Regina L. Nuzzo (2016) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001">“The Box Plots Alternative for Visualizing Quantitative Data”</a>, <em>PR&amp;M</em>, Volume8, Issue3, pp.&nbsp;268-272.</li>
+<li><a href="http://junkcharts.typepad.com/junk_charts/junk-charts-trifecta-checkup-the-definitive-guide.html">Junk Charts Trifecta Checkup: The Definitive Guide</a></li>
+<li><a href="http://flowingdata.com/2010/07/22/7-basic-rules-for-making-charts-and-graphs/">7 Basic Rules for Making Charts and Graphs</a></li>
+<li><a href="http://www.perceptualedge.com/articles/visual_business_intelligence/quantitative_literacy_across_curriculum.pdf">Quantitative Literacy Across the Curriculum</a></li>
+<li><a href="http://www.perceptualedge.com/articles/ie/visual_perception.pdf">Tapping the Power of Visual Perception</a></li>
+<li><a href="http://www.perceptualedge.com/articles/visual_business_intelligence/sometimes_we_must_raise_our_voices.pdf">Sometimes We Must Raise Our Voices</a></li>
+<li><a href="http://www.perceptualedge.com/articles/b-eye/quantitative_data.pdf">Best Practices for Understanding Quantitative Data</a></li>
+<li><a href="http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf">Data Visualization: Rules for Encoding Values in Graph</a></li>
+<li><a href="http://www.perceptualedge.com/articles/b-eye/choosing_colors.pdf">Choosing Colors for Data Visualization</a></li>
+<li><a href="http://www.perceptualedge.com/articles/visual_business_intelligence/line_graphs_and_irregular_intervals.pdf">Line Graphs and Irregular Intervals: An Incompatible Partnership</a></li>
+<li><a href="https://www.eea.europa.eu/data-and-maps/daviz/learn-more/chart-dos-and-donts">Dos and don’ts of data visualisation- Usability guidelines for improving your visualisations</a></li>
 </ul>
 </section>
-<section id="violin-plots" class="level3">
-<h3 class="anchored" data-anchor-id="violin-plots">Violin Plots</h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Violin_plot">Violin Plot-wikipedia</a></li>
-<li>Hintze, Jerry L.; Nelson, Ray D. (1998). “<a href="https://search.proquest.com/openview/dcd68eb137d2d6b08aa23f37e34e0b01/1?pq-origsite=gscholar">Violin Plots: A Box Plot-Density Trace Synergism</a>”. <em>The American Statistician</em>. 52 (2): 181–4</li>
-<li><a href="https://www.londonsoda.com/articles/violin-plots">Violin Plot</a> by LondonSODA.</li>
-</ul>
 </section>
-<section id="notched-box-plots" class="level3">
-<h3 class="anchored" data-anchor-id="notched-box-plots">Notched Box Plots</h3>
+<section id="learning-from-examples" class="level2">
+<h2 class="anchored" data-anchor-id="learning-from-examples">Learning from Examples</h2>
 <ul>
-<li><a href="https://sites.google.com/site/davidsstatistics/davids-statistics/notched-box-plots">Notched Box Plots</a></li>
+<li><a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">Mistakes, we’ve drawn a few</a></li>
+<li><a href="https://www.ft.com/graphics">FT stories through charts and graphics</a></li>
+<li><a href="https://www.tableau.com/sites/default/files/whitepapers/three_steps_to_make_your_data_clearer_the_gi_tableau_guide.pdf">Three Steps to Make Your Data Clearer</a></li>
+<li><a href="http://www.thefunctionalart.com/2019/03/when-your-own-data-contradicts-your.html">When your own data contradicts your headline</a></li>
 </ul>
-</section>
-<section id="dot-plots" class="level3">
-<h3 class="anchored" data-anchor-id="dot-plots">Dot Plots</h3>
-<ul>
-<li><a href="https://search-proquest-com.libproxy.smu.edu.sg/docview/228429978?rfr_id=info%3Axri%2Fsid%3Aprimo">Dot plots</a></li>
-<li><a href="http://www.b-eye-network.com/view/2468">Dot Plots: A Useful Alternative to Bar Charts</a></li>
-<li><a href="https://d-nb.info/1151959243/34">The dot plot: A graphical tool for data analysis and presentation</a></li>
-<li>Leland Wilkinson (1999) <a href="http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf">“Dot Plot”</a>, <em>Statistical Computing and Graphics</em>, Vol. 53, No.&nbsp;3, pp.&nbsp;276-281.</li>
-</ul>
-</section>
-<section id="pie-chart-and-bar-chart" class="level3">
-<h3 class="anchored" data-anchor-id="pie-chart-and-bar-chart">Pie chart and Bar chart</h3>
-<ul>
-<li><a href="https://eagereyes.org/techniques/pie-charts">Understanding Pie Charts</a></li>
-<li>Tracey L. Weissgerber et. al.&nbsp;(2015) <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128">“Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm”</a>, <em>PLoS Biology</em>.</li>
-</ul>
-</section>
-<section id="raincloud-plots" class="level3">
-<h3 class="anchored" data-anchor-id="raincloud-plots">Raincloud Plots</h3>
-<ul>
-<li>Allen M, Poggiali D, Whitaker K et al.&nbsp;<a href="https://wellcomeopenresearch.org/articles/4-63">“Raincloud plots: a multi-platform tool for robust data. visualization”</a> [version 2; peer review: 2 approved]. <em>Welcome Open Res</em> 2021, pp.&nbsp;4:63.</li>
-</ul>
-</section>
-<section id="trellis-display" class="level3">
-<h3 class="anchored" data-anchor-id="trellis-display">Trellis Display</h3>
-<ul>
-<li><a href="https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents">The Visual Design and Control of Trellis Display</a></li>
-<li><a href="https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1002/wics.121">Trellis display</a></li>
-<li><a href="https://www.researchgate.net/publication/2671674_Trellis_Displays_vs_Interactive_Graphics">Trellis Displays vs.&nbsp;Interactive Graphics</a></li>
-</ul>
-</section>
 </section>
 <section id="all-about-tableau" class="level2">
 <h2 class="anchored" data-anchor-id="all-about-tableau">All About Tableau</h2>
-<section id="things-about-tableau-you-must-know" class="level3">
-<h3 class="anchored" data-anchor-id="things-about-tableau-you-must-know">Things about Tableau you must know!</h3>
+<section id="white-paper" class="level3">
+<h3 class="anchored" data-anchor-id="white-paper">White Paper</h3>
 <ul>
-<li><a href="https://graphics.stanford.edu/papers/polaris_extended/polaris.pdf">Polaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases</a></li>
-<li><a href="https://www.tableau.com/products/technology">Tableau Technology</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf">Show Me: Automatic Presentation for Visual Analysis</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/TS_WP_VA_F2_new_temp_0.pdf">Whitepaper: Visual Analysis for Everyone</a></li>
-<li><a href="https://help.tableau.com/current/blueprint/en-us/bp_analytics_best_practices_in_tableau.htm">Analytics Best Practices in Tableau</a></li>
+<li><a href="https://www.tableau.com/sites/default/files/whitepapers/which_chart_or_graph_v2.pdf">Which chart or graphis right for you?</a></li>
+<li><a href="https://www.tableau.com/sites/default/files/whitepapers/goodenoughtogreat.pdf">Good Enough to Great: A Quick Guide for Better Data Visualizations</a></li>
 </ul>
 </section>
-<section id="learning-tableau" class="level3">
-<h3 class="anchored" data-anchor-id="learning-tableau">Learning Tableau</h3>
+<section id="tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="tutorial">Tutorial</h3>
 <ul>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started">Getting Started</a></li>
-<li><a href="http://www.tableau.com/learn/tutorials/on-demand/tableau-interface">Tableau Interface</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics">Getting Started with Visual Analytics</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting">Formatting</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting-pane">The Formatting Pane</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/reference-lines">Reference lines</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-data">Getting Started with Data</a> also self-learn the remaining videos under ’‘’Connecting to Data’’’</li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-tableau-prep">Getting Started with Tableau Prep Builder</a>. This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep <a href="https://www.tableau.com/about/blog/2018/3/tableau-prep-project-maestro-here-redefining-your-data-prep-experience-84620">here</a>. You are encouraged to view all the 12 videos under ’‘’Tableau Prep’’’.</li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-dashboards-and-stories">Getting Started with Dashboards and Stories</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-calculations">Getting Started with Calculation</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/calculation-syntax">Calculation Syntax</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/introduction-lod-expressions">Introduction to LOD Expressions</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/intro-table-calculations">Intro to Table Calculations</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/modifying-table-calculations">Modifying Table Calculations</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/aggregate-calculations">Aggregate Calculations</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/date-calculations">Date Calculations</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/logic-calculations">Logic Calculation</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/string-calculations">String Calculation</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/number-calculations">Number Calculation</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/type-calculations">Type Calculation</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/conceptual-topics-lod-expressions">Conceptual Topics with LOD Expressions</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/aggregation-and-replication-lod-expressions">Aggregation and Replication with LOD Expressions</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/tutorials/on-demand/nested-lod-expressions">Nested LOD Expressions</a></p></li>
+</ul>
+</section>
+</section>
+<section id="visual-analytics-methods-of-the-week" class="level2">
+<h2 class="anchored" data-anchor-id="visual-analytics-methods-of-the-week">Visual Analytics Method(s) of the Week</h2>
+<section id="age-sex-pyramid" class="level3">
+<h3 class="anchored" data-anchor-id="age-sex-pyramid">Age-sex Pyramid</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Population_pyramid">Population pyramid</a></li>
+<li><a href="https://www.thoughtco.com/age-sex-pyramids-and-population-pyramids-1435272">Age-Sex and Population Pyramids: The Most Useful Graphs in Population Geography</a></li>
+<li><a href="https://www.populationpyramid.net/singapore/2017/">Population Pyramid Singapore</a></li>
+</ul>
+</section>
+<section id="pareto-chart" class="level3">
+<h3 class="anchored" data-anchor-id="pareto-chart">Pareto Chart</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pareto_chart">Pareto chart</a></li>
+<li><a href="https://www-tandfonline-com.libproxy.smu.edu.sg/doi/abs/10.1198/000313006X152243">Revising the Pareto Chart</a></li>
+</ul>
+</section>
+<section id="diverging-stacked-bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="diverging-stacked-bar-chart">Diverging Stacked Bar Chart</h3>
+<ul>
+<li><a href="https://www.jstatsoft.org/article/view/v057i05">Design of Diverging Stacked Bar Charts for Likert Scales and Other Applications</a></li>
+<li><a href="https://www.perceptualedge.com/blog/?p=2239">When Are 100% Stacked Bar Graphs Useful?</a></li>
+<li><a href="https://blog.datawrapper.de/divergingbars/">The case against diverging stacked bars</a></li>
+<li><a href="https://www.linkedin.com/pulse/diverging-100-stacked-bars-useless-daniel-zvinca/?published=t">Are diverging 100% stacked bars useless?</a></li>
+<li><a href="https://www.datarevelations.com/rethinkingdivergent.html">Rethinking the divergent stacked bar chart — placing the stronger views in the center</a></li>
+</ul>
+</section>
+<section id="packed-bars" class="level3">
+<h3 class="anchored" data-anchor-id="packed-bars">Packed Bars</h3>
+<ul>
+<li><a href="https://community.jmp.com/t5/JMP-Blog/Introducing-packed-bars-a-new-chart-form/ba-p/39972#">Introducing packed bars, a new chart form</a></li>
+<li><a href="https://cran.r-project.org/web/packages/rPackedBar/index.html">rPackedBar: Packed Bar Charts with ‘plotly’</a></li>
 </ul>
 
 

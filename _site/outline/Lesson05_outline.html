@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-01-03">
 
-<title>ISSS608 - Lesson 1: Introduction to Visual Analytics</title>
+<title>ISSS608 - Lesson 5: Visual Multivariate Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -174,26 +174,17 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#content" id="toc-content" class="nav-link active" data-scroll-target="#content">Content</a></li>
   <li><a href="#lesson-slides-and-hands-on-notes" id="toc-lesson-slides-and-hands-on-notes" class="nav-link" data-scroll-target="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
-  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise">In-class Exercise</a></li>
-  <li><a href="#self-reading-before-lesson" id="toc-self-reading-before-lesson" class="nav-link" data-scroll-target="#self-reading-before-lesson">Self-reading Before Lesson</a>
+  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a>
   <ul class="collapse">
-  <li><a href="#webinars" id="toc-webinars" class="nav-link" data-scroll-target="#webinars">Webinars</a></li>
+  <li><a href="#core-readings" id="toc-core-readings" class="nav-link" data-scroll-target="#core-readings">Core Readings</a></li>
+  <li><a href="#optional-readings" id="toc-optional-readings" class="nav-link" data-scroll-target="#optional-readings">Optional Readings</a></li>
   </ul></li>
-  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
-  <li><a href="#statistical-graphics-methods" id="toc-statistical-graphics-methods" class="nav-link" data-scroll-target="#statistical-graphics-methods">Statistical Graphics Methods</a>
+  <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R Packages</a>
   <ul class="collapse">
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
-  <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots">Violin Plots</a></li>
-  <li><a href="#notched-box-plots" id="toc-notched-box-plots" class="nav-link" data-scroll-target="#notched-box-plots">Notched Box Plots</a></li>
-  <li><a href="#dot-plots" id="toc-dot-plots" class="nav-link" data-scroll-target="#dot-plots">Dot Plots</a></li>
-  <li><a href="#pie-chart-and-bar-chart" id="toc-pie-chart-and-bar-chart" class="nav-link" data-scroll-target="#pie-chart-and-bar-chart">Pie chart and Bar chart</a></li>
-  <li><a href="#raincloud-plots" id="toc-raincloud-plots" class="nav-link" data-scroll-target="#raincloud-plots">Raincloud Plots</a></li>
-  <li><a href="#trellis-display" id="toc-trellis-display" class="nav-link" data-scroll-target="#trellis-display">Trellis Display</a></li>
-  </ul></li>
-  <li><a href="#all-about-tableau" id="toc-all-about-tableau" class="nav-link" data-scroll-target="#all-about-tableau">All About Tableau</a>
-  <ul class="collapse">
-  <li><a href="#things-about-tableau-you-must-know" id="toc-things-about-tableau-you-must-know" class="nav-link" data-scroll-target="#things-about-tableau-you-must-know">Things about Tableau you must know!</a></li>
-  <li><a href="#learning-tableau" id="toc-learning-tableau" class="nav-link" data-scroll-target="#learning-tableau">Learning Tableau</a></li>
+  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix">Correlation Matrix</a></li>
+  <li><a href="#heatmap" id="toc-heatmap" class="nav-link" data-scroll-target="#heatmap">Heatmap</a></li>
+  <li><a href="#treemaps" id="toc-treemaps" class="nav-link" data-scroll-target="#treemaps">Treemaps</a></li>
+  <li><a href="#sunburst-diagram" id="toc-sunburst-diagram" class="nav-link" data-scroll-target="#sunburst-diagram">Sunburst Diagram</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -203,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lesson 1: Introduction to Visual Analytics</h1>
+<h1 class="title">Lesson 5: Visual Multivariate Analysis</h1>
 </div>
 
 
@@ -227,132 +218,141 @@ ul.task-list li input[type="checkbox"] {
 <section id="content" class="level2">
 <h2 class="anchored" data-anchor-id="content">Content</h2>
 <ul>
-<li>Course Overview</li>
-<li>Motivation of Visual Analytics</li>
-<li>What Visual Analytics is</li>
-<li>Visual Analytics in History</li>
-<li>Intents of Visual Analytics Applications</li>
-<li>Visual Analytics Techniques: basic graphical methods</li>
-<li>Visual Analytics Tools</li>
+<li>Correlation Matrix
+<ul>
+<li>Correlogram</li>
+</ul></li>
+<li>Multivariate Data Visualisation
+<ul>
+<li>ternary plot</li>
+<li>Glyphs or Star Plot</li>
+<li>heatmap</li>
+<li>parallel coordinate plot</li>
+<li>parallel plot</li>
+</ul></li>
+<li>Space-constrained visualization of hierarchies
+<ul>
+<li>Treemaps</li>
+<li>Sunburst diagram</li>
+</ul></li>
 </ul>
 </section>
 <section id="lesson-slides-and-hands-on-notes" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
 <ul>
-<li><p>Lesson slides in <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.html">html</a> and <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.pdf">pdf</a> formats</p></li>
-<li><p>Lesson 1 (Supplement): Choosing the Right Visualisation in <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.html">html</a> and <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.pdf">pdf</a> formats. <img src="img/new1.jpg" class="img-fluid"></p></li>
-<li><p>Handout of In-class Exercise 1 in <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.pdf">pdf</a> formats.</p></li>
-</ul>
-</section>
-<section id="in-class-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-exercise">In-class Exercise</h2>
-<p>By the end of this lesson, you will gain hands-on experience on:</p>
+<li><p>Lesson slides in <a href="../lesson/Lesson05/Lesson05-VMA.html">html</a> and <a href="../lesson/Lesson05/Lesson05-VMA.pdf">pdf</a> formats</p></li>
+<li><p>Handout of Hands-on Exercise 5</p>
 <ul>
-<li>creating the course website by using Quarto and RStudio,</li>
-<li>managing the website by using git/github by using RStudio</li>
-<li>publishing the website onto Netlify server</li>
+<li><a href="../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-ternary.html">Building Ternary Plot with R</a>.</li>
+<li><a href="../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Corrgram.html">Visualising Correlation Matrix with R</a>.</li>
+<li><a href="../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html">Building Heatmap with R</a>.</li>
+<li><a href="../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html">Building Parallel Coordinates Plot with R</a>.</li>
+</ul></li>
 </ul>
-</section>
-<section id="self-reading-before-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="self-reading-before-lesson">Self-reading Before Lesson</h2>
-<section id="webinars" class="level3">
-<h3 class="anchored" data-anchor-id="webinars">Webinars</h3>
-<ul>
-<li><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?referrer=playlist-the_best_hans_rosling_talks_yo">The best Hans Rosling talks you’ve ever seen</a>.</li>
-<li><a href="https://www.youtube.com/watch?v=LYKO_6KPZCM/">VIVA – What is Visual Analytics?</a></li>
-<li><a href="https://www.youtube.com/watch?v=5uGRGqCFryg/">Why Visual Analytics</a></li>
-<li><a href="https://www.youtube.com/watch?v=5i3xbitEVfs/">Visual Analytics - Mastering the Information Age</a></li>
-</ul>
-</section>
 </section>
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<section id="core-readings" class="level3">
+<h3 class="anchored" data-anchor-id="core-readings">Core Readings</h3>
+<p><strong>Multivariate Methods</strong></p>
 <ul>
-<li>Thomas, J.J. &amp; Cook, K.A. (2006) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2006/01/mcg2006010010/13rRUxBa5ej">A Visual Analytics Agenda</a>”, ‘’IEEE Computer Graphics and Applications’’, January 2006, Vol.26(1), pp.10-13</li>
-<li>Chabot, C (2009) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z">Demystifying Visual Analytics</a>”, ‘’IEEE Computer Graphics and Applications’’, March 2009, Vol.29(2), pp.84-87.</li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf">The 5 Most Influential Data Visualizations of All Time</a></li>
-<li>J.J. Thomas and K.A. Cook, eds.&nbsp;(2005) <a href="https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf">Illuminating the Path: The Research and Development Agenda for Visual Analytics</a>, IEEE CS Press.</li>
-<li>Jun, Yuan et. al.&nbsp;(2020) “A survey of visual analytics techniques for machine learning”, <em>Computational Visual Media</em>. <a href="https://doi.org/10.1007/s41095-020-0191-7">doi.org/10.1007/s41095-020-0191-7</a>.</li>
-<li>Cui, Wenqiang (2019) “<a href="https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2">Visual Analytics: A Comprehensive Overview</a>”, IEEE Access.</li>
+<li><a href="http://www.perceptualedge.com/articles/b-eye/visual_multivariate_analysis.pdf">An Introduction to Visual Multivariate Analysis</a></li>
+<li><a href="https://search-proquest-com.libproxy.smu.edu.sg/docview/228501277?rfr_id=info%3Axri%2Fsid%3Aprimo">Corrgrams: Exploratory Displays for Correlation Matrices</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ternary_plot">Ternary Plot</a></li>
+<li><a href="https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2F978-3-540-33037-0_8.pdf">Multivariate Data Glyphs</a></li>
+<li><a href="https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2F978-3-540-33037-0_25.pdf">Parallel Coordinates</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Heat_map">Wikipedia: Heatmap</a></li>
+</ul>
+<p><strong>Treemaps</strong></p>
+<ul>
+<li>Shneiderman, Ben (2008) <a href="http://www.cs.umd.edu/hcil/treemap-history/">Treemaps for space-constrained visualization of hierarchies</a></li>
+<li><a href="http://www.cs.umd.edu/hcil/treemap/FLEXIBLE-HIERARCHY-FINAL.pdf">Extending the Utility of Treemaps with Flexible Hierarchy</a></li>
 </ul>
 </section>
-<section id="statistical-graphics-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-graphics-methods">Statistical Graphics Methods</h2>
-<section id="boxplot" class="level3">
-<h3 class="anchored" data-anchor-id="boxplot">Boxplot</h3>
+<section id="optional-readings" class="level3">
+<h3 class="anchored" data-anchor-id="optional-readings">Optional Readings</h3>
+<p><strong>Multivariate Methods</strong></p>
 <ul>
-<li><a href="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51">Understanding Boxplots</a></li>
-<li>Regina L. Nuzzo (2016) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001">“The Box Plots Alternative for Visualizing Quantitative Data”</a>, <em>PR&amp;M</em>, Volume8, Issue3, pp.&nbsp;268-272.</li>
+<li><a href="http://junkcharts.typepad.com/junk_charts/2010/06/the-scatterplot-matrix-a-great-tool.html">The scatter-plot matrix: a great tool</a></li>
+<li><a href="https://search-proquest-com.libproxy.smu.edu.sg/docview/1750838449?rfr_id=info%3Axri%2Fsid%3Aprimo">A Graphical Display of Large Correlation Matrices</a></li>
+<li><a href="https://www.sciencedirect.com/topics/engineering/ternary-diagram">Ternary Diagram</a></li>
+<li><a href="http://csmgeo.csm.jmu.edu/geollab/fichter/Sedrx/readternary.html">Reading a Ternary Diagram</a></li>
+<li><a href="http://www.ifs.tuwien.ac.at/~silvia/wien/vu-infovis/articles/Inselberg-InfoVis97.pdf">Multidimensional Detective</a></li>
+<li><a href="https://eagereyes.org/techniques/parallel-coordinates">Parallel Coordinates</a></li>
+<li><a href="http://www.perceptualedge.com/articles/b-eye/parallel_coordinates.pdf">Multivariate Analysis Using Parallel Coordinates</a></li>
+<li><a href="https://towardsdatascience.com/ghosts-on-the-radar-why-radar-charts-are-easily-misread-dba00fc399ef">Ghosts on the Radar — Why Radar Charts Are Easily Misread</a></li>
+<li><a href="https://www.perceptualedge.com/articles/dmreview/radar_graphs.pdf">Keep Radar Graphs Below the Radar - Far Below</a></li>
+<li><a href="https://blog.scottlogic.com/2011/09/23/a-critique-of-radar-charts.html">A Critique of Radar Charts</a></li>
+<li><a href="https://www.darkhorseanalytics.com/blog/radar-more-evil-than-pie">Radar: More Evil Than Pie</a></li>
 </ul>
-</section>
-<section id="violin-plots" class="level3">
-<h3 class="anchored" data-anchor-id="violin-plots">Violin Plots</h3>
+<p><strong>Treemaps</strong></p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Violin_plot">Violin Plot-wikipedia</a></li>
-<li>Hintze, Jerry L.; Nelson, Ray D. (1998). “<a href="https://search.proquest.com/openview/dcd68eb137d2d6b08aa23f37e34e0b01/1?pq-origsite=gscholar">Violin Plots: A Box Plot-Density Trace Synergism</a>”. <em>The American Statistician</em>. 52 (2): 181–4</li>
-<li><a href="https://www.londonsoda.com/articles/violin-plots">Violin Plot</a> by LondonSODA.</li>
-</ul>
-</section>
-<section id="notched-box-plots" class="level3">
-<h3 class="anchored" data-anchor-id="notched-box-plots">Notched Box Plots</h3>
-<ul>
-<li><a href="https://sites.google.com/site/davidsstatistics/davids-statistics/notched-box-plots">Notched Box Plots</a></li>
-</ul>
-</section>
-<section id="dot-plots" class="level3">
-<h3 class="anchored" data-anchor-id="dot-plots">Dot Plots</h3>
-<ul>
-<li><a href="https://search-proquest-com.libproxy.smu.edu.sg/docview/228429978?rfr_id=info%3Axri%2Fsid%3Aprimo">Dot plots</a></li>
-<li><a href="http://www.b-eye-network.com/view/2468">Dot Plots: A Useful Alternative to Bar Charts</a></li>
-<li><a href="https://d-nb.info/1151959243/34">The dot plot: A graphical tool for data analysis and presentation</a></li>
-<li>Leland Wilkinson (1999) <a href="http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf">“Dot Plot”</a>, <em>Statistical Computing and Graphics</em>, Vol. 53, No.&nbsp;3, pp.&nbsp;276-281.</li>
-</ul>
-</section>
-<section id="pie-chart-and-bar-chart" class="level3">
-<h3 class="anchored" data-anchor-id="pie-chart-and-bar-chart">Pie chart and Bar chart</h3>
-<ul>
-<li><a href="https://eagereyes.org/techniques/pie-charts">Understanding Pie Charts</a></li>
-<li>Tracey L. Weissgerber et. al.&nbsp;(2015) <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128">“Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm”</a>, <em>PLoS Biology</em>.</li>
-</ul>
-</section>
-<section id="raincloud-plots" class="level3">
-<h3 class="anchored" data-anchor-id="raincloud-plots">Raincloud Plots</h3>
-<ul>
-<li>Allen M, Poggiali D, Whitaker K et al.&nbsp;<a href="https://wellcomeopenresearch.org/articles/4-63">“Raincloud plots: a multi-platform tool for robust data. visualization”</a> [version 2; peer review: 2 approved]. <em>Welcome Open Res</em> 2021, pp.&nbsp;4:63.</li>
-</ul>
-</section>
-<section id="trellis-display" class="level3">
-<h3 class="anchored" data-anchor-id="trellis-display">Trellis Display</h3>
-<ul>
-<li><a href="https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents">The Visual Design and Control of Trellis Display</a></li>
-<li><a href="https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1002/wics.121">Trellis display</a></li>
-<li><a href="https://www.researchgate.net/publication/2671674_Trellis_Displays_vs_Interactive_Graphics">Trellis Displays vs.&nbsp;Interactive Graphics</a></li>
+<li><a href="http://eagereyes.org/Techniques/Treemaps.html">Treemaps</a></li>
+<li><a href="http://www.b-eye-network.com/view/2673">Discovering Business Intelligence Using Treemap Visualization</a></li>
+<li><a href="http://www.juiceanalytics.com/writing/10-lessons-treemap-design/">10 Lessons in Treemap Design</a></li>
+<li>Bederson, Benjamin B.; Shneiderman, Ben; Wattenberg, Martin (2002). <a href="http://delivery.acm.org.libproxy.smu.edu.sg/10.1145/580000/571649/p833-b_bederson.pdf?ip=202.161.43.77&amp;id=571649&amp;acc=ACTIVE%20SERVICE&amp;key=FF6731C4D3E3CFFF%2E39D185EE56A58666%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1538033167_4a6787aed9b15196b9e585b3af4b7031"><em>Ordered and quantum treemaps: Making effective use of 2D space to display hierarchies</em></a>. <strong>ACM Transactions on Graphics</strong>. 21 (4): 833.</li>
+<li>Bruls, Mark; Huizing, Kees; van Wijk, Jarke J. (2000). <a href="http://www.win.tue.nl/~vanwijk/stm.pdf"><em>Squarified treemaps</em></a>. In de Leeuw, W.; van Liere, R. <strong>Data Visualization 2000: Proc.</strong> Joint Eurographics and IEEE TCVG Symp. on Visualization]</li>
+<li><a href="http://www.juiceanalytics.com/writing/us-economic-census-treemap/">US Economic Census Treemap</a></li>
+<li><a href="https://ac-els-cdn-com.libproxy.smu.edu.sg/S0740624X11001055/1-s2.0-S0740624X11001055-main.pdf?_tid=5f3e825d-c9d0-414f-b1d2-3ffbe8e115d1&amp;acdnat=1538033558_64b0c1431092fec2ea12cc5e7ba8e77b">TreeCovery: Coordinated dual treemap visualization for exploring the Recovery Act</a></li>
+<li><a href="http://www.juiceanalytics.com/writing/juices-stimulus-bill-explorer/">Juice’s Stimulus Bill Explorer</a></li>
+<li><a href="http://www.cc.gatech.edu/gvu/ii/fundexplorer/">Fundexplorer</a></li>
+<li><a href="http://www.smartmoney.com/map-of-the-market/">Map of the Market</a></li>
+<li><a href="http://www.hivegroup.com/gallery/index.html">The HIVE Group</a></li>
+<li><a href="http://www.nytimes.com/imagepages/2007/02/25/business/20070225_CHRYSLER_GRAPHIC.html">Truck Sales Slip, Tripping Up Chrysler</a></li>
+<li><a href="http://newsmap.jp/">Newsmap</a></li>
+<li><a href="http://www.nytimes.com/interactive/2010/02/01/us/budget.html">Obama’s 2011 Budget Proposal: How It’s Spent</a></li>
 </ul>
 </section>
 </section>
-<section id="all-about-tableau" class="level2">
-<h2 class="anchored" data-anchor-id="all-about-tableau">All About Tableau</h2>
-<section id="things-about-tableau-you-must-know" class="level3">
-<h3 class="anchored" data-anchor-id="things-about-tableau-you-must-know">Things about Tableau you must know!</h3>
+<section id="r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="r-packages">R Packages</h2>
+<section id="correlation-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-matrix">Correlation Matrix</h3>
 <ul>
-<li><a href="https://graphics.stanford.edu/papers/polaris_extended/polaris.pdf">Polaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases</a></li>
-<li><a href="https://www.tableau.com/products/technology">Tableau Technology</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf">Show Me: Automatic Presentation for Visual Analysis</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/TS_WP_VA_F2_new_temp_0.pdf">Whitepaper: Visual Analysis for Everyone</a></li>
-<li><a href="https://help.tableau.com/current/blueprint/en-us/bp_analytics_best_practices_in_tableau.htm">Analytics Best Practices in Tableau</a></li>
+<li><a href="https://ggobi.github.io/ggally/#ggallyggscatmat">ggscatmat</a> and <a href="https://ggobi.github.io/ggally/#ggallyggpairs">ggpairs</a> of <a href="https://ggobi.github.io/ggally/index.html">GGally</a>.</li>
+<li><a href="https://cran.r-project.org/web/packages/corrplot/index.html">corrplot</a>. A graphical display of a correlation matrix or general matrix. It also contains some algorithms to do matrix reordering. In addition, corrplot is good at details, including choosing color, text labels, color labels, layout, etc.</li>
+<li><a href="https://cran.r-project.org/web/packages/corrgram/index.html">corrgram</a> calculates correlation of variables and displays the results graphically. Included panel functions can display points, shading, ellipses, and correlation values with confidence intervals.</li>
 </ul>
 </section>
-<section id="learning-tableau" class="level3">
-<h3 class="anchored" data-anchor-id="learning-tableau">Learning Tableau</h3>
+<section id="heatmap" class="level3">
+<h3 class="anchored" data-anchor-id="heatmap">Heatmap</h3>
+<p><strong>Static heatmap</strong></p>
 <ul>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started">Getting Started</a></li>
-<li><a href="http://www.tableau.com/learn/tutorials/on-demand/tableau-interface">Tableau Interface</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics">Getting Started with Visual Analytics</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting">Formatting</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting-pane">The Formatting Pane</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/reference-lines">Reference lines</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-data">Getting Started with Data</a> also self-learn the remaining videos under ’‘’Connecting to Data’’’</li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-tableau-prep">Getting Started with Tableau Prep Builder</a>. This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep <a href="https://www.tableau.com/about/blog/2018/3/tableau-prep-project-maestro-here-redefining-your-data-prep-experience-84620">here</a>. You are encouraged to view all the 12 videos under ’‘’Tableau Prep’’’.</li>
+<li><a href="https://www.rdocumentation.org/packages/stats/versions/3.6.0/topics/heatmap">heatmap()</a> of R stats package. It draws a simple heatmap.</li>
+<li><a href="https://www.rdocumentation.org/packages/gplots/versions/3.0.1.1/topics/heatmap.2">heatmap.2()</a> of <strong>gplots</strong> R package. It draws an enhanced heatmap compared to the R base function.</li>
+<li><a href="https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap">pheatmap()</a> of <a href="https://www.rdocumentation.org/packages/pheatmap"><strong>pheatmap</strong></a> R package. <strong>pheatmap</strong> package also known as Pretty Heatmap. The package provides functions to draws pretty heatmaps and provides more control to change the appearance of heatmaps.</li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/ComplexHeatmap.html"><strong>ComplexHeatmap</strong></a> package of R/Bioconductor package. The package draws, annotates and arranges complex heatmaps (very useful for genomic data analysis). The full reference guide of the package is available <a href="https://jokergoo.github.io/ComplexHeatmap-reference/book/">here</a>.</li>
+<li><a href="https://cran.r-project.org/web/packages/superheat/"><strong>superheat</strong></a> package: A Graphical Tool for Exploring Complex Datasets Using Heatmaps. A system for generating extendable and customizable heatmaps for exploring complex datasets, including big data and data with multiple data types. The full reference guide of the package is available <a href="https://rlbarter.github.io/superheat/">here</a>.</li>
+</ul>
+<p><strong>Interactive Heatmap</strong></p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/heatmaply/index.html">heatmaply</a>: Make Interactive Cluster Heat Maps Using ‘plotly’</li>
+<li><a href="https://cran.r-project.org/web/packages/d3heatmap/index.html">d3heatmap</a>: Make Interactive Heat Maps Using ‘htmlwidgets’ and ’D3.js.</li>
+<li><a href="https://cran.r-project.org/web/packages/iheatmapr/index.html">iheatmapr</a> makes complex, interactive heatmaps. Detail information are available at <a href="https://docs.ropensci.org/iheatmapr/">here</a>.</li>
+</ul>
+</section>
+<section id="treemaps" class="level3">
+<h3 class="anchored" data-anchor-id="treemaps">Treemaps</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/treemap/">Treemap</a> package.
+<ul>
+<li><a href="https://rpubs.com/brandonkopp/creating-a-treemap-in-r">Creating a Treemap in R</a></li>
+<li><a href="https://cran.r-project.org/web/packages/treemap/vignettes/treemap-color_mapping.html">treemap: mapping to color palettes</a></li>
+<li><a href="https://r-posts.com/simple-steps-to-create-treemap-in-r/">Simple Steps to Create Treemap in R</a></li>
+</ul></li>
+<li><a href="https://cran.r-project.org/web/packages/treemapify/index.html">treemapify: Draw Treemaps in ‘ggplot2’</a>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/treemapify/vignettes/introduction-to-treemapify.html">Introduction to treemapify</a></li>
+<li><a href="https://datascience-enthusiast.com/R/R_shiny_Tableau_treemap.html">Interactive visualization with R-Shiny versus with Tableau: Treemaps</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="sunburst-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="sunburst-diagram">Sunburst Diagram</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/sunburstR/">sunburstR</a></li>
+<li><a href="https://cran.r-project.org/web/packages/sunburstR/vignettes/sunburst-2-0-0.html">Sunburst 2.0.0</a></li>
+<li><a href="https://medium.com/optima-blog/create-basic-sunburst-graphs-with-ggplot2-7d7484d92c61">Create Basic Sunburst Graphs with ggplot2</a></li>
 </ul>
 
 

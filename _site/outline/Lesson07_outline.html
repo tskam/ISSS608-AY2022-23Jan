@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-01-03">
 
-<title>ISSS608 - Lesson 1: Introduction to Visual Analytics</title>
+<title>ISSS608 - Lesson 7: GeoVisual Analytics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,28 +172,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#content" id="toc-content" class="nav-link active" data-scroll-target="#content">Content</a></li>
+  <li><a href="#lesson-outline" id="toc-lesson-outline" class="nav-link active" data-scroll-target="#lesson-outline">Lesson Outline</a></li>
   <li><a href="#lesson-slides-and-hands-on-notes" id="toc-lesson-slides-and-hands-on-notes" class="nav-link" data-scroll-target="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
-  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise">In-class Exercise</a></li>
-  <li><a href="#self-reading-before-lesson" id="toc-self-reading-before-lesson" class="nav-link" data-scroll-target="#self-reading-before-lesson">Self-reading Before Lesson</a>
+  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a>
   <ul class="collapse">
-  <li><a href="#webinars" id="toc-webinars" class="nav-link" data-scroll-target="#webinars">Webinars</a></li>
+  <li><a href="#core-reading" id="toc-core-reading" class="nav-link" data-scroll-target="#core-reading">Core Reading</a></li>
+  <li><a href="#additional-readings" id="toc-additional-readings" class="nav-link" data-scroll-target="#additional-readings">Additional Readings</a></li>
   </ul></li>
-  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
-  <li><a href="#statistical-graphics-methods" id="toc-statistical-graphics-methods" class="nav-link" data-scroll-target="#statistical-graphics-methods">Statistical Graphics Methods</a>
+  <li><a href="#visualising-geographic-data-tableau-methods" id="toc-visualising-geographic-data-tableau-methods" class="nav-link" data-scroll-target="#visualising-geographic-data-tableau-methods">Visualising Geographic Data: Tableau Methods</a>
   <ul class="collapse">
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
-  <li><a href="#violin-plots" id="toc-violin-plots" class="nav-link" data-scroll-target="#violin-plots">Violin Plots</a></li>
-  <li><a href="#notched-box-plots" id="toc-notched-box-plots" class="nav-link" data-scroll-target="#notched-box-plots">Notched Box Plots</a></li>
-  <li><a href="#dot-plots" id="toc-dot-plots" class="nav-link" data-scroll-target="#dot-plots">Dot Plots</a></li>
-  <li><a href="#pie-chart-and-bar-chart" id="toc-pie-chart-and-bar-chart" class="nav-link" data-scroll-target="#pie-chart-and-bar-chart">Pie chart and Bar chart</a></li>
-  <li><a href="#raincloud-plots" id="toc-raincloud-plots" class="nav-link" data-scroll-target="#raincloud-plots">Raincloud Plots</a></li>
-  <li><a href="#trellis-display" id="toc-trellis-display" class="nav-link" data-scroll-target="#trellis-display">Trellis Display</a></li>
+  <li><a href="#basic-tutorial" id="toc-basic-tutorial" class="nav-link" data-scroll-target="#basic-tutorial">Basic Tutorial</a></li>
+  <li><a href="#beyond-the-basic" id="toc-beyond-the-basic" class="nav-link" data-scroll-target="#beyond-the-basic">Beyond the Basic</a></li>
   </ul></li>
-  <li><a href="#all-about-tableau" id="toc-all-about-tableau" class="nav-link" data-scroll-target="#all-about-tableau">All About Tableau</a>
+  <li><a href="#geovisual-analytics-r-methods" id="toc-geovisual-analytics-r-methods" class="nav-link" data-scroll-target="#geovisual-analytics-r-methods">GeoVisual Analytics: R methods</a>
   <ul class="collapse">
-  <li><a href="#things-about-tableau-you-must-know" id="toc-things-about-tableau-you-must-know" class="nav-link" data-scroll-target="#things-about-tableau-you-must-know">Things about Tableau you must know!</a></li>
-  <li><a href="#learning-tableau" id="toc-learning-tableau" class="nav-link" data-scroll-target="#learning-tableau">Learning Tableau</a></li>
+  <li><a href="#sf-package" id="toc-sf-package" class="nav-link" data-scroll-target="#sf-package">sf package</a></li>
+  <li><a href="#raster-package" id="toc-raster-package" class="nav-link" data-scroll-target="#raster-package">raster package</a></li>
+  <li><a href="#stars" id="toc-stars" class="nav-link" data-scroll-target="#stars">stars</a></li>
+  <li><a href="#tmap-package" id="toc-tmap-package" class="nav-link" data-scroll-target="#tmap-package">tmap package</a></li>
+  <li><a href="#micromap-package" id="toc-micromap-package" class="nav-link" data-scroll-target="#micromap-package">micromap package</a></li>
+  <li><a href="#geofacet-package" id="toc-geofacet-package" class="nav-link" data-scroll-target="#geofacet-package">geofacet package</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -203,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lesson 1: Introduction to Visual Analytics</h1>
+<h1 class="title">Lesson 7: GeoVisual Analytics</h1>
 </div>
 
 
@@ -224,135 +222,140 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
+<section id="lesson-outline" class="level2">
+<h2 class="anchored" data-anchor-id="lesson-outline">Lesson Outline</h2>
 <ul>
-<li>Course Overview</li>
-<li>Motivation of Visual Analytics</li>
-<li>What Visual Analytics is</li>
-<li>Visual Analytics in History</li>
-<li>Intents of Visual Analytics Applications</li>
-<li>Visual Analytics Techniques: basic graphical methods</li>
-<li>Visual Analytics Tools</li>
+<li>Introducing map</li>
+<li>Properties of geographical data</li>
+<li>Typology of map</li>
+<li>Thematic mapping techniques
+<ul>
+<li>Proportional symbol map</li>
+<li>Choropleth map</li>
+<li>Data Classification</li>
+</ul></li>
+<li>Alternative mapping techniques</li>
 </ul>
 </section>
 <section id="lesson-slides-and-hands-on-notes" class="level2">
 <h2 class="anchored" data-anchor-id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
 <ul>
-<li><p>Lesson slides in <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.html">html</a> and <a href="../lesson/Lesson01/Lesson01-Intro_to_VAA.pdf">pdf</a> formats</p></li>
-<li><p>Lesson 1 (Supplement): Choosing the Right Visualisation in <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.html">html</a> and <a href="../lesson/Lesson01/Lesson01a-Choosing-the-Right-Visualisation.pdf">pdf</a> formats. <img src="img/new1.jpg" class="img-fluid"></p></li>
-<li><p>Handout of In-class Exercise 1 in <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.pdf">pdf</a> formats.</p></li>
-</ul>
-</section>
-<section id="in-class-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-exercise">In-class Exercise</h2>
-<p>By the end of this lesson, you will gain hands-on experience on:</p>
+<li><p>Lesson slides in <a href="../lesson/Lesson07/Lesson07-GeoVA.html">html</a> and <a href="../lesson/Lesson07/Lesson07-GeoVA.pdf">pdf</a> formats</p></li>
+<li><p>Hands-on Exercises:</p>
 <ul>
-<li>creating the course website by using Quarto and RStudio,</li>
-<li>managing the website by using git/github by using RStudio</li>
-<li>publishing the website onto Netlify server</li>
+<li>Hands-on Exercise 7: Basic Mapping in <a href="../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-BasicMapping.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-BasicMapping.pdf">pdf</a> formats.</li>
+<li>Hands-on Exercise 7: MovementVis in <a href="../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-MovementVis.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-MovementVis.pdf">pdf</a> formats</li>
+</ul></li>
+<li><p>Handout of Hands-on Exercise 7: Analytical Mapping in <a href="../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-AMap.html">html</a> and <a href="../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-AMap.pdf">pdf</a> formats.</p></li>
 </ul>
-</section>
-<section id="self-reading-before-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="self-reading-before-lesson">Self-reading Before Lesson</h2>
-<section id="webinars" class="level3">
-<h3 class="anchored" data-anchor-id="webinars">Webinars</h3>
-<ul>
-<li><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?referrer=playlist-the_best_hans_rosling_talks_yo">The best Hans Rosling talks you’ve ever seen</a>.</li>
-<li><a href="https://www.youtube.com/watch?v=LYKO_6KPZCM/">VIVA – What is Visual Analytics?</a></li>
-<li><a href="https://www.youtube.com/watch?v=5uGRGqCFryg/">Why Visual Analytics</a></li>
-<li><a href="https://www.youtube.com/watch?v=5i3xbitEVfs/">Visual Analytics - Mastering the Information Age</a></li>
-</ul>
-</section>
 </section>
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<section id="core-reading" class="level3">
+<h3 class="anchored" data-anchor-id="core-reading">Core Reading</h3>
 <ul>
-<li>Thomas, J.J. &amp; Cook, K.A. (2006) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2006/01/mcg2006010010/13rRUxBa5ej">A Visual Analytics Agenda</a>”, ‘’IEEE Computer Graphics and Applications’’, January 2006, Vol.26(1), pp.10-13</li>
-<li>Chabot, C (2009) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z">Demystifying Visual Analytics</a>”, ‘’IEEE Computer Graphics and Applications’’, March 2009, Vol.29(2), pp.84-87.</li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf">The 5 Most Influential Data Visualizations of All Time</a></li>
-<li>J.J. Thomas and K.A. Cook, eds.&nbsp;(2005) <a href="https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf">Illuminating the Path: The Research and Development Agenda for Visual Analytics</a>, IEEE CS Press.</li>
-<li>Jun, Yuan et. al.&nbsp;(2020) “A survey of visual analytics techniques for machine learning”, <em>Computational Visual Media</em>. <a href="https://doi.org/10.1007/s41095-020-0191-7">doi.org/10.1007/s41095-020-0191-7</a>.</li>
-<li>Cui, Wenqiang (2019) “<a href="https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2">Visual Analytics: A Comprehensive Overview</a>”, IEEE Access.</li>
+<li><a href="https://www.yaaka.cc/unit/the-concept-of-map-symbols/">The Concept of Map Symbols</a></li>
+<li><a href="https://www.axismaps.com/guide/univariate/proportional-symbols/">Proportional Symbols</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a></li>
+<li><a href="https://www.axismaps.com/guide/univariate/choropleth/">Choropleth Maps</a></li>
+<li><a href="https://www.axismaps.com/guide/data/data-classification/">The Basics of Data Classification</a></li>
 </ul>
 </section>
-<section id="statistical-graphics-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-graphics-methods">Statistical Graphics Methods</h2>
-<section id="boxplot" class="level3">
-<h3 class="anchored" data-anchor-id="boxplot">Boxplot</h3>
+<section id="additional-readings" class="level3">
+<h3 class="anchored" data-anchor-id="additional-readings">Additional Readings</h3>
 <ul>
-<li><a href="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51">Understanding Boxplots</a></li>
-<li>Regina L. Nuzzo (2016) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1016/j.pmrj.2016.02.001">“The Box Plots Alternative for Visualizing Quantitative Data”</a>, <em>PR&amp;M</em>, Volume8, Issue3, pp.&nbsp;268-272.</li>
-</ul>
-</section>
-<section id="violin-plots" class="level3">
-<h3 class="anchored" data-anchor-id="violin-plots">Violin Plots</h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Violin_plot">Violin Plot-wikipedia</a></li>
-<li>Hintze, Jerry L.; Nelson, Ray D. (1998). “<a href="https://search.proquest.com/openview/dcd68eb137d2d6b08aa23f37e34e0b01/1?pq-origsite=gscholar">Violin Plots: A Box Plot-Density Trace Synergism</a>”. <em>The American Statistician</em>. 52 (2): 181–4</li>
-<li><a href="https://www.londonsoda.com/articles/violin-plots">Violin Plot</a> by LondonSODA.</li>
-</ul>
-</section>
-<section id="notched-box-plots" class="level3">
-<h3 class="anchored" data-anchor-id="notched-box-plots">Notched Box Plots</h3>
-<ul>
-<li><a href="https://sites.google.com/site/davidsstatistics/davids-statistics/notched-box-plots">Notched Box Plots</a></li>
-</ul>
-</section>
-<section id="dot-plots" class="level3">
-<h3 class="anchored" data-anchor-id="dot-plots">Dot Plots</h3>
-<ul>
-<li><a href="https://search-proquest-com.libproxy.smu.edu.sg/docview/228429978?rfr_id=info%3Axri%2Fsid%3Aprimo">Dot plots</a></li>
-<li><a href="http://www.b-eye-network.com/view/2468">Dot Plots: A Useful Alternative to Bar Charts</a></li>
-<li><a href="https://d-nb.info/1151959243/34">The dot plot: A graphical tool for data analysis and presentation</a></li>
-<li>Leland Wilkinson (1999) <a href="http://moderngraphics11.pbworks.com/f/wilkinson_1999.DotPlots.pdf">“Dot Plot”</a>, <em>Statistical Computing and Graphics</em>, Vol. 53, No.&nbsp;3, pp.&nbsp;276-281.</li>
-</ul>
-</section>
-<section id="pie-chart-and-bar-chart" class="level3">
-<h3 class="anchored" data-anchor-id="pie-chart-and-bar-chart">Pie chart and Bar chart</h3>
-<ul>
-<li><a href="https://eagereyes.org/techniques/pie-charts">Understanding Pie Charts</a></li>
-<li>Tracey L. Weissgerber et. al.&nbsp;(2015) <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128">“Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm”</a>, <em>PLoS Biology</em>.</li>
-</ul>
-</section>
-<section id="raincloud-plots" class="level3">
-<h3 class="anchored" data-anchor-id="raincloud-plots">Raincloud Plots</h3>
-<ul>
-<li>Allen M, Poggiali D, Whitaker K et al.&nbsp;<a href="https://wellcomeopenresearch.org/articles/4-63">“Raincloud plots: a multi-platform tool for robust data. visualization”</a> [version 2; peer review: 2 approved]. <em>Welcome Open Res</em> 2021, pp.&nbsp;4:63.</li>
-</ul>
-</section>
-<section id="trellis-display" class="level3">
-<h3 class="anchored" data-anchor-id="trellis-display">Trellis Display</h3>
-<ul>
-<li><a href="https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents">The Visual Design and Control of Trellis Display</a></li>
-<li><a href="https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1002/wics.121">Trellis display</a></li>
-<li><a href="https://www.researchgate.net/publication/2671674_Trellis_Displays_vs_Interactive_Graphics">Trellis Displays vs.&nbsp;Interactive Graphics</a></li>
+<li><a href="https://gisgeography.com/choropleth-maps-data-classification/">Choropleth Maps – A Guide to Data Classification</a></li>
+<li><a href="https://www.axismaps.com/guide/multivariate/bivariate-choropleth/">Bivariate Choropleth</a></li>
+<li><a href="http://andywoodruff.com/blog/value-by-alpha-maps/">Value-by-alpha maps</a></li>
+<li><a href="https://blog.datawrapper.de/choroplethmaps/">What to consider when creating choropleth maps</a></li>
+<li><a href="https://www.directionsmag.com/article/3363">Choropleth Mapping with Exploratory Data Analysis</a></li>
+<li><a href="https://gisgeography.com/cartogram-maps/">Cartogram Maps: Data Visualization with Exaggeration</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cartogram">Cartogram</a></li>
+<li><a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/">When Maps Shouldn’t Be Maps</a></li>
+<li><a href="https://blog.datawrapper.de/choroplethmaps/">What to consider when creating choropleth maps</a></li>
 </ul>
 </section>
 </section>
-<section id="all-about-tableau" class="level2">
-<h2 class="anchored" data-anchor-id="all-about-tableau">All About Tableau</h2>
-<section id="things-about-tableau-you-must-know" class="level3">
-<h3 class="anchored" data-anchor-id="things-about-tableau-you-must-know">Things about Tableau you must know!</h3>
+<section id="visualising-geographic-data-tableau-methods" class="level2">
+<h2 class="anchored" data-anchor-id="visualising-geographic-data-tableau-methods">Visualising Geographic Data: Tableau Methods</h2>
+<section id="basic-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="basic-tutorial">Basic Tutorial</h3>
 <ul>
-<li><a href="https://graphics.stanford.edu/papers/polaris_extended/polaris.pdf">Polaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases</a></li>
-<li><a href="https://www.tableau.com/products/technology">Tableau Technology</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf">Show Me: Automatic Presentation for Visual Analysis</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/TS_WP_VA_F2_new_temp_0.pdf">Whitepaper: Visual Analysis for Everyone</a></li>
-<li><a href="https://help.tableau.com/current/blueprint/en-us/bp_analytics_best_practices_in_tableau.htm">Analytics Best Practices in Tableau</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/maps.htm">Maps and Geographic Data Analysis in Tableau</a>. This chapter from the User Guide of Tableau provide a comprehensive overview of the mapping concepts and Tableau methods. I strongly recommend you to read the chapter at least once.</li>
+<li><a href="https://www.tableau.com/learn/webinars/live-training-mapping#video">Live Training: Mapping</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-mapping?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Getting Started with Mapping</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/maps-tableau?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Maps in Tableau</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/editing-unrecognized-locations?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Editing Unrecognized Location</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/spatial-files?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Spatial Files</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/density-mark-type?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">The Density Mark Type (Heat maps)</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/expanding-tableaus-mapping-capabilities?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Expanding Tableau’s Mapping Capabilities</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/custom-geocoding?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Custom Geocoding</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/polygon-maps?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Polygon Maps</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/background-images?product=tableau_desktop%2Btableau_prep&amp;version=tableau_desktop_2019_3%2Btableau_prep_2019_3_1&amp;topic=mapping">Background Images</a></li>
 </ul>
 </section>
-<section id="learning-tableau" class="level3">
-<h3 class="anchored" data-anchor-id="learning-tableau">Learning Tableau</h3>
+<section id="beyond-the-basic" class="level3">
+<h3 class="anchored" data-anchor-id="beyond-the-basic">Beyond the Basic</h3>
 <ul>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started">Getting Started</a></li>
-<li><a href="http://www.tableau.com/learn/tutorials/on-demand/tableau-interface">Tableau Interface</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics">Getting Started with Visual Analytics</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting">Formatting</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting-pane">The Formatting Pane</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/reference-lines">Reference lines</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-data">Getting Started with Data</a> also self-learn the remaining videos under ’‘’Connecting to Data’’’</li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-tableau-prep">Getting Started with Tableau Prep Builder</a>. This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep <a href="https://www.tableau.com/about/blog/2018/3/tableau-prep-project-maestro-here-redefining-your-data-prep-experience-84620">here</a>. You are encouraged to view all the 12 videos under ’‘’Tableau Prep’’’.</li>
+<li><a href="https://www.tableau.com/learn/webinars/advanced-mapping-techniques-tableau">Advanced Mapping with Tableau</a></li>
+<li><a href="https://www.tableau.com/learn/whitepapers/10-ways-add-value-your-dashboards-maps">10 ways to add value to your dashboards with maps</a></li>
+<li><a href="https://www.ryansleeper.com/3-ways-to-make-magnificent-maps-in-tableau/">3 Ways to Make Magnificent Maps in Tableau</a></li>
+<li><a href="https://playfairdata.com/how-to-make-trellis-tile-small-multiple-maps-in-tableau//">How to Make Trellis / Tile / Small Multiple Maps in Tableau</a></li>
+</ul>
+</section>
+</section>
+<section id="geovisual-analytics-r-methods" class="level2">
+<h2 class="anchored" data-anchor-id="geovisual-analytics-r-methods">GeoVisual Analytics: R methods</h2>
+<section id="sf-package" class="level3">
+<h3 class="anchored" data-anchor-id="sf-package">sf package</h3>
+<ul>
+<li><a href="https://r-spatial.github.io/sf/articles/sf1.html">Simple Features for R</a></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf2.html">Reading, Writing and Converting Simple Features</a></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf3.html">Manipulating Simple Feature Geometries</a></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf4.html">Manipulating Simple Features</a></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf5.html">Plotting Simple Features</a></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf6.html">Miscellaneous</a></li>
+<li><a href="https://r-spatial.github.io/sf/articles/sf7.html">Spherical geometry in sf using s2geometry</a></li>
+</ul>
+</section>
+<section id="raster-package" class="level3">
+<h3 class="anchored" data-anchor-id="raster-package">raster package</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/raster/raster.pdf">raster reference</a></li>
+<li><a href="https://rspatial.org/raster/pkg/index.html">raster</a> package</li>
+</ul>
+</section>
+<section id="stars" class="level3">
+<h3 class="anchored" data-anchor-id="stars">stars</h3>
+<ul>
+<li><a href="https://r-spatial.github.io/stars/reference/index.html">stars reference</a></li>
+<li><a href="https://r-spatial.github.io/stars/index.html">Spatiotemporal Arrays: Raster and Vector Datacubes</a></li>
+<li><a href="https://r-spatial.github.io/stars/articles/stars1.html">Introduction</a></li>
+<li><a href="https://r-spatial.github.io/stars/articles/stars3.html">stars tidyverse methods</a></li>
+<li><a href="https://r-spatial.github.io/stars/articles/stars7.html">Statistical modelling with stars objects</a></li>
+</ul>
+</section>
+<section id="tmap-package" class="level3">
+<h3 class="anchored" data-anchor-id="tmap-package">tmap package</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/tmap/tmap.pdf">tmap reference</a></li>
+<li><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">tmap: get started!</a></li>
+<li><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-changes.html">tmap: what is changed in recent versions?</a></li>
+<li>Tennekes, M., (2018)<a href="https://www.jstatsoft.org/article/view/v084i06">tmap: Thematic Maps in R</a>, <em>Journal of Statistical Software</em>, 84(6), 1-39.</li>
+</ul>
+</section>
+<section id="micromap-package" class="level3">
+<h3 class="anchored" data-anchor-id="micromap-package">micromap package</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/micromap/index.html">micromap</a> provides functions simplifies the creation of linked micromap plots.</li>
+<li><a href="https://cran.r-project.org/web/packages/micromap/vignettes/Introduction_Guide.pdf">Linked Micromaps</a></li>
+</ul>
+</section>
+<section id="geofacet-package" class="level3">
+<h3 class="anchored" data-anchor-id="geofacet-package">geofacet package</h3>
+<ul>
+<li><a href="https://hafen.github.io/geofacet/">geofacet</a> provides geofaceting functionality for ggplot2. Geofaceting arranges a sequence of plots of data for different geographical entities into a grid that strives to preserve some of the original geographical orientation of the entities.</li>
+<li><a href="https://hafen.github.io/geofacet/articles/geofacet.html">Introduction to geofacet</a></li>
 </ul>
 
 
