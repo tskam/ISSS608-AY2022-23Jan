@@ -998,5 +998,5 @@ shinyApp (ui=ui, server=server)
 ```{r}
 #| eval: false 
 #| echo: false 
-renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/lesson/lesson01/Lesson01-VAA.html")
+renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/ShinyWorkshop/Shiny2/Shiny2.html")
 ```

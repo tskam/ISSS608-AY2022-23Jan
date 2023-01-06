@@ -842,245 +842,245 @@
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#content",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#content",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Content",
     "text": "Content\n\nWhat is a Web-enabled Visual Analytics Application?\nWhy building Web-enabled Visual Analytical Application?\nEvolution of web-based Technology\nGetting to Know Shiny"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#what-is-a-web-enabled-visual-analytics-application",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#what-is-a-web-enabled-visual-analytics-application",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "What is a Web-enabled Visual Analytics Application?",
-    "text": "What is a Web-enabled Visual Analytics Application?\n\n\n\nFocuses and emphasises on interactivity and effective integration of techniques from data analytics, visualization and human-computer interaction (HCI).\n\n\n\n\n\n\n\nWhy building a Web-enabled Visual Analytics Application?\n\n\n\nTo explore how the best of these different but related domains can be combined such that the sum is greater than the parts.\nTo democratise data and analytics through web-based analytical applications for data exploration, visualisation analysis and modelling.\n\n\n\n\nSource: Democratize data analytics customer data platform\n\n\n\n\n\n\nTechnology Challenges\n\n\n\nMainframe computing tend to have low usability and low accessibility.\nDesktop computing tend to have high usability but low accessibility.\nWeb-based computing (including mobile computing) are highly accesible but with relatively low capability.\n\n\n\n\n\n\n\n\nWeb-based data visualisation\n\n\n\nThe break-through is Rich Internet Applications (RIA)\n\n\n\n\n\n\nReference: Rich Internet Applications\n\n\n\n\nDevelopment of RIA\n\n\n\n\nFirst generation RIA data visualisation (2000~)\n\nAdobe Flex Builder\n\nFlare\n\nMicrosoft Silverlight\nJavaFX\n\n\n\n\nSecond generation RIA data visualisation (2010~)\n\nHTML 5 + JavaScript + SVG + CSS\n\nClient-side rendering\nNo plug-in is required\nMobile computing enabled\n\nD3.js - Data Driven Document\n\n\n\n\n\n\nMethodological Challenges\n\n\n\nLack of analysis functions.\nNot reproducible.\nNot extendable.\nRequire to learn multiple technologies and methods."
+    "text": "What is a Web-enabled Visual Analytics Application?\n\n\n\nFocuses and emphasises on interactivity and effective integration of techniques from data analytics, visualization and human-computer interaction (HCI)."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nShiny: Overview\n\n\n\nShiny is an open package from RStudio.\nIt provides a web application framework to create interactive web applications (visualization) called “Shiny apps”.\nIt can be found at https://shiny.rstudio.com/"
+    "text": "Getting to Know Shiny\nShiny: Overview\n\n\n\nShiny is an open source package from Posit (formally called RStudio).\nIt provides a web application framework to create interactive web applications (visualization) called “Shiny apps”.\nTo learn more about Shiny, visit its homepage"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-1",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-1",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nWhat is so special about Shiny?\n\n\nIt allows R users: - to build and share highly interactive web-enabled applications without having to invest significant among of time and efforts to master core web design technologies such as html5, Javascript and CSS.\n\nto integrate the analytical and visualisation packages of R without having to change from one programming language to another."
+    "text": "Getting to Know Shiny\nWhat is so special about Shiny?\n\n\nIt allows R users:\n\nto build and share highly interactive web-enabled applications without having to invest significant among of time and efforts to master core web design technologies such as html5, Javascript and CSS.\nto integrate the analytical and visualisation packages of R without having to change from one programming language to another."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-2",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-2",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nUnderstanding the architecture\n\nEvery Shiny app is maintained by a computer running R."
+    "text": "Getting to Know Shiny\nUnderstanding the architecture\n\nEvery Shiny app is maintained by a computer running R."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-3",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-3",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nThe Structure of a Shiny app\n\n\n\nA Shiny app comprises of two components, namely:\n\na user-interface script, and\na server script."
+    "text": "Getting to Know Shiny\nThe Structure of a Shiny app\n\n\n\nA Shiny app comprises of two components, namely:\n\na user-interface script, and\na server script."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-4",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-4",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nShiny’s user-interface, ui.R\n\nThe ui.R script controls the layout and appearance of a shiny app.\n\nIt is defined in a source script name ui.R.\nActually, ui is a web document that the user gets to see, it is based on the famous Twitter bootstrap framework, which makes the look and layout highly customizable and fully responsive.\nIn fact, you only need to know R and how to use the shiny package to build a pretty web application. Also, a little knowledge of HTML, CSS, and JavaScript may help."
+    "text": "Getting to Know Shiny\nShiny’s user-interface, ui.R\n\nThe ui.R script controls the layout and appearance of a shiny app.\n\nIt is defined in a source script name ui.R.\nActually, ui is a web document that the user gets to see, it is based on the famous Twitter bootstrap framework, which makes the look and layout highly customizable and fully responsive.\nIn fact, you only need to know R and how to use the shiny package to build a pretty web application. Also, a little knowledge of HTML, CSS, and JavaScript may help."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-5",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-5",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nShiny’s server server.R\n\nThe server.R script contains the instructions that your computer needs to build your Shiny app.\nYou are expected to:\n\nknow how to programme with R.\nfamiliar with Tidyverse, specifically dplyr, tidyr and ggplot2"
+    "text": "Getting to Know Shiny\nShiny’s server server.R\n\nThe server.R script contains the instructions that your computer needs to build your Shiny app.\nYou are expected to:\n\nknow how to programme with R.\nfamiliar with Tidyverse, specifically dplyr, tidyr and ggplot2"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-6",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-6",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nShiny Examples\nThe Shiny package has eleven built-in examples that each demonstrates how Shiny works."
+    "text": "Getting to Know Shiny\nShiny Examples\nThe Shiny package has eleven built-in examples that each demonstrates how Shiny works."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-7",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#getting-to-know-shiny-7",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Getting to Know Shiny",
-    "text": "Getting to Know Shiny\n\nRunning Shiny example\n\n\n\nlibrary(shiny)\nrunExample(\"01_hello\")"
+    "text": "Getting to Know Shiny\nRunning Shiny example\n\n\n\nlibrary(shiny)\nrunExample(\"01_hello\")"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#building-a-shiny-app",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#building-a-shiny-app",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Building a Shiny app",
-    "text": "Building a Shiny app\n\nA Shiny app can be in a form of a single file called app.R.\nAlternatively, a Shiny app can be also created using separate ui.R and server.R files.\nThe seperate files way is preferred when the app is complex and involves more codes.\n\n\n\n\nA basic Shiny app script\n\n\n\n\nImportant tips of Shiny app file\n\n\n\n\n\n\nTip\n\n\n\n\nIt is very important that the name of the file is app.R, otherwise it would not be recognized as a Shiny app.\nYou should not have any R code after the shinyApp(ui = ui, server = server) line. That line needs to be the last line in your file.\nIt is good practice to place this app in its own folder, and not in a folder that already has other R scripts or files, unless those other files are used by your app.\n\n\n\n\n\n\nLoading the dataset\n\n\n\nlibrary(shiny)\nlibrary(tidyverse)\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\nui <- fluidPage()\nserver <- function(input, output) {}\nshinyApp (ui=ui, server=server)\n\n\n\nMake sure that the data file path and file name are correct.\nTo check if the dataset has been added correctly, you can add a print() argument after reading the data."
+    "text": "Building a Shiny app\n\nA Shiny app can be in a form of a single file called app.R.\nAlternatively, a Shiny app can be also created using separate ui.R and server.R files.\nThe seperate files way is preferred when the app is complex and involves more codes."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Layout",
-    "text": "Shiny Layout\n\nShiny ui.R scripts use the function fluidPage to create a display that automatically adjusts to the dimensions of your user’s browser window.\nYou lay out your app by placing elements in the fluidPage function.\ntitlePanel and sidebarLayout are the two most popular elements to add to fluidPage. They create a basic Shiny app with a sidebar.\n\n\n\nShiny Layout Panels\n\nAn overview\n\n\n\n\n\nShiny Layout Panels\n\nPanels\n\nUse panels to group multiple elements into a single element that has its own properties.\nEspecially important and useful for complex apps with a large number of inputs and outputs such that it might not be clear to the user where to get started.\n\n\n\n\n\nShiny Layout Panels\n\n\ntitlePanel()"
+    "text": "Shiny Layout\n\nShiny ui.R scripts use the function fluidPage to create a display that automatically adjusts to the dimensions of your user’s browser window.\nYou lay out your app by placing elements in the fluidPage function.\ntitlePanel and sidebarLayout are the two most popular elements to add to fluidPage. They create a basic Shiny app with a sidebar."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Building the basic UI",
-    "text": "Building the basic UI\n\nWorking with titlePanel\n\n\n\ntitlePanel() is used to add the application title.\n\n\nlibrary(shiny)\nlibrary(tidyverse)\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\nui <- fluidPage( #<<\n  titlePanel(\"Pupils Examination Results Dashboard\") #<<\n) #<<\n\nserver <- function(input, output) {}\n\nshinyApp (ui=ui, server=server)"
+    "text": "Building the basic UI\nWorking with sidebarLayout()"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout-panels-3",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout-panels-3",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Layout Panels",
-    "text": "Shiny Layout Panels\n\nsidebarPanel() and mainPanel()"
+    "text": "Shiny Layout Panels\nsidebarPanel() and mainPanel()"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-1",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-1",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Building the basic UI",
-    "text": "Building the basic UI\n\nWorking with sidebarLayout()"
+    "text": "Building the basic UI\nWorking with sidebarLayout()\n\nlibrary(shiny)\nlibrary(tidyverse)\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\nui <- fluidPage(\n  titlePanel(\"Pupils Examination Results Dashboard\"),\n  sidebarLayout(\n    sidebarPanel(\"Side bar panel\"),\n    mainPanel(\"View display\")\n  )\n)\n\nserver <- function(input, output) {}\nshinyApp (ui=ui, server=server)\n\n\n\n\n\n\n\nNote\n\n\nNote that in a fluid design your sidebar and other elements may “collapse” if your browser view is not wide enough."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-2",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-2",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Building the basic UI",
-    "text": "Building the basic UI\n\nWorking with sidebarLayout()\n\nsidebarLayout() always takes two arguments:\n\nsidebarPanel() function output\nmainPanel() function output\n\nThese functions place content in either the sidebar or the main panels.\nThe sidebarPanel() will appear on the left side of your app by default. You can move it to the right side by giving sidebarLayout() the optional argument position = “right”.\nYou can use navbarPage to give your app a multi-page user-interface that includes a navigation bar. Or you can use fluidRow() and column() to build your layout up from a grid system.\nTo learn more about the advanced options, read the Shiny Application Layout Guide."
+    "text": "Building the basic UI\nWorking with sidebarLayout()\n\nlibrary(shiny)\nlibrary(tidyverse)\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\nui <- fluidPage(\n  titlePanel(\"Pupils Examination Results Dashboard\"),\n  sidebarLayout( #<<\n    sidebarPanel(\"Side bar panel\"), #<<\n    mainPanel(\"View display\") #<<\n  ) #<<\n)\n\nserver <- function(input, output) {}\nshinyApp (ui=ui, server=server)\n\n\n\n\n\n\n\nNote\n\n\nNote that in a fluid design your sidebar and other elements may “collapse” if your browser view is not wide enough."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-3",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-3",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Building the basic UI",
-    "text": "Building the basic UI\n\nWorking with sidebarLayout()\n\nlibrary(shiny)\nlibrary(tidyverse)\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\nui <- fluidPage(\n  titlePanel(\"Pupils Examination Results Dashboard\"),\n  sidebarLayout( #<<\n    sidebarPanel(\"Side bar panel\"), #<<\n    mainPanel(\"View display\") #<<\n  ) #<<\n)\n\nserver <- function(input, output) {}\nshinyApp (ui=ui, server=server)\n\n\n\n\n\n\n\nNote\n\n\n\nNote that in a fluid design your sidebar and other elements may “collapse” if your browser view is not wide enough."
+    "text": "Building the basic UI\nWorking with sidebarLayout()\n\nlibrary(shiny)\nlibrary(tidyverse)\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\nui <- fluidPage(\n  titlePanel(\"Pupils Examination Results Dashboard\"),\n  sidebarLayout( #<<\n    sidebarPanel(\"Side bar panel\"), #<<\n    mainPanel(\"View display\") #<<\n  ) #<<\n)\n\nserver <- function(input, output) {}\nshinyApp (ui=ui, server=server)\n\n\n\n\n\n\n\nNote\n\n\nNote that in a fluid design your sidebar and other elements may “collapse” if your browser view is not wide enough."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Inputs",
-    "text": "Shiny Inputs\n\nAn overview of Shiny Inputs\n\n\n\nInputs are what gives users a way to interact with a Shiny app.\nShiny provides many input functions to support many kinds of interactions that the user could have with an app.\n\n\n]\n\n\nReference: Refer to 2 Basic UI of Master Shiny to learn more about Shiny UI usage and arguments."
+    "text": "Shiny Inputs\nAn overview of Shiny Inputs\n\n\n\nInputs are what gives users a way to interact with a Shiny app.\nShiny provides many input functions to support many kinds of interactions that the user could have with an app.\n\n\n\n\n\nReference: Refer to 2 Basic UI of Master Shiny to learn more about Shiny UI usage and arguments."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-1",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-1",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Inputs",
-    "text": "Shiny Inputs\n\nInputs syntax\n\n\n\nAll input functions have the same first two arguments: inputId and label.\nThe inputId will be the name that Shiny will use to refer to this input when you want to retrieve its current value.\nIt is important to note that every input must have a unique inputId.\n\nThe label argument specifies the text in the display label that goes along with the input widget.\nEvery input can also have multiple other arguments specific to that input type."
+    "text": "Shiny Inputs\nInputs syntax\n\n\n\nAll input functions have the same first two arguments: inputId and label.\nThe inputId will be the name that Shiny will use to refer to this input when you want to retrieve its current value.\nIt is important to note that every input must have a unique inputId.\nThe label argument specifies the text in the display label that goes along with the input widget.\nEvery input can also have multiple other arguments specific to that input type."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-2",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-2",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Inputs",
-    "text": "Shiny Inputs\n\nAdding inputs to the UI (selectInput() and sliderInput() functions)\n\nui <- fluidPage(\n  titlePanel(\"Pupils Examination Results Dashboard\"),\n  sidebarLayout(\n    sidebarPanel( #<<\n      selectInput(inputId = \"variable\", #<<\n                  label = \"Subject:\", #<<\n                  choices = c(\"English\" = \"ENGLISH\", #<<\n                              \"Maths\" = \"MATHS\",#<<\n                              \"Science\" = \"SCIENCE\"), #<<\n                  selected = \"ENGLISH\"), #<<\n      sliderInput(inputId = \"bins\", #<<\n                  label = \"Number of Bins\", #<<\n                  min = 5, #<<\n                  max = 20, #<<\n                  value= 10) #<<\n                ), #<<\n    mainPanel()\n  )\n)"
+    "text": "Shiny Inputs\nAdding checkboxInput()\n\nui: Add an input widget that the user can interact with to check/uncheck the box.]\n\n\nsliderInput(inputId = \"bin\",\n            label = \"Number of Bins\",\n            min = 5,\n            max = 20,\n            value = c(10)),\ncheckboxInput(inputId = \"show_data\", #<<\n              label = \"Show data table\", #<<\n              value = TRUE) #<<\n        ), #<<\n    mainPanel()\n  )\n)"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-3",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-3",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Inputs",
-    "text": "Shiny Inputs\n\nAdding checkboxInput()\nAdd a checkbox input to specify whether the data plotted should be shown in a data table.\n\nui: Add an input widget that the user can interact with to check/uncheck the box.\nui: Add an output defining where the data table should appear.\nserver: Add a reactive expression that creates the data table if the checkbox is checked."
+    "text": "Shiny Inputs\nAdding checkboxInput()\n\nui: Add an input widget that the user can interact with to check/uncheck the box.]\n\n\nsliderInput(inputId = \"bin\",\n            label = \"Number of Bins\",\n            min = 5,\n            max = 20,\n            value = c(10)),\ncheckboxInput(inputId = \"show_data\", #<<\n              label = \"Show data table\", #<<\n              value = TRUE) #<<\n        ), #<<\n    mainPanel()\n  )\n)"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-4",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-inputs-4",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Inputs",
-    "text": "Shiny Inputs\n\nAdding checkboxInput()\n\nui: Add an input widget that the user can interact with to check/uncheck the box.]\n\n\nsliderInput(inputId = \"bin\",\n            label = \"Number of Bins\",\n            min = 5,\n            max = 20,\n            value = c(10)),\ncheckboxInput(inputId = \"show_data\", #<<\n              label = \"Show data table\", #<<\n              value = TRUE) #<<\n        ), #<<\n    mainPanel()\n  )\n)"
+    "text": "Shiny Inputs\nAdding checkboxInput()\n\nui: Add an input widget that the user can interact with to check/uncheck the box.]\n\n\nsliderInput(inputId = \"bin\",\n            label = \"Number of Bins\",\n            min = 5,\n            max = 20,\n            value = c(10)),\ncheckboxInput(inputId = \"show_data\", #<<\n              label = \"Show data table\", #<<\n              value = TRUE) #<<\n        ), #<<\n    mainPanel()\n  )\n)"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-output",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-output",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Output()",
-    "text": "Shiny Output()\n\nAn overview of Shiny Output()\n\nAfter creating all the inputs, we should add elements to the UI to display the outputs.\nTo display output, add it to fluidPage() with an Output() function.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nSimilarly to the input functions, all the output functions have a outputId argument that is used to identify each output, and this argument must be unique for each output.\nEach output needs to be constructed in the server code later."
+    "text": "Shiny Output()\nAn overview of Shiny Output()\n\nAfter creating all the inputs, we should add elements to the UI to display the outputs.\nTo display output, add it to fluidPage() with an Output() function.\n\n\n\n\n\n\n\n\nNote\n\n\n\nSimilarly to the input functions, all the output functions have a outputId argument that is used to identify each output, and this argument must be unique for each output.\nEach output needs to be constructed in the server code later."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-output-1",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-output-1",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Output()",
-    "text": "Shiny Output()\n\nShiny Output() options\n\n\n\nOutputs can be any object that R creates and that we want to display in our app - such as a plot, a table, or text."
+    "text": "Shiny Output()\nShiny Output() options\n\n\n\nOutputs can be any object that R creates and that we want to display in our app - such as a plot, a table, or text."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-output-2",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-output-2",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny Output()",
-    "text": "Shiny Output()\n\nAdding plotOutput()\n\nui <- fluidPage(\n    titlePanel(\"Pupils Examination Results Dashboard\"),\n    sidebarLayout(\n        sidebarPanel(\"Side bar panel\"),\n        mainPanel(\n            plotOutput(\"distPlot\") #<<\n        )    \n    )\n)"
+    "text": "Shiny Output()\nAdding plotOutput()\n\nui <- fluidPage(\n    titlePanel(\"Pupils Examination Results Dashboard\"),\n    sidebarLayout(\n        sidebarPanel(\"Side bar panel\"),\n        mainPanel(\n            plotOutput(\"distPlot\") #<<\n        )    \n    )\n)"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny server.R",
-    "text": "Shiny server.R\n\nBuilding an output\nThere are three rules to build an output in Shiny, they are:\n\nSave the output object into the output list (remember the app template - every server function has an output argument).\nBuild the object with a render() function, where is the type of output.\nAccess input values using the input list (every server function has an input argument)\n\n\n\n\n\n\n\nNote\n\n\n\nThe third rule is only required if you want your output to depend on some input."
+    "text": "Shiny server.R\nBuilding an output\nThere are three rules to build an output in Shiny, they are:\n\nSave the output object into the output list (remember the app template - every server function has an output argument).\nBuild the object with a render() function, where is the type of output.\nAccess input values using the input list (every server function has an input argument)\n\n\n\n\n\n\n\nNote\n\n\nThe third rule is only required if you want your output to depend on some input."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-1",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-1",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny server.R",
-    "text": "Shiny server.R\n\nA generic Shiny render() syntax"
+    "text": "Shiny server.R\nA generic Shiny render() syntax"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-2",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-2",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny server.R",
-    "text": "Shiny server.R\n\nShiny render()"
+    "text": "Shiny server.R\nShiny render()"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-3",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-3",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny server.R",
-    "text": "Shiny server.R\n\nBuilding a basic output\nLet’s first see how to build a very basic output using only the first two rules. We’ll create a plot and send it to the distPlot output.\n\nserver <- function(input, output){\n    output$distPlot <- renderPlot({ #<<\n        ggplot(exam, aes(ENGLISH)) + #<<\n            geom_histogram(bins = 20, #<<\n                           color=\"black\", #<< \n                           fill=\"light blue\") #<<\n    }) #<<\n} \n\n\n\n\n\n\n\nNote\n\n\n\n\nThis simple code shows the first two rules: we’re creating a plot inside the renderPlot() function, and assigning it to distPlot in the output list.\nRemember that every output created in the UI must have a unique ID, now we see why. In order to attach an R object to an output with ID x, we assign the R object to output$distPlot.\nSince distPlot was defined as a plotOutput, we must use the renderPlot() function, and we must create a plot inside the renderPlot() function."
+    "text": "Shiny server.R\nBuilding a complete output: The revised version\n\nserver <- function(input, output){\n    output$distPlot <- renderPlot({\n      ggplot(exam, \n             aes_string(x = input$variable)) + #<<\n        geom_histogram(bins = input$bin,\n                       color=\"black\", \n                       fill=\"light blue\")\n      })\n}\n\n\n\n\n\n\n\nNote\n\n\n\nNotice that aes_string() instead of aes() of ggplot2 is used. To understand the differences between aes_string() and aes(), please refer to this link."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-4",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-4",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny server.R",
-    "text": "Shiny server.R\n\nBuilding a complete output\n\nserver <- function(input, output){\n    output$distPlot <- renderPlot({\n        x <- unlist(exam[,input$variable]) #<<\n        \n        ggplot(exam, aes(x)) +\n            geom_histogram(bins = input$bin,\n                           color=\"black\", \n                           fill=\"light blue\")\n    })\n}"
+    "text": "Shiny server.R\nBuilding a complete output: The revised version\n\nserver <- function(input, output){\n    output$distPlot <- renderPlot({\n      ggplot(exam, \n             aes_string(x = input$variable)) + #<<\n        geom_histogram(bins = input$bin,\n                       color=\"black\", \n                       fill=\"light blue\")\n      })\n}\n\n\n\n\n\n\n\nNote\n\n\n\nNotice that aes_string() instead of aes() of ggplot2 is used. To understand the differences between aes_string() and aes(), please refer to this link."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-5",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-server.r-5",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny server.R",
-    "text": "Shiny server.R\n\nBuilding a complete output: The revised version\n\nserver <- function(input, output){\n    output$distPlot <- renderPlot({\n      ggplot(exam, \n             aes_string(x = input$variable)) + #<<\n        geom_histogram(bins = input$bin,\n                       color=\"black\", \n                       fill=\"light blue\")\n      })\n}\n\n\n\n\n\n\n\nNote\n\n\n\n\nNotice that aes_string() instead of aes() of ggplot2 is used. To understand the differences between aes_string() and aes(), please refer to this link."
+    "text": "Shiny server.R\nBuilding a complete output: The revised version\n\nserver <- function(input, output){\n    output$distPlot <- renderPlot({\n      ggplot(exam, \n             aes_string(x = input$variable)) + #<<\n        geom_histogram(bins = input$bin,\n                       color=\"black\", \n                       fill=\"light blue\")\n      })\n}\n\n\n\n\n\n\n\nNote\n\n\n\nNotice that aes_string() instead of aes() of ggplot2 is used. To understand the differences between aes_string() and aes(), please refer to this link."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#the-shinyapp",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#the-shinyapp",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "The shinyApp()",
-    "text": "The shinyApp()\n\n\n\n\n\n\nImportant\n\n\n\n\nIt is important to add shinyApp() at the end of your Shiny application.\n\n\n\n\nshinyApp(ui = ui, server = server) #<<\n\n]"
+    "text": "The shinyApp()\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIt is important to add shinyApp() at the end of your Shiny application.\n\n\n\n\n\nshinyApp(ui = ui, server = server)"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-app-is-reactive",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-app-is-reactive",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Shiny app is Reactive",
-    "text": "Shiny app is Reactive\n\nReactivity automatically occurs when an input value is used to render an output object.\n\n\n\n\nReactive Flow"
+    "text": "Shiny app is Reactive\n\nReactivity automatically occurs when an input value is used to render an output object."
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#survival-tips",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#survival-tips",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "Survival Tips",
-    "text": "Survival Tips\n\n\n\n\n\n\nTip\n\n\n\n\nAlways run the entire script, not just up to the point where you’re developing code.\nSometimes the best way to see what’s wrong is to run the app and review the error.\nWatch out for commas!"
+    "text": "Survival Tips\n\n\n\n\n\n\nTip\n\n\n\nAlways run the entire script, not just up to the point where you’re developing code.\nSometimes the best way to see what’s wrong is to run the app and review the error.\nWatch out for commas!"
   },
   {
     "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#references",
     "href": "ShinyWorkshop/Shiny1/Shiny1.html#references",
-    "title": "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
     "section": "References",
     "text": "References\n\nHadley Wickham (2021) Mastering Shiny, O’Reilly Media. This is a highly recommended book.\nBuilding Web Applications with Shiny, especially Module 1 and 2.\nShiny Three Parts Tutorial.\nOnline Function reference\nThe basic parts of a Shiny app\nHow to build a Shiny app\nThe Shiny Cheat sheet\n\nBeyond Uncle Google! Last but not least, when you need help\n\nHow to get help"
   },
@@ -1258,5 +1258,26 @@
     "title": "Building Web-enabled Visual Analytics Application with Shiny: Beyond the basic",
     "section": "",
     "text": "In this lesson, selected advanced methods of Shiny will be discussed. You will also gain hands-on experiences on using these advanced methods to build Shiny applications.\nBy the end of this lesson, you will be able to:\n\nunderstanding the basic development cycle of creating apps, making changes, and experimenting with the results,\ndebug errors in the codes,\nbuild complex Shiny application using module, and\nimprove the productivity of Shiny applications development"
+  },
+  {
+    "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout-panels-1",
+    "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout-panels-1",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
+    "section": "Shiny Layout Panels",
+    "text": "Shiny Layout Panels\nsidebarPanel() and mainPanel()"
+  },
+  {
+    "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-sidebarlayout",
+    "href": "ShinyWorkshop/Shiny1/Shiny1.html#building-the-basic-ui-sidebarlayout",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
+    "section": "Building the basic UI :sidebarLayout()",
+    "text": "Building the basic UI :sidebarLayout()\n\n\n\nsidebarLayout() always takes two arguments:\n\nsidebarPanel() function output\nmainPanel() function output\n\nThese functions place content in either the sidebar or the main panels.\nThe sidebarPanel() will appear on the left side of your app by default. You can move it to the right side by giving sidebarLayout() the optional argument position = “right”.\n\n\nsidebarPanel() and mainPanel()"
+  },
+  {
+    "objectID": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout-panels",
+    "href": "ShinyWorkshop/Shiny1/Shiny1.html#shiny-layout-panels",
+    "title": "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic",
+    "section": "Shiny Layout Panels",
+    "text": "Shiny Layout Panels\n\nPanels are used to group multiple elements into a single element that has its own properties.\nEspecially important and useful for complex apps with a large number of inputs and outputs such that it might not be clear to the user where to get started."
   }
 ]

@@ -1,5 +1,5 @@
 ---
-title: "Building Web-enabled Visual Analytics Application with Shiny: Shiny basic"
+title: "Building Web-enabled Visual Analytics Applications with Shiny: Shiny basic"
 subtitle: ""  
 author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems"
 institute: "School of Computing and Information Systems,<br/>Singapore Management University"
@@ -99,7 +99,7 @@ Reference: [Rich Internet Applications](https://www.computerworld.com/article/25
 
 ::: columns
 ::: {.column width="50%"}
-### First generation RIA data visualisation (2000\~)
+#### First generation RIA data visualisation (2000\~)
 
 -   Adobe Flex Builder
     -   [Flare](http://flare.prefuse.org/)
@@ -108,7 +108,7 @@ Reference: [Rich Internet Applications](https://www.computerworld.com/article/25
 :::
 
 ::: {.column width="50%"}
-### Second generation RIA data visualisation (2010\~)
+#### Second generation RIA data visualisation (2010\~)
 
 -   HTML 5 + JavaScript + SVG + CSS
     -   Client-side rendering
@@ -144,11 +144,11 @@ Reference: [Rich Internet Applications](https://www.computerworld.com/article/25
 
 ::: columns
 ::: {.column width="50%"}
--   Shiny is an open package from RStudio.
+-   Shiny is an open source package from [Posit](https://posit.co/) (formally called RStudio).
 
 -   It provides a **web application framework** to create interactive web applications (visualization) called "Shiny apps".
 
--   It can be found at https://shiny.rstudio.com/
+-   To learn more about Shiny, visit its [homepage](https://shiny.rstudio.com/)
 :::
 
 ::: {.column width="50%"}
@@ -162,7 +162,9 @@ Reference: [Rich Internet Applications](https://www.computerworld.com/article/25
 
 ::: columns
 ::: {.column width="50%"}
-It allows R users: - to build and share highly interactive web-enabled applications without having to invest significant among of time and efforts to master core web design technologies such as html5, Javascript and CSS.
+It allows R users:
+
+-   to build and share highly interactive web-enabled applications without having to invest significant among of time and efforts to master core web design technologies such as html5, Javascript and CSS.
 
 -   to integrate the analytical and visualisation packages of R without having to change from one programming language to another.
 :::
@@ -261,12 +263,16 @@ runExample("01_hello")
 
 ### Important tips of Shiny app file
 
+::: columns
+::: {.column width="50%"}
 ::: callout-tip
 -   It is very important that the name of the file is *app.R*, otherwise it would not be recognized as a Shiny app.
 
 -   You should not have any R code after the `shinyApp(ui = ui, server = server)` line. That line needs to be the last line in your file.
 
 -   It is good practice to place this app in its own folder, and not in a folder that already has other R scripts or files, unless those other files are used by your app.
+:::
+:::
 :::
 
 ------------------------------------------------------------------------
@@ -304,39 +310,21 @@ shinyApp (ui=ui, server=server)
 
 -   *titlePanel* and *sidebarLayout* are the two most popular elements to add to fluidPage. They create a basic Shiny app with a sidebar.
 
-------------------------------------------------------------------------
+## Shiny Layout Panels
 
-### Shiny Layout Panels
+-   Panels are used to group multiple elements into a single element that has its own properties.
 
-#### An overview
+-   Especially important and useful for complex apps with a large number of inputs and outputs such that it might not be clear to the user where to get started.
 
 ![](img/image10.jpg)
 
 ------------------------------------------------------------------------
 
-### Shiny Layout Panels
-
-#### Panels
-
--   Use panels to group multiple elements into a single element that has its own properties.
-
--   Especially important and useful for complex apps with a large number of inputs and outputs such that it might not be clear to the user where to get started.
-
-------------------------------------------------------------------------
-
-### Shiny Layout Panels
-
-### `titlePanel()`
-
-![](img/image17.jpg)
-
-## Building the basic UI
-
-### Working with *titlePanel*
+### Working with `titlePanel`
 
 ::: columns
 ::: {.column width="60%"}
--   `titlePanel()` is used to add the application title.
+-   [`titlePanel()`](https://shiny.rstudio.com/reference/shiny/1.7.4/titlepanel) is used to add the application title.
 
 ```{r, echo=TRUE, eval=FALSE}
 library(shiny)
@@ -359,37 +347,39 @@ shinyApp (ui=ui, server=server)
 :::
 :::
 
-## Shiny Layout Panels
+------------------------------------------------------------------------
 
-### `sidebarPanel()` and `mainPanel()`
+### Shiny Layout Panel : `sidebarLayout()`
 
-![](img/image15.jpg)
-
-## Building the basic UI
-
-### Working with `sidebarLayout()`
-
-![](img/image19.jpg){width="320"}
-
-## Building the basic UI
-
-### Working with `sidebarLayout()`
-
--   `sidebarLayout()` always takes two arguments:
+::: columns
+::: {.column width="50%"}
+-   [`sidebarLayout()`](https://shiny.rstudio.com/reference/shiny/1.7.4/sidebarlayout) always takes two arguments:
     -   `sidebarPanel()` function output
     -   `mainPanel()` function output
 -   These functions place content in either the sidebar or the main panels.
 -   The `sidebarPanel()` will appear on the left side of your app by default. You can move it to the right side by giving `sidebarLayout()` the optional argument position = "right".
--   You can use *navbarPage* to give your app a multi-page user-interface that includes a navigation bar. Or you can use `fluidRow()` and `column()` to build your layout up from a grid system.
--   To learn more about the advanced options, read the [Shiny Application Layout Guide](http://shiny.rstudio.com/articles/layout-guide.html).
+:::
 
-## Building the basic UI
+::: {.column width="50%"}
+![](img/image15a.jpg){width="547"}
 
-### Working with `sidebarLayout()`
+![](img/image15b.jpg)
+:::
+:::
+
+---
+
+### Hands-on Exercise: Working with `sidebarLayout()`
+
+::: columns
+::: {.column width="50%"}
+
+Lets add the highlighted codes into the original code chunk.
 
 ```{r, echo=TRUE,eval=FALSE}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "8,9,10,11"
 library(shiny)
 library(tidyverse)
 
@@ -397,18 +387,26 @@ exam <- read_csv("data/Exam_data.csv")
 
 ui <- fluidPage(
   titlePanel("Pupils Examination Results Dashboard"),
-  sidebarLayout( #<<
-    sidebarPanel("Side bar panel"), #<<
-    mainPanel("View display") #<<
-  ) #<<
+  sidebarLayout(
+    sidebarPanel("Side bar panel"),
+    mainPanel("View display")
+  )
 )
 
 server <- function(input, output) {}
 shinyApp (ui=ui, server=server)
 ```
+:::
 
-::: callout-note
+::: {.column width="50%"}
+Refresh Shiny App and your screen should look similar to the figure below.
+
+![](img/image19.jpg)
+
+::: {.callout-note}
 Note that in a fluid design your sidebar and other elements may "collapse" if your browser view is not wide enough.
+:::
+:::
 :::
 
 ## Shiny Inputs
@@ -423,21 +421,20 @@ Note that in a fluid design your sidebar and other elements may "collapse" if yo
 :::
 
 ::: {.column width="50%"}
-![](img/image26.jpg)\]
+![](img/image26.jpg)
 :::
 :::
 
 Reference: Refer to [2 Basic UI](https://mastering-shiny.org/basic-ui.html) of Master Shiny to learn more about Shiny UI usage and arguments.
 
 ## Shiny Inputs
-
 ### Inputs syntax
 
 ::: columns
 ::: {.column width="50%"}
 -   All input functions have the same first two arguments: inputId and label.
 -   The inputId will be the name that Shiny will use to refer to this input when you want to retrieve its current value.
--   It is important to note that every input must have a unique inputId.\
+-   It is important to note that every input must have a unique inputId.
 -   The label argument specifies the text in the display label that goes along with the input widget.
 -   Every input can also have multiple other arguments specific to that input type.
 :::
@@ -447,71 +444,40 @@ Reference: Refer to [2 Basic UI](https://mastering-shiny.org/basic-ui.html) of M
 :::
 :::
 
-## Shiny Inputs
+---
 
-### Adding inputs to the UI (`selectInput()` and `sliderInput()` functions)
+### Hands-on Exercise: Adding inputs
+
+::: columns
+::: {.column width="50%"}
+Adding inputs to the UI by using [`selectInput()`](https://shiny.rstudio.com/reference/shiny/1.7.4/selectinput) and [`sliderInput()`](https://shiny.rstudio.com/reference/shiny/1.7.4/sliderinput).
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "4-16"
 ui <- fluidPage(
   titlePanel("Pupils Examination Results Dashboard"),
   sidebarLayout(
-    sidebarPanel( #<<
-      selectInput(inputId = "variable", #<<
-                  label = "Subject:", #<<
-                  choices = c("English" = "ENGLISH", #<<
-                              "Maths" = "MATHS",#<<
-                              "Science" = "SCIENCE"), #<<
-                  selected = "ENGLISH"), #<<
-      sliderInput(inputId = "bins", #<<
-                  label = "Number of Bins", #<<
-                  min = 5, #<<
-                  max = 20, #<<
-                  value= 10) #<<
-                ), #<<
+    sidebarPanel(
+      selectInput(inputId = "variable",
+                  label = "Subject:",
+                  choices = c("English" = "ENGLISH",
+                              "Maths" = "MATHS",
+                              "Science" = "SCIENCE"),
+                  selected = "ENGLISH"),
+      sliderInput(inputId = "bins",
+                  label = "Number of Bins",
+                  min = 5,
+                  max = 20,
+                  value= 10)
+                ),
     mainPanel()
-  )
-)
 ```
-
-## Shiny Inputs
-
-### Adding `checkboxInput()`
-
-Add a checkbox input to specify whether the data plotted should be shown in a data table.
-
--   ui: Add an input widget that the user can interact with to check/uncheck the box.
-
--   ui: Add an output defining where the data table should appear.
-
--   server: Add a reactive expression that creates the data table if the checkbox is checked.
-
-## Shiny Inputs
-
-### Adding `checkboxInput()`
-
--   ui: Add an input widget that the user can interact with to check/uncheck the box.\]
-
-```{r}
-#| echo: true
-#| eval: false
-sliderInput(inputId = "bin",
-            label = "Number of Bins",
-            min = 5,
-            max = 20,
-            value = c(10)),
-checkboxInput(inputId = "show_data", #<<
-              label = "Show data table", #<<
-              value = TRUE) #<<
-        ), #<<
-    mainPanel()
-  )
-)
-```
+:::
+:::
 
 ## Shiny `Output()`
-
 ### An overview of Shiny `Output()`
 
 -   After creating all the inputs, we should add elements to the UI to display the outputs.
@@ -525,7 +491,6 @@ checkboxInput(inputId = "show_data", #<<
 :::
 
 ## Shiny `Output()`
-
 ### Shiny `Output()` options
 
 ::: columns
@@ -538,26 +503,32 @@ checkboxInput(inputId = "show_data", #<<
 :::
 :::
 
-## Shiny `Output()`
+---
 
-### Adding `plotOutput()`
+### Hands-on Exercise: 
+
+::: columns
+::: {.column width="50%"}
+Adding [`plotOutput()`](https://shiny.rstudio.com/reference/shiny/1.7.4/plotoutput)
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "6"
 ui <- fluidPage(
     titlePanel("Pupils Examination Results Dashboard"),
     sidebarLayout(
         sidebarPanel("Side bar panel"),
         mainPanel(
-            plotOutput("distPlot") #<<
+            plotOutput("distPlot") 
         )    
     )
 )
 ```
+:::
+:::
 
 ## Shiny server.R
-
 ### Building an output
 
 There are three rules to build an output in Shiny, they are:
@@ -573,7 +544,6 @@ The third rule is only required if you want your output to depend on some input.
 :::
 
 ## Shiny server.R
-
 ### A generic Shiny `render()` syntax
 
 ![](img/image21.jpg)
@@ -584,42 +554,53 @@ The third rule is only required if you want your output to depend on some input.
 
 ![](img/image29.jpg)
 
-## Shiny server.R
+---
 
-### Building a basic output
+### Hands-on Exercise: Building a basic output
 
-Let's first see how to build a very basic output using only the first two rules. We'll create a plot and send it to the ***distPlot*** output.
+::: columns
+::: {.column width="50%"}
+Let's first see how to build a very basic output using [`renderPlot()`](https://shiny.rstudio.com/reference/shiny/1.7.4/renderplot). We'll create a plot and send it to the ***distPlot*** output.
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "2-7"
 server <- function(input, output){
-    output$distPlot <- renderPlot({ #<<
-        ggplot(exam, aes(ENGLISH)) + #<<
-            geom_histogram(bins = 20, #<<
-                           color="black", #<< 
-                           fill="light blue") #<<
-    }) #<<
+    output$distPlot <- renderPlot({
+        ggplot(exam, aes(ENGLISH)) + 
+            geom_histogram(bins = 20, 
+                           color="black",  
+                           fill="light blue") 
+    }) 
 } 
 ```
+:::
 
-::: callout-note
+::: {.column width="50%"}
+::: {.callout-note}
 -   This simple code shows the first two rules: we're creating a plot inside the `renderPlot()` function, and assigning it to ***distPlot*** in the output list.
 -   Remember that every output created in the UI must have a unique ID, now we see why. In order to attach an R object to an output with ID x, we assign the R object to ***output\$distPlot***.
 -   Since ***distPlot*** was defined as a ***plotOutput***, we must use the `renderPlot()` function, and we must create a plot inside the `renderPlot()` function.
 :::
+:::
+:::
 
-## Shiny server.R
+---
 
-### Building a complete output
+### Hands-on Exercise: Building a basic output
+
+::: columns
+::: {.column width="50%"}
+First revision.
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "3" 
 server <- function(input, output){
     output$distPlot <- renderPlot({
-        x <- unlist(exam[,input$variable]) #<<
-        
+        x <- unlist(exam[,input$variable])
         ggplot(exam, aes(x)) +
             geom_histogram(bins = input$bin,
                            color="black", 
@@ -627,18 +608,25 @@ server <- function(input, output){
     })
 }
 ```
+:::
+:::
 
-## Shiny server.R
+---
 
-### Building a complete output: The revised version
+### Hands-on Exercise: Building a basic output
+
+::: columns
+::: {.column width="50%"}
+Using `aes_string()`.
 
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "4"
 server <- function(input, output){
     output$distPlot <- renderPlot({
       ggplot(exam, 
-             aes_string(x = input$variable)) + #<<
+             aes_string(x = input$variable)) + 
         geom_histogram(bins = input$bin,
                        color="black", 
                        fill="light blue")
@@ -646,39 +634,31 @@ server <- function(input, output){
 }
 ```
 
-::: callout-note
+::: {.callout-note}
 -   Notice that [`aes_string()`](https://ggplot2.tidyverse.org/reference/aes_.html) instead of `aes()` of ggplot2 is used. To understand the differences between `aes_string()` and `aes()`, please refer to this [link](https://stackoverflow.com/questions/28897577/what-is-the-difference-between-aes-and-aes-string-ggplot2-in-r).\
+:::
+:::
 :::
 
 ## The shinyApp()
 
-::: callout-important
+::: columns
+::: {.column width="50%"}
+::: {.callout-important}
 -   It is important to add *shinyApp()* at the end of your Shiny application.
 :::
 
 ```{r}
 #| echo: true
 #| eval: false
-shinyApp(ui = ui, server = server) #<<
+shinyApp(ui = ui, server = server)
 ```
-
-![](img/image22.jpg)\]
-
-## Shiny app is Reactive
-
--   Reactivity automatically occurs when an input value is used to render an output object.
-
-![](img/image23.jpg)
-
-------------------------------------------------------------------------
-
-### Reactive Flow
-
-![](img/image24.jpg)
+:::
+:::
 
 ## Survival Tips
 
-::: callout-tip
+::: {.callout-tip}
 -   Always run the entire script, not just up to the point where you're developing code.
 
 -   Sometimes the best way to see what's wrong is to run the app and review the error.
@@ -709,5 +689,5 @@ shinyApp(ui = ui, server = server) #<<
 ```{r}
 #| eval: false 
 #| echo: false 
-renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/lesson/lesson01/Lesson01-VAA.html")
+renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/ShinyWorkshop/Shiny1/Shiny1.html")
 ```
