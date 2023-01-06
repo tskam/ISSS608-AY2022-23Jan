@@ -25,7 +25,7 @@ website:
         - text: "Beyond the basic"
           href: "ShinyWorkshop/Shiny2/Shiny0.html"
         - text: "Customising Shiny"
-          href: "ShinyWorkshop/Shiny3/Shiny0.html"
+          href: "ShinyWorkshop/Shiny3/Shiny3.html"
         - text: "Shiny Resources"  
           href: ShinyResources.html
     - text: "Tableau Resources"

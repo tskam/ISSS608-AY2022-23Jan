@@ -261,7 +261,7 @@ runExample("01_hello")
 
 ### Important tips of Shiny app file
 
-:::{.callout-tip}
+::: callout-tip
 -   It is very important that the name of the file is *app.R*, otherwise it would not be recognized as a Shiny app.
 
 -   You should not have any R code after the `shinyApp(ui = ui, server = server)` line. That line needs to be the last line in your file.
@@ -706,10 +706,8 @@ shinyApp(ui = ui, server = server) #<<
 
 -   [How to get help](https://shiny.rstudio.com/articles/help.html)
 
-
-```{r} 
+```{r}
 #| eval: false 
 #| echo: false 
 renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/lesson/lesson01/Lesson01-VAA.html")
 ```
-
