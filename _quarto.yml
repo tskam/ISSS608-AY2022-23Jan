@@ -21,11 +21,11 @@ website:
     - text: "Shiny Workshop"
       menu:
         - text: "R Shiny basic"
-          href: "ShinyWorkshop/Shiny1/Shiny1.html"
+          href: "ShinyWorkshop/Shiny1/Shiny0.html"
         - text: "Beyond the basic"
-          href: "ShinyWorkshop/Shiny2/Shiny2.html"
+          href: "ShinyWorkshop/Shiny2/Shiny0.html"
         - text: "Customising Shiny"
-          href: "ShinyWorkshop/Shiny3/Shiny3.html"
+          href: "ShinyWorkshop/Shiny3/Shiny0.html"
         - text: "Shiny Resources"  
           href: ShinyResources.html
     - text: "Tableau Resources"
