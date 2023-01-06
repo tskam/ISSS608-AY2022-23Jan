@@ -286,7 +286,7 @@ ui <- fluidPage(
 [`bs_theme()`](https://rstudio.github.io/bslib/reference/bs_theme.html) provides direct access to Bootstrap's main colors & fonts as well as any of the 100s of more specific theming options. Also, when it comes to custom font(s) that may not be available on the end users machine, make sure to leverage {bslib}'s helper functions like [`font_google()`](https://fonts.google.com/), `font_link()`, and `font_face()`, which assist in including font file(s) in an convenient, efficient, and responsible way.
 :::
 
-:::{.column width="50%"}
+::: {.column width="50%"}
 ```{r}
 #| echo: true
 #| eval: false
@@ -308,7 +308,7 @@ ui <- fluidPage(
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Customising Plot
 
@@ -577,25 +577,6 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 
-## Programming Shiny Application: Survival Tip!
-
-::: columns
-::: {.column width="50%"}
-### What can we learn from Lego?
-
-![](img/image1.jpg){width="464"}
-:::
-
-::: {.column width="50%"}
--   Sketch the storyboard
--   Building the app incrementally
-    -   Using prototyping approach
-    -   Start as simple as possible
-    -   Adding features one at a time
--   Save -\> Run App
-:::
-:::
-
 ## Debugging
 
 ::: {style="font-size: 0.9em"}
@@ -658,7 +639,7 @@ Three main cases of problems which we'll discuss below:
 -   Debugger
     -   Set breakpoints in RStudio
     -   browser()
-    -   Conditionals: if (!is.null(input\$x)) browser() 
+    -   Conditionals: if (!is.null(input\$x)) browser()
 
 ------------------------------------------------------------------------
 
@@ -707,8 +688,7 @@ Op, there is an error!
 ::: columns
 ::: {.column width="50%"}
 ::: {style="font-size: 0.75em"}
-![](img/image4.jpg) 
-Things to learn from the call stack:
+![](img/image4.jpg) Things to learn from the call stack:
 
 -   The first few calls start the app in this case you just see runApp() but depending on how you start the app, you might see something more complicated.
 -   In general, you can ignore anything before the first runApp(); this is just the setup code to get the app running.
@@ -722,7 +702,8 @@ Things to learn from the call stack:
 -   Finally, at the very top, you'll see the code that you have written:
     -   This is the code called inside of *renderPlot()*. You can tell you should pay attention here because of the file path and line number; this lets you know that it's your code.
 :::
-::: {.callout-tip}
+
+::: callout-tip
 If you get an error in your app but don't see a traceback then make sure that you're running the app using Cmd/Ctrl + Shift + Enter (or if not in RStudio, calling runApp()), and that you've saved the file that you're running it from. Other ways of running the app don't always capture the information necessary to make a traceback.
 :::
 :::

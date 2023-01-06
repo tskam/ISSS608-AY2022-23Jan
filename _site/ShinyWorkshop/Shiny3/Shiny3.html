@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Dr.&nbsp;Kam Tin Seong Assoc. Professor of Information Systems">
-  <meta name="dcterms.date" content="2023-01-06">
+  <meta name="dcterms.date" content="2023-01-07">
   <title>ISSS608 - Building Web-enabled Visual Analytics Application with Shiny: Beyond the basic</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -402,7 +402,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
     </div>
 </div>
 
-  <p class="date">06 Jan 2023</p>
+  <p class="date">07 Jan 2023</p>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -907,26 +907,6 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 <span id="cb15-20"><a href="#cb15-20"></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="programming-shiny-application-survival-tip" class="slide level2">
-<h2>Programming Shiny Application: Survival Tip!</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="what-can-we-learn-from-lego">What can we learn from Lego?</h3>
-<p><img data-src="img/image1.jpg" width="464"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Sketch the storyboard</li>
-<li>Building the app incrementally
-<ul>
-<li>Using prototyping approach</li>
-<li>Start as simple as possible</li>
-<li>Adding features one at a time</li>
-</ul></li>
-<li>Save -&gt; Run App</li>
-</ul>
-</div>
-</div>
-</section>
 <section id="debugging" class="slide level2">
 <h2>Debugging</h2>
 <div style="font-size: 0.9em">
@@ -1343,6 +1323,44 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
