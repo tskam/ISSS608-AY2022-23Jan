@@ -527,11 +527,11 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 
 <h3 id="the-server">The server</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session){    <span class="co">#&lt;&lt;</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session){    </span>
 <span id="cb2-2"><a href="#cb2-2"></a>    output<span class="sc">$</span>scatterPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
 <span id="cb2-3"><a href="#cb2-3"></a>        <span class="fu">ggplot</span>(<span class="at">data=</span>exam,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>               <span class="fu">aes_string</span>(<span class="at">x =</span> input<span class="sc">$</span>xvariable,      <span class="co">#&lt;&lt;</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>                          <span class="at">y =</span> input<span class="sc">$</span>yvariable)) <span class="sc">+</span>   <span class="co">#&lt;&lt;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>               <span class="fu">aes_string</span>(<span class="at">x =</span> input<span class="sc">$</span>xvariable,      </span>
+<span id="cb2-5"><a href="#cb2-5"></a>                          <span class="at">y =</span> input<span class="sc">$</span>yvariable)) <span class="sc">+</span>   </span>
 <span id="cb2-6"><a href="#cb2-6"></a>                   <span class="fu">geom_point</span>()</span>
 <span id="cb2-7"><a href="#cb2-7"></a>    })</span>
 <span id="cb2-8"><a href="#cb2-8"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1058,7 +1058,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 <div class="callout-content">
 <p>A gentle reminder,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">shinyApp</span> (<span class="at">ui=</span>ui, <span class="at">server=</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
 </div>
 </div>
@@ -1073,18 +1073,18 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 
 <h3 id="setting-up-1">Setting up</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">library</span>(shiny)</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">library</span>(sf)</span>
-<span id="cb28-3"><a href="#cb28-3"></a><span class="fu">library</span>(tmap)</span>
-<span id="cb28-4"><a href="#cb28-4"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="fu">library</span>(sf)</span>
+<span id="cb27-3"><a href="#cb27-3"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h3 id="importing-the-geospatial-data-1">Importing the geospatial data</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>sgpools <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/aspatial/SGPools_svy21.csv"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2"></a>sgpools_sf <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(sgpools, </span>
-<span id="cb29-3"><a href="#cb29-3"></a>                       <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"XCOORD"</span>, </span>
-<span id="cb29-4"><a href="#cb29-4"></a>                                  <span class="st">"YCOORD"</span>),</span>
-<span id="cb29-5"><a href="#cb29-5"></a>                       <span class="at">crs=</span> <span class="dv">3414</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>sgpools <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/aspatial/SGPools_svy21.csv"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2"></a>sgpools_sf <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(sgpools, </span>
+<span id="cb28-3"><a href="#cb28-3"></a>                       <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"XCOORD"</span>, </span>
+<span id="cb28-4"><a href="#cb28-4"></a>                                  <span class="st">"YCOORD"</span>),</span>
+<span id="cb28-5"><a href="#cb28-5"></a>                       <span class="at">crs=</span> <span class="dv">3414</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="things-to-learn-from-the-code-chunk-above" class="{callout-note}">
 <h3>Things to learn from the code chunk above:</h3>
@@ -1097,20 +1097,20 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 
 <h3 id="the-ui-1">The ui</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb30-2"><a href="#cb30-2"></a>    <span class="fu">titlePanel</span>(<span class="st">"Interactive Map View"</span>),</span>
-<span id="cb30-3"><a href="#cb30-3"></a>    <span class="fu">sidebarLayout</span>(</span>
-<span id="cb30-4"><a href="#cb30-4"></a>        <span class="fu">sidebarPanel</span>(</span>
-<span id="cb30-5"><a href="#cb30-5"></a>            <span class="fu">checkboxInput</span>(<span class="at">inputId =</span> <span class="st">"showData"</span>,</span>
-<span id="cb30-6"><a href="#cb30-6"></a>                          <span class="at">label =</span> <span class="st">"Show data table"</span>,</span>
-<span id="cb30-7"><a href="#cb30-7"></a>                          <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb30-8"><a href="#cb30-8"></a>        ),</span>
-<span id="cb30-9"><a href="#cb30-9"></a>        <span class="fu">mainPanel</span>(</span>
-<span id="cb30-10"><a href="#cb30-10"></a>            <span class="fu">tmapOutput</span>(<span class="st">"mapPlot"</span>), <span class="co">#&lt;&lt;</span></span>
-<span id="cb30-11"><a href="#cb30-11"></a>            DT<span class="sc">::</span><span class="fu">dataTableOutput</span>(<span class="at">outputId =</span> <span class="st">"aTable"</span>)</span>
-<span id="cb30-12"><a href="#cb30-12"></a>        )</span>
-<span id="cb30-13"><a href="#cb30-13"></a>    )</span>
-<span id="cb30-14"><a href="#cb30-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb29-2"><a href="#cb29-2"></a>    <span class="fu">titlePanel</span>(<span class="st">"Interactive Map View"</span>),</span>
+<span id="cb29-3"><a href="#cb29-3"></a>    <span class="fu">sidebarLayout</span>(</span>
+<span id="cb29-4"><a href="#cb29-4"></a>        <span class="fu">sidebarPanel</span>(</span>
+<span id="cb29-5"><a href="#cb29-5"></a>            <span class="fu">checkboxInput</span>(<span class="at">inputId =</span> <span class="st">"showData"</span>,</span>
+<span id="cb29-6"><a href="#cb29-6"></a>                          <span class="at">label =</span> <span class="st">"Show data table"</span>,</span>
+<span id="cb29-7"><a href="#cb29-7"></a>                          <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-8"><a href="#cb29-8"></a>        ),</span>
+<span id="cb29-9"><a href="#cb29-9"></a>        <span class="fu">mainPanel</span>(</span>
+<span id="cb29-10"><a href="#cb29-10"></a>            <span class="fu">tmapOutput</span>(<span class="st">"mapPlot"</span>), <span class="co">#&lt;&lt;</span></span>
+<span id="cb29-11"><a href="#cb29-11"></a>            DT<span class="sc">::</span><span class="fu">dataTableOutput</span>(<span class="at">outputId =</span> <span class="st">"aTable"</span>)</span>
+<span id="cb29-12"><a href="#cb29-12"></a>        )</span>
+<span id="cb29-13"><a href="#cb29-13"></a>    )</span>
+<span id="cb29-14"><a href="#cb29-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-note callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1130,24 +1130,24 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 
 <h3 id="the-server-1">The server</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session){</span>
-<span id="cb31-2"><a href="#cb31-2"></a>    output<span class="sc">$</span>mapPlot <span class="ot">&lt;-</span> <span class="fu">renderTmap</span>({   <span class="co">#&lt;&lt;</span></span>
-<span id="cb31-3"><a href="#cb31-3"></a>        <span class="fu">tm_shape</span>(sgpools_sf)<span class="sc">+</span></span>
-<span id="cb31-4"><a href="#cb31-4"></a>            <span class="fu">tm_bubbles</span>(<span class="at">col =</span> <span class="st">"OUTLET TYPE"</span>,</span>
-<span id="cb31-5"><a href="#cb31-5"></a>                       <span class="at">size =</span> <span class="st">"Gp1Gp2 Winnings"</span>,</span>
-<span id="cb31-6"><a href="#cb31-6"></a>                       <span class="at">border.col =</span> <span class="st">"black"</span>,</span>
-<span id="cb31-7"><a href="#cb31-7"></a>                       <span class="at">border.lwd =</span> <span class="fl">0.5</span>)</span>
-<span id="cb31-8"><a href="#cb31-8"></a>    })</span>
-<span id="cb31-9"><a href="#cb31-9"></a>    </span>
-<span id="cb31-10"><a href="#cb31-10"></a>    output<span class="sc">$</span>aTable <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDataTable</span>({</span>
-<span id="cb31-11"><a href="#cb31-11"></a>        <span class="cf">if</span>(input<span class="sc">$</span>showData){</span>
-<span id="cb31-12"><a href="#cb31-12"></a>            DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">data =</span> sgpools_sf <span class="sc">%&gt;%</span> </span>
-<span id="cb31-13"><a href="#cb31-13"></a>                            <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>),</span>
-<span id="cb31-14"><a href="#cb31-14"></a>                          <span class="at">options=</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>),</span>
-<span id="cb31-15"><a href="#cb31-15"></a>                          <span class="at">rownames =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb31-16"><a href="#cb31-16"></a>        }</span>
-<span id="cb31-17"><a href="#cb31-17"></a>    })    </span>
-<span id="cb31-18"><a href="#cb31-18"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session){</span>
+<span id="cb30-2"><a href="#cb30-2"></a>    output<span class="sc">$</span>mapPlot <span class="ot">&lt;-</span> <span class="fu">renderTmap</span>({   <span class="co">#&lt;&lt;</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>        <span class="fu">tm_shape</span>(sgpools_sf)<span class="sc">+</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>            <span class="fu">tm_bubbles</span>(<span class="at">col =</span> <span class="st">"OUTLET TYPE"</span>,</span>
+<span id="cb30-5"><a href="#cb30-5"></a>                       <span class="at">size =</span> <span class="st">"Gp1Gp2 Winnings"</span>,</span>
+<span id="cb30-6"><a href="#cb30-6"></a>                       <span class="at">border.col =</span> <span class="st">"black"</span>,</span>
+<span id="cb30-7"><a href="#cb30-7"></a>                       <span class="at">border.lwd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb30-8"><a href="#cb30-8"></a>    })</span>
+<span id="cb30-9"><a href="#cb30-9"></a>    </span>
+<span id="cb30-10"><a href="#cb30-10"></a>    output<span class="sc">$</span>aTable <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDataTable</span>({</span>
+<span id="cb30-11"><a href="#cb30-11"></a>        <span class="cf">if</span>(input<span class="sc">$</span>showData){</span>
+<span id="cb30-12"><a href="#cb30-12"></a>            DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">data =</span> sgpools_sf <span class="sc">%&gt;%</span> </span>
+<span id="cb30-13"><a href="#cb30-13"></a>                            <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>),</span>
+<span id="cb30-14"><a href="#cb30-14"></a>                          <span class="at">options=</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>),</span>
+<span id="cb30-15"><a href="#cb30-15"></a>                          <span class="at">rownames =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb30-16"><a href="#cb30-16"></a>        }</span>
+<span id="cb30-17"><a href="#cb30-17"></a>    })    </span>
+<span id="cb30-18"><a href="#cb30-18"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-note callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1172,58 +1172,58 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 
 <h3 id="the-ui-2">The ui</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb32-2"><a href="#cb32-2"></a>    <span class="fu">titlePanel</span>(<span class="st">"Reactive Map"</span>),</span>
-<span id="cb32-3"><a href="#cb32-3"></a>    <span class="fu">sidebarLayout</span>(</span>
-<span id="cb32-4"><a href="#cb32-4"></a>        <span class="fu">sidebarPanel</span>(</span>
-<span id="cb32-5"><a href="#cb32-5"></a>            <span class="fu">selectInput</span>(<span class="at">inputId =</span> <span class="st">"type"</span>,</span>
-<span id="cb32-6"><a href="#cb32-6"></a>                        <span class="at">label =</span> <span class="st">"Branch or Outlet?"</span>,</span>
-<span id="cb32-7"><a href="#cb32-7"></a>                        <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"branch"</span> <span class="ot">=</span> <span class="st">"Branch"</span>,</span>
-<span id="cb32-8"><a href="#cb32-8"></a>                                    <span class="st">"outlet"</span> <span class="ot">=</span> <span class="st">"Outlet"</span>),</span>
-<span id="cb32-9"><a href="#cb32-9"></a>                        <span class="at">selected =</span> <span class="st">"Branch"</span>,</span>
-<span id="cb32-10"><a href="#cb32-10"></a>                        <span class="at">multiple =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb32-11"><a href="#cb32-11"></a>            <span class="fu">sliderInput</span>(<span class="at">inputId =</span> <span class="st">"winning"</span>, </span>
-<span id="cb32-12"><a href="#cb32-12"></a>                        <span class="at">label =</span> <span class="st">"Number of winnings"</span>, </span>
-<span id="cb32-13"><a href="#cb32-13"></a>                        <span class="at">min =</span> <span class="dv">2</span>,</span>
-<span id="cb32-14"><a href="#cb32-14"></a>                        <span class="at">max =</span> <span class="dv">80</span>, </span>
-<span id="cb32-15"><a href="#cb32-15"></a>                        <span class="at">value =</span> <span class="dv">20</span>),</span>
-<span id="cb32-16"><a href="#cb32-16"></a>            <span class="fu">checkboxInput</span>(<span class="at">inputId =</span> <span class="st">"showData"</span>,</span>
-<span id="cb32-17"><a href="#cb32-17"></a>                          <span class="at">label =</span> <span class="st">"Show data table"</span>,</span>
-<span id="cb32-18"><a href="#cb32-18"></a>                          <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb32-19"><a href="#cb32-19"></a>        ),</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb31-2"><a href="#cb31-2"></a>    <span class="fu">titlePanel</span>(<span class="st">"Reactive Map"</span>),</span>
+<span id="cb31-3"><a href="#cb31-3"></a>    <span class="fu">sidebarLayout</span>(</span>
+<span id="cb31-4"><a href="#cb31-4"></a>        <span class="fu">sidebarPanel</span>(</span>
+<span id="cb31-5"><a href="#cb31-5"></a>            <span class="fu">selectInput</span>(<span class="at">inputId =</span> <span class="st">"type"</span>,</span>
+<span id="cb31-6"><a href="#cb31-6"></a>                        <span class="at">label =</span> <span class="st">"Branch or Outlet?"</span>,</span>
+<span id="cb31-7"><a href="#cb31-7"></a>                        <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"branch"</span> <span class="ot">=</span> <span class="st">"Branch"</span>,</span>
+<span id="cb31-8"><a href="#cb31-8"></a>                                    <span class="st">"outlet"</span> <span class="ot">=</span> <span class="st">"Outlet"</span>),</span>
+<span id="cb31-9"><a href="#cb31-9"></a>                        <span class="at">selected =</span> <span class="st">"Branch"</span>,</span>
+<span id="cb31-10"><a href="#cb31-10"></a>                        <span class="at">multiple =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb31-11"><a href="#cb31-11"></a>            <span class="fu">sliderInput</span>(<span class="at">inputId =</span> <span class="st">"winning"</span>, </span>
+<span id="cb31-12"><a href="#cb31-12"></a>                        <span class="at">label =</span> <span class="st">"Number of winnings"</span>, </span>
+<span id="cb31-13"><a href="#cb31-13"></a>                        <span class="at">min =</span> <span class="dv">2</span>,</span>
+<span id="cb31-14"><a href="#cb31-14"></a>                        <span class="at">max =</span> <span class="dv">80</span>, </span>
+<span id="cb31-15"><a href="#cb31-15"></a>                        <span class="at">value =</span> <span class="dv">20</span>),</span>
+<span id="cb31-16"><a href="#cb31-16"></a>            <span class="fu">checkboxInput</span>(<span class="at">inputId =</span> <span class="st">"showData"</span>,</span>
+<span id="cb31-17"><a href="#cb31-17"></a>                          <span class="at">label =</span> <span class="st">"Show data table"</span>,</span>
+<span id="cb31-18"><a href="#cb31-18"></a>                          <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb31-19"><a href="#cb31-19"></a>        ),</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
 <h3 id="the-ui-continue">The ui (continue)</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>        <span class="fu">mainPanel</span>(</span>
-<span id="cb33-2"><a href="#cb33-2"></a>            <span class="fu">tmapOutput</span>(<span class="st">"mapPlot"</span>),</span>
-<span id="cb33-3"><a href="#cb33-3"></a>            DT<span class="sc">::</span><span class="fu">dataTableOutput</span>(<span class="at">outputId =</span> <span class="st">"aTable"</span>)</span>
-<span id="cb33-4"><a href="#cb33-4"></a>        )</span>
-<span id="cb33-5"><a href="#cb33-5"></a>    <span class="er">)</span></span>
-<span id="cb33-6"><a href="#cb33-6"></a><span class="er">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>        <span class="fu">mainPanel</span>(</span>
+<span id="cb32-2"><a href="#cb32-2"></a>            <span class="fu">tmapOutput</span>(<span class="st">"mapPlot"</span>),</span>
+<span id="cb32-3"><a href="#cb32-3"></a>            DT<span class="sc">::</span><span class="fu">dataTableOutput</span>(<span class="at">outputId =</span> <span class="st">"aTable"</span>)</span>
+<span id="cb32-4"><a href="#cb32-4"></a>        )</span>
+<span id="cb32-5"><a href="#cb32-5"></a>    <span class="er">)</span></span>
+<span id="cb32-6"><a href="#cb32-6"></a><span class="er">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
 
 <h3 id="the-server-2">The server</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session){</span>
-<span id="cb34-2"><a href="#cb34-2"></a>    dataset <span class="ot">=</span> <span class="fu">reactive</span>({ <span class="co">#&lt;&lt;                   </span></span>
-<span id="cb34-3"><a href="#cb34-3"></a>        sgpools_sf <span class="sc">%&gt;%</span> <span class="co">#&lt;&lt;</span></span>
-<span id="cb34-4"><a href="#cb34-4"></a>            <span class="fu">filter</span>(TYPE <span class="sc">==</span> input<span class="sc">$</span>type) <span class="sc">%&gt;%</span> <span class="co">#&lt;&lt;</span></span>
-<span id="cb34-5"><a href="#cb34-5"></a>            <span class="fu">filter</span>(WINNINGS <span class="sc">&gt;</span> input<span class="sc">$</span>winning) <span class="co">#&lt;&lt;</span></span>
-<span id="cb34-6"><a href="#cb34-6"></a>    })</span>
-<span id="cb34-7"><a href="#cb34-7"></a>    </span>
-<span id="cb34-8"><a href="#cb34-8"></a>    output<span class="sc">$</span>mapPlot <span class="ot">&lt;-</span> <span class="fu">renderTmap</span>({</span>
-<span id="cb34-9"><a href="#cb34-9"></a>        <span class="fu">tm_shape</span>(<span class="at">shp =</span> <span class="fu">dataset</span>(), <span class="co">#&lt;&lt;</span></span>
-<span id="cb34-10"><a href="#cb34-10"></a>                 <span class="at">bbox =</span> <span class="fu">st_bbox</span>(sgpools_sf))<span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
-<span id="cb34-11"><a href="#cb34-11"></a>            <span class="fu">tm_bubbles</span>(<span class="at">col =</span> <span class="st">"TYPE"</span>,</span>
-<span id="cb34-12"><a href="#cb34-12"></a>                       <span class="at">size =</span> <span class="st">"WINNINGS"</span>,</span>
-<span id="cb34-13"><a href="#cb34-13"></a>                       <span class="at">border.col =</span> <span class="st">"black"</span>,</span>
-<span id="cb34-14"><a href="#cb34-14"></a>                       <span class="at">border.lwd =</span> <span class="fl">0.5</span>)</span>
-<span id="cb34-15"><a href="#cb34-15"></a>    })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session){</span>
+<span id="cb33-2"><a href="#cb33-2"></a>    dataset <span class="ot">=</span> <span class="fu">reactive</span>({ <span class="co">#&lt;&lt;                   </span></span>
+<span id="cb33-3"><a href="#cb33-3"></a>        sgpools_sf <span class="sc">%&gt;%</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb33-4"><a href="#cb33-4"></a>            <span class="fu">filter</span>(TYPE <span class="sc">==</span> input<span class="sc">$</span>type) <span class="sc">%&gt;%</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb33-5"><a href="#cb33-5"></a>            <span class="fu">filter</span>(WINNINGS <span class="sc">&gt;</span> input<span class="sc">$</span>winning) <span class="co">#&lt;&lt;</span></span>
+<span id="cb33-6"><a href="#cb33-6"></a>    })</span>
+<span id="cb33-7"><a href="#cb33-7"></a>    </span>
+<span id="cb33-8"><a href="#cb33-8"></a>    output<span class="sc">$</span>mapPlot <span class="ot">&lt;-</span> <span class="fu">renderTmap</span>({</span>
+<span id="cb33-9"><a href="#cb33-9"></a>        <span class="fu">tm_shape</span>(<span class="at">shp =</span> <span class="fu">dataset</span>(), <span class="co">#&lt;&lt;</span></span>
+<span id="cb33-10"><a href="#cb33-10"></a>                 <span class="at">bbox =</span> <span class="fu">st_bbox</span>(sgpools_sf))<span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb33-11"><a href="#cb33-11"></a>            <span class="fu">tm_bubbles</span>(<span class="at">col =</span> <span class="st">"TYPE"</span>,</span>
+<span id="cb33-12"><a href="#cb33-12"></a>                       <span class="at">size =</span> <span class="st">"WINNINGS"</span>,</span>
+<span id="cb33-13"><a href="#cb33-13"></a>                       <span class="at">border.col =</span> <span class="st">"black"</span>,</span>
+<span id="cb33-14"><a href="#cb33-14"></a>                       <span class="at">border.lwd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb33-15"><a href="#cb33-15"></a>    })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-note callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1246,15 +1246,15 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 
 <h3 id="the-server-continue">The server (continue)</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>    output<span class="sc">$</span>aTable <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDataTable</span>({</span>
-<span id="cb35-2"><a href="#cb35-2"></a>        <span class="cf">if</span>(input<span class="sc">$</span>showData){</span>
-<span id="cb35-3"><a href="#cb35-3"></a>            DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">data =</span> <span class="fu">dataset</span>() <span class="sc">%&gt;%</span> <span class="co">#&lt;&lt;</span></span>
-<span id="cb35-4"><a href="#cb35-4"></a>                              <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>),</span>
-<span id="cb35-5"><a href="#cb35-5"></a>                          <span class="at">options=</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>),</span>
-<span id="cb35-6"><a href="#cb35-6"></a>                          <span class="at">rownames =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb35-7"><a href="#cb35-7"></a>        }</span>
-<span id="cb35-8"><a href="#cb35-8"></a>    })    </span>
-<span id="cb35-9"><a href="#cb35-9"></a><span class="er">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>    output<span class="sc">$</span>aTable <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDataTable</span>({</span>
+<span id="cb34-2"><a href="#cb34-2"></a>        <span class="cf">if</span>(input<span class="sc">$</span>showData){</span>
+<span id="cb34-3"><a href="#cb34-3"></a>            DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">data =</span> <span class="fu">dataset</span>() <span class="sc">%&gt;%</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a>                              <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>),</span>
+<span id="cb34-5"><a href="#cb34-5"></a>                          <span class="at">options=</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>),</span>
+<span id="cb34-6"><a href="#cb34-6"></a>                          <span class="at">rownames =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb34-7"><a href="#cb34-7"></a>        }</span>
+<span id="cb34-8"><a href="#cb34-8"></a>    })    </span>
+<span id="cb34-9"><a href="#cb34-9"></a><span class="er">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-important callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1267,7 +1267,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
 <div class="callout-content">
 <p>Also, don’t forget this magic line!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">shinyApp</span> (<span class="at">ui=</span>ui, <span class="at">server=</span>server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
 </div>
 </div>
@@ -1508,6 +1508,44 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

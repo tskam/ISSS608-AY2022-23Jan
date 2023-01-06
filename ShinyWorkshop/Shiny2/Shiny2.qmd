@@ -17,13 +17,13 @@ editor: visual
 
 ## Overview
 
-In this lesson, selected advanced methods of  Shiny will be discussed.  You will also gain hands-on experiences on using these advanced methods to build Shiny applications. 
+In this lesson, selected advanced methods of Shiny will be discussed. You will also gain hands-on experiences on using these advanced methods to build Shiny applications.
 
 By the end of this lesson, you will be able to:
 
-- gain further understanding of the reactive feature of Shiny and Shiny's functions that support reactive flow,
-- build interactive Shiny application by using plotly R and
-- build static, interactive and reactive geovisualisation application by using tmap
+-   gain further understanding of the reactive feature of Shiny and Shiny's functions that support reactive flow,
+-   build interactive Shiny application by using plotly R and
+-   build static, interactive and reactive geovisualisation application by using tmap
 
 ## Reactive Flow
 
@@ -31,13 +31,13 @@ By default, Shiny application is **Reactive**!
 
 ![](img/image12.jpg)
 
----
+------------------------------------------------------------------------
 
 ### Reactive Flow - the basic
 
 The user selects an input, this input goes through some expression in the server, and an output is rendered. Each time the user changes their input selection, the expression that generates the output will automatically re-execute, and the relevant output will be re-rendered based on the new value of the input.
 
-In a Shiny application, there’s no need to explictly describe the relationships between inputs and outputs and tell R what to do when each input changes, Shiny automatically handles these details for you.
+In a Shiny application, there's no need to explictly describe the relationships between inputs and outputs and tell R what to do when each input changes, Shiny automatically handles these details for you.
 
 ![](img/image11.jpg)
 
@@ -45,29 +45,29 @@ In a Shiny application, there’s no need to explictly describe the relationship
 Source: [Module 2](https://minecr.shinyapps.io/02-flow/#section-reactive-flow) of [Building Web Applications with Shiny](https://rstudio-education.github.io/shiny-course/)
 :::
 
----
+------------------------------------------------------------------------
 
 ### Reactive Flow - The full features
 
 ![](img/image1.jpg)
 
----
+------------------------------------------------------------------------
 
 ### Reactive elements
 
 ::: columns
-::: {.column width=60%}
+::: {.column width="60%"}
 Three components of reactive execution in Shiny are:
 
-- reactive inputs,
-- reactive expressions, and
-- reactive outputs.
+-   reactive inputs,
+-   reactive expressions, and
+-   reactive outputs.
 
 ![](img/image13.jpg)
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Reactive elements
 
@@ -76,20 +76,20 @@ Three components of reactive execution in Shiny are:
 ::: {.column width="50%"}
 #### Reactive inputs and outputs
 
-- A **reactive input** is a user input that comes through a browser interface, typically.
-- A **reactive output** is something that appears in the user’s browser window, such as a plot or a table of values.
+-   A **reactive input** is a user input that comes through a browser interface, typically.
+-   A **reactive output** is something that appears in the user's browser window, such as a plot or a table of values.
 
 ![](img/image14.jpg)
 
-- One reactive input can be connected to multiple outputs, and vice versa. For example we might have a UI input widget for filtering out data based on user’s selection, and the filtered data can be used in multiple outputs like plots and summaries.
+-   One reactive input can be connected to multiple outputs, and vice versa. For example we might have a UI input widget for filtering out data based on user's selection, and the filtered data can be used in multiple outputs like plots and summaries.
 :::
 
 ::: {.column width="50%"}
 #### Reactive expressions
 
-- A **reactive expressions** is component between an input and an output.
+-   A **reactive expressions** is component between an input and an output.
 
-- It can both be a dependent (i.e be a child) and have dependents (i.e. be a parent).
+-   It can both be a dependent (i.e be a child) and have dependents (i.e. be a parent).
 
 ![](img/image15.jpg)
 :::
@@ -104,10 +104,10 @@ In this in-class exercise, you are going to explore advanced reactive features.
 
 To get started, you need to do the followings:
 
-- start a new Shiny Application
-- load the necessary R package, namely Shiny and tidyverse
-- import the data file (i.e. Exam_data.csv )
-- build a basic scatterplot look similar to the figure on the right.
+-   start a new Shiny Application
+-   load the necessary R package, namely Shiny and tidyverse
+-   import the data file (i.e. Exam_data.csv )
+-   build a basic scatterplot look similar to the figure on the right.
 :::
 
 ::: {.column width="50%"}
@@ -115,9 +115,9 @@ To get started, you need to do the followings:
 :::
 :::
 
----
+------------------------------------------------------------------------
 
-### The UI 
+### The UI
 
 ```{r}
 #| echo: true
@@ -150,18 +150,18 @@ ui <- fluidPage(
 )
 ```
 
----
+------------------------------------------------------------------------
 
 ### The server
 
 ```{r}
 #| echo: true
 #| eval: false
-server <- function(input, output, session){    #<<
+server <- function(input, output, session){    
     output$scatterPlot <- renderPlot({
         ggplot(data=exam,
-               aes_string(x = input$xvariable,      #<<
-                          y = input$yvariable)) +   #<<
+               aes_string(x = input$xvariable,      
+                          y = input$yvariable)) +   
                    geom_point()
     })
 }
@@ -175,28 +175,28 @@ Lastly, do not forget to add this line!
 shinyApp (ui=ui, server=server)
 ```
 
----
+------------------------------------------------------------------------
 
 ### Stop-trigger-delay
 
 In this section, you will learn how to how to stop, trigger, and delay Shiny actions.
 
-- Using `submitButton()`
-- Using `isolate()` and `actionButton()`
+-   Using `submitButton()`
+-   Using `isolate()` and `actionButton()`
 
----
+------------------------------------------------------------------------
 
 ### Working with `submitButton()`
 
 ![](img/image17.jpg)
 
----
+------------------------------------------------------------------------
 
 ### Working with `submitButton()`
 
-- `submitButton()` is used when you want to delay a reaction.
+-   `submitButton()` is used when you want to delay a reaction.
 
-- Edit the code as shown below:
+-   Edit the code as shown below:
 
 ```{r}
 #| echo: true
@@ -214,16 +214,17 @@ Note: The use of `submitButton()` is generally discouraged in favor of the more 
 
 Reference: [submitButton](https://shiny.rstudio.com/reference/shiny/latest/submitButton.html).
 
----
+------------------------------------------------------------------------
 
 ### Isolating reactions
+
 #### When to use?
 
 ::: columns
 ::: {.column width="50%"}
-- Suppose your app has an input widget where users can enter text for the title of the plot. However you only want the title to update if any of the other inputs that go into the plot change. You can achieve this by isolating the plot title such that: 
-    - When input$x or input$y changes, the plot will update.
-    - But when only the title input (input$plot_title) changes, the plot will not update.
+-   Suppose your app has an input widget where users can enter text for the title of the plot. However you only want the title to update if any of the other inputs that go into the plot change. You can achieve this by isolating the plot title such that:
+    -   When input$x or input$y changes, the plot will update.
+    -   But when only the title input (input\$plot_title) changes, the plot will not update.
 :::
 
 ::: {.column width="50%"}
@@ -233,11 +234,11 @@ Reference: [submitButton](https://shiny.rstudio.com/reference/shiny/latest/submi
 
 Reference: [isolation](https://shiny.rstudio.com/articles/isolation.html)
 
----
+------------------------------------------------------------------------
 
 ### Working with `isolate()` and `actionButton()`
 
-- At the ui, edit the code as shown below:
+-   At the ui, edit the code as shown below:
 
 ```{r}
 #| echo: true
@@ -255,14 +256,14 @@ Reference: [isolation](https://shiny.rstudio.com/articles/isolation.html)
             actionButton("goButton", "Go!") #<<
 ```
 
-- Reference guide on [`textInput()`](https://shiny.rstudio.com/reference/shiny/1.6.0/textInput.html)
-- Reference guide on [`actionButton()`](https://shiny.rstudio.com/reference/shiny/1.6.0/actionButton.html)
+-   Reference guide on [`textInput()`](https://shiny.rstudio.com/reference/shiny/1.6.0/textInput.html)
+-   Reference guide on [`actionButton()`](https://shiny.rstudio.com/reference/shiny/1.6.0/actionButton.html)
 
----
+------------------------------------------------------------------------
 
 ### Working with `isolate()` and `actionButton()`
 
-- At the server side, edit the codes as shown below:
+-   At the server side, edit the codes as shown below:
 
 ```{r}
 #| echo: true
@@ -282,35 +283,32 @@ server <- function(input, output, session){
 }
 ```
 
-- Reference guide on [`isolate()`](https://shiny.rstudio.com/reference/shiny/1.6.0/isolate.html)
+-   Reference guide on [`isolate()`](https://shiny.rstudio.com/reference/shiny/1.6.0/isolate.html)
 
 ## Embedding Interactive Graphs in R Shiny
+
 ### The **plotly** way
 
 ::: columns
 ::: {.column width="50%"}
-Two approaches:
-- Using plotly directly, or
-- Plot the basic visualisation using **ggplot2**, then wrap the visualisation object into plotly object using `ggplotly()`.
+Two approaches: - Using plotly directly, or - Plot the basic visualisation using **ggplot2**, then wrap the visualisation object into plotly object using `ggplotly()`.
 
-Reference:
-- [Plotly R Open Source Graphing Library](https://plotly.com/r/)
-- [17 Server-side linking with shiny](https://plotly-r.com/linking-views-with-shiny.html) of [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html)
+Reference: - [Plotly R Open Source Graphing Library](https://plotly.com/r/) - [17 Server-side linking with shiny](https://plotly-r.com/linking-views-with-shiny.html) of [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/index.html)
 :::
 
 ::: {.column width="50%"}
-![](img/image20.jpg)]
+![](img/image20.jpg)\]
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding an interactive scatter plot in Shiny
 
 ::: columns
 ::: {.column width="50%"}
-- Install plotly R package if it has yet to be install in RStudio.
-- include a new line as shown below to launch plotly library. 
+-   Install plotly R package if it has yet to be install in RStudio.
+-   include a new line as shown below to launch plotly library.
 
 ```{r}
 #| echo: true
@@ -320,7 +318,7 @@ library(plotly) #<<
 library(tidyverse)
 ```
 
-- At UI, edit the code as shown below
+-   At UI, edit the code as shown below
 
 ```{r}
 #| echo: true
@@ -330,8 +328,8 @@ library(tidyverse)
 ```
 :::
 
-:::{.column width="50%"}
-- edit the server section of the Shiny app as shown below.
+::: {.column width="50%"}
+-   edit the server section of the Shiny app as shown below.
 
 ```{r}
 #| echo: true
@@ -352,15 +350,15 @@ server <- function(input, output){
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding an interactive bar chart in Shiny
 
-In this exercise, you will learn how going to embed an interactive bar chart in Shiny by using plotly.  The output will look similar to the figure below.
+In this exercise, you will learn how going to embed an interactive bar chart in Shiny by using plotly. The output will look similar to the figure below.
 
 ![](img/image21.jpg)
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding an interactive bar chart in Shiny
 
@@ -418,7 +416,7 @@ In this exercise, you will learn how to embed a drill-down bar chart in Shiny by
 
 ![](img/image22.jpg)
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding a drill-down bar chart in Shiny
 
@@ -480,7 +478,7 @@ server <- function(input, output) {
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding a drill-down bar chart in Shiny (Revised version)
 
@@ -542,12 +540,11 @@ server <- function(input, output) {
 
 ## In-class Exercise: Embedding A Static Map in Shiny
 
-In this exercise, you will learn how to embed a static map in Shiny by using *renderPlot()*.  By the end of this exercise, you will be able to plot a static map on Shiny display as shown below.
+In this exercise, you will learn how to embed a static map in Shiny by using *renderPlot()*. By the end of this exercise, you will be able to plot a static map on Shiny display as shown below.
 
 ![](img/image23.jpg)
 
-
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding A Static Map in Shiny
 
@@ -577,7 +574,7 @@ mpsz <- st_read(dsn = "data/geospatial",
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding a static map in Shiny
 
@@ -602,7 +599,7 @@ ui <- fluidPage(
 )
 ```
 
----
+------------------------------------------------------------------------
 
 ### In-class Exercise: Embedding a static map in Shiny
 
@@ -628,7 +625,7 @@ server <- function(input, output){
 }
 ```
 
-::: {.callout-important}
+::: callout-important
 Important, don't miss out this line
 
 ```{r}
@@ -638,15 +635,15 @@ shinyApp (ui=ui, server=server)
 ```
 :::
 
-## In-class Exercise:  Building a choropleth mapping application
+## In-class Exercise: Building a choropleth mapping application
 
 In this exercise, you will learn how to build a choropleth mapping application by using tmap and Shiny.
 
 ![](img/image24.jpg)
 
----
+------------------------------------------------------------------------
 
-### In-class Exercise:  Building a choropleth mapping application
+### In-class Exercise: Building a choropleth mapping application
 
 Edit the code as shown below:
 
@@ -664,9 +661,9 @@ mpsz <- st_read(dsn = "data/geospatial",
 popagsex <- read_csv("data/aspatial/respopagsex2000to2018.csv") #<<
 ```
 
----
+------------------------------------------------------------------------
 
-### In-class Exercise:  Building a choropleth mapping application
+### In-class Exercise: Building a choropleth mapping application
 
 Edit the codes as shown below:
 
@@ -696,9 +693,9 @@ mpsz_agemale2018 <- left_join(mpsz,
                               by = c("SUBZONE_N" = "SZ"))
 ```
 
----
+------------------------------------------------------------------------
 
-### In-class Exercise:  Building a choropleth mapping application
+### In-class Exercise: Building a choropleth mapping application
 
 At the UI, edit the codes as shown below:
 
@@ -724,9 +721,9 @@ ui <- fluidPage(
                         selected = "pretty"),
 ```
 
----
+------------------------------------------------------------------------
 
-### In-class Exercise:  Building a choropleth mapping application
+### In-class Exercise: Building a choropleth mapping application
 
 At the UI, continue edit the codes as shown below:
 
@@ -751,9 +748,9 @@ At the UI, continue edit the codes as shown below:
         ),
 ```
 
----
+------------------------------------------------------------------------
 
-### In-class Exercise:  Building a choropleth mapping application
+### In-class Exercise: Building a choropleth mapping application
 
 At the server, edit the codes as shown below:
 
@@ -773,7 +770,7 @@ server <- function(input, output){
 }
 ```
 
-::: {.callout-important}
+::: callout-important
 A gentle reminder,
 
 ```{r eval=FALSE}
@@ -783,11 +780,11 @@ shinyApp (ui=ui, server=server)
 
 ## Embedding an interactive map in Shiny
 
-In this exercise, you will learn how to embed an interactive map in Shiny by using `renderTmap()` and `tmapOutput()` of **tmap** package.  The interactive map is a proportional symbol map showing distribution of winnings by branches/outlets.
+In this exercise, you will learn how to embed an interactive map in Shiny by using `renderTmap()` and `tmapOutput()` of **tmap** package. The interactive map is a proportional symbol map showing distribution of winnings by branches/outlets.
 
 ![](img/image25.jpg)
 
----
+------------------------------------------------------------------------
 
 ### Setting up
 
@@ -815,10 +812,10 @@ sgpools_sf <- st_as_sf(sgpools,
 ::: {callout-note}
 ### Things to learn from the code chunk above:
 
-- [`st_as_sf()`](https://r-spatial.github.io/sf/reference/st_as_sf.html) of sf package is used to convert the tibble data frame into simple feature data frame by using values from the XCOORD and YCOORD fields.  The crs argument is used to specify the projected coordinates systems (i.e. svy21 for Singapore).
+-   [`st_as_sf()`](https://r-spatial.github.io/sf/reference/st_as_sf.html) of sf package is used to convert the tibble data frame into simple feature data frame by using values from the XCOORD and YCOORD fields. The crs argument is used to specify the projected coordinates systems (i.e. svy21 for Singapore).
 :::
 
----
+------------------------------------------------------------------------
 
 ### The ui
 
@@ -842,11 +839,11 @@ ui <- fluidPage(
 
 ```
 
-::: {.callout-note}
+::: callout-note
 Notice that `tmapout()` is used instead of `plotOutput()`.
 :::
 
----
+------------------------------------------------------------------------
 
 ### The server
 
@@ -873,17 +870,17 @@ server <- function(input, output, session){
 }
 ```
 
-::: {.callout-note}
+::: callout-note
 Notice that [`renderTmap()`](https://rdrr.io/cran/tmap/man/renderTmap.html) is used instead of `renderPlot()`.
 :::
 
 ## In-class Exercise: Reactive Map in R Shiny
 
-In this exercise, you will learn how to create reactive map in Shiny.  The output will look similar to the figure below.
+In this exercise, you will learn how to create reactive map in Shiny. The output will look similar to the figure below.
 
 ![](img/image26.jpg)
 
----
+------------------------------------------------------------------------
 
 ### The ui
 
@@ -911,7 +908,7 @@ ui <- fluidPage(
         ),
 ```
 
----
+------------------------------------------------------------------------
 
 ### The ui (continue)
 
@@ -926,7 +923,7 @@ ui <- fluidPage(
 )
 ```
 
----
+------------------------------------------------------------------------
 
 ### The server
 
@@ -950,14 +947,14 @@ server <- function(input, output, session){
     })
 ```
 
-::: {.callout-note}
+::: callout-note
 ### Things to learn from the code chunk above:
 
-- [`reactive()`](https://shiny.rstudio.com/reference/shiny/1.6.0/reactive.html) is used to create a reactive expression (i.e. dataset) that hold the extracted data set.
-- *bbox = `st_bbox()`* argument is used to fix the extend of the map view.
+-   [`reactive()`](https://shiny.rstudio.com/reference/shiny/1.6.0/reactive.html) is used to create a reactive expression (i.e. dataset) that hold the extracted data set.
+-   *bbox = `st_bbox()`* argument is used to fix the extend of the map view.
 :::
 
----
+------------------------------------------------------------------------
 
 ### The server (continue)
 
@@ -975,7 +972,7 @@ server <- function(input, output, session){
 }
 ```
 
-::: {.callout-important}
+::: callout-important
 Also, don't forget this magic line!
 
 ```{r eval=FALSE}
@@ -985,15 +982,14 @@ shinyApp (ui=ui, server=server)
 
 ## References
 
-- Hadley Wickham (2020) **Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Powered by R** online version
-    - [Chapter 3 Basic reactivity](https://mastering-shiny.org/basic-reactivity.html)
-    - [Chapter 13 Why reactivity?](https://mastering-shiny.org/reactive-motivation.html)
-    - [Chapter 14 The reactive graph](https://mastering-shiny.org/reactive-graph.html)
-    - [Chapter 15 Reactive building blocks](https://mastering-shiny.org/reactivity-objects.html)
-    - [Chapter 16 Escaping the graph](https://mastering-shiny.org/reactivity-components.html)
-- Carson Sievert (2019) **Interactive web-based data visualization with R, plotly, and shiny**, online version. 
-    - [Chapter 17 Server-side linking with shiny](https://plotly-r.com/linking-views-with-shiny.html)
-
+-   Hadley Wickham (2020) **Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Powered by R** online version
+    -   [Chapter 3 Basic reactivity](https://mastering-shiny.org/basic-reactivity.html)
+    -   [Chapter 13 Why reactivity?](https://mastering-shiny.org/reactive-motivation.html)
+    -   [Chapter 14 The reactive graph](https://mastering-shiny.org/reactive-graph.html)
+    -   [Chapter 15 Reactive building blocks](https://mastering-shiny.org/reactivity-objects.html)
+    -   [Chapter 16 Escaping the graph](https://mastering-shiny.org/reactivity-components.html)
+-   Carson Sievert (2019) **Interactive web-based data visualization with R, plotly, and shiny**, online version.
+    -   [Chapter 17 Server-side linking with shiny](https://plotly-r.com/linking-views-with-shiny.html)
 
 ```{r}
 #| eval: false 
