@@ -656,7 +656,7 @@ shinyApp(ui = ui, server = server)
 :::
 :::
 
-## Survival Tips
+## Programming Shiny: Survival Tip!
 
 ::: {.callout-tip}
 -   Always run the entire script, not just up to the point where you're developing code.
@@ -665,6 +665,27 @@ shinyApp(ui = ui, server = server)
 
 -   Watch out for commas!
 :::
+
+## Building Shiny Application: Survival Tip!
+
+::: columns
+::: {.column width="50%"}
+### What can we learn from Lego?
+
+![](img/image30.jpg){width="464"}
+:::
+
+::: {.column width="50%"}
+-   Sketch the storyboard
+-   Building the app incrementally
+    -   Using prototyping approach
+    -   Start as simple as possible
+    -   Adding features one at a time
+-   Save -\> Run App
+:::
+:::
+
+
 
 ## References
 
