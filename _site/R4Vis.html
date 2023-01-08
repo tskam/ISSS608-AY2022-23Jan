@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-01-08">
+<meta name="description" content="This page provides links to useful R packages and references for data visualisation and visual analytics.">
+
+<title>ISSS608 - R for Visual Analytics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ISSS608</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lesson.html">
+ <span class="menu-text">Lesson Plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./DataViz.html">
+ <span class="menu-text">DataViz Makeover</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./take-home.html">
+ <span class="menu-text">Take-home Exercise</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./VAproject.html">
+ <span class="menu-text">Visual Analytics Project</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-shiny-workshop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Shiny Workshop</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-shiny-workshop">    
+        <li>
+    <a class="dropdown-item" href="./ShinyWorkshop/Shiny1/Shiny1.html">
+ <span class="dropdown-text">R Shiny basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ShinyWorkshop/Shiny2/Shiny0.html">
+ <span class="dropdown-text">Beyond the basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ShinyWorkshop/Shiny3/Shiny0.html">
+ <span class="dropdown-text">Customising Shiny</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ShinyResources.html">
+ <span class="dropdown-text">Shiny Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./Tableau.html">
+ <span class="menu-text">Tableau Resources</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-about-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All About R</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-all-about-r">    
+        <li>
+    <a class="dropdown-item" href="./R.html">
+ <span class="dropdown-text">R Resouces</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./R4Vis.html">
+ <span class="dropdown-text">R for Visual Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Rt.html">
+ <span class="dropdown-text">R tips &amp; tricks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Quarto.html">
+ <span class="dropdown-text">Quarto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./git.html">
+ <span class="dropdown-text">git and github</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link active" data-scroll-target="#ggplot2">ggplot2</a>
+  <ul class="collapse">
+  <li><a href="#ggplot2-core" id="toc-ggplot2-core" class="nav-link" data-scroll-target="#ggplot2-core">ggplot2 Core</a></li>
+  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a></li>
+  <li><a href="#articlesblog-posts" id="toc-articlesblog-posts" class="nav-link" data-scroll-target="#articlesblog-posts">Articles/Blog posts</a></li>
+  <li><a href="#webminers" id="toc-webminers" class="nav-link" data-scroll-target="#webminers">Webminers</a></li>
+  <li><a href="#ggplots-extension" id="toc-ggplots-extension" class="nav-link" data-scroll-target="#ggplots-extension">ggplots Extension</a></li>
+  </ul></li>
+  <li><a href="#interactive-data-visualisation-with-r" id="toc-interactive-data-visualisation-with-r" class="nav-link" data-scroll-target="#interactive-data-visualisation-with-r">Interactive Data Visualisation with R</a>
+  <ul class="collapse">
+  <li><a href="#plotly-r" id="toc-plotly-r" class="nav-link" data-scroll-target="#plotly-r">plotly R</a></li>
+  <li><a href="#ggigraph" id="toc-ggigraph" class="nav-link" data-scroll-target="#ggigraph">ggigraph</a></li>
+  </ul></li>
+  <li><a href="#other-r-graphics-packages" id="toc-other-r-graphics-packages" class="nav-link" data-scroll-target="#other-r-graphics-packages">Other R graphics packages</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R for Visual Analytics</h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>This page provides links to useful R packages and references for data visualisation and visual analytics.</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 8, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="ggplot2">ggplot2</h2>
+<section id="ggplot2-core" class="level3">
+<h3 class="anchored" data-anchor-id="ggplot2-core">ggplot2 Core</h3>
+<ul>
+<li><a href="https://ggplot2.tidyverse.org//">ggplot2</a></li>
+<li><a href="http://www.r-graph-gallery.com/portfolio/ggplot2-package/">ggplot2 – The R graph Gallery</a></li>
+<li><a href="http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html#org93999d8">Introduction to R Graphics with ggplot2</a></li>
+<li><a href="http://r-statistics.co/ggplot2-Tutorial-With-R.html">ggplot2 - A Short Tutorial</a></li>
+<li><a href="https://bookdown.org/tpemartin/minicourse_ggplot2/">ggplot2 介紹</a></li>
+</ul>
+</section>
+<section id="books" class="level3">
+<h3 class="anchored" data-anchor-id="books">Books</h3>
+<ul>
+<li>Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen (2020)<a href="https://ggplot2-book.org/index.html">ggplot2: Elegant Graphics for Data Analysis</a> (3rd Edition, online version).</li>
+<li>Kieran Healy (2019) <a href="https://socviz.co/">Data Visualization: A practical introduction</a>. This is the online version.</li>
+<li>Aravind Hebbali (2020) <a href="https://viz-ggplot2.rsquaredacademy.com/index.html">Data Visualization with ggplot2</a></li>
+<li>Winston Chang (2020) <a href="https://r-graphics.org/">R Graphics Cookbook</a> (2nd edition, online version)</li>
+<li>Rob Kabacoff (2020) <a href="https://rkabacoff.github.io/datavis/">Data Visualization with R</a></li>
+<li>Zuguang Gu <a href="https://jokergoo.github.io/circlize_book/book/">Circular Visualization in R</a>. Last visit: 27/12/2020.</li>
+<li>Zach Bogart &amp; Joyce Robbins (2020) <a href="https://edav.info/">Exploratory Data Analysis &amp; Visualization</a></li>
+<li><a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></li>
+<li>Nordmann, E., McAleer, P., Toivo, W., Paterson, H. &amp; DeBruine, L. <a href="https://psyteachr.github.io/introdataviz/index.html">Data visualisation using R, for researchers who don’t use R</a></li>
+</ul>
+</section>
+<section id="articlesblog-posts" class="level3">
+<h3 class="anchored" data-anchor-id="articlesblog-posts">Articles/Blog posts</h3>
+<ul>
+<li><a href="http://r-statistics.co/ggplot2-Tutorial-With-R.html">How to make any plot in ggplot2?</a></li>
+<li><a href="http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html">The Complete ggplot2 Tutorial - Part1 | Introduction To ggplot2 (Full R code)</a></li>
+<li><a href="http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html">The Complete ggplot2 Tutorial - Part 2 | How To Customize ggplot2 (Full R code)</a></li>
+<li><a href="http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html">Top 50 ggplot2 Visualizations - The Master List (With Full R Code)</a></li>
+<li><a href="http://r-statistics.co/ggplot2-cheatsheet.html">ggplot2 Quickref</a></li>
+<li><a href="https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html">Data visualization with ggplot2</a></li>
+<li><a href="https://www.cedricscherer.com/slides/useR-2021_ggplot-wizardry-extended.pdf">ggplot Wizardary</a></li>
+</ul>
+</section>
+<section id="webminers" class="level3">
+<h3 class="anchored" data-anchor-id="webminers">Webminers</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=h29g21z0a68">ggplot2 workshop part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=0m4yywqNPVY">ggplot2 workshop part 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=qnw1xDnt_Ec">Make Beautiful Graphs in R: 5 Quick Ways to Improve ggplot2 Graphs</a></li>
+<li><a href="https://www.youtube.com/watch?v=7UjA_5gNvdw&amp;list=PLAm5TIX-yz7IkKOUcStM_vl8AD0S9v0co&amp;index=34">Outlier 2021—ggplot wizardy: my favorite tricks and secrets for beautiful plots in R</a> by Cédric Scherer</li>
+</ul>
+</section>
+<section id="ggplots-extension" class="level3">
+<h3 class="anchored" data-anchor-id="ggplots-extension">ggplots Extension</h3>
+<ul>
+<li>ggVis</li>
+<li>ggmap</li>
+<li><a href="http://www.ggtern.com/">ggtern</a>, an extension to ggplot2 specifically for the plotting of ternary diagrams.</li>
+<li><a href="https://github.com/daattali/ggExtra">ggExtra</a>, a collection of functions and layers to enhance ggplot2. The main function is ggMarginal, which can be used to add marginal histograms/boxplots/density plots to ggplot2 scatterplots.</li>
+<li><a href="https://cran.r-project.org/web/packages/ggthemes/index.html">ggthemes</a>, some extra themes, geoms, and scales for ‘ggplot2’. Provides ‘ggplot2’ themes and scales that replicate the look of plots by Edward Tufte, Stephen Few, ‘Fivethirtyeight’, ‘The Economist’, ‘Stata’, ‘Excel’, and ‘The Wall Street Journal’, among others. Provides ‘geoms’ for Tufte’s box plot and range frame.</li>
+<li><a href="http://ggobi.github.io/ggally/">GGally</a> extends ‘ggplot2’ by adding several functions to reduce the complexity of combining geometric objects with transformed data. Some of these functions include a pairwise plot matrix, a two group pairwise plot matrix, a parallel coordinates plot, a survival plot, and several functions to plot networks.</li>
+<li><a href="http://www.strengejacke.de/sjPlot/">sjPlot</a>:Data Visualization for Statistics in Social Science</li>
+<li><a href="https://indrajeetpatil.github.io/ggstatsplot/">ggstatsplot</a> is an extension of ggplot2 package for creating graphics with details from statistical tests included in the plots themselves and targeted primarily at behavioral sciences community to provide a one-line code to produce information-rich plots.</li>
+<li><a href="https://cran.r-project.org/web/packages/ggside/index.html">ggside</a> allows the user to add graphical information about one of the main panel’s axis. This is particularly useful for metadata for discrete axis, or summary graphics on a continuous axis such as a boxplot or a density distribution. These <a href="https://cran.r-project.org/web/packages/ggside/vignettes/ggside_basic_usage.html">vignette</a> and <a href="https://finnstats.com/index.php/2021/05/12/visualization-graphs/">article</a> provide useful introduction.</li>
+<li><a href="https://patchwork.data-imaginist.com/index.html">Patchwork</a> is a package designed to make plot composition in R extremely simple and powerful. It is mainly intended for users of ggplot2 and goes to great lengths to make sure ggplots are properly aligned no matter the complexity of your composition. The <a href="https://patchwork.data-imaginist.com/articles/patchwork.html">Getting Started</a> page explains the main features of the package.</li>
+<li><a href="https://gganimate.com/index.html">gganimate</a> extends the grammar of graphics as implemented by ggplot2 to include the description of animation. It does this by providing a range of new grammar classes that can be added to the plot object in order to customise how it should change with time.</li>
+<li><a href="https://mjskay.github.io/ggdist/index.html">ggdist</a> is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualizing distributions and uncertainty. It is designed for both <a href="https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html">frequentist</a> and [https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html] visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization: for frequentist models, one visualizes confidence distributions or bootstrap distributions (see vignette(“freq-uncertainty-vis”)); for Bayesian models, one visualizes probability distributions (see the tidybayes package, which builds on top of ggdist).</li>
+</ul>
+</section>
+</section>
+<section id="interactive-data-visualisation-with-r" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-data-visualisation-with-r">Interactive Data Visualisation with R</h2>
+<section id="plotly-r" class="level3">
+<h3 class="anchored" data-anchor-id="plotly-r">plotly R</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/plotly/index.html">plotly</a>: Create Interactive Web Graphics via ‘plotly.js’</li>
+<li><a href="https://plotly-r.com/">Interactive web-based data visualization with R, plotly, and shiny</a></li>
+<li><a href="https://plot.ly/r/">Plotly R Open Source Graphing Library</a></li>
+<li><a href="https://plot.ly/ggplot2/getting-started/">Getting Started with Plotly and ggplot2</a></li>
+</ul>
+</section>
+<section id="ggigraph" class="level3">
+<h3 class="anchored" data-anchor-id="ggigraph">ggigraph</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/ggiraph/vignettes/an_introduction.html">ggigraph</a> lets R users to make ggplot interactive.</li>
+</ul>
+</section>
+</section>
+<section id="other-r-graphics-packages" class="level2">
+<h2 class="anchored" data-anchor-id="other-r-graphics-packages">Other R graphics packages</h2>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html">corrplot</a>. A graphical display of a correlation matrix or general matrix. It also contains some algorithms to do matrix reordering. In addition, corrplot is good at details, including choosing color, text labels, color labels, layout, etc.</li>
+<li><a href="https://cran.r-project.org/web/packages/corrgram/index.html">corrgram</a> calculates correlation of variables and displays the results graphically. Included panel functions can display points, shading, ellipses, and correlation values with confidence intervals. [https://cran.r-project.org/web/packages/corrgram/index.html]</li>
+<li><a href="https://cran.r-project.org/web/packages/vcd/index.html">vcd</a>, Visualization techniques, data sets, summary and inference procedures aimed particularly at categorical data. Special emphasis is given to highly extensible grid graphics.</li>
+<li><a href="https://cran.r-project.org/web/packages/tmap/index.html">tmap</a> offers a flexible, layer-based, and easy to use approach to create thematic maps, such as choropleths and bubble maps.</li>
+</ul>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

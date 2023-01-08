@@ -29,3 +29,7 @@ editor: visual
 -   [Citations & Footnotes](https://quarto.org/docs/authoring/footnotes-and-citations.html)
 -   [Cross References](https://quarto.org/docs/authoring/cross-references.html)
 -   [Article Layout](https://quarto.org/docs/authoring/article-layout.html)
+
+Useful web resources
+
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto#featured-new-releases).  This github repository provides a comprehensive listing of Quarto resources.  It should be the second stop (after Quarto homepage) if you need to look for revelent materials about Quarto.  

@@ -201,13 +201,14 @@ In this section, you will learn how to how to stop, trigger, and delay Shiny act
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "7"
             selectInput(inputId = "xvariable",
                         label = "x Variable:",
                         choices = c("English" = "ENGLISH",
                                     "Maths" = "MATHS",
                                     "Science" = "SCIENCE"),
                         selected = "SCIENCE"),
-            submitButton("Apply changes")  #<<
+            submitButton("Apply changes")
 ```
 
 Note: The use of `submitButton()` is generally discouraged in favor of the more versatile `actionButton()`.
@@ -243,17 +244,18 @@ Reference: [isolation](https://shiny.rstudio.com/articles/isolation.html)
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "7-11"
             selectInput(inputId = "xvariable",
                         label = "x Variable:",
                         choices = c("English" = "ENGLISH",
                                     "Maths" = "MATHS",
                                     "Science" = "SCIENCE"),
                         selected = "SCIENCE"),
-            textInput(                      #<< 
-                inputId = "plot_title",     #<<
-                label = "Plot title",       #<<
-                placeholder = "Enter text to be used as plot title"), #<<
-            actionButton("goButton", "Go!") #<<
+            textInput(                       
+                inputId = "plot_title",     
+                label = "Plot title",       
+                placeholder = "Enter text to be used as plot title"), 
+            actionButton("goButton", "Go!") 
 ```
 
 -   Reference guide on [`textInput()`](https://shiny.rstudio.com/reference/shiny/1.6.0/textInput.html)
@@ -268,17 +270,18 @@ Reference: [isolation](https://shiny.rstudio.com/articles/isolation.html)
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "3,9-11"
 server <- function(input, output, session){
     output$scatterPlot <- renderPlot({
-        input$goButton                           #<<
+        input$goButton                           
         
         ggplot(data=exam,
                aes_string(x = input$xvariable,
                           y = input$yvariable)) +
             geom_point() +
-            labs(title = isolate({               #<<
-                toTitleCase(input$plot_title)    #<<
-            }))                                  #<<
+            labs(title = isolate({               
+                toTitleCase(input$plot_title)    
+            }))                                  
     })
 }
 ```
@@ -297,7 +300,7 @@ Reference: - [Plotly R Open Source Graphing Library](https://plotly.com/r/) - [1
 :::
 
 ::: {.column width="50%"}
-![](img/image20.jpg)\]
+![](img/image20.jpg)
 :::
 :::
 
@@ -313,8 +316,9 @@ Reference: - [Plotly R Open Source Graphing Library](https://plotly.com/r/) - [1
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "2,"
 library(shiny)
-library(plotly) #<< 
+library(plotly) 
 library(tidyverse)
 ```
 
@@ -323,8 +327,9 @@ library(tidyverse)
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "2"
  mainPanel(
-    plotlyOutput("scatterPlot") #<<
+    plotlyOutput("scatterPlot") 
 ```
 :::
 
@@ -334,6 +339,7 @@ library(tidyverse)
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "2"
 server <- function(input, output){
     output$scatterPlot <- renderPlotly({ #<<
         

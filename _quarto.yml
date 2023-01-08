@@ -21,7 +21,7 @@ website:
     - text: "Shiny Workshop"
       menu:
         - text: "R Shiny basic"
-          href: "ShinyWorkshop/Shiny1/Shiny0.html"
+          href: "ShinyWorkshop/Shiny1/Shiny1.html"
         - text: "Beyond the basic"
           href: "ShinyWorkshop/Shiny2/Shiny0.html"
         - text: "Customising Shiny"
@@ -34,6 +34,8 @@ website:
       menu: 
         - text: "R Resouces"
           href: R.html
+        - text: "R for Visual Analytics"
+          href: R4Vis.html
         - text: "R tips & tricks"
           href: Rt.html
         - text: "Quarto"
