@@ -1,7 +1,7 @@
 ---
 title: "All About Quarto"
 description: |
-  This page provides links to useful R packages and references.
+  This page provides links to useful resources related Quarto.
 date: "`r Sys.Date()`"
 format: html
 editor: visual
@@ -32,4 +32,4 @@ editor: visual
 
 Useful web resources
 
--   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto#featured-new-releases).  This github repository provides a comprehensive listing of Quarto resources.  It should be the second stop (after Quarto homepage) if you need to look for revelent materials about Quarto.  
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto#featured-new-releases). This github repository provides a comprehensive listing of Quarto resources. It should be the second stop (after Quarto homepage) if you need to look for revelent materials about Quarto.
