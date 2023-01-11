@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.269">
+
+  <meta name="author" content="Dr.&nbsp;Kam Tin Seong Assoc. Professor of Information Systems (Practice)">
+  <meta name="dcterms.date" content="2023-01-11">
+  <title>ISSS608 - Hands-on Exercise 1: Programming Elegant DataVis with ggplot2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Hands-on Exercise 1: Programming Elegant DataVis with ggplot2</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice) 
+</div>
+        <p class="quarto-title-affiliation">
+            School of Computing and Information Systems,<br>Singapore Management University
+          </p>
+    </div>
+</div>
+
+  <p class="date">11 Jan 2023</p>
+</section>
+<section id="content" class="slide level2">
+<h2>Content</h2>
+<ul>
+<li><p>Introducing Tidyverse</p></li>
+<li><p><em>ggplot2</em>, The Layered Grammar of Graphics</p>
+<ul>
+<li>The Essential Grammatical Elements in ggplot2</li>
+<li>Designing Analytical Graphics with ggplot2</li>
+</ul></li>
+<li><p>ggplot Wizardry</p></li>
+</ul>
+</section>
+<section id="introducing-tidyverse" class="slide level2">
+<h2>Introducing <strong>Tidyverse</strong></h2>
+<p><a href="https://www.tidyverse.org/"><strong>tidyverse</strong></a> is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.</p>
+
+<img data-src="img/image1.jpg" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="core-tidyverse-packages">Core <strong>Tidyverse</strong> packages</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><a href="https://dplyr.tidyverse.org/"><strong>dplyr</strong></a> is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges.</li>
+<li><a href="https://tidyr.tidyverse.org/"><strong>tidyr</strong></a> helps R users to create tidy data.</li>
+<li><a href="https://stringr.tidyverse.org/"><strong>stringr</strong></a> provides a cohesive set of functions designed to make working with strings as easy as possible.</li>
+<li><a href="https://forcats.tidyverse.org/"><strong>forcats</strong></a> provides a suite of tools that solve common problems with factors, including changing the order of levels or the values.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><a href="https://readr.tidyverse.org/"><strong>readr</strong></a> provides a fast and friendly way to read rectangular data (like csv, tsv, and fwf).</li>
+<li><a href="https://tibble.tidyverse.org/"><strong>tibble</strong></a> is a modern reimagining of the data.frame, keeping what time has proven to be effective, and throwing out what is not.</li>
+<li><a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a> is a system for declaratively creating graphics, based on The Grammar of Graphics.</li>
+<li><a href="https://purrr.tidyverse.org/"><strong>purrr</strong></a> enhances R’s functional programming (FP) toolkit by providing a complete and consistent set of tools for working with functions and vectors.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="data-science-workflow-with-tidyverse">Data Science Workflow with Tidyverse</h3>
+
+<img data-src="img/image1a.jpg" class="r-stretch"><p>Reference: <a href="https://oliviergimenez.github.io/intro_tidyverse/#1">Introduction to the Tidyverse: How to be a tidy data scientist</a>.</p>
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<h3 id="installing-and-loading-the-required-libraries">Installing and loading the required libraries</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Before we get started, it is important for us to ensure that the required R packages have been installed. If yes, we will load the R packages. If they have yet to be installed, we will install the R packages and load them onto R environment.</li>
+</ul>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>The code chunk on the right assumes that you already have <a href="https://cran.r-project.org/web/packages/pacman/index.html"><strong>pacman</strong></a> package installed. If not, please go ahead install pacman first.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getting-started-1" class="slide level2">
+<h2>Getting Started</h2>
+<h3 id="importing-data">Importing data</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>The code chunk below imports <em>exam_data.csv</em> into R environment by using <a href="https://readr.tidyverse.org/reference/read_delim.html"><em>read_csv()</em></a> function of <a href="https://readr.tidyverse.org/"><strong>readr</strong></a> package.</p></li>
+<li><p><strong>readr</strong> is one of the tidyverse package.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>exam_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Exam_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Year end examination grades of a cohort of primary 3 students from a local school.</p></li>
+<li><p>There are a total of seven attributes. Four of them are categorical data type and the other three are in continuous data type.</p>
+<ul>
+<li>The categorical attributes are: ID, CLASS, GENDER and RACE.</li>
+<li>The continuous attributes are: MATHS, ENGLISH and SCIENCE.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="introducing-ggplot" class="slide level2">
+<h2>Introducing ggplot <img data-src="img/image2a.jpg" width="80" height="94"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>An R package for <strong>declaratively</strong> creating <strong>data-driven</strong> graphics based on <strong><em>The Grammar of Graphics</em></strong></p></li>
+<li><p>It is part of the tidyverse family specially designed for visual exploration and communication.</p></li>
+<li><p>For more detail, visit <a href="https://ggplot2.tidyverse.org/index.html">ggplot2 link</a>.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/image2.png" width="650"></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="r-graphics-vs-ggplot">R Graphics VS ggplot</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="r-graphics">R Graphics</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">hist</span>(exam_data<span class="sc">$</span>MATHS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<h4 id="ggplot2">ggplot2</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">10</span>, </span>
+<span id="cb4-3"><a href="#cb4-3"></a>                 <span class="at">boundary =</span> <span class="dv">100</span>,</span>
+<span id="cb4-4"><a href="#cb4-4"></a>                 <span class="at">color=</span><span class="st">"black"</span>, </span>
+<span id="cb4-5"><a href="#cb4-5"></a>                 <span class="at">fill=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Maths scores"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="then-why-ggplot2">Then, why ggplot2</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>The transferable skills from ggplot2 are not the idiosyncrasies of plotting syntax, but a powerful way of thinking about visualisation, as a way of mapping between variables and the visual properties of geometric objects that you can perceive.</p>
+<p><a href="http://varianceexplained.org/r/teach_ggplot2_to_beginners/#comment-1745406157">Hadley Wickham</a></p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">10</span>, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>                 <span class="at">boundary =</span> <span class="dv">100</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>                 <span class="at">color=</span><span class="st">"black"</span>, </span>
+<span id="cb5-5"><a href="#cb5-5"></a>                 <span class="at">fill=</span><span class="st">"grey"</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Maths scores"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/image5.png"></p>
+</div>
+</div>
+</section>
+<section id="grammar-of-graphics" class="slide level2">
+<h2>Grammar of Graphics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Wilkinson, L. (1999) <strong>Grammar of Graphics</strong>, Springer.</p></li>
+<li><p>The grammar of graphics is an answer to a question:</p></li>
+</ul>
+<div style="font-size: 1.25em; text-align: center">
+<p>What is a statistical graphic?</p>
+</div>
+<ul>
+<li><p>Grammar of graphics defines the rules of structuring mathematical and aesthetic elements into a meaningful graph.</p></li>
+<li><p>Two principles</p>
+<ul>
+<li>Graphics = distinct layers of grammatical elements</li>
+<li>Meaningful plots through aesthetic mapping</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>A good grammar will allow us to gain insight into the composition of complicated graphics, and reveal unexpected connections between seemingly different graphics (Cox 1978).</p></li>
+<li><p>A grammar provides a strong foundation for understanding a diverse range of graphics.</p></li>
+<li><p>A grammar may also help guide us on what a well-formed or correct graphic looks like, but there will still be many grammatically correct but nonsensical graphics.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<p>A Layered Grammar of Graphics</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 0.75em">
+<ul>
+<li><strong>Data</strong>: The dataset being plotted.</li>
+<li><strong>Aesthetics</strong> take attributes of the data and use them to influence visual characteristics, such as position, colours, size, shape, or transparency.</li>
+<li><strong>Geometrics</strong>: The visual elements used for our data, such as point, bar or line.</li>
+<li><strong>Facets</strong> split the data into subsets to create multiple variations of the same graph (paneling, multiple plots).</li>
+<li><strong>Statistics</strong>, statiscal transformations that summarise data (e.g.&nbsp;mean, confidence intervals).</li>
+<li><strong>Coordinate systems</strong> define the plane on which data are mapped on the graphic.</li>
+<li><strong>Themes</strong> modify all non-data components of a plot, such as main title, sub-title, y-aixs title, or legend background.</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/image4.jpg"></p>
+<div style="font-size: 0.6em">
+<p>Reference: Hadley Wickham (2010) <a href="https://vita.had.co.nz/papers/layered-grammar.html">“A layered grammar of graphics.”</a> <em>Journal of Computational and Graphical Statistics</em>, vol.&nbsp;19, no. 1, pp.&nbsp;3–28.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-1" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="the-ggplot-function-and-data-argument">The <code>ggplot()</code> function and <em>data</em> argument</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Let us call the <code>ggplot()</code> function using the code chunk on the right.</p></li>
+<li><p>Notice that a blank canvas appears.</p></li>
+<li><p><code>ggplot()</code> initializes a ggplot object.</p></li>
+<li><p>The <em>data</em> argument defines the dataset to be used for plotting.</p></li>
+<li><p>If the dataset is not already a data.frame, it will be converted to one by <code>fortify()</code>.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-2" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="the-aesthetic-mappings">The <a href="https://ggplot2.tidyverse.org/reference/aes.html">Aesthetic mappings</a></h3>
+<ul>
+<li><p>The aesthetic mappings take attributes of the data and and use them to influence visual characteristics, such as position, colour, size, shape, or transparency.</p></li>
+<li><p>Each visual characteristic can thus encode an aspect of the data and be used to convey information.</p></li>
+<li><p>All aesthetics of a plot are specified in the <a href="https://ggplot2.tidyverse.org/articles/ggplot2-specs.html"><code>aes()</code></a> function call (in later part of this lesson, you will see that each <em>geom</em> layer can have its own aes specification)</p></li>
+</ul>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-3" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-aes">Working with <code>aes()</code></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The code chunk on the right add the aesthetic element into the plot.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb7-2"><a href="#cb7-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Notice that ggplot includes the x-axis and the axis’s label.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-4" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom">Geometric Objects: <strong>geom</strong></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 0.8em">
+<ul>
+<li>Geometric objects are the actual marks we put on a plot. Examples include:
+<ul>
+<li><em>geom_point</em> for drawing individual points (e.g., a scatter plot)</li>
+<li><em>geom_line</em> for drawing lines (e.g., for a line charts)</li>
+<li><em>geom_smooth</em> for drawing smoothed lines (e.g., for simple trends or approximations)</li>
+<li><em>geom_bar</em> for drawing bars (e.g., for bar charts)</li>
+<li><em>geom_histogram</em> for drawing binned values (e.g.&nbsp;a histogram)</li>
+<li><em>geom_polygon</em> for drawing arbitrary shapes</li>
+<li><em>geom_map</em> for drawing polygons in the shape of a map! (You can access the data to use for these maps by using the map_data() function).</li>
+</ul></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/image6.jpg"></p>
+<div style="font-size: 0.8em">
+<ul>
+<li>A plot must have at least one geom; there is no upper limit. You can add a geom to a plot using the <strong>+</strong> operator.</li>
+<li>For complete list, please refer to <a href="https://ggplot2.tidyverse.org/reference/#section-layer-geoms">here</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-5" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_bar">Geometric Objects: <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><em>geom_bar</em></a></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below plots a bar chart by using <code>geom_bar()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb8-2"><a href="#cb8-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span>RACE)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-6" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_dotplot">Geometric Objects: geom_dotplot</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>In a dot plot, the width of a dot corresponds to the bin width (or maximum width, depending on the binning algorithm), and dots are stacked, with each dot representing one observation.</p>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Be warned</strong></p>
+</div>
+<div class="callout-content">
+<p>The y scale is not very useful, in fact it is very misleading.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>In the code chunk below, <a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html"><code>geom_dotplot()</code></a> of ggplot2 is used to plot a dot plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb9-2"><a href="#cb9-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-7" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_dotplot-1">Geometric Objects: <em>geom_dotplot</em></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below performs the following two steps:</p>
+<ul>
+<li><code>scale_y_continuous()</code> is used to turn off the y-axis, and</li>
+<li><em>binwidth argument</em> is used to change the binwidth to 2.5.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb10-2"><a href="#cb10-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth=</span><span class="fl">2.5</span>,         </span>
+<span id="cb10-4"><a href="#cb10-4"></a>               <span class="at">dotsize =</span> <span class="fl">0.5</span>) <span class="sc">+</span>      </span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="cn">NULL</span>,           </span>
+<span id="cb10-6"><a href="#cb10-6"></a>                     <span class="at">breaks =</span> <span class="cn">NULL</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-8" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_histogram">Geometric Objects: <code>geom_histogram()</code></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>In the code chunk below, <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><em>geom_histogram()</em></a> is used to create a simple histogram by using values in <em>MATHS</em> field of <em>exam_data</em>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb11-2"><a href="#cb11-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_histogram</span>()       </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Note that the default bin is <strong>30</strong>.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-9" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="modifying-a-geometric-object-by-changing-geom">Modifying a geometric object by changing <code>geom()</code></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>In the code chunk below,</p>
+<ul>
+<li><em>bins</em> argument is used to change the number of bins to 20,</li>
+<li><em>fill</em> argument is used to shade the histogram with light blue color, and</li>
+<li><em>color</em> argument is used to change the outline colour of the bars in black</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb12-2"><a href="#cb12-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>,            </span>
+<span id="cb12-4"><a href="#cb12-4"></a>                 <span class="at">color=</span><span class="st">"black"</span>,      </span>
+<span id="cb12-5"><a href="#cb12-5"></a>                 <span class="at">fill=</span><span class="st">"light blue"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-10" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="modifying-a-geometric-object-by-changing-aes">Modifying a geometric object by changing <em>aes()</em></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The code chunk below changes the interior colour of the histogram (i.e.&nbsp;<em>fill</em>) by using sub-group of <em>aesthetic()</em>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb13-2"><a href="#cb13-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, </span>
+<span id="cb13-3"><a href="#cb13-3"></a>           <span class="at">fill =</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>, </span>
+<span id="cb13-5"><a href="#cb13-5"></a>                 <span class="at">color=</span><span class="st">"grey30"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>This approach can be used to colour, fill and alpha of the geometric.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-11" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom-density">Geometric Objects: geom-density</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://ggplot2.tidyverse.org/reference/geom_density.html"><code>geom-density()</code></a> computes and plots kernel density estimate, which is a smoothed version of the histogram.</p>
+<p>It is a useful alternative to the histogram for continuous data that comes from an underlying smooth distribution.</p>
+<p>The code below plots the distribution of Maths scores in a kernel density estimate plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb14-2"><a href="#cb14-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">geom_density</span>()           </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Reference: <a href="https://en.wikipedia.org/wiki/Kernel_density_estimation">Kernel density estimation</a></p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-12" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom-density-1">Geometric Objects: geom-density</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below plots two kernel density lines by using <em>colour</em> or <em>fill</em> arguments of <em>aes()</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb15-2"><a href="#cb15-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> MATHS, </span>
+<span id="cb15-3"><a href="#cb15-3"></a>           <span class="at">colour =</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-13" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_boxplot">Geometric Objects: geom_boxplot</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html"><code>geom_boxplot()</code></a> displays continuous value list. It visualises five summary statistics (the median, two hinges and two whiskers), and all “outlying” points individually.<br>
+</li>
+<li>The code chunk below plots boxplots by using <em>geom_boxplot()</em>.]</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb16-2"><a href="#cb16-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS,       </span>
+<span id="cb16-3"><a href="#cb16-3"></a>           <span class="at">x=</span> GENDER)) <span class="sc">+</span>    </span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_boxplot</span>()            </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-14" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_boxplot-1">Geometric Objects: geom_boxplot</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Notches</strong> are used in box plots to help visually assess whether the medians of distributions differ. If the notches do not overlap, this is evidence that the medians are different.</p>
+<p>The code chunk below plots the distribution of Maths scores by gender in notched plot instead of boxplot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb17-2"><a href="#cb17-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS, </span>
+<span id="cb17-3"><a href="#cb17-3"></a>           <span class="at">x=</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">geom_boxplot</span>(<span class="at">notch=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Reference: <a href="https://sites.google.com/site/davidsstatistics/home/notched-box-plots">Notched Box Plots</a>.</p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-15" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geom-objects-can-be-combined"><em>geom</em> objects can be combined</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below plots the data points on the boxplots by using both <code>geom_boxplot()</code> and <code>geom_point()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb18-2"><a href="#cb18-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS, </span>
+<span id="cb18-3"><a href="#cb18-3"></a>           <span class="at">x=</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span>              <span class="co">#&lt;&lt;      </span></span>
+<span id="cb18-5"><a href="#cb18-5"></a>  <span class="fu">geom_point</span>(<span class="at">position=</span><span class="st">"jitter"</span>, <span class="co">#&lt;&lt;</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a>             <span class="at">size =</span> <span class="fl">0.5</span>)        <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-16" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_violin">Geometric Objects: geom_violin</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html"><code>geom_violin</code></a> is designed for creating violin plot. Violin plots are a way of comparing multiple data distributions. With ordinary density curves, it is difficult to compare more than just a few distributions because the lines visually interfere with each other. With a violin plot, it’s easier to compare several distributions since they’re placed side by side.</p>
+<p>The code below plot the distribution of Maths score by gender in violin plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS, </span>
+<span id="cb19-3"><a href="#cb19-3"></a>           <span class="at">x=</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_violin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-17" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_violin-and-geom_boxplot">Geometric Objects: <code>geom_violin()</code> and <code>geom_boxplot()</code></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below combined a violin plot and a boxplot to show the distribution of Maths scores by gender.]</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb20-2"><a href="#cb20-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS, </span>
+<span id="cb20-3"><a href="#cb20-3"></a>           <span class="at">x=</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">geom_violin</span>(<span class="at">fill=</span><span class="st">"light blue"</span>) <span class="sc">+</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)           </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-18" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="geometric-objects-geom_point">Geometric Objects: <code>geom_point()</code></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><a href="https://ggplot2.tidyverse.org/reference/geom_point.html"><code>geom_point()</code></a> is especially useful for creating scatterplot.</li>
+<li>The code chunk below plots a scatterplot showing the Maths and English grades of pupils by using <code>geom_point()</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb21-2"><a href="#cb21-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, </span>
+<span id="cb21-3"><a href="#cb21-3"></a>           <span class="at">y=</span>ENGLISH)) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">geom_point</span>()            </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-19" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="statistics-stat">Statistics, <em>stat</em></h3>
+<ul>
+<li>The Statistics functions statistically transform data, usually as some form of summary. For example:
+<ul>
+<li>frequency of values of a variable (bar graph)</li>
+<li>a mean</li>
+<li>a confidence limit</li>
+</ul></li>
+<li>There are two ways to use these functions:
+<ul>
+<li>add a <code>stat_()</code> function and override the default geom, or</li>
+<li>add a <code>geom_()</code> function and override the default stat.</li>
+</ul></li>
+</ul>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-20" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-stat">Working with stat</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>The boxplots on the right are incomplete because the positions of the means were not shown.</p></li>
+<li><p>Next two slides will show you how to add the mean values on the boxplots.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-21" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-stat---the-stat_summary-method">Working with stat - the <em>stat_summary()</em> method</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below adds mean values by using <a href="https://ggplot2.tidyverse.org/reference/stat_summary.html"><code>stat_summary()</code></a> function and overriding the default geom.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="4-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb22-2"><a href="#cb22-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS, <span class="at">x=</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"point"</span>,       </span>
+<span id="cb22-5"><a href="#cb22-5"></a>               <span class="at">fun.y=</span><span class="st">"mean"</span>,         </span>
+<span id="cb22-6"><a href="#cb22-6"></a>               <span class="at">colour =</span><span class="st">"red"</span>,        </span>
+<span id="cb22-7"><a href="#cb22-7"></a>               <span class="at">size=</span><span class="dv">4</span>)               </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-22" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-stat---the-geom-method">Working with stat - the <code>geom()</code> method</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below adding mean values by using <code>geom_()</code> function and overriding the default stat.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="4-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb23-2"><a href="#cb23-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> MATHS, <span class="at">x=</span> GENDER)) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>  <span class="fu">geom_point</span>(<span class="at">stat=</span><span class="st">"summary"</span>,        </span>
+<span id="cb23-5"><a href="#cb23-5"></a>             <span class="at">fun.y=</span><span class="st">"mean"</span>,           </span>
+<span id="cb23-6"><a href="#cb23-6"></a>             <span class="at">colour =</span><span class="st">"red"</span>,          </span>
+<span id="cb23-7"><a href="#cb23-7"></a>             <span class="at">size=</span><span class="dv">4</span>)          </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-23" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="how-to-add-a-best-fit-curve-on-a-scatterplot">How to add a best fit curve on a scatterplot?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>The scatterplot on the right shows the relationship of Maths and English grades of pupils.</p></li>
+<li><p>The interpretability of this graph can be improved by adding a best fit curve.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-41-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-24" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="how-to-add-a-best-fit-curve-on-a-scatterplot-1">How to add a best fit curve on a scatterplot?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>In the code chunk below, <a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html"><code>geom_smooth()</code></a> is used to plot a best fit curve on the scatterplot.</p>
+<ul>
+<li>The default method used is <em>loess</em>.]</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb24-2"><a href="#cb24-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, <span class="at">y=</span>ENGLISH)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">size=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-43-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-25" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="how-to-add-a-best-fit-curve-on-a-scatterplot-2">How to add a best fit curve on a scatterplot?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The default smoothing method can be overridden as shown below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="5-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb25-2"><a href="#cb25-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, </span>
+<span id="cb25-3"><a href="#cb25-3"></a>           <span class="at">y=</span>ENGLISH)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, </span>
+<span id="cb25-6"><a href="#cb25-6"></a>              <span class="at">size=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-45-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-26" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="facets">Facets</h3>
+<ul>
+<li><p>Facetting generates small multiples (sometimes also called trellis plot), each displaying a different subset of the data.</p></li>
+<li><p>Facets are an alternative to aesthetics for displaying additional discrete variables.</p></li>
+<li><p>ggplot2 supports two types of factes, namely: <code>facet_grid()</code> and <code>facet_wrap</code>.</p></li>
+</ul>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-27" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="facet_wrap"><code>facet_wrap()</code></h3>
+<ul>
+<li><p><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html"><code>facet_wrap</code></a> wraps a 1d sequence of panels into 2d.</p></li>
+<li><p>This is generally a better use of screen space than facet_grid because most displays are roughly rectangular.</p></li>
+</ul>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-28" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-facet_wrap">Working with <code>facet_wrap()</code></h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below plots a trellis plot using <code>facet-wrap()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb26-2"><a href="#cb26-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> CLASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-47-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-29" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="facet_grid-function"><code>facet_grid()</code> function</h3>
+<ul>
+<li><p><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html"><code>facet_grid()</code></a> forms a matrix of panels defined by row and column facetting variables.</p></li>
+<li><p>It is most useful when you have two discrete variables, and all combinations of the variables exist in the data.</p></li>
+</ul>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-30" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-facet_grid">Working with <code>facet_grid()</code></h3>
+<p>The code chunk below plots a trellis plot using <code>facet_grid()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb27-2"><a href="#cb27-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS)) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a>    <span class="fu">facet_grid</span>(<span class="sc">~</span> CLASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-49-1.png" width="1440" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="working-with-facet">Working with facet</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Your turn</strong></p>
+</div>
+<div class="callout-content">
+<p>Plot a trellis boxplot looks similar to the figure below.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-50-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<h4 id="the-solution">The solution:</h4>
+<div class="cell">
+
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-facet-1">Working with facet</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Your turn</strong></p>
+</div>
+<div class="callout-content">
+<p>Plot a trellis boxplot looks similar to the figure below.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-52-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The solution:</p>
+<div class="cell">
+
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-facet-2">Working with facet</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Your turn</strong></p>
+</div>
+<div class="callout-content">
+<p>Plot a trellis boxplot looks similar to the figure below.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-54-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The solution:</p>
+<div class="cell">
+
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-31" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="coordinates">Coordinates</h3>
+<ul>
+<li><p>The <em>Coordinates</em> functions map the position of objects onto the plane of the plot.</p></li>
+<li><p>There are a number of different possible coordinate systems to use, they are:</p>
+<ul>
+<li><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html"><code>coord_cartesian()</code></a>: the default cartesian coordinate systems, where you specify x and y values (e.g.&nbsp;allows you to zoom in or out).</li>
+<li><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html"><code>coord_flip()</code></a>: a cartesian system with the x and y flipped.</li>
+<li><a href="https://ggplot2.tidyverse.org/reference/coord_fixed.html"><code>coord_fixed()</code></a>: a cartesian system with a “fixed” aspect ratio (e.g.&nbsp;1.78 for a “widescreen” plot).</li>
+<li><a href="https://ggplot2.tidyverse.org/reference/coord_map.html"><code>coord_quickmap()</code></a>: a coordinate system that approximates a good aspect ratio for maps.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-coordinate">Working with Coordinate</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>By the default, the bar chart of ggplot2 is in vertical form.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-56-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The code chunk below flips the horizontal bar chart into vertical bar chart by using <code>coord_flip()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb28-2"><a href="#cb28-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span>RACE)) <span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-57-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-coordinate-1">Working with Coordinate</h3>
+<h4 id="how-to-change-to-the-y--and-x-axis-range">How to change to the y- and x-axis range?</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The scatterplot on the right is slightly misleading because the y-aixs and x-axis range are not equal.</p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-58-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-coordinate-2">Working with Coordinate</h3>
+<h4 id="how-to-change-to-the-y--and-x-axis-range-1">How to change to the y- and x-axis range?</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below fixed both the y-axis and x-axis range from 0-100.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb29-2"><a href="#cb29-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, <span class="at">y=</span>ENGLISH)) <span class="sc">+</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span>lm, </span>
+<span id="cb29-5"><a href="#cb29-5"></a>              <span class="at">size=</span><span class="fl">0.5</span>) <span class="sc">+</span>  </span>
+<span id="cb29-6"><a href="#cb29-6"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>),</span>
+<span id="cb29-7"><a href="#cb29-7"></a>                  <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-60-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-32" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="themes">Themes</h3>
+<div style="font-size: 0.8em">
+<ul>
+<li>Themes control elements of the graph not related to the data. For example:
+<ul>
+<li>background colour</li>
+<li>size of fonts</li>
+<li>gridlines</li>
+<li>colour of labels</li>
+</ul></li>
+<li>Built-in themes include:
+<ul>
+<li><code>theme_gray()</code> (default)</li>
+<li><code>theme_bw()</code></li>
+<li><code>theme_classic()</code></li>
+</ul></li>
+<li>A list of theme can be found at this <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">link</a>.</li>
+<li>Each theme element can be conceived of as either a line (e.g.&nbsp;x-axis), a rectangle (e.g.&nbsp;graph background), or text (e.g.&nbsp;axis title).</li>
+</ul>
+</div>
+</section>
+<section id="essential-grammatical-elements-in-ggplot2-33" class="slide level2">
+<h2>Essential Grammatical Elements in ggplot2</h2>
+<h3 id="working-with-theme">Working with theme</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The code chunk below plot a horizontal bar chart using <code>theme_gray()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb30-2"><a href="#cb30-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span>RACE)) <span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a>  <span class="fu">theme_gray</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-62-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-theme-1">Working with theme</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>A horizontal bar chart plotted using <code>theme_classic()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb31-2"><a href="#cb31-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span>RACE)) <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-63-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>A horizontal bar chart plotted using <code>theme_minimal()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
+<span id="cb32-2"><a href="#cb32-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span>RACE)) <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-64-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="working-with-theme-2">Working with theme</h3>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Your turn</strong></p>
+</div>
+<div class="callout-content">
+<p>Plot a horizontal bar chart looks similar to the figure below.</p>
+<ul>
+<li>Changing the colors of plot panel background of <code>theme_minimal()</code> to light blue and the color of grid lines to white.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-65-1.png" width="960" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="working-with-theme-3">Working with theme</h3>
+<h4 id="the-solution-1">The solution</h4>
+<div class="cell">
+
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-i" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis I</h2>
+<h3 id="the-original-design">The original design</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>A simple vertical bar chart for frequency analysis. Critics:</p>
+<ul>
+<li>y-aixs label is not clear (i.e.&nbsp;count)</li>
+<li>To support effective comparison, the bars should be sorted by their resepctive frequencies.</li>
+<li>For static graph, frequency values should be added to provide addition information.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-67-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-i-1" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis I</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The makeover design</strong></p>
+</div>
+<div class="callout-content">
+<p>With reference to the critics on the earlier slide, create a makeover looks similar to the figure on the right.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-69-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-i-2" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis I</h2>
+<h3 id="the-makeover-design-1">The makeover design</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>This code chunk uses <a href="https://forcats.tidyverse.org/reference/fct_inorder.html"><code>fct_infreq()</code></a> of <a href="https://forcats.tidyverse.org/articles/forcats.html"><strong>forcats</strong></a> package.</p>
+<div class="cell">
+
+</div>
+<p>Credit: I learned this trick from <a href="https://wilkelab.org/SDS375/slides/getting-things-in-order.html#1"><em>Getting things into the right order</em></a> of Prof.&nbsp;Claus O. Wilke, the author of <a href="https://clauswilke.com/dataviz/"><strong>Fundamentals of Data Visualization</strong></a></p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-71-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-ii" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis II</h2>
+<h3 id="the-original-design-1">The original design</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-72-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-ii-1" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis II</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The makeover design</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Adding mean and median lines on the histogram plot.</li>
+<li>Change fill color and line color</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-73-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The code chunk:</p>
+<div class="cell">
+
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-iii" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis III</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="the-original-design-2">The original design</h3>
+<p>The histograms on the left are elegantly designed but not informative. This is because they only reveal the distribution of English scores by gender but without context such as all pupils.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-75-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The makeover design</strong></p>
+</div>
+<div class="callout-content">
+<p>Create a makeover looks similar to the figure below. The background histograms show the distribution of English scores for all pupils.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-76-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-iv" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis IV</h2>
+<h3 id="the-original-design.">The original design.</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-77-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-data-drive-graphics-for-analysis-iv-1" class="slide level2">
+<h2>Designing Data-drive Graphics for Analysis IV</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The makeover design</strong></p>
+</div>
+<div class="callout-content">
+<p>Create a makeover looks similar to the figure on the right.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+</div><div class="column" style="width:50%;">
+<p>A within group scatterplot with reference lines.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex01-ggplot2_files/figure-revealjs/unnamed-chunk-79-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reference" class="slide level2">
+<h2>Reference</h2>
+<ul>
+<li>Hadley Wickham (2023) <a href="https://ggplot2-book.org/"><strong>ggplot2: Elegant Graphics for Data Analysis</strong></a>. Online 3rd edition.</li>
+<li>Winston Chang (2013) <a href="https://r-graphics.org/"><strong>R Graphics Cookbook 2nd edition</strong></a>. Online version.</li>
+<li>Healy, Kieran (2019) <a href="https://socviz.co/"><strong>Data Visualization: A practical introduction</strong></a>. Online version</li>
+<li><a href="https://henrywang.nl/learning-ggplot2-on-paper-components/">Learning ggplot2 on Paper – Components</a></li>
+<li><a href="https://henrywang.nl/learning-ggplot2-on-paper-layer/">Learning ggplot2 on Paper – Layer</a></li>
+<li><a href="https://henrywang.nl/tag/learning-ggplot2-on-paper/">Learning ggplot2 on Paper – Scale</a></li>
+</ul>
+
+<div class="footer footer-default">
+
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
