@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2023-01-15">
+<meta name="description" content="Creating data visualisation beyond default">
 
-<title>ISSS608 - Lesson 1: Introduction to Visual Analytics</title>
+<title>ISSS608 - Take-home Exercise 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -176,25 +177,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#content" id="toc-content" class="nav-link active" data-scroll-target="#content">Content</a></li>
-  <li><a href="#lesson-slides-and-hands-on-notes" id="toc-lesson-slides-and-hands-on-notes" class="nav-link" data-scroll-target="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
-  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise">In-class Exercise</a></li>
-  <li><a href="#self-reading-before-lesson" id="toc-self-reading-before-lesson" class="nav-link" data-scroll-target="#self-reading-before-lesson">Self-reading Before Lesson</a>
+  <li><a href="#the-task" id="toc-the-task" class="nav-link active" data-scroll-target="#the-task">The Task</a>
   <ul class="collapse">
-  <li><a href="#webinars" id="toc-webinars" class="nav-link" data-scroll-target="#webinars">Webinars</a></li>
+  <li><a href="#survival-tip" id="toc-survival-tip" class="nav-link" data-scroll-target="#survival-tip">Survival Tip</a></li>
   </ul></li>
-  <li><a href="#readings" id="toc-readings" class="nav-link" data-scroll-target="#readings">Readings</a></li>
-  <li><a href="#statistical-graphics-methods" id="toc-statistical-graphics-methods" class="nav-link" data-scroll-target="#statistical-graphics-methods">Statistical Graphics Methods</a>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a>
   <ul class="collapse">
-  <li><a href="#age-sex-pyramid" id="toc-age-sex-pyramid" class="nav-link" data-scroll-target="#age-sex-pyramid">Age-sex Pyramid</a></li>
-  <li><a href="#pareto-chart" id="toc-pareto-chart" class="nav-link" data-scroll-target="#pareto-chart">Pareto Chart</a></li>
-  <li><a href="#trellis-display" id="toc-trellis-display" class="nav-link" data-scroll-target="#trellis-display">Trellis Display</a></li>
+  <li><a href="#submission-date" id="toc-submission-date" class="nav-link" data-scroll-target="#submission-date">Submission date</a></li>
+  <li><a href="#learning-from-the-senior" id="toc-learning-from-the-senior" class="nav-link" data-scroll-target="#learning-from-the-senior">Learning from the senior</a></li>
   </ul></li>
-  <li><a href="#all-about-tableau" id="toc-all-about-tableau" class="nav-link" data-scroll-target="#all-about-tableau">All About Tableau</a>
-  <ul class="collapse">
-  <li><a href="#things-about-tableau-you-must-know" id="toc-things-about-tableau-you-must-know" class="nav-link" data-scroll-target="#things-about-tableau-you-must-know">Things about Tableau you must know!</a></li>
-  <li><a href="#learning-tableau" id="toc-learning-tableau" class="nav-link" data-scroll-target="#learning-tableau">Learning Tableau</a></li>
-  </ul></li>
+  <li><a href="#peer-learning" id="toc-peer-learning" class="nav-link" data-scroll-target="#peer-learning">Peer Learning</a></li>
   </ul>
 </nav>
     </div>
@@ -203,9 +195,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lesson 1: Introduction to Visual Analytics</h1>
+<h1 class="title">Take-home Exercise 1</h1>
 </div>
 
+<div>
+  <div class="description">
+    <p>Creating data visualisation beyond default</p>
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -224,110 +221,75 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<ul>
-<li>Course Overview</li>
-<li>Motivation of Visual Analytics</li>
-<li>What Visual Analytics is</li>
-<li>Visual Analytics in History</li>
-<li>Intents of Visual Analytics Applications</li>
-<li>Visual Analytics Techniques: basic graphical methods</li>
-<li>Visual Analytics Tools</li>
-</ul>
+<section id="the-task" class="level1">
+<h1>The Task</h1>
+<p>In this take-home exercise, you are required to apply the skills you had learned in Lesson 1 and Hands-on Exercise 1 to reveal the demographic of the <a href="https://vast-challenge.github.io/2022/">city of Engagement, Ohio USA</a> by using appropriate static statistical graphics methods. The data should be processed by using appropriate <strong>tidyverse</strong> family of packages and the statistical graphics must be prepared using <strong>ggplot2</strong> and its extensions.</p>
+<section id="survival-tip" class="level3">
+<h3 class="anchored" data-anchor-id="survival-tip">Survival Tip</h3>
+<p>Start with <em>Participant</em>s data file in the Attributes folder.</p>
 </section>
-<section id="lesson-slides-and-hands-on-notes" class="level2">
-<h2 class="anchored" data-anchor-id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
-<ul>
-<li><p>Lesson slides in <a href="../lesson/Lesson01/Lesson01-VAA.html">html</a> format</p></li>
-<li><p>Hands-on Exercise 1 in <a href="../hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html">html</a> format.</p></li>
-</ul>
 </section>
-<section id="in-class-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-exercise">In-class Exercise</h2>
-<p>By the end of this lesson, you will gain hands-on experience on:</p>
+<section id="submission-instructions" class="level1">
+<h1>Submission Instructions</h1>
+<p>This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.</p>
 <ul>
-<li>creating the course website by using Quarto and RStudio,</li>
-<li>managing the website by using git/github by using RStudio</li>
-<li>publishing the website onto Netlify server</li>
+<li>The take-home exercise submission must be written by using <strong>distill for R Markdown</strong>. It can be in either <a href="https://distill.pub/guide/">distill article</a> or <a href="https://rstudio.github.io/distill/blog.html">distill blog</a> format. You are required to publish the exercise on <a href="https://www.netlify.com/">Netlify</a> and provide the link on the take-home exercise submission page on elearn.</li>
+<li>You are also required to push the take-home exercise folder and data onto your individual Github repository and provide the link on the take-home exercise submission page on eLearn.</li>
 </ul>
+<section id="submission-date" class="level3">
+<h3 class="anchored" data-anchor-id="submission-date">Submission date</h3>
+<p>Your completed take-home exercise is due on <strong>24th April 2022, by 11:59pm evening</strong>.</p>
 </section>
-<section id="self-reading-before-lesson" class="level2">
-<h2 class="anchored" data-anchor-id="self-reading-before-lesson">Self-reading Before Lesson</h2>
-<section id="webinars" class="level3">
-<h3 class="anchored" data-anchor-id="webinars">Webinars</h3>
+<section id="learning-from-the-senior" class="level3">
+<h3 class="anchored" data-anchor-id="learning-from-the-senior">Learning from the senior</h3>
 <ul>
-<li><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?referrer=playlist-the_best_hans_rosling_talks_yo">The best Hans Rosling talks you’ve ever seen</a>.</li>
-<li><a href="https://www.youtube.com/watch?v=LYKO_6KPZCM/">VIVA – What is Visual Analytics?</a></li>
-<li><a href="https://www.youtube.com/watch?v=5uGRGqCFryg/">Why Visual Analytics</a></li>
-<li><a href="https://www.youtube.com/watch?v=5i3xbitEVfs/">Visual Analytics - Mastering the Information Age</a></li>
+<li><a href="https://rpubs.com/deniseadele/584423">Singapore’s Demographic Composition Across Time</a></li>
 </ul>
 </section>
 </section>
-<section id="readings" class="level2">
-<h2 class="anchored" data-anchor-id="readings">Readings</h2>
+<section id="peer-learning" class="level1">
+<h1>Peer Learning</h1>
 <ul>
-<li>Thomas, J.J. &amp; Cook, K.A. (2006) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2006/01/mcg2006010010/13rRUxBa5ej">A Visual Analytics Agenda</a>”, ‘’IEEE Computer Graphics and Applications’’, January 2006, Vol.26(1), pp.10-13</li>
-<li>Chabot, C (2009) “<a href="https://www-computer-org.libproxy.smu.edu.sg/csdl/magazine/cg/2009/02/mcg2009020084/13rRUy3gn3z">Demystifying Visual Analytics</a>”, ‘’IEEE Computer Graphics and Applications’’, March 2009, Vol.29(2), pp.84-87.</li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/the_5_most_influential_data_visualizations_of_all_time.pdf">The 5 Most Influential Data Visualizations of All Time</a></li>
-<li>J.J. Thomas and K.A. Cook, eds.&nbsp;(2005) <a href="https://ils.unc.edu/courses/2017_fall/inls641_001/books/RD_Agenda_VisualAnalytics.pdf">Illuminating the Path: The Research and Development Agenda for Visual Analytics</a>, IEEE CS Press.</li>
-<li>Jun, Yuan et. al.&nbsp;(2020) “A survey of visual analytics techniques for machine learning”, <em>Computational Visual Media</em>. <a href="https://doi.org/10.1007/s41095-020-0191-7">doi.org/10.1007/s41095-020-0191-7</a>.</li>
-<li>Cui, Wenqiang (2019) “<a href="https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/2608888/08740868.pdf?sequence=2">Visual Analytics: A Comprehensive Overview</a>”, IEEE Access.</li>
+<li><a href="https://visual-analytics-course.netlify.app/th_ex/th_ex1.html">ALOYSIUS TENG</a></li>
+<li><a href="https://isss608-hhhandy.netlify.app/th_ex/th_ex1.html">ANTONIUS HANDY</a></li>
+<li><a href="https://r4dsa4va.netlify.app/th_ex/th_ex1.html">CHE XUAN</a></li>
+<li><a href="https://yn-isss608.netlify.app/take-home_ex/th_ex1.html">CHU YI-NING</a></li>
+<li><a href="https://jiarui-cui-isss608.netlify.app/th_ex/th_ex01">CUI JIARUI</a></li>
+<li><a href="https://dkwx1234.netlify.app/th_ex/takehomeex1.html">DAVID KWOK WEI XIANG</a></li>
+<li><a href="https://dingyanmu.netlify.app/th_ex/th_ex1.html">DING YANMU</a></li>
+<li><a href="https://heranshan-isss608.netlify.app/th_ex/th_ex1.html">HERANSHAN SO SUBRAMANIAM</a></li>
+<li><a href="https://master--huanganni.netlify.app/th_ex/th_ex1.html">HUANG ANNI</a></li>
+<li><a href="https://vast-challenge-2022-th-ex-1.netlify.app/th_ex/th_ex1.html">HUANG YAPING</a></li>
+<li><a href="https://hulwana-va.netlify.app/th_ex/th_ex1.html">HULWANA BINTE SAIFULZAMAN</a></li>
+<li><a href="https://bomink.netlify.app/posts/2022-04-25-hw1/">KIM BOMIN</a></li>
+<li><a href="https://jeremiahlam.netlify.app/th_ex/th_ex1.html">LAM KUO JIAN JEREMIAH</a></li>
+<li><a href="https://tiffanylxq.netlify.app/takehomeex/th_ex1">LEE XIAO QI</a></li>
+<li><a href="https://jessielee.netlify.app/th_ex/th_ex1.html">LI HONGYI</a></li>
+<li><a href="https://katherine-isss608.netlify.app/th_ex/th_ex1.html">LI HUAN</a></li>
+<li><a href="https://isss608-visualization-liminqi.netlify.app/th_ex/th_ex1">LI MINQI</a></li>
+<li><a href="https://zhenglinliuvisual.netlify.app/th_ex/th_ex1.html">LIU ZHENGLIN</a></li>
+<li><a href="https://leslielong-da.netlify.app/posts/2022-04-18-takehome1/">LONG NU</a>. A good example on using appropriate ggplot2’s functions to build enlightening statistical graphics. Section 2.3 Data Wrangling shows how to use appropriate functions of <strong>dplyr</strong> package and <code>%&gt;%</code> to perform data wrangling. <img src="img/thumbup1.jpg" class="img-fluid"><br>
+</li>
+<li><a href="https://isss-608-junqiuni.netlify.app/takehome_ex/takehome_ex01.html">NI JUNQIU</a></li>
+<li><a href="https://isss608-jordan-va.netlify.app/th_ex1/the_1">ONG ZHI RONG JORDAN</a></li>
+<li><a href="https://rakendu-mitb2021.netlify.app/th_ex/th_ex01.html">RAKENDU RAMESH</a></li>
+<li><a href="https://jeanrao.netlify.app/th_ex/th1.html">RAO NINGZHEN</a></li>
+<li><a href="https://isss608-raunakkapur.netlify.app/th_ex/the1">RAUNAK KAPUR</a></li>
+<li><a href="https://raveenaclr.netlify.app/th_ex/th_ex1.html">RAVEENA CHAKRAPANI</a></li>
+<li><a href="https://visualanalytics.netlify.app/th_ex/th_ex1.html">SHACHI ANIRUDHA RAODEO</a></li>
+<li><a href="https://isss608totallynew.netlify.app/take_home_exercise/ex_1.html">SUI TIANYUE</a></li>
+<li><a href="https://clarencetay.netlify.app/th_ex/th_ex1.html">TAY CHENG WEI CLARENCE</a></li>
+<li><a href="https://mitb-va-joycetseng.netlify.app/posts/2022-04-18-takehome1/">TSENG CHIA-YI</a></li>
+<li><a href="https://wtqmitbva.netlify.app/takehome1">WANG TIANQI</a></li>
+<li>XIAO YUHE</li>
+<li><a href="https://kimsiang-va.netlify.app/takehome_exercise/takehome_exercise_1.html">YEO KIM SIANG</a></li>
+<li><a href="https://yudiva.netlify.app/exe1">YU DI</a></li>
 </ul>
-</section>
-<section id="statistical-graphics-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-graphics-methods">Statistical Graphics Methods</h2>
-<section id="age-sex-pyramid" class="level3">
-<h3 class="anchored" data-anchor-id="age-sex-pyramid">Age-sex Pyramid</h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Population_pyramid">Population pyramid</a></li>
-<li><a href="https://www.thoughtco.com/age-sex-pyramids-and-population-pyramids-1435272">Age-Sex and Population Pyramids: The Most Useful Graphs in Population Geography</a></li>
-<li><a href="https://www.populationpyramid.net/singapore/2017/">Population Pyramid Singapore</a></li>
-</ul>
-</section>
-<section id="pareto-chart" class="level3">
-<h3 class="anchored" data-anchor-id="pareto-chart">Pareto Chart</h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Pareto_chart">Pareto chart</a></li>
-<li><a href="https://www-tandfonline-com.libproxy.smu.edu.sg/doi/abs/10.1198/000313006X152243">Revising the Pareto Chart</a></li>
-</ul>
-</section>
-<section id="trellis-display" class="level3">
-<h3 class="anchored" data-anchor-id="trellis-display">Trellis Display</h3>
-<ul>
-<li><a href="https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents">The Visual Design and Control of Trellis Display</a></li>
-<li><a href="https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1002/wics.121">Trellis display</a></li>
-<li><a href="https://www.researchgate.net/publication/2671674_Trellis_Displays_vs_Interactive_Graphics">Trellis Displays vs.&nbsp;Interactive Graphics</a></li>
-</ul>
-</section>
-</section>
-<section id="all-about-tableau" class="level2">
-<h2 class="anchored" data-anchor-id="all-about-tableau">All About Tableau</h2>
-<section id="things-about-tableau-you-must-know" class="level3">
-<h3 class="anchored" data-anchor-id="things-about-tableau-you-must-know">Things about Tableau you must know!</h3>
-<ul>
-<li><a href="https://graphics.stanford.edu/papers/polaris_extended/polaris.pdf">Polaris: A System for Query, Analysis,and Visualization of Multidimensional Relational Databases</a></li>
-<li><a href="https://www.tableau.com/products/technology">Tableau Technology</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf">Show Me: Automatic Presentation for Visual Analysis</a></li>
-<li><a href="https://www.tableau.com/sites/default/files/whitepapers/TS_WP_VA_F2_new_temp_0.pdf">Whitepaper: Visual Analysis for Everyone</a></li>
-<li><a href="https://help.tableau.com/current/blueprint/en-us/bp_analytics_best_practices_in_tableau.htm">Analytics Best Practices in Tableau</a></li>
-</ul>
-</section>
-<section id="learning-tableau" class="level3">
-<h3 class="anchored" data-anchor-id="learning-tableau">Learning Tableau</h3>
-<ul>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started">Getting Started</a></li>
-<li><a href="http://www.tableau.com/learn/tutorials/on-demand/tableau-interface">Tableau Interface</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics">Getting Started with Visual Analytics</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting">Formatting</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/formatting-pane">The Formatting Pane</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/reference-lines">Reference lines</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-data">Getting Started with Data</a> also self-learn the remaining videos under ’‘’Connecting to Data’’’</li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/getting-started-tableau-prep">Getting Started with Tableau Prep Builder</a>. This is a brand-new product from Tableau designed to help everyone quickly and confidently combine, shape, and clean their data for analysis. You can learn more about Tableau Data Prep <a href="https://www.tableau.com/about/blog/2018/3/tableau-prep-project-maestro-here-redefining-your-data-prep-experience-84620">here</a>. You are encouraged to view all the 12 videos under ’‘’Tableau Prep’’’.</li>
-</ul>
+<div class="cell">
+
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

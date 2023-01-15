@@ -1,0 +1,100 @@
+---
+title: "Take-home Exercise 1"
+description: |
+  Creating data visualisation beyond default
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# The Task
+
+In this take-home exercise, you are required to apply the skills you had learned in Lesson 1 and Hands-on Exercise 1 to reveal the demographic of the [city of Engagement, Ohio USA](https://vast-challenge.github.io/2022/) by using appropriate static statistical graphics methods.  The data should be processed by using appropriate **tidyverse** family of packages and the statistical graphics must be prepared using **ggplot2** and its extensions.
+
+### Survival Tip
+
+Start with *Participant*s data file in the Attributes folder.
+
+# Submission Instructions 
+
+This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually. 
+
+- The take-home exercise submission must be written by using **distill for R Markdown**.  It can be in either [distill article](https://distill.pub/guide/) or [distill blog ](https://rstudio.github.io/distill/blog.html) format. You are required to publish the exercise on [Netlify](https://www.netlify.com/) and provide the link on the take-home exercise submission page on elearn. 
+- You are also required to push the take-home exercise folder and data onto your individual Github repository and provide the link on the take-home exercise submission page on eLearn.
+ 
+### Submission date 
+ 
+Your completed take-home exercise is due on **24th April 2022, by 11:59pm evening**.
+
+### Learning from the senior
+
+- [Singapore’s Demographic Composition Across Time](https://rpubs.com/deniseadele/584423)
+
+
+# Peer Learning
+
+- [ALOYSIUS TENG](https://visual-analytics-course.netlify.app/th_ex/th_ex1.html)
+- [ANTONIUS HANDY](https://isss608-hhhandy.netlify.app/th_ex/th_ex1.html)
+- [CHE XUAN](https://r4dsa4va.netlify.app/th_ex/th_ex1.html)
+- [CHU YI-NING](https://yn-isss608.netlify.app/take-home_ex/th_ex1.html)
+- [CUI  JIARUI](https://jiarui-cui-isss608.netlify.app/th_ex/th_ex01)
+- [DAVID KWOK WEI XIANG](https://dkwx1234.netlify.app/th_ex/takehomeex1.html)
+- [DING YANMU](https://dingyanmu.netlify.app/th_ex/th_ex1.html)
+- [HERANSHAN SO SUBRAMANIAM](https://heranshan-isss608.netlify.app/th_ex/th_ex1.html)
+- [HUANG ANNI](https://master--huanganni.netlify.app/th_ex/th_ex1.html)
+- [HUANG YAPING](https://vast-challenge-2022-th-ex-1.netlify.app/th_ex/th_ex1.html)
+- [HULWANA BINTE SAIFULZAMAN](https://hulwana-va.netlify.app/th_ex/th_ex1.html)
+- [KIM BOMIN](https://bomink.netlify.app/posts/2022-04-25-hw1/)
+- [LAM KUO JIAN JEREMIAH](https://jeremiahlam.netlify.app/th_ex/th_ex1.html)
+- [LEE XIAO QI](https://tiffanylxq.netlify.app/takehomeex/th_ex1)
+- [LI HONGYI](https://jessielee.netlify.app/th_ex/th_ex1.html)
+- [LI HUAN](https://katherine-isss608.netlify.app/th_ex/th_ex1.html)
+- [LI MINQI](https://isss608-visualization-liminqi.netlify.app/th_ex/th_ex1)
+- [LIU ZHENGLIN](https://zhenglinliuvisual.netlify.app/th_ex/th_ex1.html)
+- [LONG NU](https://leslielong-da.netlify.app/posts/2022-04-18-takehome1/). A good example on using appropriate ggplot2's functions to build enlightening statistical graphics. Section 2.3 Data Wrangling shows how to use appropriate functions of **dplyr** package and `%>%` to perform data wrangling.  ![](img/thumbup1.jpg)  
+- [NI JUNQIU](https://isss-608-junqiuni.netlify.app/takehome_ex/takehome_ex01.html)
+- [ONG ZHI RONG JORDAN](https://isss608-jordan-va.netlify.app/th_ex1/the_1)
+- [RAKENDU RAMESH](https://rakendu-mitb2021.netlify.app/th_ex/th_ex01.html)
+- [RAO NINGZHEN](https://jeanrao.netlify.app/th_ex/th1.html)
+- [RAUNAK KAPUR](https://isss608-raunakkapur.netlify.app/th_ex/the1)
+- [RAVEENA CHAKRAPANI](https://raveenaclr.netlify.app/th_ex/th_ex1.html)
+- [SHACHI ANIRUDHA RAODEO](https://visualanalytics.netlify.app/th_ex/th_ex1.html)
+- [SUI TIANYUE](https://isss608totallynew.netlify.app/take_home_exercise/ex_1.html)
+- [TAY CHENG WEI CLARENCE](https://clarencetay.netlify.app/th_ex/th_ex1.html)
+- [TSENG CHIA-YI](https://mitb-va-joycetseng.netlify.app/posts/2022-04-18-takehome1/)
+- [WANG TIANQI](https://wtqmitbva.netlify.app/takehome1)
+- XIAO YUHE
+- [YEO KIM SIANG](https://kimsiang-va.netlify.app/takehome_exercise/takehome_exercise_1.html)
+- [YU DI](https://yudiva.netlify.app/exe1)
+
+
+
+```{r echo=FALSE, eval=FALSE}
+library(pagedown)
+pagedown::chrome_print("_site/take-home.html")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
