@@ -133,7 +133,7 @@ exam_data <- read_csv("data/Exam_data.csv")
 #### R Graphics
 
 ```{r}
-#| fig-height: 8
+#| fig-height: 6
 hist(exam_data$MATHS)
 ```
 :::
@@ -142,7 +142,7 @@ hist(exam_data$MATHS)
 #### ggplot2
 
 ```{r}
-#| fig-height: 8
+#| fig-height: 6
 ggplot(data=exam_data, aes(x = MATHS)) +
   geom_histogram(bins=10, 
                  boundary = 100,
@@ -157,12 +157,12 @@ ggplot(data=exam_data, aes(x = MATHS)) +
 
 ### Then, why ggplot2
 
-::: columns 
-::: {.column width="50%"} 
-::: {.callout-note} 
+::: columns
+::: {.column width="50%"}
+::: callout-note
 The transferable skills from ggplot2 are not the idiosyncrasies of plotting syntax, but a powerful way of thinking about visualisation, as a way of mapping between variables and the visual properties of geometric objects that you can perceive.
 
-[Hadley Wickham](http://varianceexplained.org/r/teach_ggplot2_to_beginners/#comment-1745406157) 
+[Hadley Wickham](http://varianceexplained.org/r/teach_ggplot2_to_beginners/#comment-1745406157)
 :::
 
 ```{r}
@@ -231,26 +231,26 @@ A Layered Grammar of Graphics
 ![](img/image4.jpg)
 
 ::: {style="font-size: 0.6em"}
-Reference: Hadley Wickham (2010) ["A layered grammar of graphics."](https://vita.had.co.nz/papers/layered-grammar.html) *Journal of Computational and Graphical Statistics*, vol. 19, no. 1, pp. 3--28. 
+Reference: Hadley Wickham (2010) ["A layered grammar of graphics."](https://vita.had.co.nz/papers/layered-grammar.html) *Journal of Computational and Graphical Statistics*, vol. 19, no. 1, pp. 3--28.
 :::
 :::
 :::
-
 
 ## Essential Grammatical Elements in ggplot2
-### The `ggplot()` function and *data* argument 
+
+### The `ggplot()` function and *data* argument
 
 ::: columns
 ::: {.column width="50%"}
-- Let us call the `ggplot()` function using the code chunk on the right.
+-   Let us call the `ggplot()` function using the code chunk on the right.
 
-- Notice that a blank canvas appears.
+-   Notice that a blank canvas appears.
 
-- `ggplot()` initializes a ggplot object.
+-   `ggplot()` initializes a ggplot object.
 
-- The *data* argument defines the dataset to be used for plotting. 
+-   The *data* argument defines the dataset to be used for plotting.
 
-- If the dataset is not already a data.frame, it will be converted to one by `fortify()`. 
+-   If the dataset is not already a data.frame, it will be converted to one by `fortify()`.
 :::
 
 ::: {.column width="50%"}
@@ -261,20 +261,22 @@ ggplot(data=exam_data)
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### The [Aesthetic mappings](https://ggplot2.tidyverse.org/reference/aes.html)
 
-- The aesthetic mappings take attributes of the data and and use them to influence visual characteristics, such as position, colour, size, shape, or transparency.
+-   The aesthetic mappings take attributes of the data and and use them to influence visual characteristics, such as position, colour, size, shape, or transparency.
 
-- Each visual characteristic can thus encode an aspect of the data and be used to convey information.
+-   Each visual characteristic can thus encode an aspect of the data and be used to convey information.
 
-- All aesthetics of a plot are specified in the [`aes()`](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html) function call (in later part of this lesson, you will see that each *geom* layer can have its own aes specification)
+-   All aesthetics of a plot are specified in the [`aes()`](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html) function call (in later part of this lesson, you will see that each *geom* layer can have its own aes specification)
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Working with `aes()`
 
 ::: columns
 ::: {.column width="50%"}
-- The code chunk on the right add the aesthetic element into the plot.
+-   The code chunk on the right add the aesthetic element into the plot.
 
 ```{r}
 #| eval: false
@@ -283,7 +285,7 @@ ggplot(data=exam_data,
        aes(x= MATHS))
 ```
 
-- Notice that ggplot includes the x-axis and the axis's label.
+-   Notice that ggplot includes the x-axis and the axis's label.
 :::
 
 ::: {.column width="50%"}
@@ -296,19 +298,20 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
-### Geometric Objects: **geom** 
+
+### Geometric Objects: **geom**
 
 ::: columns
 ::: {.column width="50%"}
 ::: {style="font-size: 0.8em"}
-- Geometric objects are the actual marks we put on a plot. Examples include: 
-    + *geom_point* for drawing individual points (e.g., a scatter plot)
-    + *geom_line* for drawing lines (e.g., for a line charts)
-    + *geom_smooth* for drawing smoothed lines (e.g., for simple trends or approximations)
-    + *geom_bar* for drawing bars (e.g., for bar charts)
-    + *geom_histogram* for drawing binned values (e.g. a histogram)
-    + *geom_polygon* for drawing arbitrary shapes
-    + *geom_map* for drawing polygons in the shape of a map! (You can access the data to use for these maps by using the map_data() function).
+-   Geometric objects are the actual marks we put on a plot. Examples include:
+    -   *geom_point* for drawing individual points (e.g., a scatter plot)
+    -   *geom_line* for drawing lines (e.g., for a line charts)
+    -   *geom_smooth* for drawing smoothed lines (e.g., for simple trends or approximations)
+    -   *geom_bar* for drawing bars (e.g., for bar charts)
+    -   *geom_histogram* for drawing binned values (e.g. a histogram)
+    -   *geom_polygon* for drawing arbitrary shapes
+    -   *geom_map* for drawing polygons in the shape of a map! (You can access the data to use for these maps by using the map_data() function).
 :::
 :::
 
@@ -316,14 +319,14 @@ ggplot(data=exam_data,
 ![](img/image6.jpg)
 
 ::: {style="font-size: 0.8em"}
-- A plot must have at least one geom; there is no upper limit. You can add a geom to a plot using the **+** operator.
-- For complete list, please refer to [here](https://ggplot2.tidyverse.org/reference/#section-layer-geoms).
+-   A plot must have at least one geom; there is no upper limit. You can add a geom to a plot using the **+** operator.
+-   For complete list, please refer to [here](https://ggplot2.tidyverse.org/reference/#section-layer-geoms).
 :::
-
 :::
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: [*geom_bar*](https://ggplot2.tidyverse.org/reference/geom_bar.html)
 
 ::: columns
@@ -349,20 +352,22 @@ ggplot(data=exam_data, aes(x=RACE)) +
 :::
 
 ## Essential Grammatical Elements in ggplot2
-### Geometric Objects: geom_dotplot 
+
+### Geometric Objects: geom_dotplot
 
 ::: columns
 ::: {.column width="50%"}
 In a dot plot, the width of a dot corresponds to the bin width (or maximum width, depending on the binning algorithm), and dots are stacked, with each dot representing one observation.
 
-::: {.callout-warning}
+::: callout-warning
 ### Be warned
+
 The y scale is not very useful, in fact it is very misleading.
 :::
 :::
 
 ::: {.column width="50%"}
-In the code chunk below, [`geom_dotplot()`](https://ggplot2.tidyverse.org/reference/geom_dotplot.html) of ggplot2 is used to plot a dot plot.  
+In the code chunk below, [`geom_dotplot()`](https://ggplot2.tidyverse.org/reference/geom_dotplot.html) of ggplot2 is used to plot a dot plot.
 
 ```{r}
 ggplot(data=exam_data, 
@@ -373,14 +378,15 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: *geom_dotplot*
 
 ::: columns
 ::: {.column width="50%"}
-The code chunk below performs the following two steps: 
+The code chunk below performs the following two steps:
 
-- `scale_y_continuous()` is used to turn off the y-axis, and 
-- *binwidth argument* is used to change the binwidth to 2.5.
+-   `scale_y_continuous()` is used to turn off the y-axis, and
+-   *binwidth argument* is used to change the binwidth to 2.5.
 
 ```{r}
 #| eval: false
@@ -405,7 +411,8 @@ ggplot(data=exam_data, aes(x = MATHS)) +
 :::
 
 ## Essential Grammatical Elements in ggplot2
-### Geometric Objects: `geom_histogram()` 
+
+### Geometric Objects: `geom_histogram()`
 
 ::: columns
 ::: {.column width="50%"}
@@ -419,7 +426,7 @@ ggplot(data=exam_data,
   geom_histogram()       
 ```
 
-::: {.callout-note}
+::: callout-note
 Note that the default bin is **30**.
 :::
 :::
@@ -436,15 +443,16 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Modifying a geometric object by changing `geom()`
 
 ::: columns
 ::: {.column width="50%"}
-In the code chunk below, 
+In the code chunk below,
 
-- *bins* argument is used to change the number of bins to 20,
-- *fill* argument is used to shade the histogram with light blue color, and 
-- *color* argument is used to change the outline colour of the bars in black
+-   *bins* argument is used to change the number of bins to 20,
+-   *fill* argument is used to shade the histogram with light blue color, and
+-   *color* argument is used to change the outline colour of the bars in black
 
 ```{r}
 #| eval: false
@@ -471,11 +479,12 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
-### Modifying a geometric object by changing *aes()* 
+
+### Modifying a geometric object by changing *aes()*
 
 ::: columns
 ::: {.column width="50%"}
-- The code chunk below changes the interior colour of the histogram (i.e. *fill*) by using sub-group of *aesthetic()*.    
+-   The code chunk below changes the interior colour of the histogram (i.e. *fill*) by using sub-group of *aesthetic()*.
 
 ```{r}
 #| eval: false
@@ -487,7 +496,7 @@ ggplot(data=exam_data,
                  color="grey30")
 ```
 
-::: {.callout-note}
+::: callout-note
 This approach can be used to colour, fill and alpha of the geometric.
 :::
 :::
@@ -506,11 +515,12 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: geom-density
 
 ::: columns
 ::: {.column width="50%"}
-[`geom-density()`](https://ggplot2.tidyverse.org/reference/geom_density.html) computes and plots kernel density estimate, which is a smoothed version of the histogram. 
+[`geom-density()`](https://ggplot2.tidyverse.org/reference/geom_density.html) computes and plots kernel density estimate, which is a smoothed version of the histogram.
 
 It is a useful alternative to the histogram for continuous data that comes from an underlying smooth distribution.
 
@@ -538,6 +548,7 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: geom-density
 
 ::: columns
@@ -566,13 +577,13 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: geom_boxplot
 
 ::: columns
 ::: {.column width="50%"}
-
-- [`geom_boxplot()`](https://ggplot2.tidyverse.org/reference/geom_boxplot.html) displays continuous value list. It visualises five summary statistics (the median, two hinges and two whiskers), and all "outlying" points individually.   
-- The code chunk below plots boxplots by using *geom_boxplot()*.]
+-   [`geom_boxplot()`](https://ggplot2.tidyverse.org/reference/geom_boxplot.html) displays continuous value list. It visualises five summary statistics (the median, two hinges and two whiskers), and all "outlying" points individually.\
+-   The code chunk below plots boxplots by using *geom_boxplot()*.\]
 
 ```{r}
 #| eval: false
@@ -596,6 +607,7 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: geom_boxplot
 
 ::: columns
@@ -628,6 +640,7 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### *geom* objects can be combined
 
 ::: columns
@@ -660,7 +673,8 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
-### Geometric Objects: geom_violin 
+
+### Geometric Objects: geom_violin
 
 ::: columns
 ::: {.column width="50%"}
@@ -690,11 +704,12 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: `geom_violin()` and `geom_boxplot()`
 
 ::: columns
 ::: {.column width="50%"}
-The code chunk below combined a violin plot and a boxplot to show the distribution of Maths scores by gender.]
+The code chunk below combined a violin plot and a boxplot to show the distribution of Maths scores by gender.\]
 
 ```{r}
 #| eval: false
@@ -720,12 +735,13 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Geometric Objects: `geom_point()`
 
 ::: columns
 ::: {.column width="50%"}
-- [`geom_point()`](https://ggplot2.tidyverse.org/reference/geom_point.html) is especially useful for creating scatterplot.
-- The code chunk below plots a scatterplot showing the Maths and English grades of pupils by using `geom_point()`. 
+-   [`geom_point()`](https://ggplot2.tidyverse.org/reference/geom_point.html) is especially useful for creating scatterplot.
+-   The code chunk below plots a scatterplot showing the Maths and English grades of pupils by using `geom_point()`.
 
 ```{r}
 #| eval: false
@@ -750,29 +766,29 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Statistics, *stat*
 
-- The Statistics functions statistically transform data, usually as some form of summary.  For example:
-    - frequency of values of a variable (bar graph)
-    - a mean
-    - a confidence limit
-
-- There are two ways to use these functions:
-    - add a `stat_()` function and override the default geom, or
-    - add a `geom_()` function and override the default stat.
+-   The Statistics functions statistically transform data, usually as some form of summary. For example:
+    -   frequency of values of a variable (bar graph)
+    -   a mean
+    -   a confidence limit
+-   There are two ways to use these functions:
+    -   add a `stat_()` function and override the default geom, or
+    -   add a `geom_()` function and override the default stat.
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Working with stat
 
 ::: columns
 ::: {.column width="50%"}
-- The boxplots on the right are incomplete because the positions of the means were not shown.
+-   The boxplots on the right are incomplete because the positions of the means were not shown.
 
-- Next two slides will show you how to add the mean values on the boxplots.
+-   Next two slides will show you how to add the mean values on the boxplots.
 :::
 
 ::: {.column width="50%"}
-
 ```{r}
 #| echo: false
 ggplot(data=exam_data, 
@@ -783,6 +799,7 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Working with stat - the *stat_summary()* method
 
 ::: columns
@@ -817,6 +834,7 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Working with stat - the `geom()` method
 
 ::: columns
@@ -851,13 +869,14 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### How to add a best fit curve on a scatterplot?
 
 ::: columns
 ::: {.column width="50%"}
-- The scatterplot on the right shows the relationship of Maths and English grades of pupils.
+-   The scatterplot on the right shows the relationship of Maths and English grades of pupils.
 
-- The interpretability of this graph can be improved by adding a best fit curve.
+-   The interpretability of this graph can be improved by adding a best fit curve.
 :::
 
 ::: {.column width="50%"}
@@ -873,13 +892,14 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### How to add a best fit curve on a scatterplot?
 
 ::: columns
 ::: {.column width="50%"}
 In the code chunk below, [`geom_smooth()`](https://ggplot2.tidyverse.org/reference/geom_smooth.html) is used to plot a best fit curve on the scatterplot.
 
-- The default method used is *loess*.]
+-   The default method used is *loess*.\]
 
 ```{r}
 #| eval: false
@@ -904,6 +924,7 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### How to add a best fit curve on a scatterplot?
 
 ::: columns
@@ -937,23 +958,25 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Facets
 
-- Facetting generates small multiples (sometimes also called trellis plot), each displaying a different subset of the data. 
+-   Facetting generates small multiples (sometimes also called trellis plot), each displaying a different subset of the data.
 
-- Facets are an alternative to aesthetics for displaying additional discrete variables.
+-   Facets are an alternative to aesthetics for displaying additional discrete variables.
 
-- ggplot2 supports two types of factes, namely: `facet_grid()` and `facet_wrap`.
-
-## Essential Grammatical Elements in ggplot2
-### `facet_wrap()` 
-
-- [`facet_wrap`](https://ggplot2.tidyverse.org/reference/facet_wrap.html) wraps a 1d sequence of panels into 2d.
-
-- This is generally a better use of screen space than facet_grid because most displays are roughly rectangular.
-
+-   ggplot2 supports two types of factes, namely: `facet_grid()` and `facet_wrap`.
 
 ## Essential Grammatical Elements in ggplot2
+
+### `facet_wrap()`
+
+-   [`facet_wrap`](https://ggplot2.tidyverse.org/reference/facet_wrap.html) wraps a 1d sequence of panels into 2d.
+
+-   This is generally a better use of screen space than facet_grid because most displays are roughly rectangular.
+
+## Essential Grammatical Elements in ggplot2
+
 ### Working with `facet_wrap()`
 
 ::: columns
@@ -982,13 +1005,15 @@ ggplot(data=exam_data, aes(x= MATHS)) +
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### `facet_grid()` function
 
-- [`facet_grid()`](https://ggplot2.tidyverse.org/reference/facet_grid.html) forms a matrix of panels defined by row and column facetting variables. 
+-   [`facet_grid()`](https://ggplot2.tidyverse.org/reference/facet_grid.html) forms a matrix of panels defined by row and column facetting variables.
 
-- It is most useful when you have two discrete variables, and all combinations of the variables exist in the data.
+-   It is most useful when you have two discrete variables, and all combinations of the variables exist in the data.
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Working with `facet_grid()`
 
 The code chunk below plots a trellis plot using `facet_grid()`.
@@ -1002,7 +1027,6 @@ ggplot(data=exam_data,
     facet_grid(~ CLASS)
 ```
 
-
 ```{r}
 #| echo: false
 #| fig-height: 4
@@ -1013,14 +1037,15 @@ ggplot(data=exam_data,
     facet_grid(~ CLASS)
 ```
 
----
+------------------------------------------------------------------------
 
 ### Working with facet
 
 ::: columns
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 #### Your turn
+
 Plot a trellis boxplot looks similar to the figure below.
 :::
 
@@ -1047,14 +1072,15 @@ ggplot(data=exam_data,
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Working with facet
 
 ::: columns
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 #### Your turn
+
 Plot a trellis boxplot looks similar to the figure below.
 :::
 
@@ -1080,14 +1106,15 @@ ggplot(data=exam_data,
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Working with facet
 
 ::: columns
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 #### Your turn
+
 Plot a trellis boxplot looks similar to the figure below.
 :::
 
@@ -1114,18 +1141,19 @@ The solution:
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Coordinates
 
-- The *Coordinates* functions map the position of objects onto the plane of the plot.
+-   The *Coordinates* functions map the position of objects onto the plane of the plot.
 
-- There are a number of different possible coordinate systems to use, they are:
+-   There are a number of different possible coordinate systems to use, they are:
 
-    - [`coord_cartesian()`](https://ggplot2.tidyverse.org/reference/coord_cartesian.html): the default cartesian coordinate systems, where you specify x and y values (e.g. allows you to zoom in or out).
-    - [`coord_flip()`](https://ggplot2.tidyverse.org/reference/coord_flip.html): a cartesian system with the x and y flipped.
-    - [`coord_fixed()`](https://ggplot2.tidyverse.org/reference/coord_fixed.html): a cartesian system with a "fixed" aspect ratio (e.g. 1.78 for a "widescreen" plot).
-    - [`coord_quickmap()`](https://ggplot2.tidyverse.org/reference/coord_map.html): a coordinate system that approximates a good aspect ratio for maps. 
+    -   [`coord_cartesian()`](https://ggplot2.tidyverse.org/reference/coord_cartesian.html): the default cartesian coordinate systems, where you specify x and y values (e.g. allows you to zoom in or out).
+    -   [`coord_flip()`](https://ggplot2.tidyverse.org/reference/coord_flip.html): a cartesian system with the x and y flipped.
+    -   [`coord_fixed()`](https://ggplot2.tidyverse.org/reference/coord_fixed.html): a cartesian system with a "fixed" aspect ratio (e.g. 1.78 for a "widescreen" plot).
+    -   [`coord_quickmap()`](https://ggplot2.tidyverse.org/reference/coord_map.html): a coordinate system that approximates a good aspect ratio for maps.
 
----
+------------------------------------------------------------------------
 
 ### Working with Coordinate
 
@@ -1154,9 +1182,10 @@ ggplot(data=exam_data,
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Working with Coordinate
+
 #### How to change to the y- and x-axis range?
 
 ::: columns
@@ -1176,14 +1205,15 @@ ggplot(data=exam_data,
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Working with Coordinate
+
 #### How to change to the y- and x-axis range?
 
 ::: columns
 ::: {.column width="50%"}
-The code chunk below fixed both the y-axis and x-axis range from 0-100. 
+The code chunk below fixed both the y-axis and x-axis range from 0-100.
 
 ```{r}
 #| eval: false
@@ -1214,23 +1244,25 @@ ggplot(data=exam_data,
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Themes
 
 ::: {style="font-size: 0.8em"}
-- Themes control elements of the graph not related to the data.  For example:
-    + background colour
-    + size of fonts
-    + gridlines
-    + colour of labels
-- Built-in themes include:
-    + `theme_gray()` (default)
-    + `theme_bw()`
-    + `theme_classic()`
-- A list of theme can be found at this [link](https://ggplot2.tidyverse.org/reference/ggtheme.html).
-- Each theme element can be conceived of as either a line (e.g. x-axis), a rectangle (e.g. graph background), or text (e.g. axis title).
+-   Themes control elements of the graph not related to the data. For example:
+    -   background colour
+    -   size of fonts
+    -   gridlines
+    -   colour of labels
+-   Built-in themes include:
+    -   `theme_gray()` (default)
+    -   `theme_bw()`
+    -   `theme_classic()`
+-   A list of theme can be found at this [link](https://ggplot2.tidyverse.org/reference/ggtheme.html).
+-   Each theme element can be conceived of as either a line (e.g. x-axis), a rectangle (e.g. graph background), or text (e.g. axis title).
 :::
 
 ## Essential Grammatical Elements in ggplot2
+
 ### Working with theme
 
 ::: columns
@@ -1260,7 +1292,7 @@ ggplot(data=exam_data,
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Working with theme
 
@@ -1292,15 +1324,16 @@ ggplot(data=exam_data,
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ### Working with theme
 
-::: {.callout-note}
+::: callout-note
 #### Your turn
+
 Plot a horizontal bar chart looks similar to the figure below.
 
-- Changing the colors of plot panel background of `theme_minimal()` to light blue and the color of grid lines to white.
+-   Changing the colors of plot panel background of `theme_minimal()` to light blue and the color of grid lines to white.
 :::
 
 ```{r}
@@ -1325,9 +1358,10 @@ ggplot(data=exam_data,
       colour = "white"))
 ```
 
----
+------------------------------------------------------------------------
 
 ### Working with theme
+
 #### The solution
 
 ```{r, echo=TRUE, eval=FALSE, fig.width=8, fig.height=5}
@@ -1354,15 +1388,16 @@ ggplot(data=exam_data,
 ```
 
 ## Designing Data-drive Graphics for Analysis I
+
 ### The original design
 
 ::: columns
 ::: {.column width="50%"}
 A simple vertical bar chart for frequency analysis. Critics:
 
-- y-aixs label is not clear (i.e. count)
-- To support effective comparison, the bars should be sorted by their resepctive frequencies.
-- For static graph, frequency values should be added to provide addition information.
+-   y-aixs label is not clear (i.e. count)
+-   To support effective comparison, the bars should be sorted by their resepctive frequencies.
+-   For static graph, frequency values should be added to provide addition information.
 :::
 
 ::: {.column width="50%"}
@@ -1380,8 +1415,9 @@ ggplot(data=exam_data,
 
 ::: columns
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 ### The makeover design
+
 With reference to the critics on the earlier slide, create a makeover looks similar to the figure on the right.
 :::
 
@@ -1425,7 +1461,8 @@ ggplot(data=exam_data,
 :::
 
 ## Designing Data-drive Graphics for Analysis I
-### The makeover design 
+
+### The makeover design
 
 ::: columns
 ::: {.column width="50%"}
@@ -1474,11 +1511,11 @@ exam_data %>%
 :::
 
 ## Designing Data-drive Graphics for Analysis II
+
 ### The original design
 
 ::: columns
 ::: {.column width="50%"}
-
 ```{r}
 #| echo: false
 ggplot(data=exam_data, 
@@ -1492,10 +1529,11 @@ ggplot(data=exam_data,
 
 ::: columns
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 ### The makeover design
-- Adding mean and median lines on the histogram plot.
-- Change fill color and line color
+
+-   Adding mean and median lines on the histogram plot.
+-   Change fill color and line color
 :::
 
 ```{r}
@@ -1539,7 +1577,8 @@ ggplot(data=exam_data,
 ::: columns
 ::: {.column width="50%"}
 ### The original design
-The histograms on the left are elegantly designed but not informative.  This is because they only reveal the distribution of English scores by gender but without context such as all pupils.
+
+The histograms on the left are elegantly designed but not informative. This is because they only reveal the distribution of English scores by gender but without context such as all pupils.
 
 ```{r}
 #| echo: false
@@ -1551,10 +1590,12 @@ ggplot(exam_data,
 :::
 
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 ### The makeover design
-Create a makeover looks similar to the figure below.  The background histograms show the distribution of English scores for all pupils.  
+
+Create a makeover looks similar to the figure below. The background histograms show the distribution of English scores for all pupils.
 :::
+
 ```{r}
 #| echo: false
 d <- exam_data   # Full data set
@@ -1571,6 +1612,7 @@ ggplot(d, aes(x = ENGLISH, fill = GENDER)) +
 :::
 
 ## Designing Data-drive Graphics for Analysis IV
+
 ### The original design.
 
 ::: columns
@@ -1584,14 +1626,16 @@ ggplot(data=exam_data, aes(x=MATHS, y=ENGLISH)) +
 :::
 :::
 
----
+------------------------------------------------------------------------
+
 ## Designing Data-drive Graphics for Analysis IV
 
 ::: columns
 ::: {.column width="50%"}
-::: {.callout-note}
+::: callout-note
 ### The makeover design
-Create a makeover looks similar to the figure on the right. 
+
+Create a makeover looks similar to the figure on the right.
 :::
 
 ```{r}
@@ -1638,13 +1682,15 @@ ggplot(data=exam_data,
 
 ## Reference
 
-- Hadley Wickham (2023) [**ggplot2: Elegant Graphics for Data Analysis**](https://ggplot2-book.org/). Online 3rd edition.
-- Winston Chang (2013) [**R Graphics Cookbook 2nd edition**](https://r-graphics.org/). Online version. 
-- Healy, Kieran (2019) [**Data Visualization: A practical introduction**](https://socviz.co/). Online version 
-- [Learning ggplot2 on Paper – Components](https://henrywang.nl/learning-ggplot2-on-paper-components/)
-- [Learning ggplot2 on Paper – Layer](https://henrywang.nl/learning-ggplot2-on-paper-layer/)
-- [Learning ggplot2 on Paper – Scale](https://henrywang.nl/tag/learning-ggplot2-on-paper/)
+-   Hadley Wickham (2023) [**ggplot2: Elegant Graphics for Data Analysis**](https://ggplot2-book.org/). Online 3rd edition.
+-   Winston Chang (2013) [**R Graphics Cookbook 2nd edition**](https://r-graphics.org/). Online version.
+-   Healy, Kieran (2019) [**Data Visualization: A practical introduction**](https://socviz.co/). Online version
+-   [Learning ggplot2 on Paper -- Components](https://henrywang.nl/learning-ggplot2-on-paper-components/)
+-   [Learning ggplot2 on Paper -- Layer](https://henrywang.nl/learning-ggplot2-on-paper-layer/)
+-   [Learning ggplot2 on Paper -- Scale](https://henrywang.nl/tag/learning-ggplot2-on-paper/)
 
-
-
-
+```{r}
+#| eval: false
+#| echo: false
+renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html")
+```
