@@ -94,10 +94,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../DataViz.html">
  <span class="menu-text">DataViz Makeover</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../take-home.html">
- <span class="menu-text">Take-home Exercise</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-take-home-exercise" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Take-home Exercise</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-take-home-exercise">    
+        <li>
+    <a class="dropdown-item" href="../take-home_ex/TH_EX01.html">
+ <span class="dropdown-text">Take-home Exercise 1</span></a>
   </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../VAproject.html">
  <span class="menu-text">Visual Analytics Project</span></a>
@@ -177,15 +184,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-task" id="toc-the-task" class="nav-link active" data-scroll-target="#the-task">The Task</a>
-  <ul class="collapse">
-  <li><a href="#survival-tip" id="toc-survival-tip" class="nav-link" data-scroll-target="#survival-tip">Survival Tip</a></li>
-  </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a>
-  <ul class="collapse">
+  <li><a href="#the-task" id="toc-the-task" class="nav-link active" data-scroll-target="#the-task">The Task</a></li>
+  <li><a href="#the-designing-tool" id="toc-the-designing-tool" class="nav-link" data-scroll-target="#the-designing-tool">The Designing Tool</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
+  <li><a href="#the-write-up" id="toc-the-write-up" class="nav-link" data-scroll-target="#the-write-up">The Write-up</a></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
   <li><a href="#submission-date" id="toc-submission-date" class="nav-link" data-scroll-target="#submission-date">Submission date</a></li>
-  <li><a href="#learning-from-the-senior" id="toc-learning-from-the-senior" class="nav-link" data-scroll-target="#learning-from-the-senior">Learning from the senior</a></li>
-  </ul></li>
   <li><a href="#peer-learning" id="toc-peer-learning" class="nav-link" data-scroll-target="#peer-learning">Peer Learning</a></li>
   </ul>
 </nav>
@@ -223,71 +227,40 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="the-task" class="level1">
 <h1>The Task</h1>
-<p>In this take-home exercise, you are required to apply the skills you had learned in Lesson 1 and Hands-on Exercise 1 to reveal the demographic of the <a href="https://vast-challenge.github.io/2022/">city of Engagement, Ohio USA</a> by using appropriate static statistical graphics methods. The data should be processed by using appropriate <strong>tidyverse</strong> family of packages and the statistical graphics must be prepared using <strong>ggplot2</strong> and its extensions.</p>
-<section id="survival-tip" class="level3">
-<h3 class="anchored" data-anchor-id="survival-tip">Survival Tip</h3>
-<p>Start with <em>Participant</em>s data file in the Attributes folder.</p>
+<p><a href="https://isss608-ay2022-23jan.netlify.app/outline/lesson01_outline#age-sex-pyramid">Age-sex pyramid</a> is an analytical visualisation commonly used by demographers to reveal the structure of population by gender and age group. In this take-home exercise, you are required to reveal the demographic structure of Singapore at planning area level by using age-sex pyramid method. Instead of plotting a single age-sex pyramid, however, you are required to display nine selected planning areas on a single view by using <a href="https://isss608-ay2022-23jan.netlify.app/outline/lesson01_outline#trellis-display">trellis display (also know as small-multiple plot)</a>.</p>
 </section>
+<section id="the-designing-tool" class="level1">
+<h1>The Designing Tool</h1>
+<p>For the purpose of this take-home exercise, Tableau desktop should be used to design the analytical visualisation.</p>
+</section>
+<section id="the-data" class="level1">
+<h1>The Data</h1>
+<p><em>Singapore Residents by Planning Area / Subzone, Age Group, Sex and Type of Dwelling, June 2022</em> should be used to prepare the analytical visualisation. It is available at <a href="https://www.singstat.gov.sg/">Department of Statistics, Singapore</a>(in short SingStat).</p>
+</section>
+<section id="the-write-up" class="level1">
+<h1>The Write-up</h1>
+<p>The write-up of the take-home exercise should include but not limited to the followings:</p>
+<ul>
+<li><p>A reproducible description of the procedures used to prepare the analytical visualisation. Please refer to the senior submission I shared for example <a href="https://bilian-mitb2021.netlify.app/th_ex/dataviz2/dataviz2#step-by-step-description">1</a> and <a href="https://isss608visualanalyticssun.netlify.app/dataviz/dataviz1/dataviz1#step-by-step-preparation">2</a>.</p></li>
+<li><p>A write-up of not more than 500 words to discuss the patterns reveal by the analytical visualisation prepared.</p></li>
+</ul>
 </section>
 <section id="submission-instructions" class="level1">
 <h1>Submission Instructions</h1>
 <p>This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.</p>
+<p>The specific submission instructions are as follows:</p>
 <ul>
-<li>The take-home exercise submission must be written by using <strong>distill for R Markdown</strong>. It can be in either <a href="https://distill.pub/guide/">distill article</a> or <a href="https://rstudio.github.io/distill/blog.html">distill blog</a> format. You are required to publish the exercise on <a href="https://www.netlify.com/">Netlify</a> and provide the link on the take-home exercise submission page on elearn.</li>
-<li>You are also required to push the take-home exercise folder and data onto your individual Github repository and provide the link on the take-home exercise submission page on eLearn.</li>
-</ul>
-<section id="submission-date" class="level3">
-<h3 class="anchored" data-anchor-id="submission-date">Submission date</h3>
-<p>Your completed take-home exercise is due on <strong>24th April 2022, by 11:59pm evening</strong>.</p>
-</section>
-<section id="learning-from-the-senior" class="level3">
-<h3 class="anchored" data-anchor-id="learning-from-the-senior">Learning from the senior</h3>
-<ul>
-<li><a href="https://rpubs.com/deniseadele/584423">Singapore’s Demographic Composition Across Time</a></li>
+<li>The analytical visualisation must be prepared by using <strong>Tableau Desktop</strong>. The final workbook must be uploaded onto <a href="https://public.tableau.com/en-us/s/">Tableau Public</a>.</li>
+<li>The write-up of the take-home exercise must be in <strong>Quarto html document</strong> format. You are required to publish the write-up on <a href="https://www.netlify.com/"><strong>Netlify</strong></a>.</li>
+<li>Provide the links to the Take-home Exercise write-up, github repository and Tableau Public onto eLearn (i.e.&nbsp;Take-home Exercise section)</li>
 </ul>
 </section>
+<section id="submission-date" class="level1">
+<h1>Submission date</h1>
+<p>Your completed take-home exercise is due on <strong>22nd January 2023, by 11:59pm evening</strong>.</p>
 </section>
 <section id="peer-learning" class="level1">
 <h1>Peer Learning</h1>
-<ul>
-<li><a href="https://visual-analytics-course.netlify.app/th_ex/th_ex1.html">ALOYSIUS TENG</a></li>
-<li><a href="https://isss608-hhhandy.netlify.app/th_ex/th_ex1.html">ANTONIUS HANDY</a></li>
-<li><a href="https://r4dsa4va.netlify.app/th_ex/th_ex1.html">CHE XUAN</a></li>
-<li><a href="https://yn-isss608.netlify.app/take-home_ex/th_ex1.html">CHU YI-NING</a></li>
-<li><a href="https://jiarui-cui-isss608.netlify.app/th_ex/th_ex01">CUI JIARUI</a></li>
-<li><a href="https://dkwx1234.netlify.app/th_ex/takehomeex1.html">DAVID KWOK WEI XIANG</a></li>
-<li><a href="https://dingyanmu.netlify.app/th_ex/th_ex1.html">DING YANMU</a></li>
-<li><a href="https://heranshan-isss608.netlify.app/th_ex/th_ex1.html">HERANSHAN SO SUBRAMANIAM</a></li>
-<li><a href="https://master--huanganni.netlify.app/th_ex/th_ex1.html">HUANG ANNI</a></li>
-<li><a href="https://vast-challenge-2022-th-ex-1.netlify.app/th_ex/th_ex1.html">HUANG YAPING</a></li>
-<li><a href="https://hulwana-va.netlify.app/th_ex/th_ex1.html">HULWANA BINTE SAIFULZAMAN</a></li>
-<li><a href="https://bomink.netlify.app/posts/2022-04-25-hw1/">KIM BOMIN</a></li>
-<li><a href="https://jeremiahlam.netlify.app/th_ex/th_ex1.html">LAM KUO JIAN JEREMIAH</a></li>
-<li><a href="https://tiffanylxq.netlify.app/takehomeex/th_ex1">LEE XIAO QI</a></li>
-<li><a href="https://jessielee.netlify.app/th_ex/th_ex1.html">LI HONGYI</a></li>
-<li><a href="https://katherine-isss608.netlify.app/th_ex/th_ex1.html">LI HUAN</a></li>
-<li><a href="https://isss608-visualization-liminqi.netlify.app/th_ex/th_ex1">LI MINQI</a></li>
-<li><a href="https://zhenglinliuvisual.netlify.app/th_ex/th_ex1.html">LIU ZHENGLIN</a></li>
-<li><a href="https://leslielong-da.netlify.app/posts/2022-04-18-takehome1/">LONG NU</a>. A good example on using appropriate ggplot2’s functions to build enlightening statistical graphics. Section 2.3 Data Wrangling shows how to use appropriate functions of <strong>dplyr</strong> package and <code>%&gt;%</code> to perform data wrangling. <img src="img/thumbup1.jpg" class="img-fluid"><br>
-</li>
-<li><a href="https://isss-608-junqiuni.netlify.app/takehome_ex/takehome_ex01.html">NI JUNQIU</a></li>
-<li><a href="https://isss608-jordan-va.netlify.app/th_ex1/the_1">ONG ZHI RONG JORDAN</a></li>
-<li><a href="https://rakendu-mitb2021.netlify.app/th_ex/th_ex01.html">RAKENDU RAMESH</a></li>
-<li><a href="https://jeanrao.netlify.app/th_ex/th1.html">RAO NINGZHEN</a></li>
-<li><a href="https://isss608-raunakkapur.netlify.app/th_ex/the1">RAUNAK KAPUR</a></li>
-<li><a href="https://raveenaclr.netlify.app/th_ex/th_ex1.html">RAVEENA CHAKRAPANI</a></li>
-<li><a href="https://visualanalytics.netlify.app/th_ex/th_ex1.html">SHACHI ANIRUDHA RAODEO</a></li>
-<li><a href="https://isss608totallynew.netlify.app/take_home_exercise/ex_1.html">SUI TIANYUE</a></li>
-<li><a href="https://clarencetay.netlify.app/th_ex/th_ex1.html">TAY CHENG WEI CLARENCE</a></li>
-<li><a href="https://mitb-va-joycetseng.netlify.app/posts/2022-04-18-takehome1/">TSENG CHIA-YI</a></li>
-<li><a href="https://wtqmitbva.netlify.app/takehome1">WANG TIANQI</a></li>
-<li>XIAO YUHE</li>
-<li><a href="https://kimsiang-va.netlify.app/takehome_exercise/takehome_exercise_1.html">YEO KIM SIANG</a></li>
-<li><a href="https://yudiva.netlify.app/exe1">YU DI</a></li>
-</ul>
-<div class="cell">
-
-</div>
 
 
 </section>

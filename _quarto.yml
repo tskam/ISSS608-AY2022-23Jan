@@ -13,7 +13,9 @@ website:
     - text: "DataViz Makeover"
       href: DataViz.html
     - text: "Take-home Exercise"
-      href: take-home.html
+      menu:
+        - text: "Take-home Exercise 1"
+          href: "take-home_ex/TH_EX01.html"
     - text: "Visual Analytics Project"
       href: VAproject.html
 

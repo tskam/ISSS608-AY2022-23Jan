@@ -3,98 +3,45 @@ title: "Take-home Exercise 1"
 description: |
   Creating data visualisation beyond default
 date: "`r Sys.Date()`"
-output:
-  distill::distill_article:
-    self_contained: false
-    toc: true
+format: html
+editor: visual
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 # The Task
 
-In this take-home exercise, you are required to apply the skills you had learned in Lesson 1 and Hands-on Exercise 1 to reveal the demographic of the [city of Engagement, Ohio USA](https://vast-challenge.github.io/2022/) by using appropriate static statistical graphics methods.  The data should be processed by using appropriate **tidyverse** family of packages and the statistical graphics must be prepared using **ggplot2** and its extensions.
+[Age-sex pyramid](https://isss608-ay2022-23jan.netlify.app/outline/lesson01_outline#age-sex-pyramid) is an analytical visualisation commonly used by demographers to reveal the structure of population by gender and age group.  In this take-home exercise, you are required to reveal the demographic structure of Singapore at planning area level by using age-sex pyramid method.  Instead of plotting a single age-sex pyramid, however, you are required to display nine selected planning areas on a single view by using [trellis display (also know as small-multiple plot)](https://isss608-ay2022-23jan.netlify.app/outline/lesson01_outline#trellis-display).
 
-### Survival Tip
+# The Designing Tool
 
-Start with *Participant*s data file in the Attributes folder.
+For the purpose of this take-home exercise, Tableau desktop should be used to design the analytical visualisation.
 
-# Submission Instructions 
+# The Data
 
-This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually. 
+*Singapore Residents by Planning Area / Subzone, Age Group, Sex and Type of Dwelling, June 2022* should be used to prepare the analytical visualisation.  It is available at [Department of Statistics, Singapore](https://www.singstat.gov.sg/)(in short SingStat). 
 
-- The take-home exercise submission must be written by using **distill for R Markdown**.  It can be in either [distill article](https://distill.pub/guide/) or [distill blog ](https://rstudio.github.io/distill/blog.html) format. You are required to publish the exercise on [Netlify](https://www.netlify.com/) and provide the link on the take-home exercise submission page on elearn. 
-- You are also required to push the take-home exercise folder and data onto your individual Github repository and provide the link on the take-home exercise submission page on eLearn.
- 
-### Submission date 
- 
-Your completed take-home exercise is due on **24th April 2022, by 11:59pm evening**.
+# The Write-up
 
-### Learning from the senior
+The write-up of the take-home exercise should include but not limited to the followings:
 
-- [Singapore’s Demographic Composition Across Time](https://rpubs.com/deniseadele/584423)
+-   A reproducible description of the procedures used to prepare the analytical visualisation.  Please refer to the senior submission I shared for example [1](https://bilian-mitb2021.netlify.app/th_ex/dataviz2/dataviz2#step-by-step-description) and [2](https://isss608visualanalyticssun.netlify.app/dataviz/dataviz1/dataviz1#step-by-step-preparation).
+
+-   A write-up of not more than 500 words to discuss the patterns reveal by the analytical visualisation prepared.  
+
+# Submission Instructions
+
+This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.
+
+The specific submission instructions are as follows:
+
+-   The analytical visualisation must be prepared by using **Tableau Desktop**. The final workbook must be uploaded onto [Tableau Public](https://public.tableau.com/en-us/s/).
+-   The write-up of the take-home exercise must be in **Quarto html document** format. You are required to publish the write-up on [**Netlify**](https://www.netlify.com/).
+-   Provide the links to the Take-home Exercise write-up, github repository and Tableau Public onto eLearn (i.e. Take-home Exercise section) 
+
+# Submission date
+
+Your completed take-home exercise is due on **22nd January 2023, by 11:59pm evening**.
 
 
 # Peer Learning
-
-- [ALOYSIUS TENG](https://visual-analytics-course.netlify.app/th_ex/th_ex1.html)
-- [ANTONIUS HANDY](https://isss608-hhhandy.netlify.app/th_ex/th_ex1.html)
-- [CHE XUAN](https://r4dsa4va.netlify.app/th_ex/th_ex1.html)
-- [CHU YI-NING](https://yn-isss608.netlify.app/take-home_ex/th_ex1.html)
-- [CUI  JIARUI](https://jiarui-cui-isss608.netlify.app/th_ex/th_ex01)
-- [DAVID KWOK WEI XIANG](https://dkwx1234.netlify.app/th_ex/takehomeex1.html)
-- [DING YANMU](https://dingyanmu.netlify.app/th_ex/th_ex1.html)
-- [HERANSHAN SO SUBRAMANIAM](https://heranshan-isss608.netlify.app/th_ex/th_ex1.html)
-- [HUANG ANNI](https://master--huanganni.netlify.app/th_ex/th_ex1.html)
-- [HUANG YAPING](https://vast-challenge-2022-th-ex-1.netlify.app/th_ex/th_ex1.html)
-- [HULWANA BINTE SAIFULZAMAN](https://hulwana-va.netlify.app/th_ex/th_ex1.html)
-- [KIM BOMIN](https://bomink.netlify.app/posts/2022-04-25-hw1/)
-- [LAM KUO JIAN JEREMIAH](https://jeremiahlam.netlify.app/th_ex/th_ex1.html)
-- [LEE XIAO QI](https://tiffanylxq.netlify.app/takehomeex/th_ex1)
-- [LI HONGYI](https://jessielee.netlify.app/th_ex/th_ex1.html)
-- [LI HUAN](https://katherine-isss608.netlify.app/th_ex/th_ex1.html)
-- [LI MINQI](https://isss608-visualization-liminqi.netlify.app/th_ex/th_ex1)
-- [LIU ZHENGLIN](https://zhenglinliuvisual.netlify.app/th_ex/th_ex1.html)
-- [LONG NU](https://leslielong-da.netlify.app/posts/2022-04-18-takehome1/). A good example on using appropriate ggplot2's functions to build enlightening statistical graphics. Section 2.3 Data Wrangling shows how to use appropriate functions of **dplyr** package and `%>%` to perform data wrangling.  ![](img/thumbup1.jpg)  
-- [NI JUNQIU](https://isss-608-junqiuni.netlify.app/takehome_ex/takehome_ex01.html)
-- [ONG ZHI RONG JORDAN](https://isss608-jordan-va.netlify.app/th_ex1/the_1)
-- [RAKENDU RAMESH](https://rakendu-mitb2021.netlify.app/th_ex/th_ex01.html)
-- [RAO NINGZHEN](https://jeanrao.netlify.app/th_ex/th1.html)
-- [RAUNAK KAPUR](https://isss608-raunakkapur.netlify.app/th_ex/the1)
-- [RAVEENA CHAKRAPANI](https://raveenaclr.netlify.app/th_ex/th_ex1.html)
-- [SHACHI ANIRUDHA RAODEO](https://visualanalytics.netlify.app/th_ex/th_ex1.html)
-- [SUI TIANYUE](https://isss608totallynew.netlify.app/take_home_exercise/ex_1.html)
-- [TAY CHENG WEI CLARENCE](https://clarencetay.netlify.app/th_ex/th_ex1.html)
-- [TSENG CHIA-YI](https://mitb-va-joycetseng.netlify.app/posts/2022-04-18-takehome1/)
-- [WANG TIANQI](https://wtqmitbva.netlify.app/takehome1)
-- XIAO YUHE
-- [YEO KIM SIANG](https://kimsiang-va.netlify.app/takehome_exercise/takehome_exercise_1.html)
-- [YU DI](https://yudiva.netlify.app/exe1)
-
-
-
-```{r echo=FALSE, eval=FALSE}
-library(pagedown)
-pagedown::chrome_print("_site/take-home.html")
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

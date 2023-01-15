@@ -61,7 +61,6 @@ By the end of this lesson, you will gain hands-on experience on:
 -   [Pareto chart](https://en.wikipedia.org/wiki/Pareto_chart)
 -   [Revising the Pareto Chart](https://www-tandfonline-com.libproxy.smu.edu.sg/doi/abs/10.1198/000313006X152243)
 
-
 ### Trellis Display
 
 -   [The Visual Design and Control of Trellis Display](https://www-jstor-org.libproxy.smu.edu.sg/stable/1390777?seq=1#metadata_info_tab_contents)
