@@ -1062,7 +1062,6 @@ ggplot(data=exam_data,
 #### The solution:
 
 ```{r}
-#| echo: false
 #| eval: false
 ggplot(data=exam_data, 
        aes(y = MATHS, x= CLASS)) +
@@ -1096,7 +1095,6 @@ ggplot(data=exam_data, aes(y = MATHS, x= CLASS)) +
 The solution:
 
 ```{r}
-#| echo: false
 #| eval: false
 ggplot(data=exam_data, 
        aes(y = MATHS, x= CLASS)) +
@@ -1130,12 +1128,12 @@ ggplot(data=exam_data,
 ::: {.column width="50%"}
 The solution:
 
-```{r, echo=TRUE, eval=FALSE, fig.height=5, fig.width=10}
-#| echo: false
+```{r}
 #| eval: false
+ggplot(data=exam_data, 
        aes(y = MATHS, x= GENDER)) +
   geom_boxplot() +
-  facet_grid(GENDER ~ CLASS)
+    facet_grid(GENDER ~ CLASS)
 ```
 :::
 :::
@@ -1364,8 +1362,7 @@ ggplot(data=exam_data,
 
 #### The solution
 
-```{r, echo=TRUE, eval=FALSE, fig.width=8, fig.height=5}
-#| echo: false
+```{r}
 #| eval: false
 ggplot(data=exam_data, 
        aes(x=RACE)) +
@@ -1388,7 +1385,6 @@ ggplot(data=exam_data,
 ```
 
 ## Designing Data-drive Graphics for Analysis I
-
 ### The original design
 
 ::: columns
@@ -1423,7 +1419,6 @@ With reference to the critics on the earlier slide, create a makeover looks simi
 
 ```{r}
 #| eval: false
-#| echo: false
 ggplot(data=exam_data,
        aes(x=reorder(RACE,RACE,
                 function(x)-length(x))))+
@@ -1469,7 +1464,6 @@ ggplot(data=exam_data,
 This code chunk uses [`fct_infreq()`](https://forcats.tidyverse.org/reference/fct_inorder.html) of [**forcats**](https://forcats.tidyverse.org/articles/forcats.html) package.
 
 ```{r}
-#| echo: false
 #| eval: false
 exam_data %>%
   mutate(RACE = fct_infreq(RACE)) %>%
@@ -1486,7 +1480,9 @@ exam_data %>%
   theme(axis.title.y=element_text(angle = 0))
 ```
 
+::: {style="font-size: 0.7em"}
 Credit: I learned this trick from [*Getting things into the right order*](https://wilkelab.org/SDS375/slides/getting-things-in-order.html#1) of Prof. Claus O. Wilke, the author of [**Fundamentals of Data Visualization**](https://clauswilke.com/dataviz/)
+:::
 :::
 
 ::: {.column width="50%"}
@@ -1551,7 +1547,6 @@ ggplot(data=exam_data, aes(x= MATHS)) +
 The code chunk:
 
 ```{r}
-#| echo: false
 #| eval: false
 ggplot(data=exam_data, 
        aes(x= MATHS)) +
@@ -1611,6 +1606,44 @@ ggplot(d, aes(x = ENGLISH, fill = GENDER)) +
 :::
 :::
 
+## Designing Data-drive Graphics for Analysis III
+
+::: columns
+::: {.column width="50%"}
+### The code chunk
+
+```{r}
+#| eval: false
+d <- exam_data   
+d_bg <- d[, -3]  
+
+ggplot(d, aes(x = ENGLISH, fill = GENDER)) +
+  geom_histogram(data = d_bg, fill = "grey", alpha = .5) +
+  geom_histogram(colour = "black") +
+  facet_wrap(~ GENDER) +
+  guides(fill = FALSE) +  
+  theme_bw()
+```
+:::
+
+::: {.column width="50%"}
+### The makeover design
+
+```{r}
+#| echo: false
+d <- exam_data   # Full data set
+d_bg <- d[, -3]  # Background Data - full without the 3th column (GENDER)
+
+ggplot(d, aes(x = ENGLISH, fill = GENDER)) +
+  geom_histogram(data = d_bg, fill = "grey", alpha = .5) +
+  geom_histogram(colour = "black") +
+  facet_wrap(~ GENDER) +
+  guides(fill = FALSE) +  # to remove the legend
+  theme_bw()              # for clean look overall
+```
+:::
+:::
+
 ## Designing Data-drive Graphics for Analysis IV
 
 ### The original design.
@@ -1639,7 +1672,6 @@ Create a makeover looks similar to the figure on the right.
 :::
 
 ```{r}
-#| echo: false
 #| eval: false
 ggplot(data=exam_data, 
        aes(x=MATHS, y=ENGLISH)) +

@@ -347,14 +347,14 @@
     "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-i-1",
     "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
     "section": "Designing Data-drive Graphics for Analysis I",
-    "text": "Designing Data-drive Graphics for Analysis I\n\n\n\n\n\n\n\n\nThe makeover design\n\n\nWith reference to the critics on the earlier slide, create a makeover looks similar to the figure on the right."
+    "text": "Designing Data-drive Graphics for Analysis I\n\n\n\n\n\n\n\n\nThe makeover design\n\n\nWith reference to the critics on the earlier slide, create a makeover looks similar to the figure on the right.\n\n\n\n\nggplot(data=exam_data,\n       aes(x=reorder(RACE,RACE,\n                function(x)-length(x))))+\n  geom_bar() +\n  ylim(0,220) +\n  geom_text(stat=\"count\", \n      aes(label=paste0(..count.., \", \", \n      round(..count../sum(..count..)*100,\n            1), \"%\")),\n      vjust=-1) +\n  xlab(\"Race\") +\n  ylab(\"No. of\\nPupils\") +\n  theme(axis.title.y=element_text(angle = 0))"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-i-2",
     "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-i-2",
     "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
     "section": "Designing Data-drive Graphics for Analysis I",
-    "text": "Designing Data-drive Graphics for Analysis I\nThe makeover design\n\n\nThis code chunk uses fct_infreq() of forcats package.\n\n\n\nCredit: I learned this trick from Getting things into the right order of Prof. Claus O. Wilke, the author of Fundamentals of Data Visualization"
+    "text": "Designing Data-drive Graphics for Analysis I\nThe makeover design\n\n\nThis code chunk uses fct_infreq() of forcats package.\n\nexam_data %>%\n  mutate(RACE = fct_infreq(RACE)) %>%\n  ggplot(aes(x = RACE)) + \n  geom_bar()+\n  ylim(0,220) +\n  geom_text(stat=\"count\", \n      aes(label=paste0(..count.., \", \", \n      round(..count../sum(..count..)*100,\n            1), \"%\")),\n      vjust=-1) +\n  xlab(\"Race\") +\n  ylab(\"No. of\\nPupils\") +\n  theme(axis.title.y=element_text(angle = 0))\n\n\nCredit: I learned this trick from Getting things into the right order of Prof. Claus O. Wilke, the author of Fundamentals of Data Visualization"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-ii",
@@ -368,7 +368,7 @@
     "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-ii-1",
     "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
     "section": "Designing Data-drive Graphics for Analysis II",
-    "text": "Designing Data-drive Graphics for Analysis II\n\n\n\n\n\n\n\n\nThe makeover design\n\n\n\nAdding mean and median lines on the histogram plot.\nChange fill color and line color\n\n\n\n\n\n\n\n\n\n\nThe code chunk:"
+    "text": "Designing Data-drive Graphics for Analysis II\n\n\n\n\n\n\n\n\nThe makeover design\n\n\n\nAdding mean and median lines on the histogram plot.\nChange fill color and line color\n\n\n\n\n\n\n\n\n\n\nThe code chunk:\n\nggplot(data=exam_data, \n       aes(x= MATHS)) +\n  geom_histogram(bins=20, \n                 color=\"black\", \n                 fill=\"light blue\") +\n  geom_vline(aes(xintercept=mean(MATHS,\n                                 na.rm=T)),\n             color=\"red\", \n             linetype=\"dashed\", \n             size=1) +\n  geom_vline(aes(xintercept=median(MATHS,\n                                  na.rm=T)),\n             color=\"grey30\",\n             linetype=\"dashed\", \n             size=1)"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii",
@@ -389,7 +389,7 @@
     "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iv-1",
     "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
     "section": "Designing Data-drive Graphics for Analysis IV",
-    "text": "Designing Data-drive Graphics for Analysis IV\n\n\n\n\n\n\n\n\nThe makeover design\n\n\nCreate a makeover looks similar to the figure on the right.\n\n\n\n\n\n\n\nA within group scatterplot with reference lines."
+    "text": "Designing Data-drive Graphics for Analysis IV\n\n\n\n\n\n\n\n\nThe makeover design\n\n\nCreate a makeover looks similar to the figure on the right.\n\n\n\n\nggplot(data=exam_data, \n       aes(x=MATHS, y=ENGLISH)) +\n  geom_point() +\n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  geom_hline(yintercept=50,\n             linetype=\"dashed\",\n             color=\"grey60\",\n             size=1) + \n  geom_vline(xintercept=50, \n             linetype=\"dashed\",\n             color=\"grey60\",\n             size=1)\n\n\nA within group scatterplot with reference lines."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#reference",
@@ -1475,5 +1475,12 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii-1",
+    "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii-1",
+    "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
+    "section": "Designing Data-drive Graphics for Analysis III",
+    "text": "Designing Data-drive Graphics for Analysis III\n\n\nThe code chunk\n\nd <- exam_data   \nd_bg <- d[, -3]  \n\nggplot(d, aes(x = ENGLISH, fill = GENDER)) +\n  geom_histogram(data = d_bg, fill = \"grey\", alpha = .5) +\n  geom_histogram(colour = \"black\") +\n  facet_wrap(~ GENDER) +\n  guides(fill = FALSE) +  \n  theme_bw()\n\n\nThe makeover design"
   }
 ]
