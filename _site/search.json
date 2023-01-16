@@ -378,6 +378,13 @@
     "text": "Designing Data-drive Graphics for Analysis III\n\n\nThe original design\nThe histograms on the left are elegantly designed but not informative. This is because they only reveal the distribution of English scores by gender but without context such as all pupils.\n\n\n\n\n\n\n\n\n\n\n\n\nThe makeover design\n\n\nCreate a makeover looks similar to the figure below. The background histograms show the distribution of English scores for all pupils."
   },
   {
+    "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii-1",
+    "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii-1",
+    "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
+    "section": "Designing Data-drive Graphics for Analysis III",
+    "text": "Designing Data-drive Graphics for Analysis III\n\n\nThe code chunk\n\nd <- exam_data   \nd_bg <- d[, -3]  \n\nggplot(d, aes(x = ENGLISH, fill = GENDER)) +\n  geom_histogram(data = d_bg, fill = \"grey\", alpha = .5) +\n  geom_histogram(colour = \"black\") +\n  facet_wrap(~ GENDER) +\n  guides(fill = FALSE) +  \n  theme_bw()\n\n\nThe makeover design"
+  },
+  {
     "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iv",
     "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iv",
     "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
@@ -1475,12 +1482,5 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
-  },
-  {
-    "objectID": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii-1",
-    "href": "hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html#designing-data-drive-graphics-for-analysis-iii-1",
-    "title": "Hands-on Exercise 1: Programming Elegant DataVis with ggplot2",
-    "section": "Designing Data-drive Graphics for Analysis III",
-    "text": "Designing Data-drive Graphics for Analysis III\n\n\nThe code chunk\n\nd <- exam_data   \nd_bg <- d[, -3]  \n\nggplot(d, aes(x = ENGLISH, fill = GENDER)) +\n  geom_histogram(data = d_bg, fill = \"grey\", alpha = .5) +\n  geom_histogram(colour = \"black\") +\n  facet_wrap(~ GENDER) +\n  guides(fill = FALSE) +  \n  theme_bw()\n\n\nThe makeover design"
   }
 ]
