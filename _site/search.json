@@ -1671,5 +1671,54 @@
     "title": "Lesson 2: Designing Graphs to Enlighten",
     "section": "",
     "text": "Data visualisation design process\nThe Devil is in the data\nHuman perception and information processing\nComponents of a graph\nPrinciples and practical guides for data visualisation design\nData visualisation critics framework\n\n\n\nIn this lesson, I am going to share with you the basic principles and best practices of Data Visualisation Design. The discussion consists of five sections. First, I will provide an overview of data visualisation design process. Next, by using appropriate examples, I will share with you the importance of data selection and preparation in building enlightening graphs. In section three, the principles of visual perception will be introduce. In section four, the practical guides of data visualisation design will be discussed. Lastly, a framework for evaluating and criticising data visualisation design will be introduced."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#content",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#content",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Content",
+    "text": "Content\n\n\nBeyond ggplot2 Themes\nBeyond ggplot2 Annotation\nBeyond ggplot2 facet"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#getting-started",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#getting-started",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Getting started",
+    "text": "Getting started\nInstalling and loading the required libraries\n\n\n\nBefore we get started, it is important for us to ensure that the required R packages have been installed. If yes, we will load the R packages. If they have yet to be installed, we will install the R packages and load them onto R environment.\nThe chunk code on the right will do the trick.\n\n\n\npacman::p_load(tidyverse, ggdist, ggridges,\n                patchwork, ggthemes, hrbrthemes,\n                ggrepel, ggforce)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#installing-and-loading-the-required-libraries",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#installing-and-loading-the-required-libraries",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Installing and loading the required libraries",
+    "text": "Installing and loading the required libraries\n\n\n\nBefore we get started, it is important for us to ensure that the required R packages have been installed. If yes, we will load the R packages. If they have yet to be installed, we will install the R packages and load them onto R environment.\nThe chunk code on the right will do the trick.\n\n\n\npacman::p_load(tidyverse, ggdist, ggridges,\n                patchwork, ggthemes, hrbrthemes,\n                ggrepel, ggforce)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-annotation",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-annotation",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Beyond ggplot2 Annotation",
+    "text": "Beyond ggplot2 Annotation\n\n\nOne of the challenge in plotting statistical graph is annotation, especially with large number of data points.\n\nggplot(data=exam_data, \n       aes(x= MATHS, \n           y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, \n              size=0.5) +  \n  geom_label(aes(label = ID), \n             hjust = .5, \n             vjust = -.5) +\n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-themes",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-themes",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Beyond ggplot2 Themes",
+    "text": "Beyond ggplot2 Themes\n\n\nggplot2 comes with eight built-in themes, they are: theme_gray(), theme_bw(), theme_classic(), theme_dark(), theme_light(), theme_linedraw(), theme_minimal(), and theme_void().\n\nggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  theme_gray() +  #<<\n  ggtitle(\"Distribution of Maths scores\") \n\nRefer to this link to learn more about ggplot2 Themes,"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-facet",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-facet",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Beyond ggplot2 facet",
+    "text": "Beyond ggplot2 facet\n\n\nIn this section, you will learn how to create composite plot by combining multiple graphs. First, let us create three statistical graphics.\n\np1 <- ggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") + \n  coord_cartesian(xlim=c(0,100)) +\n  ggtitle(\"Distribution of Maths scores\")\n\n\np2 <- ggplot(data=exam_data, \n             aes(x = ENGLISH)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  coord_cartesian(xlim=c(0,100)) +\n  ggtitle(\"Distribution of English scores\")\n\n\n\np3 <- ggplot(data=exam_data, \n             aes(x= MATHS, \n                 y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, \n              size=0.5) +  \n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#reference",
+    "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#reference",
+    "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
+    "section": "Reference",
+    "text": "Reference\n\nPatchwork R package goes nerd viral\nggrepel\nggthemes\nhrbrthemes\nggplot tips: Arranging plots\nggplot2 Theme Elements Demonstration\nggplot2 Theme Elements Reference Sheet"
   }
 ]
