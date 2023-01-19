@@ -424,10 +424,12 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <li><p>The chunk code on the right will do the trick.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
+<div style="font-size: 1.2em">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse, ggdist, ggridges,</span>
-<span id="cb1-2"><a href="#cb1-2"></a>                patchwork, ggthemes, hrbrthemes,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                ggrepel, ggforce) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse, patchwork, </span>
+<span id="cb1-2"><a href="#cb1-2"></a>               ggthemes, hrbrthemes,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>               ggrepel) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -441,8 +443,10 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <li><p>The code chunk below imports <em>exam_data.csv</em> into R environment using <a href="https://readr.tidyverse.org/reference/read_delim.html"><em>read_csv()</em></a> function of <a href="https://readr.tidyverse.org/"><strong>readr</strong></a> package.</p></li>
 <li><p><strong>readr</strong> is one of the tidyverse package.</p></li>
 </ul>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>exam_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Exam_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
 <ul>
@@ -461,6 +465,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>One of the challenge in plotting statistical graph is annotation, especially with large number of data points.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb3-2"><a href="#cb3-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, </span>
@@ -474,6 +479,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb3-10"><a href="#cb3-10"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>),</span>
 <span id="cb3-11"><a href="#cb3-11"></a>                  <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>)) <span class="sc">+</span></span>
 <span id="cb3-12"><a href="#cb3-12"></a>  <span class="fu">ggtitle</span>(<span class="st">"English scores versus Maths scores for Primary 3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -490,6 +496,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><a href="https://ggrepel.slowkow.com/index.html"><strong>ggrepel</strong></a> is an extension of <strong>ggplot2</strong> package which provides <code>geoms</code> for <strong>ggplot2</strong> to repel overlapping text as in our examples on the right. We simply replace <code>geom_text()</code> by <a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html"><code>geom_text_repel()</code></a> and <code>geom_label()</code> by <a href="https://ggrepel.slowkow.com/reference/geom_text_repel.html"><code>geom_label_repel</code></a>.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">x=</span> MATHS, </span>
@@ -502,6 +509,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>),</span>
 <span id="cb4-10"><a href="#cb4-10"></a>                  <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>)) <span class="sc">+</span></span>
 <span id="cb4-11"><a href="#cb4-11"></a>  <span class="fu">ggtitle</span>(<span class="st">"English scores versus Maths scores for Primary 3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -517,6 +525,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>ggplot2 comes with eight <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">built-in themes</a>, they are: <code>theme_gray()</code>, <code>theme_bw()</code>, <code>theme_classic()</code>, <code>theme_dark()</code>, <code>theme_light()</code>, <code>theme_linedraw()</code>, <code>theme_minimal()</code>, and <code>theme_void()</code>.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb5-2"><a href="#cb5-2"></a>             <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
@@ -524,10 +533,13 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb5-4"><a href="#cb5-4"></a>                 <span class="at">boundary =</span> <span class="dv">100</span>,</span>
 <span id="cb5-5"><a href="#cb5-5"></a>                 <span class="at">color=</span><span class="st">"grey25"</span>, </span>
 <span id="cb5-6"><a href="#cb5-6"></a>                 <span class="at">fill=</span><span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">theme_gray</span>() <span class="sc">+</span>  <span class="co">#&lt;&lt;</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">theme_gray</span>() <span class="sc">+</span>  </span>
 <span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Maths scores"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Refer to this <a href="https://ggplot2.tidyverse.org/reference/index.html#themes">link</a> to learn more about ggplot2 <code>Themes</code>,</p>
+</div>
+<div style="font-size: 0.65em">
+<p>Refer to this <a href="https://ggplot2.tidyverse.org/reference/index.html#themes">link</a> to learn more about ggplot2 <code>Themes</code></p>
+</div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -543,6 +555,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><a href="https://cran.r-project.org/web/packages/ggthemes/index.html"><strong>ggthemes</strong></a> provides <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">‘ggplot2’ themes</a> that replicate the look of plots by Edward Tufte, Stephen Few, <a href="https://fivethirtyeight.com/">Fivethirtyeight</a>, <a href="https://www.economist.com/graphic-detail">The Economist</a>, ‘Stata’, ‘Excel’, and <a href="https://www.pinterest.com/wsjgraphics/wsj-graphics/">The Wall Street Journal</a>, among others.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb6-2"><a href="#cb6-2"></a>             <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
@@ -551,9 +564,12 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb6-5"><a href="#cb6-5"></a>                 <span class="at">color=</span><span class="st">"grey25"</span>, </span>
 <span id="cb6-6"><a href="#cb6-6"></a>                 <span class="at">fill=</span><span class="st">"grey90"</span>) <span class="sc">+</span></span>
 <span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Maths scores"</span>) <span class="sc">+</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">theme_economist</span>() <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">theme_economist</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>It also provides some extra geoms and scales for ‘ggplot2’. Consult <a href="https://mran.microsoft.com/snapshot/2016-12-28/web/packages/ggthemes/vignettes/ggthemes.html">this vignette</a> to learn more.</p>
+</div>
+<ul>
+<li>It also provides some extra geoms and scales for ‘ggplot2’. Consult <a href="https://mran.microsoft.com/snapshot/2016-12-28/web/packages/ggthemes/vignettes/ggthemes.html">this vignette</a> to learn more.</li>
+</ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -569,6 +585,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><a href="https://cinc.rud.is/web/packages/hrbrthemes/"><strong>hrbrthemes</strong></a> package provides a base theme that focuses on typographic elements, including where various labels are placed as well as the fonts that are used.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb7-2"><a href="#cb7-2"></a>             <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
@@ -577,7 +594,8 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb7-5"><a href="#cb7-5"></a>                 <span class="at">color=</span><span class="st">"grey25"</span>, </span>
 <span id="cb7-6"><a href="#cb7-6"></a>                 <span class="at">fill=</span><span class="st">"grey90"</span>) <span class="sc">+</span></span>
 <span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Maths scores"</span>) <span class="sc">+</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">theme_ipsum</span>() <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <ul>
 <li>The second goal centers around productivity for a production workflow. In fact, this “production workflow” is the context for where the elements of hrbrthemes should be used. Consult <a href="https://cran.r-project.org/web/packages/hrbrthemes/vignettes/why_hrbrthemes.html">this vignette</a> to learn more.</li>
@@ -596,7 +614,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <h3 id="working-with-hrbthems-package-1">Working with hrbthems package</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>What can we learn from the code chunk below?</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb8-2"><a href="#cb8-2"></a>             <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
@@ -609,11 +627,24 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb8-9"><a href="#cb8-9"></a>              <span class="at">base_size =</span> <span class="dv">15</span>, </span>
 <span id="cb8-10"><a href="#cb8-10"></a>              <span class="at">grid =</span> <span class="st">"Y"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What can we learn from the code chunk below?</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li><code>axis_title_size</code> argument is used to increase the font size of the axis title to 18,</li>
 <li><code>base_size</code> argument is used to increase the default axis label to 15, and</li>
 <li><code>grid</code> argument is used to remove the x-axis grid lines.</li>
 </ul>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -628,6 +659,7 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>In this section, you will learn how to create composite plot by combining multiple graphs. First, let us create three statistical graphics.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb9-2"><a href="#cb9-2"></a>             <span class="fu">aes</span>(<span class="at">x =</span> MATHS)) <span class="sc">+</span></span>
@@ -648,7 +680,9 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 <span id="cb10-7"><a href="#cb10-7"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>)) <span class="sc">+</span></span>
 <span id="cb10-8"><a href="#cb10-8"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of English scores"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 </div><div class="column" style="width:50%;">
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>exam_data, </span>
 <span id="cb11-2"><a href="#cb11-2"></a>             <span class="fu">aes</span>(<span class="at">x=</span> MATHS, </span>
@@ -662,66 +696,87 @@ Dr.&nbsp;Kam Tin Seong<br>Assoc. Professor of Information Systems (Practice)
 </div>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 
-<h3 id="creating-composite-graphics">Creating Composite Graphics</h3>
+<h3 id="creating-composite-graphics-pathwork-methods">Creating Composite Graphics: pathwork methods</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>It is not unusual that multiple graphs are required to tell a compelling visual story. There are several ggplot2 extensions provide functions to compose figure with multiple graphs. In this section, I am going to shared with you <a href="https://patchwork.data-imaginist.com/index.html"><strong>patchwork</strong></a>.</p>
 <p>Patchwork package has a very simple syntax where we can create layouts super easily. Here’s the general syntax that combines: - Two-Column Layout using the Plus Sign +. - Parenthesis () to create a subplot group. - Two-Row Layout using the Division Sign <code>\</code></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/image8.png"></p>
 </div>
 </div>
 </section>
 <section class="slide level2">
 
 <h3 id="working-with-patchwork">Working with patchwork</h3>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>p1 <span class="sc">+</span> p2 <span class="sc">/</span> p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
 </div>
-<img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 <h3 id="working-with-patchwork-1">Working with patchwork</h3>
 <p>| will place the plots beside each other, while / will stack them.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>(p1 <span class="sc">/</span> p2) <span class="sc">|</span> p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
 </div>
-<img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"><p>To learn more about, refer to <a href="https://patchwork.data-imaginist.com/articles/guides/assembly.html">Plot Assembly</a>.</p>
+</div>
+</div>
+<p>To learn more about, refer to <a href="https://patchwork.data-imaginist.com/articles/guides/assembly.html">Plot Assembly</a>.</p>
 </section>
 <section class="slide level2">
 
 <h3 id="working-with-patchwork-2">Working with patchwork</h3>
 <p><strong>patchwork</strong> also provides auto-tagging capabilities, in order to identify subplots in text:</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>((p1 <span class="sc">/</span> p2) <span class="sc">|</span> p3) <span class="sc">+</span> </span>
 <span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="st">'I'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
 </div>
-<img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 <h3 id="working-with-patchwork-3">Working with patchwork</h3>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>patchwork <span class="ot">&lt;-</span> (p1 <span class="sc">/</span> p2) <span class="sc">|</span> p3</span>
 <span id="cb15-2"><a href="#cb15-2"></a>patchwork <span class="sc">&amp;</span> <span class="fu">theme_economist</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="cell-output-display">
+<p><img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-21-1.png" width="1152"></p>
 </div>
-<img data-src="Hands-on_Ex02-Beyond_ggplot2_files/figure-revealjs/unnamed-chunk-21-1.png" width="1152" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 <h3 id="working-with-patchwork-4">Working with patchwork</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Beside providing functions to place plots next to each other based on the provided layout. With <a href="https://patchwork.data-imaginist.com/reference/inset_element.html"><code>inset_element()</code></a> of <strong>patchwork</strong>, we can place one or several plots or graphic elements freely on top or below another plot.</p>
+<div style="font-size: 1.2em">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>p3 <span class="sc">+</span> <span class="fu">inset_element</span>(p2, </span>
 <span id="cb16-2"><a href="#cb16-2"></a>                   <span class="at">left =</span> <span class="fl">0.02</span>, </span>
 <span id="cb16-3"><a href="#cb16-3"></a>                   <span class="at">bottom =</span> <span class="fl">0.7</span>, </span>
 <span id="cb16-4"><a href="#cb16-4"></a>                   <span class="at">right =</span> <span class="fl">0.5</span>, </span>
 <span id="cb16-5"><a href="#cb16-5"></a>                   <span class="at">top =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">

@@ -1684,7 +1684,7 @@
     "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#getting-started",
     "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
     "section": "Getting started",
-    "text": "Getting started\nInstalling and loading the required libraries\n\n\n\nBefore we get started, it is important for us to ensure that the required R packages have been installed. If yes, we will load the R packages. If they have yet to be installed, we will install the R packages and load them onto R environment.\nThe chunk code on the right will do the trick.\n\n\n\npacman::p_load(tidyverse, ggdist, ggridges,\n                patchwork, ggthemes, hrbrthemes,\n                ggrepel, ggforce)"
+    "text": "Getting started\nInstalling and loading the required libraries\n\n\n\nBefore we get started, it is important for us to ensure that the required R packages have been installed. If yes, we will load the R packages. If they have yet to be installed, we will install the R packages and load them onto R environment.\nThe chunk code on the right will do the trick.\n\n\n\n\npacman::p_load(tidyverse, patchwork, \n               ggthemes, hrbrthemes,\n               ggrepel)"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#installing-and-loading-the-required-libraries",
@@ -1698,21 +1698,21 @@
     "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-annotation",
     "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
     "section": "Beyond ggplot2 Annotation",
-    "text": "Beyond ggplot2 Annotation\n\n\nOne of the challenge in plotting statistical graph is annotation, especially with large number of data points.\n\nggplot(data=exam_data, \n       aes(x= MATHS, \n           y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, \n              size=0.5) +  \n  geom_label(aes(label = ID), \n             hjust = .5, \n             vjust = -.5) +\n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
+    "text": "Beyond ggplot2 Annotation\n\n\nOne of the challenge in plotting statistical graph is annotation, especially with large number of data points.\n\n\nggplot(data=exam_data, \n       aes(x= MATHS, \n           y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, \n              size=0.5) +  \n  geom_label(aes(label = ID), \n             hjust = .5, \n             vjust = -.5) +\n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-themes",
     "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-themes",
     "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
     "section": "Beyond ggplot2 Themes",
-    "text": "Beyond ggplot2 Themes\n\n\nggplot2 comes with eight built-in themes, they are: theme_gray(), theme_bw(), theme_classic(), theme_dark(), theme_light(), theme_linedraw(), theme_minimal(), and theme_void().\n\nggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  theme_gray() +  #<<\n  ggtitle(\"Distribution of Maths scores\") \n\nRefer to this link to learn more about ggplot2 Themes,"
+    "text": "Beyond ggplot2 Themes\n\n\nggplot2 comes with eight built-in themes, they are: theme_gray(), theme_bw(), theme_classic(), theme_dark(), theme_light(), theme_linedraw(), theme_minimal(), and theme_void().\n\n\nggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  theme_gray() +  \n  ggtitle(\"Distribution of Maths scores\") \n\n\n\nRefer to this link to learn more about ggplot2 Themes"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-facet",
     "href": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#beyond-ggplot2-facet",
     "title": "Hands-on Exercise 2: Beyond ggplot2 Fundamentals",
     "section": "Beyond ggplot2 facet",
-    "text": "Beyond ggplot2 facet\n\n\nIn this section, you will learn how to create composite plot by combining multiple graphs. First, let us create three statistical graphics.\n\np1 <- ggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") + \n  coord_cartesian(xlim=c(0,100)) +\n  ggtitle(\"Distribution of Maths scores\")\n\n\np2 <- ggplot(data=exam_data, \n             aes(x = ENGLISH)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  coord_cartesian(xlim=c(0,100)) +\n  ggtitle(\"Distribution of English scores\")\n\n\n\np3 <- ggplot(data=exam_data, \n             aes(x= MATHS, \n                 y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, \n              size=0.5) +  \n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
+    "text": "Beyond ggplot2 facet\n\n\nIn this section, you will learn how to create composite plot by combining multiple graphs. First, let us create three statistical graphics.\n\n\np1 <- ggplot(data=exam_data, \n             aes(x = MATHS)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") + \n  coord_cartesian(xlim=c(0,100)) +\n  ggtitle(\"Distribution of Maths scores\")\n\n\np2 <- ggplot(data=exam_data, \n             aes(x = ENGLISH)) +\n  geom_histogram(bins=20, \n                 boundary = 100,\n                 color=\"grey25\", \n                 fill=\"grey90\") +\n  coord_cartesian(xlim=c(0,100)) +\n  ggtitle(\"Distribution of English scores\")\n\n\n\n\n\np3 <- ggplot(data=exam_data, \n             aes(x= MATHS, \n                 y=ENGLISH)) +\n  geom_point() +\n  geom_smooth(method=lm, \n              size=0.5) +  \n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100)) +\n  ggtitle(\"English scores versus Maths scores for Primary 3\")"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex02/Hands-on_Ex02-Beyond_ggplot2.html#reference",
