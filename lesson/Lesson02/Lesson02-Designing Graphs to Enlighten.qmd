@@ -901,3 +901,10 @@ Tufte, Edward (2nd Edition) **The Visual Display of Quantitative Information**, 
 -   [Statistical Graphics and more](http://www.theusrus.de/blog/)
 -   [Visualizing data](http://www.visualisingdata.com/)
 -   [Visualizing Economics](http://visualizingeconomics.com/)
+
+```{r}
+#| eval: false
+#| echo: false
+renderthis::to_pdf(from = "https://isss608-ay2022-23jan.netlify.app/lesson/lesson02/Lesson02-Designing Graphs to Enlighten.html")
+```
+

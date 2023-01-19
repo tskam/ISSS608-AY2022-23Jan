@@ -18,7 +18,7 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson01/Lesson01-VAA.html) format
+-   Lesson slides in [html](../lesson/Lesson01/Lesson01-VAA.html) and [pdf](../lesson/Lesson01/Lesson01-VAA.pdf) formats.
 
 -   Hands-on Exercise 1 in [html](../hands-on_ex/Hands-on_Ex01/Hands-on_Ex01-ggplot2.html) format.
 
