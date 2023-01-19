@@ -1482,5 +1482,187 @@
     "title": "Visual Analytics Project",
     "section": "Sample Projects",
     "text": "Sample Projects\nNote that the following examples are for references purposes. You are urge to use your own creativity and innovation to design the application\n\nMITB (Analytics)\n\nISSS608 Year 2013-14 Term 3B\nISSS608 Year 2014-15 Term 3B\nISSS608 Year 2015-16 Term 1\n\nOooh Shiny!\nKong Simi - A visual earpiece into the Singapore Parliament\n\nISSS608 Year 2016-17 Term 1\n\nProject A - The Non-Conventional Sales Dashboard for Company A\nDashboardViz\n\nISSS608 Year 2016-17 Term 3\n\nVRshiny: An Application for better business decision making - Visualizing Association Rules with Network Diagram in Shiny\nDiscovering traffic patterns by using network graph visualisations. In this project, the students developed their project by using VAST Challenge data sets and scenario. However, the project was not a direct replicate of their assignments. \n\nISSS608 Year 2017-18 Term 1\nISSS608 Year 2017-18 Term 3\n\nSingapore Property Market Watch - Your new tool to visualize SG Property Trend\n\nISSS608 Year 2018-19 Term 1\n\nCorn: The A-maize-ing Crop\n\nISSS608 Year 2018-19 Term 3\n\nHow healthy is your neighbourhood?\nAn Interactive Shiny web Application to study the past trends and forecast of tourists to Singapore\n\nISSS608 Year 2019-20 Term 2\n\nSGSAS: Simple Geo-Spatial Analysis using R-Shiny\nA Visual Exploration of Media Consumption in Singapore\n\nISSS608 Year 2020-21 Term 2\nISSS608 Year 2021-22 January Term\n\nGroup 1: Money Not Enough: A Deep Dive into Singapore’s Shopping Basket\nGroup 5: How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore\nGroup 6: ShinyCoin."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#what-will-you-learn-from-this-lesson",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#what-will-you-learn-from-this-lesson",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "What will you learn from this lesson?",
+    "text": "What will you learn from this lesson?\n\n\nData visualisation design process\nThe Devil is in the data\nHuman perception and information processing\nComponents of a graph\nPrinciples and practical guides for data visualisation design\nData visualisation critics framework\n\n\n\nIn this lesson, I am going to share with you the basic principles and best practices of Data Visualisation Design. The discussion consists of five sections. First, I will provide an overview of data visualisation design process. Next, by using appropriate examples, I will share with you the importance of data selection and preparation in building enlightening graphs. In section three, the principles of visual perception will be introduce. In section four, the practical guides of data visualisation design will be discussed. Lastly, a framework for evaluating and criticising data visualisation design will be introduced."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#building-block-of-visual-analytics",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#building-block-of-visual-analytics",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Building Block of Visual Analytics",
+    "text": "Building Block of Visual Analytics\n\n\nThis slide shows the building block of visual analytics. Today, we will focus our attention on the lower left corner of the building block, namely Visual Perception."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#datavis-design-process",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#datavis-design-process",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "DataVis design process",
+    "text": "DataVis design process\n\nStart with a clear message\nSelect the right data\nUse the right visualisations\nExpress and explain\nReview and seek feedback from experts and casual readers\n\n\nIn general, a data visualisation design process consists of five major steps."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graphical-integrity-show-me-the-truth",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graphical-integrity-show-me-the-truth",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Graphical Integrity: Show Me the Truth",
+    "text": "Graphical Integrity: Show Me the Truth\n\n\nSource: Department of Statistics\n\n\nLet us take a good look at the data visualisation on the slide. Can you spot any graphical integrity issue? Yes, the issue of inconsistent data aggregation. On the figure, the major trading partners are at the country level except EU."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graphical-integrity-show-me-the-truth-1",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graphical-integrity-show-me-the-truth-1",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Graphical Integrity: Show Me the Truth",
+    "text": "Graphical Integrity: Show Me the Truth\nSnapshot can be misleading!\n\n\n\n\n\n\n\n\nSource: Cairo, Alberto (2019) How Charts Lie, W.W. Norton & Company, USA. pg 168.\n\n\nDonald Trump liked to claim that the job market was a “disaster” before he was sworn in but recovered right after, and he used charts that cropped the horizontal axis in a convenient place.\nBut if we go back in time and mark the point when Trump became president, we’ll see that there’s no remarkable change in the trajectory and slope of the line. Jobs began recovering in 2010."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graphical-integrity-show-me-the-truth-2",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graphical-integrity-show-me-the-truth-2",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Graphical Integrity: Show Me the Truth",
+    "text": "Graphical Integrity: Show Me the Truth\nDo not miss-out what had happened in between."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#human-perception-and-information-processing",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#human-perception-and-information-processing",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Human Perception and Information Processing",
+    "text": "Human Perception and Information Processing"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#how-visual-sensing-works-3",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#how-visual-sensing-works-3",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "How Visual Sensing Works?",
+    "text": "How Visual Sensing Works?\nFact 3: We don’t remember everything we see."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#application-of-pre-attentive-principle-in-data-visualisation-design-1",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#application-of-pre-attentive-principle-in-data-visualisation-design-1",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Application of pre-attentive principle in data visualisation design",
+    "text": "Application of pre-attentive principle in data visualisation design\n\n\n\n\n\n\n\n\nIn the data visualisation of the right, bright red is use to show the month running at a lot. This is another example whereby pre-attentive principle is put go used."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#components-of-a-graph",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#components-of-a-graph",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Components of a graph",
+    "text": "Components of a graph"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#bertins-semiology-of-graphics",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#bertins-semiology-of-graphics",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Bertin’s Semiology of graphics",
+    "text": "Bertin’s Semiology of graphics"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#choosing-the-right-visualisation",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#choosing-the-right-visualisation",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Choosing the Right Visualisation",
+    "text": "Choosing the Right Visualisation"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Design principles for effective visual presentation",
+    "text": "Design principles for effective visual presentation\n\n\nGuides for Encoding Values in Graph\nJunkCharts\nPractical Guides for Using Colour in Charts\nData-ink"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation-2",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation-2",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Design principles for effective visual presentation",
+    "text": "Design principles for effective visual presentation\n\n\nGuides for Encoding Values in Graph\nChartjunk\nPractical Guides for Using Colour in Charts\nData-ink\n\n\n\nChartjunk refers to all visual elements in charts and graphs that are not necessary to comprehend the information represented on the graph, or that distract the viewer from this information.\nIt was first introduced by Edward Tufte in his 1983 book The Visual Display of Quantitative Information.\nThere is an interesting blog called Junk Charts by Kaiser Fung. The blog link is available on the last slide."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation-3",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation-3",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Design principles for effective visual presentation",
+    "text": "Design principles for effective visual presentation\n\n\nGuides for Encoding Values in Graph\nJunkCharts\nPractical Guides for Using Colour in Charts\nData-ink\n\n\n\nIn this topic, I am going to share with the practical guides for using colour in data visualisation."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation-4",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#design-principles-for-effective-visual-presentation-4",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Design principles for effective visual presentation",
+    "text": "Design principles for effective visual presentation\n\n\nGuides for Encoding Values in Graph\nJunkCharts\nPractical Guides for Using Colour in Charts\nData-ink"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#data-ink",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#data-ink",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Data-ink",
+    "text": "Data-ink\n\n\n\nReduce the non data-ink\n\nRemoved unnecessary non data-ink\nDe-emphasise or regularise the remaining non data-ink\n\nEnhance the data-ink\n\nRemove unnecessary data-ink\nEmphasise the remaining data-ink\n\n\n\n\n\n\n\nThe term, ‘data-ink’, is defined as the total ink on a graph that represents data. Tufte claims that good graphical representations maximize data-ink and erase as much non-data-ink as possible. Thus, he defines the data-ink ratio is the proportion of a graphic’s ink devoted to the non-redundant display of data-information. It should equal to (1 - the proportion of graphics that can be erased without loss of data-information)."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#an-enligthening-data-visualisation-will-be-incomplete-without-a-well-worded-title",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#an-enligthening-data-visualisation-will-be-incomplete-without-a-well-worded-title",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "An enligthening data visualisation will be incomplete without a well worded title",
+    "text": "An enligthening data visualisation will be incomplete without a well worded title\n\n\nSource: The truth about weekend working, Financial Times, January 23 2020.\n\nMore example can be found here"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graph-typography",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#graph-typography",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Graph typography",
+    "text": "Graph typography\nAvoid using artistic fonts"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#three-bugs-of-charts-interpretation",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#three-bugs-of-charts-interpretation",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Three Bugs of Charts Interpretation",
+    "text": "Three Bugs of Charts Interpretation\n\n\nThe Patternicity bug: We detect interating patterns, regardless of whether or not they are real.\nThe Storytelling bug: We immediately come up with a coherent explanation for those patterns.\nThe Confirmation bug: We start seeing all further information we receive, even the one that conflicts with our explanation, in a way that confirmed it. We refuse to give our explanation up, no matter what."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#data-visualization-clarity-or-aesthetics",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#data-visualization-clarity-or-aesthetics",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Data Visualization: Clarity or Aesthetics?",
+    "text": "Data Visualization: Clarity or Aesthetics?\n\n\n\n\n\n\n\n\nSource: Data Visualisation: Clarity or Aesthetics"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#quadrant-i-clear-and-beautiful",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#quadrant-i-clear-and-beautiful",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Quadrant I – Clear and Beautiful",
+    "text": "Quadrant I – Clear and Beautiful\n\n\n\n\nWhy is it “beautiful”?\n\nGood font & color choices throughout.\nSoft gridlines don’t distract.\nAll elements well aligned and spaced.\nHigh res images are “useful” chartjunk.\n\nWhy is it “clear”?\n\nThe y-axis starts at 0 and the 2D columns are easy to gage.\nCall-outs with images aid cognition.\nImproved title & lead-in verbiage provide further elucidation.\nFor the first time, a photo credit and data source are included."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#references",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#references",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "References",
+    "text": "References\nClaus O. Wilke (2019) Fundamentals of Data Visuaization. O’Reilly, USA.\nFew, Stephen (2012) (2nd edition) Show Me the Numbers: Designing Tables and Graphs to Enlighten, Analytics Press, Oakland, USA\nCairo, Alberto (2019) How Charts Lie, W.W. Norton & Company, USA.\nRobbins, Naomi B. (2005) Creating More Effective Graphs, John Wiley & Sons, New Jersey, USA\nWong, Dona M. (2010) The Wall Street Journal Guide to Information Graphics, W. W. Norton & Company, Inc. New York.\nTufte, Edward (2nd Edition) The Visual Display of Quantitative Information, Graphics Press LLC, Connecticut, USA."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#highly-recommended-blog",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#highly-recommended-blog",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "Highly recommended blog",
+    "text": "Highly recommended blog\n\nThe Functional Art\nJunk Charts\nPerceptual Edge\nEagerEyes\nStatistical Graphics and more\nVisualizing data\nVisualizing Economics"
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#dataviz-design-process-start-with-a-clear-message",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#dataviz-design-process-start-with-a-clear-message",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "DataViz design process: Start with a clear message",
+    "text": "DataViz design process: Start with a clear message\n\n\nIn data visualisation design, it is important to be clear and explicit about what you want to achieve. Is it to explore some data, to convey an inferential analysis, to deliver a message, convince an audience, or support a decision? It may be a mixture of these—for example, even seemingly simple exploratory plots should serve some (perhaps implicit) decision (e.g., on how to explore further). Every graph, and, more generally, every communication, must be tailored to its specific purpose."
+  },
+  {
+    "objectID": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#the-devil-is-in-the-data",
+    "href": "lesson/Lesson02/Lesson02-Designing Graphs to Enlighten.html#the-devil-is-in-the-data",
+    "title": "Lesson 2: Designing Graphs to Enlighten",
+    "section": "The Devil is in the Data",
+    "text": "The Devil is in the Data\n\n\nClean and tidy data are needed to build truthful data visualisation. But beside clean and tidy data, there are at least two considerations related to data require our attention."
   }
 ]
