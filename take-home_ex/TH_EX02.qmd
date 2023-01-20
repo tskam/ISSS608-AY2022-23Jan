@@ -1,0 +1,41 @@
+---
+title: "Take-home Exercise 2"
+description: |
+  Creating data visualisation beyond default
+date: "`r Sys.Date()`"
+format: html
+editor: visual
+---
+
+# The Task
+
+In this take-home exercise, you are required to:
+
+-   select one of the Take-home Exercise 1 prepared by your classmate,
+-   critic the submission in terms of clarity and aesthetics, 
+-   prepare a sketch for the alternative design by using the data visualisation design principles and best practices you had learned in Lesson 1 and 2, and
+-   remake the original design by using ggplot2, ggplot2 extensions and tidyverse packages. 
+
+The purpose of DataVis Makeover is to improve on the original visualisation. Focus on what works, what doesn’t work, why those things don’t work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. 
+
+# Submission Instructions
+
+This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.
+
+The specific submission instructions are as follows:
+
+-   The analytical visualisation must be prepared by using **R and appropriate R packages**.
+-   The write-up of the take-home exercise must be in **Quarto html document** format. You are required to publish the write-up on [**Netlify**](https://www.netlify.com/).
+-   Provide the links to the Take-home Exercise write-up and github repository onto eLearn (i.e. Take-home Exercise section)
+
+# Submission date
+
+Your completed take-home exercise is due on **29th January 2023, by 11:59pm evening**.
+
+# Learning from senior
+
+-   [Sample 1](https://leslielong-da.netlify.app/posts/2022-04-25-takehome2/)
+
+-   [Sample 2](https://raveenaclr.netlify.app/th_ex/th_ex2.html)
+
+# Peer Learning
