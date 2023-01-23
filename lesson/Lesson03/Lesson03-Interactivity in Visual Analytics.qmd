@@ -369,6 +369,9 @@ Source: [Miserables](https://bost.ocks.org/mike/miserables/)
 ```{r}
 #| echo: false
 #| eval: false
-renderthis::to_pdf()
+renderthis::to_pdf(
+  from = "https://isss608-ay2021-22april.netlify.app/lesson/Lesson03/Lesson03-Interactivity_in_Visual_Analytics.html",
+  to = "../../_site/lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.pdf"
+)
 ```
 
