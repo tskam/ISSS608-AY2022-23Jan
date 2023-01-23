@@ -23,7 +23,7 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html) and [pdf](../lesson/Lesson04/Lesson04-Fundamentals_of_Visual_Analytics.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html) and [pdf](../lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.pdf) formats
 
 -   Handout of Hands-on Exercise 4
 
