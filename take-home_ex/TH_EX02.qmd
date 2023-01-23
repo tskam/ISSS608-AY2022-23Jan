@@ -12,11 +12,11 @@ editor: visual
 In this take-home exercise, you are required to:
 
 -   select one of the Take-home Exercise 1 prepared by your classmate,
--   critic the submission in terms of clarity and aesthetics, 
+-   critic the submission in terms of clarity and aesthetics,
 -   prepare a sketch for the alternative design by using the data visualisation design principles and best practices you had learned in Lesson 1 and 2, and
--   remake the original design by using ggplot2, ggplot2 extensions and tidyverse packages. 
+-   remake the original design by using ggplot2, ggplot2 extensions and tidyverse packages.
 
-The purpose of DataVis Makeover is to improve on the original visualisation. Focus on what works, what doesn’t work, why those things don’t work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation. 
+The purpose of DataVis Makeover is to improve on the original visualisation. Focus on what works, what doesn't work, why those things don't work, and how you made it better. You should try stick to the fields in the data set provided and improve upon the original visualisation.
 
 # Submission Instructions
 
