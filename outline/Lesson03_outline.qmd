@@ -16,7 +16,7 @@ editor: visual
 
 -   Lesson slides in [html](../lesson/Lesson03/Lesson03-Interactivity_in_Visual_Analytics.html) and [pdf](../lesson/Lesson03/Lesson03-Interactivity_in_Visual_Analytics.pdf) formats
 
--   Handout of Hands-on Exercise 3 in [html](../Hands-on_Ex/Hands-on_Ex03/Hands-on_Ex03.html) and [pdf](../Hands-on_Ex/Hands-on_Ex03/Hands-on_Ex03.pdf) formats.
+-   Handout of Hands-on Exercise 3 in [html](../hands-on_ex/Hands-on_Ex03/Hands-on_Ex03-Programming Interactive Visualisation.html) and [pdf](../hands-on_Ex/Hands-on_Ex03/Hands-on_Ex03-Programming Interactive Visualisation.pdf) formats.
 
 ## Readings
 
