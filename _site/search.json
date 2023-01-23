@@ -1853,5 +1853,117 @@
     "title": "Hands-on Exercise 3: Programming Interactive Data Visualisation with R",
     "section": "Interactive Data Visualisation - crosstalk methods!",
     "text": "Interactive Data Visualisation - crosstalk methods!\nCrosstalk is an add-on to the htmlwidgets package. It extends htmlwidgets with a set of classes, functions, and conventions for implementing cross-widget interactions (currently, linked brushing and filtering).\n\nInteractive Data Table: DT package\n\nA wrapper of the JavaScript Library DataTables\nData objects in R can be rendered as HTML tables using the JavaScript library ‘DataTables’ (typically via R Markdown or Shiny).\n\n\nDT::datatable(exam_data, class= \"compact\")\n\n\n\n\n\n\n\n\nLinked brushing: crosstalk method\n\n\nSetting the `off` event (i.e., 'plotly_deselect') to match the `on` event (i.e., 'plotly_selected'). You can change this default via the `highlight()` function.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode chunk below is used to implement the coordinated brushing shown above.\n\nd <- highlight_key(exam_data) \np <- ggplot(d, \n            aes(ENGLISH, \n                MATHS)) + \n  geom_point(size=1) +\n  coord_cartesian(xlim=c(0,100),\n                  ylim=c(0,100))\n\ngg <- highlight(ggplotly(p),        \n                \"plotly_selected\")  \n\ncrosstalk::bscols(gg,               \n                  DT::datatable(d), \n                  widths = 5)        \n\nThings to learn from the code chunk:\n\nhighlight() is a function of plotly package. It sets a variety of options for brushing (i.e., highlighting) multiple plots. These options are primarily designed for linking multiple plotly graphs, and may not behave as expected when linking plotly to another htmlwidget package via crosstalk. In some cases, other htmlwidgets will respect these options, such as persistent selection in leaflet.\nbscols() is a helper function of crosstalk package. It makes it easy to put HTML elements side by side. It can be called directly from the console but is especially designed to work in an R Markdown document. Warning: This will bring in all of Bootstrap!."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#what-will-you-learn-from-this-lesson",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#what-will-you-learn-from-this-lesson",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "What will you learn from this lesson?",
+    "text": "What will you learn from this lesson?\n\n\nTypology of Interactive Techniques\n\nData & view specification\nView Manipulation\nProcess and Provenance\n\nInteractive Design Primitive\nAnimation: Principles and Best Practices"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#building-block-of-visual-analytics",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#building-block-of-visual-analytics",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Building Block of Visual Analytics",
+    "text": "Building Block of Visual Analytics"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#taxonomy-of-interactive-dynamics",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#taxonomy-of-interactive-dynamics",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Taxonomy of Interactive Dynamics",
+    "text": "Taxonomy of Interactive Dynamics\n\n\nSource: Heer, J. & Shneiderman, B. (2012) “Interactive Dynamics for Visual Analytics” ACM Queue, Vol. 55, No. 4, pp 45-54."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nSelection functions\n\nPointer selects a single object in a plot."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-1",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-1",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nSelection functions\n\nDrag-box selects a rectangular region in a box."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-2",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-2",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nSelection functions\n\n\n\nBrush is a generalisation of the drag-box. Once a rectangular region is define, the brush allows users to move that region across a plot and thus dynamically change the selected subset."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-3",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-3",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nSelection functions\n\nLasso allows users to define an arbitrary contiguous shape to select data."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-4",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-4",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nRotating\n\nTouring view with JMP’s 3D scatterplot"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-5",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-5",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nHighlighting\n\nSelected records are highlighted."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-10",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation-10",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "View Manipulation",
+    "text": "View Manipulation\nRotating\n\nTouring view with JMP’s 3D scatterplot\n\n]"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#process-and-provenance",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#process-and-provenance",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Process and Provenance",
+    "text": "Process and Provenance\n\n\nRecord analysis histories for revisitation, review and sharing.\nAnnotate patterns to determine findings.\nShare views and annotations to enable collaboration.\nGuide users through analysis tasks or stories.\n\n\n\nVisual analytics is not limited to the generation and manipulation of visualizations—it involves a process of iterative data exploration and interpretation. As a result, visual analytics tools that provide facilities for scaffolding the analysis process will be more widely adopted. Tools should preserve analytic provenance by keeping a record of analyst actions and insights so that the history of work can be reviewed and refined."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Interactive Design Primitive",
+    "text": "Interactive Design Primitive\nA framework for effective interactive design in visual analytics application.\n\n\nSource: Roth, R.E. (2012) “Cartographic Interaction Primitive: Framework and Synthesis”. The Cartographic Journal, Vol. 49, No. 4 pp. 376-395."
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive-1",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive-1",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Interactive Design Primitive",
+    "text": "Interactive Design Primitive\n\n\nVisual Analytics Objective Primitives\n\n\nInteractive Analytics Operator Primitives"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive-2",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive-2",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Interactive Design Primitive",
+    "text": "Interactive Design Primitive"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#animation-in-visual-analytics",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#animation-in-visual-analytics",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "Animation in Visual Analytics",
+    "text": "Animation in Visual Analytics\n\n\n\nThe purpose of animation is to facilitate perception of changes when transitioning between related data graphics\nDo not confine to time-series data only\n\n\n\n\nSource: How Many Households"
+  },
+  {
+    "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#references",
+    "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#references",
+    "title": "Lesson 3: Interactivity in Visual Analytics",
+    "section": "References",
+    "text": "References\n\nDynamics for Visual Analysis\nAnimated Transitions in Statistical Data Graphics, IEEE Transactions on Visualization and Computer Graphics, Vol. 13, No. 6, 1240-1247 and the video\nCoordinated Highlighting in Context\nCartographic Interaction Primitive: Framework and Synthesis"
   }
 ]

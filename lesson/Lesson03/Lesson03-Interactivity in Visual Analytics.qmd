@@ -1,0 +1,374 @@
+---
+title: "Lesson 3: </br>Interactivity in Visual Analytics"
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems (Practice)"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    show-notes: false
+    slide-number: true
+    show-slide-number: 'all'
+date-format: "DD MMM YYYY"    
+editor: visual
+---
+
+## What will you learn from this lesson?
+
+::: {style="font-size: 1.25em"}
+-   Typology of Interactive Techniques
+
+    -   Data & view specification
+    -   View Manipulation
+    -   Process and Provenance
+
+-   Interactive Design Primitive
+
+-   Animation: Principles and Best Practices
+:::
+
+## Building Block of Visual Analytics
+
+![](img/image3-1.jpg)
+
+------------------------------------------------------------------------
+
+### Revisiting Visual Analytics Framework
+
+![](img/image3-2.jpg)
+
+## Taxonomy of Interactive Dynamics
+
+![](img/image3-4.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: Heer, J. & Shneiderman, B. (2012) "[Interactive Dynamics for Visual Analytics](https://queue.acm.org/detail.cfm?id=2146416)" ***ACM Queue***, Vol. 55, No. 4, pp 45-54.
+:::
+
+------------------------------------------------------------------------
+
+### Data & view specification
+
+-   **Visualise** data by choosing visual encodings.
+-   **Polaris** of Tableau
+
+![](img/image3-5.jpg)
+
+------------------------------------------------------------------------
+
+### Data & view specification
+
+-   **Filter** out data to focus on relevant items.
+
+![](img/image3-6.jpg)
+
+------------------------------------------------------------------------
+
+### Data & view specification
+
+-   **Slicer** is an axis-parallel selection tool, which selects a range along an axis, where the end-point of the interval can be modified dynamically.
+
+![](img/image3-10.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [crossfilter](https://square.github.io/crossfilter/)
+:::
+
+------------------------------------------------------------------------
+
+### Data & view specification
+
+-   **Sort** items to expose patterns.
+
+![](img/image3-7.jpg)
+
+------------------------------------------------------------------------
+
+### Data & view specification
+
+-   Hierarchical sorting
+
+![](img/image3-8.jpg){fig-align="center" width="881"}
+
+------------------------------------------------------------------------
+
+### Data & view specification
+
+-   **Derive** values or models from source data.
+
+![](img/image3-9.jpg)
+
+------------------------------------------------------------------------
+
+### View Manipulation: Selection functions
+
+-   **Pointer** selects a single object in a plot.
+
+![](img/image3-11.jpg)
+
+------------------------------------------------------------------------
+
+### View Manipulation: Selection functions
+
+-   **Drag-box** selects a rectangular region in a box.
+
+![](img/image3-12.jpg){fig-align="center" width="387"}
+
+------------------------------------------------------------------------
+
+### View Manipulation: Selection functions
+
+::: columns
+::: {.column width="50%"}
+-   **Brush** is a generalisation of the drag-box. Once a rectangular region is define, the brush allows users to move that region across a plot and thus dynamically change the selected subset.
+:::
+
+::: {.column width="50%"}
+![](img/image3-13.jpg){width="379"}
+:::
+:::
+
+------------------------------------------------------------------------
+
+### View Manipulation: Selection functions
+
+-   **Lasso** allows users to define an arbitrary contiguous shape to select data.
+
+![](img/image3-14.jpg)
+
+------------------------------------------------------------------------
+
+### View Manipulation: Selection modes
+
+![](img/image3-15.jpg)
+
+::: {style="font-size: 0.65em"}
+Reference: [Mondrian](http://www.theusrus.de/Mondrian/)
+:::
+
+------------------------------------------------------------------------
+
+### View Manipulation: Highlighting
+
+-   Selected records are highlighted.
+
+![](img/image3-16.jpg)
+
+------------------------------------------------------------------------
+
+### View Manipulation
+
+-   **Navigate** to examine high-level patterns and low-level detail.
+-   Shneiderman's mantra
+
+![](img/image3-3.jpg)
+
+------------------------------------------------------------------------
+
+### View Manipulation
+
+-   The scatter plot provides an overview and the bar and line graphs provide detail sales and profits trends overtime.
+
+![](img/image3-17.jpg)
+
+------------------------------------------------------------------------
+
+### View Manipulation
+
+-   **Coordinate** views for linked, multi-dimensional exploration
+
+Scatterplot with marginal boxplot
+
+![](img/image3-18.jpg){width="550"}
+
+------------------------------------------------------------------------
+
+### View Manipulation
+
+::: columns
+::: {.column width="30%"}
+-   **Organise** multiple windows and workspaces.
+:::
+
+::: {.column width="70%"}
+![](img/image3-19.jpg){width="796"}
+
+::: {style="font-size: 0.65em"}
+Source: [VAST Challenge 2017 MC1 by Yifi](https://public.tableau.com/profile/yifei2012#!/vizhome/Updated1/VASTChallenge2017MC1)
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+### View Manipulation: Rotating
+
+::: columns
+::: {.column width="45%"}
+-   Touring view with JMP's 3D scatterplot
+:::
+
+::: {.column width="55%"}
+![](img/image3-20.jpg)
+:::
+:::
+
+## Process and Provenance
+
+::: {style="font-size: 1.2em"}
+-   **Record** analysis histories for revisitation, review and sharing.
+
+-   **Annotate** patterns to determine findings.
+
+-   **Share** views and annotations to enable collaboration.
+
+-   **Guide** users through analysis tasks or stories.
+:::
+
+::: notes
+Visual analytics is not limited to the generation and manipulation of visualizations---it involves a process of iterative data exploration and interpretation. As a result, visual analytics tools that provide facilities for scaffolding the analysis process will be more widely adopted. Tools should preserve analytic provenance by keeping a record of analyst actions and insights so that the history of work can be reviewed and refined.
+:::
+
+## Interactive Design Primitive
+
+A framework for effective interactive design in visual analytics application.
+
+![](img/image3-21.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: Roth, R.E. (2012) "Cartographic Interaction Primitive: Framework and Synthesis". The Cartographic Journal, Vol. 49, No. 4 pp. 376-395.
+:::
+
+## Interactive Design Primitive
+
+::: columns
+::: {.column width="50%"}
+### Visual Analytics Objective Primitives
+
+![](img/image3-22.jpg)
+:::
+
+::: {.column width="50%"}
+### Interactive Analytics Operator Primitives
+
+![](img/image3-23.jpg)
+:::
+:::
+
+## Interactive Design Primitive
+
+![](img/image3-24.jpg)
+
+## Animation in Visual Analytics
+
+::: columns
+::: {.column width="50%"}
+-   The purpose of animation is to facilitate perception of changes when transitioning between related data graphics
+
+-   Do not confine to time-series data only
+:::
+
+::: {.column width="50%"}
+![](img/image3-25.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [How Many Households](http://worrydream.com/HowManyHouseholds/)
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Why using Animation in Visual Analytics
+
+::: {style="font-size: 1.2em"}
+-   Motion is highly effective at attracting attention.
+
+-   Animation facilitates object constancy for changing objects.
+
+-   Animated behaviours can give rise to perceptions of causality and intentionality, communicating cause-and-effect relationships and establishing narrative.
+
+-   Animation can be emotionally engaging, engendering increased interest or enjoyment.
+:::
+
+------------------------------------------------------------------------
+
+### Principles of Animation
+
+::: columns
+::: {.column width="50%"}
+-   ***Congruence*** principle states that the structure and content of the external representation should correspond to the desired and content of the internal representation.
+
+-   Maintain valid data graphics during transitions
+
+-   Use consistent semantic-syntactic mappings
+
+-   Respect semantic correspondence
+
+-   Avoid ambiguity
+:::
+
+::: {.column width="50%"}
+-   ***Apprehension*** principle states that the structure and content of the external representation should be readily and accurately perceived and comprehended.
+
+-   Group similar transitions
+
+-   Minimise occlusion
+
+-   Maximise predictability
+
+-   Use simple transitions
+
+-   Use staging for complex transitions
+
+-   Make transitions as long as needed, but no longer
+:::
+
+::: {style="font-size: 0.65em"}
+Source: Heer, J and Robertson G. (2007) [Animated Transitions in Statistical data Graphics](https://idl.cs.washington.edu/files/2007-AnimatedTransitions-InfoVis.pdf), IEEE Transactions on Visualization and Computer Graphics, Vol. 13, No. 6, 1240-1247 and the [video](https://www.youtube.com/watch?v=vLk7mlAtEXI).
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Animation in Action
+
+::: columns
+::: {.column width="50%"}
+### Stacked-to-Grouped Bars
+
+![](img/image3-26.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Stacked to Grouped Bars](https://observablehq.com/@d3/stacked-to-grouped-bars)
+:::
+:::
+
+::: {.column width="50%"}
+### Animated Co-occurrence matrix
+
+![](img/image3-27.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Miserables](https://bost.ocks.org/mike/miserables/)
+:::
+:::
+:::
+
+## References
+
+-   [Dynamics for Visual Analysis](https://idl.cs.washington.edu/files/2012-InteractiveDynamics-CACM.pdf)
+
+-   [Animated Transitions in Statistical Data Graphics](https://idl.cs.washington.edu/files/2007-AnimatedTransitions-InfoVis.pdf), IEEE Transactions on Visualization and Computer Graphics, Vol. 13, No. 6, 1240-1247 and the [video](https://www.youtube.com/watch?v=vLk7mlAtEXI)
+
+-   [Coordinated Highlighting in Context](http://www.perceptualedge.com/articles/visual_business_intelligence/coordinated_highlighting_in_context.pdf)
+
+-   [Cartographic Interaction Primitive: Framework and Synthesis](https://web-a-ebscohost-com.libproxy.smu.edu.sg/ehost/pdfviewer/pdfviewer?vid=1&sid=16eab3bc-b4a2-47b5-9a03-2619822e5ddb%40sessionmgr4007)
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf()
+```
+
