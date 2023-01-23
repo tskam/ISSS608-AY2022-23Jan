@@ -1972,5 +1972,47 @@
     "title": "Lesson 3: Interactivity in Visual Analytics",
     "section": "",
     "text": "Typology of Interactive Techniques\n\nData & view specification\nView Manipulation\nProcess and Provenance\n\nInteractive Design Primitive\nAnimation: Principles and Best Practices"
+  },
+  {
+    "objectID": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#what-will-you-learn-from-this-lesson",
+    "href": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#what-will-you-learn-from-this-lesson",
+    "title": "Lesson 4: Fundamentals of Visual Analytics",
+    "section": "What will you learn from this lesson?",
+    "text": "What will you learn from this lesson?\n\n\nVisual Analytics for Knowledge Discovery\nVisual Analytics Approach for Statistical Testing\nVisual Analytics for Building Better Models\nVisualising Uncertainty\nVariation and Its Discontents\n\n\n\nIn this lesson, I am going to share with you how visual analytics approach can be used to complement conventional statistical testing and model building. Then, We will examine methods for visualising uncertainty. Lastly, I will introduce you to funnel plot, a visual method specially designed to provide a fare comparison among entities in a group."
+  },
+  {
+    "objectID": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visually-analytics-for-knowledge-discovery",
+    "href": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visually-analytics-for-knowledge-discovery",
+    "title": "Lesson 4: Fundamentals of Visual Analytics",
+    "section": "Visually Analytics for Knowledge Discovery",
+    "text": "Visually Analytics for Knowledge Discovery\nMotivation: To combine data visualisation and statistical modeling.\n\n\nThis slide highlight the important roles play by visual analytics in the knowledge discovery framework.\nBefore building model, visual analytics can be used to provide better understanding of the variables. These information can be very useful in the subsequent model building process. For example, appropriately designed visual analytics can be used to reveals if there is sign of multicolinearity.\nAfter calibrating the model, visual analytics can be used to reveal the model output for example to check if the model conform to a specific statistical assumption."
+  },
+  {
+    "objectID": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visual-statistical-testing",
+    "href": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visual-statistical-testing",
+    "title": "Lesson 4: Fundamentals of Visual Analytics",
+    "section": "Visual Statistical Testing",
+    "text": "Visual Statistical Testing\n\nTo provide alternative statistical inference methods by default.\n\n\n\n\n\n\n\n\n\nIt is important to note that by combining data visualisation and statistical analysis, we need ensure that the methods used are regorous and inline with the statistical principles."
+  },
+  {
+    "objectID": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visual-statistical-testing-1",
+    "href": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visual-statistical-testing-1",
+    "title": "Lesson 4: Fundamentals of Visual Analytics",
+    "section": "Visual Statistical Testing",
+    "text": "Visual Statistical Testing\n\nTo follow best practices for statistical reporting.\nFor all statistical tests reported in the plots, the default template abides by the APA gold standard for statistical reporting. For example, here are results from a robust t-test:\n\n\n\nAt the sametime, we also want to ensure that the reports are inline with the academic publication best practices."
+  },
+  {
+    "objectID": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visualising-uncertainty",
+    "href": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#visualising-uncertainty",
+    "title": "Lesson 4: Fundamentals of Visual Analytics",
+    "section": "Visualising Uncertainty",
+    "text": "Visualising Uncertainty\nWhy it is important?\n\n\n\nOne of the most challenging aspects of data visualization is the visualization of uncertainty.\n\n\n\n\n\n\nSource: Chart 61, LABOUR FORCE IN SINGAPORE 2019, pg. 52.\n\n\nOne of the most challenging aspects of visual analytics is the visualisation of uncertainty. When we see data point drawn in a specific location, we tend to interpret it as a precise representation of the true value. It is difficult to conceive that a data point could actually lie somewhere it hasn’t been drawn. Yet this scenario is ubiquitous in data visualisation. Nearly every dataset we work with has some uncertainty, and whether and how we choose to represent this uncertainty can make a major difference in how accurately our audience perceives the meaning of the data.\nTwo commonly used approaches to indicate uncertainty are error bars and confidence bands. In this section, we will examine the basic concepts and design pricinples of these methods."
+  },
+  {
+    "objectID": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#variation-and-its-discontents",
+    "href": "lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html#variation-and-its-discontents",
+    "title": "Lesson 4: Fundamentals of Visual Analytics",
+    "section": "Variation and Its Discontents",
+    "text": "Variation and Its Discontents\nRandom and unfair comparisons\n\n\nReference: Variation and its discontents\n\n\nCentral to quantitative data analysis is an understanding of variation. When we measure multiple occurrences of things to determine how and to what extent they differ, we’re examining variation. Some variation is random and some is caused by factors that we can attempt to identify and perhaps control. Random variation consists of differences in measures that occur routinely, without a specific cause. We should note random variation and move on, because nothing can be done about it. It is noise. It tells us nothing that requires a response.\nInstances of non-random variation are signals; they tell us something useful and provide opportunities for action. Signals that indicate poor performance—an undesirable state—can perhaps be reduced by controlling the causes. Signals that indicate an especially good state of affairs can provide useful insights and opportunities for improvement.\nDespite the significance of variation, relatively few people who work with data in most organizations understand it, especially the nature of randomness. This leads to false conclusions and poor decisions, especially when comparing measures of performance within a set of like entities (e.g., countries or companies). Most organizations spend too much time examining noise: the cacophony of random variation. Learning to distinguish signals from the noise is a fundamental skill of data analysis and performance monitoring. In this article, we’ll take a look at a special version of a scatter plot, called a funnel plot (not to be confused with a funnel chart), which is designed to filter out the noise and shine a spotlight on meaningful variation when we compare performance among entities in a group. Funnel plots address the fact that entities with relatively few occurrences of the thing being measured (a small sample), when compared to entities with many occurrences (a large sample), exhibit a greater degree of random variation, which must be taken into account when comparing them. A little later we’ll take a look at this problem and the solution that funnel plots provide in relation to healthcare data, but first let’s get more familiar with the effects of sample size on randomness.\nConsider the following display (a caterpillar plot) of actual healthcare data. Each data point represents a hospital, with 260 in total. The values are mortality rates following surgeries and the solid horizontal line represents the mean.\nThe sample sizes (number of surgeries reported by each hospital) on which this graph is based range from 7 to 3,151. For this reason it isn’t appropriate to rank the hospitals by mortality rate. The ranking suggests a relationship of relative performance that cannot be determined by the data.\nImagine that, unlike the anonymous version of the graph above, each data point is labeled with the hospital’s name. Can you hear the screams of surgeons from the hospitals with the highest mortality rates in the 4th quartile section of the chart? Can you see the puffed up egos of the surgeons who work at the hospitals with mortality rates of zero in the 1st quartile section? One of the hospitals with a zero mortality rate provided a sample of only seven surgeries.\nNote: You might realize, especially if you work with healthcare data similar to the example above, that a fair comparison of hospitals would require the data to be adjusted not just to account for varying sample sizes but also for varying levels of risk. Some surgeries are more risky than others and some patients, due to varying levels of illness, are more at risk than others. We’ll ignore this for now to keep the example simple."
   }
 ]
