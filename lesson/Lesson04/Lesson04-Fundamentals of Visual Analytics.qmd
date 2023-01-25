@@ -532,7 +532,7 @@ It is routine when dealing with heterogeneous entities such as different types o
 #| echo: false
 #| eval: false
 renderthis::to_pdf(
-  from = "https://isss608-ay2022-23jan.netlify.app/lesson/Lesson03/Lesson03-Interactivity%20in%20Visual%20Analytics.html",
-  to = "../../_site/lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.pdf"
+  from = "https://isss608-ay2022-23jan.netlify.app/lesson/Lesson04/Lesson04-Fundamentals%20of%20Visual%20Analytics.html",
+  to = "../../_site/lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.pdf"
 )
 ```
