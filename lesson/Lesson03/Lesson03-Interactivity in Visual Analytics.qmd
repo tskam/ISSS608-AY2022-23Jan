@@ -192,7 +192,7 @@ Scatterplot with marginal boxplot
 :::
 
 ::: {.column width="70%"}
-![](img/image3-19.jpg){width="796"}
+![](img/image3-19.jpg){width="637"}
 
 ::: {style="font-size: 0.65em"}
 Source: [VAST Challenge 2017 MC1 by Yifi](https://public.tableau.com/profile/yifei2012#!/vizhome/Updated1/VASTChallenge2017MC1)
