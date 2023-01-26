@@ -374,4 +374,3 @@ renderthis::to_pdf(
   to = "../../_site/lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.pdf"
 )
 ```
-
