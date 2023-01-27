@@ -180,7 +180,7 @@ Reference: [Mondrian](http://www.theusrus.de/Mondrian/)
 
 Scatterplot with marginal boxplot
 
-![](img/image3-18.jpg){width="550"}
+![](img/image3-18.jpg){fig-align="left" width="495"}
 
 ------------------------------------------------------------------------
 
@@ -192,7 +192,7 @@ Scatterplot with marginal boxplot
 :::
 
 ::: {.column width="70%"}
-![](img/image3-19.jpg){width="637"}
+![](img/image3-19.jpg){fig-align="left" width="637"}
 
 ::: {style="font-size: 0.65em"}
 Source: [VAST Challenge 2017 MC1 by Yifi](https://public.tableau.com/profile/yifei2012#!/vizhome/Updated1/VASTChallenge2017MC1)
@@ -210,7 +210,7 @@ Source: [VAST Challenge 2017 MC1 by Yifi](https://public.tableau.com/profile/yif
 :::
 
 ::: {.column width="55%"}
-![](img/image3-20.jpg)
+![](img/image3-20.jpg){fig-align="left" width="556"}
 :::
 :::
 
