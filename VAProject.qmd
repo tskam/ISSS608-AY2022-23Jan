@@ -15,7 +15,13 @@ A project may involve developing new methods or implementing visual analytics sy
 
 ## Project Topic
 
-To be confirmed!
+The followings are possible topic and data sources:
+
+- [Landslide Prevention and Innovation Challenge](https://zindi.africa/competitions/landslide-prevention-and-innovation-challenge)
+- [Data Science Nigeria Challenge #1: Loan Default Prediction](https://zindi.africa/competitions/data-science-nigeria-challenge-1-loan-default-prediction)
+- [Fraud Detection in Electricity and Gas Consumption Challenge](https://zindi.africa/competitions/ai-hack-tunisia-4-predictive-analytics-challenge-1)
+-	[AgriFieldNet India Challenge](https://zindi.africa/competitions/agrifieldnet-india-challenge)
+ 
 
 ## Project Management
 

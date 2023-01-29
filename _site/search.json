@@ -1663,7 +1663,7 @@
     "href": "VAProject.html#project-topic",
     "title": "Visual Analytics Project",
     "section": "Project Topic",
-    "text": "Project Topic\nTo be confirmed!"
+    "text": "Project Topic\nThe followings are possible topic and data sources:\n\nLandslide Prevention and Innovation Challenge\nData Science Nigeria Challenge #1: Loan Default Prediction\nFraud Detection in Electricity and Gas Consumption Challenge\nAgriFieldNet India Challenge"
   },
   {
     "objectID": "VAProject.html#project-management",
@@ -1866,14 +1866,14 @@
     "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#building-block-of-visual-analytics",
     "title": "Lesson 3: Interactivity in Visual Analytics",
     "section": "Building Block of Visual Analytics",
-    "text": "Building Block of Visual Analytics"
+    "text": "Building Block of Visual Analytics\n\n\n\nRevisiting Visual Analytics Framework"
   },
   {
     "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#taxonomy-of-interactive-dynamics",
     "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#taxonomy-of-interactive-dynamics",
     "title": "Lesson 3: Interactivity in Visual Analytics",
     "section": "Taxonomy of Interactive Dynamics",
-    "text": "Taxonomy of Interactive Dynamics\n\n\nSource: Heer, J. & Shneiderman, B. (2012) “Interactive Dynamics for Visual Analytics” ACM Queue, Vol. 55, No. 4, pp 45-54."
+    "text": "Taxonomy of Interactive Dynamics\n\n\nSource: Heer, J. & Shneiderman, B. (2012) “Interactive Dynamics for Visual Analytics” ACM Queue, Vol. 55, No. 4, pp 45-54.\n\n\n\nData & view specification\n\nVisualise data by choosing visual encodings.\nPolaris of Tableau\n\n\n\n\n\nData & view specification\n\nFilter out data to focus on relevant items.\n\n\n\n\n\nData & view specification\n\nSlicer is an axis-parallel selection tool, which selects a range along an axis, where the end-point of the interval can be modified dynamically.\n\n\n\nSource: crossfilter\n\n\n\n\nData & view specification\n\nSort items to expose patterns.\n\n\n\n\n\nData & view specification\n\nHierarchical sorting\n\n\n\n\n\n\n\n\n\nData & view specification\n\nDerive values or models from source data.\n\n\n\n\n\nView Manipulation: Selection functions\n\nPointer selects a single object in a plot.\n\n\n\n\n\nView Manipulation: Selection functions\n\nDrag-box selects a rectangular region in a box.\n\n\n\n\n\n\n\n\n\nView Manipulation: Selection functions\n\n\n\nBrush is a generalisation of the drag-box. Once a rectangular region is define, the brush allows users to move that region across a plot and thus dynamically change the selected subset.\n\n\n\n\n\n\n\n\nView Manipulation: Selection functions\n\nLasso allows users to define an arbitrary contiguous shape to select data.\n\n\n\n\n\nView Manipulation: Selection modes\n\n\nReference: Mondrian\n\n\n\n\nView Manipulation: Highlighting\n\nSelected records are highlighted.\n\n\n\n\n\nView Manipulation\n\nNavigate to examine high-level patterns and low-level detail.\nShneiderman’s mantra\n\n\n\n\n\nView Manipulation\n\nThe scatter plot provides an overview and the bar and line graphs provide detail sales and profits trends overtime.\n\n\n\n\n\nView Manipulation\n\nCoordinate views for linked, multi-dimensional exploration\n\nScatterplot with marginal boxplot\n\n\n\n\n\n\n\n\nView Manipulation\n\n\n\nOrganise multiple windows and workspaces.\n\n\n\n\n\n\n\n\nSource: VAST Challenge 2017 MC1 by Yifi\n\n\n\n\n\n\nView Manipulation: Rotating\n\n\n\nTouring view with JMP’s 3D scatterplot"
   },
   {
     "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#view-manipulation",
@@ -1943,7 +1943,7 @@
     "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive-1",
     "title": "Lesson 3: Interactivity in Visual Analytics",
     "section": "Interactive Design Primitive",
-    "text": "Interactive Design Primitive\n\n\nVisual Analytics Objective Primitives\n\n\nInteractive Analytics Operator Primitives"
+    "text": "Interactive Design Primitive\n\n\n\nVisual Analytics Objective Primitives\n\n\n\n\nInteractive Analytics Operator Primitives"
   },
   {
     "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#interactive-design-primitive-2",
@@ -1957,7 +1957,7 @@
     "href": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#animation-in-visual-analytics",
     "title": "Lesson 3: Interactivity in Visual Analytics",
     "section": "Animation in Visual Analytics",
-    "text": "Animation in Visual Analytics\n\n\n\nThe purpose of animation is to facilitate perception of changes when transitioning between related data graphics\nDo not confine to time-series data only\n\n\n\n\nSource: How Many Households"
+    "text": "Animation in Visual Analytics\n\n\n\nThe purpose of animation is to facilitate perception of changes when transitioning between related data graphics\nDo not confine to time-series data only\n\n\n\n\nSource: How Many Households\n\n\n\n\n\nWhy using Animation in Visual Analytics\n\n\nMotion is highly effective at attracting attention.\nAnimation facilitates object constancy for changing objects.\nAnimated behaviours can give rise to perceptions of causality and intentionality, communicating cause-and-effect relationships and establishing narrative.\nAnimation can be emotionally engaging, engendering increased interest or enjoyment.\n\n\n\n\n\nPrinciples of Animation\n\n\n\nCongruence principle states that the structure and content of the external representation should correspond to the desired and content of the internal representation.\nMaintain valid data graphics during transitions\nUse consistent semantic-syntactic mappings\nRespect semantic correspondence\nAvoid ambiguity\n\n\n\nApprehension principle states that the structure and content of the external representation should be readily and accurately perceived and comprehended.\nGroup similar transitions\nMinimise occlusion\nMaximise predictability\nUse simple transitions\nUse staging for complex transitions\nMake transitions as long as needed, but no longer\n\n\nSource: Heer, J and Robertson G. (2007) Animated Transitions in Statistical data Graphics, IEEE Transactions on Visualization and Computer Graphics, Vol. 13, No. 6, 1240-1247 and the video.\n\n\n\n\n\nAnimation in Action\n\n\n\n\nStacked-to-Grouped Bars\n\n\nSource: Stacked to Grouped Bars\n\n\n\n\nAnimated Co-occurrence matrix\n\n\nSource: Miserables"
   },
   {
     "objectID": "lesson/Lesson03/Lesson03-Interactivity in Visual Analytics.html#references",
