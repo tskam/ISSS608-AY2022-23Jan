@@ -23,11 +23,11 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.html) and [pdf](../lesson/Lesson04/Lesson04-Fundamentals of Visual Analytics.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson04/Lesson04-Fundamentals%20of%20Visual%20Analytics.html) and [pdf](../lesson/Lesson04/Lesson04-Fundamentals%20of%20Visual%20Analytics.pdf) formats
 
 -   Handout of Hands-on Exercise 4
 
-    -   [Hands-on Exercise 4](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04.html).
+    -   [Hands-on Exercise 4: Visual Statistical Analysis](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-Visual Statistical Analysis.html)
     -   [Hands-on Exercise 4: Building Funnel Plot with R](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-FunnelPlot.html)
 
 ## Readings on Visualising Uncertainty

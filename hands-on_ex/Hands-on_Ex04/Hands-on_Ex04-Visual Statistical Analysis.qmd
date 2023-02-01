@@ -1,9 +1,11 @@
 ---
-title: "Lesson 4: Visual Statistical Analysis"
+title: "Hands-on Exercise 4: Visual Statistical Analysis"
 author: "Dr. Kam Tin Seong"
 format: html
-date: "`r Sys.Date()`"
-execute: 
+date: "12 January 2023"
+date-modified: "`r Sys.Date()`"
+execute:
+  echo: true
   eval: true
   warning: false
 editor: visual
@@ -87,7 +89,7 @@ Default information: - statistical details - Bayes Factor - sample sizes - distr
 
 A **Bayes Factor** can be any positive number. One of the most common interpretations is this one---first proposed by Harold Jeffereys (1961) and slightly modified by [Lee and Wagenmakers](https://www-tandfonline-com.libproxy.smu.edu.sg/doi/pdf/10.1080/00031305.1999.10474443?needAccess=true) in 2013:
 
-![](img/image6.jpg)
+![](img/image6.jpg){width="480"}
 
 ### Two-sample mean test: *ggbetweenstats()*
 
@@ -180,7 +182,7 @@ In this section, you will learn how to visualise model diagnostic and model para
 
 ## Installing and loading the required libraries
 
-::: {.callout-note}
+::: callout-note
 ### Do-It-Yourself
 
 ```{r}
