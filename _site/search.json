@@ -949,7 +949,7 @@
     "href": "outline/Lesson04_outline.html#lesson-slides-and-hands-on-notes",
     "title": "Lesson 4: Fundamentals of Visual Analytics",
     "section": "Lesson Slides and Hands-on Notes",
-    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 4\n\nHands-on Exercise 4: Visual Statistical Analysis\nHands-on Exercise 4: Building Funnel Plot with R"
+    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 4\n\nHands-on Exercise 4: Visual Statistical Analysis\nHands-on Exercise 4: Visualising Uncertainty"
   },
   {
     "objectID": "outline/Lesson04_outline.html#readings-on-visualising-uncertainty",
@@ -2140,5 +2140,40 @@
     "title": "Lesson 4: Fundamentals of Visual Analytics",
     "section": "",
     "text": "Visual Analytics for Knowledge Discovery\nVisual Analytics Approach for Statistical Testing\nVisual Analytics for Building Better Models\nVisualising Uncertainty\nVariation and Its Discontents\n\n\n\nIn this lesson, I am going to share with you how visual analytics approach can be used to complement conventional statistical testing and model building. Then, We will examine methods for visualising uncertainty. Lastly, I will introduce you to funnel plot, a visual method specially designed to provide a fare comparison among entities in a group."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html",
+    "href": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html",
+    "title": "Hands-on Exercise 4: Visualising Uncertainty",
+    "section": "",
+    "text": "In this hands-on exercise"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualizing-the-uncertainty-of-point-estimates",
+    "href": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualizing-the-uncertainty-of-point-estimates",
+    "title": "Hands-on Exercise 4: Visualising Uncertainty",
+    "section": "Visualizing the uncertainty of point estimates",
+    "text": "Visualizing the uncertainty of point estimates\n\nA point estimate is a single number, such as a mean.\nUncertainty is expressed as standard error, confidence interval, or credible interval\nImportant:\n\nDon’t confuse the uncertainty of a point estimate with the variation in the sample\n\n\n\npacman::p_load(tidyverse, plotly, crosstalk, DT, ggdist, gganimate)\n\n\nexam <- read_csv(\"data/Exam_data.csv\")\n\n\nVisualizing the uncertainty of point estimates: ggplot2 methods\nThe code chunk below performs the followings:\n\ngroup the observation by RACE,\ncomputes the count of observations, mean, standard deviation and standard error of Maths by RACE, and\nsave the output as a tibble data table called my_sum.\n\n\nmy_sum <- exam %>%\n  group_by(RACE) %>%\n  summarise(\n    n=n(),\n    mean=mean(MATHS),\n    sd=sd(MATHS)\n    ) %>%\n  mutate(se=sd/sqrt(n-1))\n\nNote: For the mathematical explanation, please refer to Slide 20 of Lesson 4.\nNext, the code chunk below will\n\nknitr::kable(head(my_sum), format = 'html')\n\n\n\n \n  \n    RACE \n    n \n    mean \n    sd \n    se \n  \n \n\n  \n    Chinese \n    193 \n    76.50777 \n    15.69040 \n    1.132357 \n  \n  \n    Indian \n    12 \n    60.66667 \n    23.35237 \n    7.041005 \n  \n  \n    Malay \n    108 \n    57.44444 \n    21.13478 \n    2.043177 \n  \n  \n    Others \n    9 \n    69.66667 \n    10.72381 \n    3.791438 \n  \n\n\n\n\n\n\n\nVisualizing the uncertainty of point estimates: ggplot2 methods\nThe code chunk below is used to reveal the standard error of mean maths score by race.\n\nggplot(my_sum) +\n  geom_errorbar(\n    aes(x=RACE, \n        ymin=mean-se, \n        ymax=mean+se), \n    width=0.2, \n    colour=\"black\", \n    alpha=0.9, \n    size=0.5) +\n  geom_point(aes\n           (x=RACE, \n            y=mean), \n           stat=\"identity\", \n           color=\"red\",\n           size = 1.5,\n           alpha=1) +\n  ggtitle(\"Standard error of mean \n          maths score by rac\")\n\n\n\n\n\n\nVisualizing the uncertainty of point estimates: ggplot2 methods\n\n\n\n\n\n\nYour turn\n\n\n\nPlot the 95% confidence interval of mean maths score by race. The error bars should be sorted by the average maths scores.\n\n\n\n\n\n\n\n\n\nVisualizing the uncertainty of point estimates with interactive error bars\n\n\n\n\n\n\nYour turn\n\n\n\nPlot interactive error bars for the 99% confidence interval of mean maths score by race."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualising-uncertainty-ggdist-package",
+    "href": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualising-uncertainty-ggdist-package",
+    "title": "Hands-on Exercise 4: Visualising Uncertainty",
+    "section": "Visualising Uncertainty: ggdist package",
+    "text": "Visualising Uncertainty: ggdist package\n\nggdist is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualising distributions and uncertainty.\nIt is designed for both frequentist and Bayesian uncertainty visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization:\n\nfor frequentist models, one visualises confidence distributions or bootstrap distributions (see vignette(“freq-uncertainty-vis”));\nfor Bayesian models, one visualises probability distributions (see the tidybayes package, which builds on top of ggdist).\n\n\n\n\nVisualizing the uncertainty of point estimates: ggdist methods\nIn the code chunk below, stat_pointinterval() of ggdist is used to build a visual for displaying distribution of maths scores by race.\n\nexam %>%\n  ggplot(aes(x = RACE, \n             y = MATHS)) +\n  stat_pointinterval() +   #<<\n  labs(\n    title = \"Visualising confidence intervals of mean math score\",\n    subtitle = \"Mean Point + Multiple-interval plot\")\n\n\n\n\nGentle advice: This function comes with many arguments, students are advised to read the syntax reference for more detail.\n\nexam %>%\n  ggplot(aes(x = RACE, y = MATHS)) +\n  stat_pointinterval(.width = 0.95,\n  .point = median,\n  .interval = qi) +\n  labs(\n    title = \"Visualising confidence intervals of mean math score\",\n    subtitle = \"Mean Point + Multiple-interval plot\")\n\n\n\n\n\n\nVisualizing the uncertainty of point estimates: ggdist methods\n\n\n\n\n\n\nYour turn\n\n\n\nMakeover the plot on previous slide by showing 95% and 99% confidence intervals.\n\n\n\nexam %>%\n  ggplot(aes(x = RACE, \n             y = MATHS)) +\n  stat_pointinterval(\n    show.legend = FALSE) +   \n  labs(\n    title = \"Visualising confidence intervals of mean math score\",\n    subtitle = \"Mean Point + Multiple-interval plot\")\n\n\n\n\nGentle advice: This function comes with many arguments, students are advised to read the syntax reference for more detail.\n\n\nVisualizing the uncertainty of point estimates: ggdist methods\nIn the code chunk below, stat_gradientinterval() of ggdist is used to build a visual for displaying distribution of maths scores by race.\n\nexam %>%\n  ggplot(aes(x = RACE, \n             y = MATHS)) +\n  stat_gradientinterval(   \n    fill = \"skyblue\",      \n    show.legend = TRUE     \n  ) +                        \n  labs(\n    title = \"Visualising confidence intervals of mean math score\",\n    subtitle = \"Gradient + interval plot\")\n\n\n\n\nGentle advice: This function comes with many arguments, students are advised to read the syntax reference for more detail."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualising-uncertainty-with-hypothetical-outcome-plots-hops",
+    "href": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualising-uncertainty-with-hypothetical-outcome-plots-hops",
+    "title": "Hands-on Exercise 4: Visualising Uncertainty",
+    "section": "Visualising Uncertainty with Hypothetical Outcome Plots (HOPs)",
+    "text": "Visualising Uncertainty with Hypothetical Outcome Plots (HOPs)\nStep 1: Installing ungeviz package\n\ndevtools::install_github(\"wilkelab/ungeviz\")\n\nNote: You only need to perform this step once.\nStep 2: Launch the application in R\n\nlibrary(ungeviz)\n\n\nggplot(data = exam, \n       (aes(x = factor(RACE), y = MATHS))) +\n  geom_point(position = position_jitter(\n    height = 0.3, width = 0.05), \n    size = 0.4, color = \"#0072B2\", alpha = 1/2) +\n  geom_hpline(data = sampler(25, group = RACE), height = 0.6, color = \"#D55E00\") +\n  theme_bw() + \n  # `.draw` is a generated column indicating the sample draw\n  transition_states(.draw, 1, 3)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualising-uncertainty-with-hypothetical-outcome-plots-hops-1",
+    "href": "hands-on_ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html#visualising-uncertainty-with-hypothetical-outcome-plots-hops-1",
+    "title": "Hands-on Exercise 4: Visualising Uncertainty",
+    "section": "Visualising Uncertainty with Hypothetical Outcome Plots (HOPs)",
+    "text": "Visualising Uncertainty with Hypothetical Outcome Plots (HOPs)\n\nggplot(data = exam, \n       (aes(x = factor(RACE), \n            y = MATHS))) +\n  geom_point(position = position_jitter(\n    height = 0.3, \n    width = 0.05), \n    size = 0.4, \n    color = \"#0072B2\", \n    alpha = 1/2) +\n  geom_hpline(data = sampler(25, \n                             group = RACE), \n              height = 0.6, \n              color = \"#D55E00\") +\n  theme_bw() + \n  transition_states(.draw, 1, 3)"
   }
 ]

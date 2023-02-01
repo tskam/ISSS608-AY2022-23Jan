@@ -2,8 +2,10 @@
 title: "Hands-on Exercise 4: Visualising Uncertainty"
 author: "Dr. Kam Tin Seong"
 format: html
-date: "`r Sys.Date()`"
-execute: 
+date: "12 January 2023"
+date-modified: "`r Sys.Date()`"
+execute:
+  echo: true
   eval: true
   warning: false
 editor: visual
@@ -15,10 +17,10 @@ In this hands-on exercise
 
 ## Visualizing the uncertainty of point estimates
 
-- A point estimate is a single number, such as a mean.
-- Uncertainty is expressed as standard error, confidence interval, or credible interval
-- Important:
-    - Don't confuse the uncertainty of a point estimate with the variation in the sample
+-   A point estimate is a single number, such as a mean.
+-   Uncertainty is expressed as standard error, confidence interval, or credible interval
+-   Important:
+    -   Don't confuse the uncertainty of a point estimate with the variation in the sample
 
 ```{r}
 pacman::p_load(tidyverse, plotly, crosstalk, DT, ggdist, gganimate)
@@ -32,9 +34,9 @@ exam <- read_csv("data/Exam_data.csv")
 
 The code chunk below performs the followings:
 
-- group the observation by RACE, 
-- computes the count of observations, mean, standard deviation and standard error of Maths by RACE, and
-- save the output as a tibble data table called `my_sum`.
+-   group the observation by RACE,
+-   computes the count of observations, mean, standard deviation and standard error of Maths by RACE, and
+-   save the output as a tibble data table called `my_sum`.
 
 ```{r}
 my_sum <- exam %>%
@@ -47,9 +49,9 @@ my_sum <- exam %>%
   mutate(se=sd/sqrt(n-1))
 ```
 
-Note: For the mathematical explanation, please refer to Slide 20 of Lesson 4. 
+Note: For the mathematical explanation, please refer to Slide 20 of Lesson 4.
 
-Next, the code chunk below will 
+Next, the code chunk below will
 
 ```{r}
 knitr::kable(head(my_sum), format = 'html')
@@ -83,9 +85,10 @@ ggplot(my_sum) +
 
 ### Visualizing the uncertainty of point estimates: **ggplot2** methods
 
-::: {.callout-note}
-### Your turn 
-Plot the 95% confidence interval of mean maths score by race.  The error bars should be sorted by the average maths scores. 
+::: callout-note
+### Your turn
+
+Plot the 95% confidence interval of mean maths score by race. The error bars should be sorted by the average maths scores.
 :::
 
 ```{r}
@@ -109,11 +112,11 @@ ggplot(my_sum) +
   ggtitle("95% confidence interval of mean maths score by race")
 ```
 
-
 ### Visualizing the uncertainty of point estimates with interactive error bars
 
-::: {.callout-note}
+::: callout-note
 ### Your turn
+
 Plot interactive error bars for the 99% confidence interval of mean maths score by race.
 :::
 
@@ -129,13 +132,14 @@ ggplotly((ggplot(shared_df) +
   formatRound(columns=c('mean', 'sd', 'se'), digits=2) 
 )
 
-```  
+```
 
-## Visualising Uncertainty: **ggdist** package 
-- [**ggdist**](https://mjskay.github.io/ggdist/index.html) is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualising distributions and uncertainty. 
-- It is designed for both frequentist and Bayesian uncertainty visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization: 
-    - for frequentist models, one visualises confidence distributions or bootstrap distributions (see vignette("freq-uncertainty-vis")); 
-    - for Bayesian models, one visualises probability distributions (see the tidybayes package, which builds on top of ggdist).
+## Visualising Uncertainty: **ggdist** package
+
+-   [**ggdist**](https://mjskay.github.io/ggdist/index.html) is an R package that provides a flexible set of ggplot2 geoms and stats designed especially for visualising distributions and uncertainty.
+-   It is designed for both frequentist and Bayesian uncertainty visualization, taking the view that uncertainty visualization can be unified through the perspective of distribution visualization:
+    -   for frequentist models, one visualises confidence distributions or bootstrap distributions (see vignette("freq-uncertainty-vis"));
+    -   for Bayesian models, one visualises probability distributions (see the tidybayes package, which builds on top of ggdist).
 
 ![](img/ggdist.png)
 
@@ -168,9 +172,10 @@ exam %>%
 
 ### Visualizing the uncertainty of point estimates: **ggdist** methods
 
-::: {.callout-note}
-### Your turn 
-Makeover the plot on previous slide by showing 95% and 99% confidence intervals. 
+::: callout-note
+### Your turn
+
+Makeover the plot on previous slide by showing 95% and 99% confidence intervals.
 :::
 
 ```{r}
@@ -253,6 +258,3 @@ ggplot(data = exam,
   theme_bw() + 
   transition_states(.draw, 1, 3)
 ```
-
-
-

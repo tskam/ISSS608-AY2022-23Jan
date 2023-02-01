@@ -27,8 +27,8 @@ editor: visual
 
 -   Handout of Hands-on Exercise 4
 
-    -   [Hands-on Exercise 4: Visual Statistical Analysis](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-Visual Statistical Analysis.html)
-    -   [Hands-on Exercise 4: Building Funnel Plot with R](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-FunnelPlot.html)
+    -   [Hands-on Exercise 4: Visual Statistical Analysis](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-Visual%20Statistical%20Analysis.html)
+    -   [Hands-on Exercise 4: Visualising Uncertainty](../Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04-Visual_Uncertainty.html)
 
 ## Readings on Visualising Uncertainty
 
