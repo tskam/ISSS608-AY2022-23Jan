@@ -2,35 +2,40 @@
 title: "Hands-on Exercise 4: Building Funnel Plot with R"
 author: "Dr. Kam Tin Seong"
 format: html
-date: "`r Sys.Date()`"
+date: "12 January 2023"
+date-modified: "`r Sys.Date()`"
+execute:
+  echo: true
+  eval: true
+  warning: false
 editor: visual
 ---
 
 ## Overview
 
-Funnel plot is a specially designed data visualisation for conducting unbiased comparison between outlets, stores or business entities.  By the end of this hands-on exercise, you will gain hands-on experience on:
+Funnel plot is a specially designed data visualisation for conducting unbiased comparison between outlets, stores or business entities. By the end of this hands-on exercise, you will gain hands-on experience on:
 
-- plotting funnel plots by using **funnelPlotR** package, 
-- plotting static funnel plot by using ggplot2 package, and 
-- plotting interactive funnel plot by using both **plotly R** and **ggplot2** packages.  
+-   plotting funnel plots by using **funnelPlotR** package,
+-   plotting static funnel plot by using ggplot2 package, and
+-   plotting interactive funnel plot by using both **plotly R** and **ggplot2** packages.
 
 ## Installing and Launching R Packages
 
-In this exercise, four R packages will be used.  They are:
+In this exercise, four R packages will be used. They are:
 
-- **readr** for importing csv into R.
-- **FunnelPlotR** for creating funnel plot.
-- **ggplot2** for creating funnel plot manually.
-- **knitr** for building static html table.
-- **plotly** for creating interactive funnel plot.
+-   **readr** for importing csv into R.
+-   **FunnelPlotR** for creating funnel plot.
+-   **ggplot2** for creating funnel plot manually.
+-   **knitr** for building static html table.
+-   **plotly** for creating interactive funnel plot.
 
 ```{r}
 pacman::p_load(tidyverse, FunnelPlotR, plotly, knitr)
 ```
 
-## Importing Data 
+## Importing Data
 
-In this section, COVID-19_DKI_Jakarta will be used.  The data was downloaded from [Open Data Covid-19 Provinsi DKI Jakarta portal](https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/).  For this hands-on exercise, we are going to compare the cumulative COVID-19 cases and death by sub-district (i.e. kelurahan) as at 31st July 2021, DKI Jakarta.  
+In this section, COVID-19_DKI_Jakarta will be used. The data was downloaded from [Open Data Covid-19 Provinsi DKI Jakarta portal](https://riwayat-file-covid-19-dki-jakarta-jakartagis.hub.arcgis.com/). For this hands-on exercise, we are going to compare the cumulative COVID-19 cases and death by sub-district (i.e. kelurahan) as at 31st July 2021, DKI Jakarta.
 
 The code chunk below imports the data into R and save it into a tibble data frame object called *covid19*.
 
@@ -47,16 +52,16 @@ kable(head(covid19))
 
 [**FunnelPlotR**](https://nhs-r-community.github.io/FunnelPlotR/) package uses ggplot to generate funnel plots. It requires a `numerator` (events of interest), `denominator` (population to be considered) and `group`. The key arguments selected for customisation are:
 
-- `limit`: plot limits (95 or 99).
-- `label_outliers`: to label outliers (true or false).
-- `Poisson_limits`: to add Poisson limits to the plot.
-- `OD_adjust`: to add overdispersed limits to the plot.
-- `xrange` and `yrange`: to specify the range to display for axes, acts like a zoom function.
-- Other aesthetic components such as graph title, axis labels etc.
+-   `limit`: plot limits (95 or 99).
+-   `label_outliers`: to label outliers (true or false).
+-   `Poisson_limits`: to add Poisson limits to the plot.
+-   `OD_adjust`: to add overdispersed limits to the plot.
+-   `xrange` and `yrange`: to specify the range to display for axes, acts like a zoom function.
+-   Other aesthetic components such as graph title, axis labels etc.
 
 ### FunnelPlotR methods: The basic plot
 
-The code chunk below plots a funnel plot. 
+The code chunk below plots a funnel plot.
 
 ```{r}
 funnel_plot(
@@ -68,13 +73,13 @@ funnel_plot(
 
 Things to learn from the code chunk above.
 
-+ `group` in this function is different from the scatterplot. Here, it defines the level of the points to be plotted i.e. Sub-district, District or City. If Cityc is chosen, there are only six data points.
-+ By default, `data_type`argument is "SR".
-+ `limit`: Plot limits, accepted values are: 95 or 99, corresponding to 95% or 99.8% quantiles of the distribution. 
+-   `group` in this function is different from the scatterplot. Here, it defines the level of the points to be plotted i.e. Sub-district, District or City. If Cityc is chosen, there are only six data points.
+-   By default, `data_type`argument is "SR".
+-   `limit`: Plot limits, accepted values are: 95 or 99, corresponding to 95% or 99.8% quantiles of the distribution.
 
 ### FunnelPlotR methods: Makeover 1
 
-The code chunk below plots a funnel plot. 
+The code chunk below plots a funnel plot.
 
 ```{r}
 funnel_plot(
@@ -87,13 +92,11 @@ funnel_plot(
 )
 ```
 
-Things to learn from the code chunk above.
-+ `data_type` argument is used to change from default "SR" to "PR" (i.e. proportions).
-+ `xrange` and `yrange` are used to set the range of x-axis and y-axis 
+Things to learn from the code chunk above. + `data_type` argument is used to change from default "SR" to "PR" (i.e. proportions). + `xrange` and `yrange` are used to set the range of x-axis and y-axis
 
 ### FunnelPlotR methods: Makeover 2
 
-The code chunk below plots a funnel plot. 
+The code chunk below plots a funnel plot.
 
 ```{r}
 funnel_plot(
@@ -112,13 +115,13 @@ funnel_plot(
 
 Things to learn from the code chunk above.
 
-- `label = NA` argument is to removed the default label outliers feature.
-- `title` argument is used to add plot title.
-- `x_label` and `y_label` arguments are used to add/edit x-axis and y-axis titles.
+-   `label = NA` argument is to removed the default label outliers feature.
+-   `title` argument is used to add plot title.
+-   `x_label` and `y_label` arguments are used to add/edit x-axis and y-axis titles.
 
 ## Funnel Plot for Fair Visual Comparison: ggplot2 methods
 
-In this section, you will gain hands-on experience on building funnel plots step-by-step by using ggplot2.  It aims to enhance you working experience of ggplot2 to customise speciallised data visualisation like funnel plot.   
+In this section, you will gain hands-on experience on building funnel plots step-by-step by using ggplot2. It aims to enhance you working experience of ggplot2 to customise speciallised data visualisation like funnel plot.
 
 ### Computing the basic derived fields
 
@@ -204,7 +207,6 @@ p
 
 The funnel plot created using ggplot2 functions can be made interactive with `ggplotly()` of **plotly** r package.
 
-
 ```{r}
 fp_ggplotly <- ggplotly(p,
   tooltip = c("label", 
@@ -215,11 +217,10 @@ fp_ggplotly
 
 ## References
 
-- [funnelPlotR](https://nhs-r-community.github.io/FunnelPlotR/index.html) package.
+-   [funnelPlotR](https://nhs-r-community.github.io/FunnelPlotR/index.html) package.
 
-- [Funnel Plots for Indirectly-standardised ratios](https://nhs-r-community.github.io/FunnelPlotR/articles/funnel_plots.html).
+-   [Funnel Plots for Indirectly-standardised ratios](https://nhs-r-community.github.io/FunnelPlotR/articles/funnel_plots.html).
 
-- [Changing funnel plot options](https://nhs-r-community.github.io/FunnelPlotR/articles/changing_funnel_plot_options.html)
+-   [Changing funnel plot options](https://nhs-r-community.github.io/FunnelPlotR/articles/changing_funnel_plot_options.html)
 
-- [ggplot2](https://ggplot2.tidyverse.org/) package.
-
+-   [ggplot2](https://ggplot2.tidyverse.org/) package.
