@@ -1,0 +1,51 @@
+---
+title: "Take-home Exercise 3"
+description: "Putting Visual Analytics into Practical Use"
+date: "4 February 2023"
+format: html
+editor: visual
+---
+
+## The Task
+
+In this take-home exercise, you are required to uncover the salient patterns of the resale prices of public housing property by residential towns and estates in Singapore by using appropriate analytical visualisation techniques learned in **Lesson 4: Fundamentals of Visual Analytics**.  Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences. 
+
+For the purpose of this study, the focus should be on **3-ROOM, 4-ROOM and 5-ROOM types**.  You can choose to focus on either one housing type or multiple housing types.  The study period should be on **2022**. 
+
+## The Data
+
+*Resale flat princes based on registration date from Jan-2017 onwards* should be used to prepare the analytical visualisation. It is available at [Data.gov.sg](https://data.gov.sg/).
+
+ 
+## The Designing Tool
+
+For the purpose of this take-home exercise, ggplot2 and its extension should be used to design the analytical visualisation.  tidyverse family of packages should be used to prepare the data.
+
+## The Write-up
+
+The write-up of the take-home exercise should include but not limited to the followings:
+
+-   Describe the selection and designed consideration of the analytical data visualisation used.  The discussion should limit to not more than 150 words each.    
+
+-   A reproducible description of the procedures used to prepare the analytical visualisation. Please refer to the peer submission I shared.
+
+-   A write-up of not more than 100 words to discuss the patterns reveal by each analytical visualisation prepared.
+
+## Submission Instructions
+
+This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.
+
+The specific submission instructions are as follows:
+
+-   The analytical visualisation must be prepared by using **R and appropriate R packages**.
+-   The write-up of the take-home exercise must be in **Quarto html document** format. You are required to publish the write-up on [**Netlify**](https://www.netlify.com/).
+-   Provide the links to the Take-home Exercise write-up and github repository onto eLearn (i.e. Take-home Exercise section)
+
+## Submission date
+
+The completed take-home exercise is due on **15th February 2023, by 11:59pm evening**.
+
+## Peer Learning
+
+
+

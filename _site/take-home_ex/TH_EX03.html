@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-02-04">
+<meta name="description" content="Putting Visual Analytics into Practical Use">
+
+<title>ISSS608 - Take-home Exercise 3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ISSS608</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lesson.html">
+ <span class="menu-text">Lesson Plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../DataViz.html">
+ <span class="menu-text">DataViz Makeover</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-take-home-exercise" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Take-home Exercise</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-take-home-exercise">    
+        <li>
+    <a class="dropdown-item" href="../take-home_ex/TH_EX01.html">
+ <span class="dropdown-text">Take-home Exercise 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../take-home_ex/TH_EX02.html">
+ <span class="dropdown-text">Take-home Exercise 2</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../VAproject.html">
+ <span class="menu-text">Visual Analytics Project</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-shiny-workshop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Shiny Workshop</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-shiny-workshop">    
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny1/Shiny1.html">
+ <span class="dropdown-text">R Shiny basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny2/Shiny0.html">
+ <span class="dropdown-text">Beyond the basic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyWorkshop/Shiny3/Shiny0.html">
+ <span class="dropdown-text">Customising Shiny</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ShinyResources.html">
+ <span class="dropdown-text">Shiny Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../Tableau.html">
+ <span class="menu-text">Tableau Resources</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-about-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All About R</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-all-about-r">    
+        <li>
+    <a class="dropdown-item" href="../R.html">
+ <span class="dropdown-text">R Resouces</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../R4Vis.html">
+ <span class="dropdown-text">R for Visual Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Rt.html">
+ <span class="dropdown-text">R tips &amp; tricks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Quarto.html">
+ <span class="dropdown-text">Quarto</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../git.html">
+ <span class="dropdown-text">git and github</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-task" id="toc-the-task" class="nav-link active" data-scroll-target="#the-task">The Task</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
+  <li><a href="#the-designing-tool" id="toc-the-designing-tool" class="nav-link" data-scroll-target="#the-designing-tool">The Designing Tool</a></li>
+  <li><a href="#the-write-up" id="toc-the-write-up" class="nav-link" data-scroll-target="#the-write-up">The Write-up</a></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
+  <li><a href="#submission-date" id="toc-submission-date" class="nav-link" data-scroll-target="#submission-date">Submission date</a></li>
+  <li><a href="#peer-learning" id="toc-peer-learning" class="nav-link" data-scroll-target="#peer-learning">Peer Learning</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Take-home Exercise 3</h1>
+</div>
+
+<div>
+  <div class="description">
+    Putting Visual Analytics into Practical Use
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 4, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="the-task" class="level2">
+<h2 class="anchored" data-anchor-id="the-task">The Task</h2>
+<p>In this take-home exercise, you are required to uncover the salient patterns of the resale prices of public housing property by residential towns and estates in Singapore by using appropriate analytical visualisation techniques learned in <strong>Lesson 4: Fundamentals of Visual Analytics</strong>. Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences.</p>
+<p>For the purpose of this study, the focus should be on <strong>3-ROOM, 4-ROOM and 5-ROOM types</strong>. You can choose to focus on either one housing type or multiple housing types. The study period should be on <strong>2022</strong>.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p><em>Resale flat princes based on registration date from Jan-2017 onwards</em> should be used to prepare the analytical visualisation. It is available at <a href="https://data.gov.sg/">Data.gov.sg</a>.</p>
+</section>
+<section id="the-designing-tool" class="level2">
+<h2 class="anchored" data-anchor-id="the-designing-tool">The Designing Tool</h2>
+<p>For the purpose of this take-home exercise, ggplot2 and its extension should be used to design the analytical visualisation. tidyverse family of packages should be used to prepare the data.</p>
+</section>
+<section id="the-write-up" class="level2">
+<h2 class="anchored" data-anchor-id="the-write-up">The Write-up</h2>
+<p>The write-up of the take-home exercise should include but not limited to the followings:</p>
+<ul>
+<li><p>Describe the selection and designed consideration of the analytical data visualisation used. The discussion should limit to not more than 150 words each.</p></li>
+<li><p>A reproducible description of the procedures used to prepare the analytical visualisation. Please refer to the peer submission I shared.</p></li>
+<li><p>A write-up of not more than 100 words to discuss the patterns reveal by each analytical visualisation prepared.</p></li>
+</ul>
+</section>
+<section id="submission-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="submission-instructions">Submission Instructions</h2>
+<p>This is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.</p>
+<p>The specific submission instructions are as follows:</p>
+<ul>
+<li>The analytical visualisation must be prepared by using <strong>R and appropriate R packages</strong>.</li>
+<li>The write-up of the take-home exercise must be in <strong>Quarto html document</strong> format. You are required to publish the write-up on <a href="https://www.netlify.com/"><strong>Netlify</strong></a>.</li>
+<li>Provide the links to the Take-home Exercise write-up and github repository onto eLearn (i.e.&nbsp;Take-home Exercise section)</li>
+</ul>
+</section>
+<section id="submission-date" class="level2">
+<h2 class="anchored" data-anchor-id="submission-date">Submission date</h2>
+<p>The completed take-home exercise is due on <strong>15th February 2023, by 11:59pm evening</strong>.</p>
+</section>
+<section id="peer-learning" class="level2">
+<h2 class="anchored" data-anchor-id="peer-learning">Peer Learning</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -2217,5 +2217,124 @@
     "title": "Hands-on Exercise 4: Building Funnel Plot with R",
     "section": "References",
     "text": "References\n\nfunnelPlotR package.\nFunnel Plots for Indirectly-standardised ratios.\nChanging funnel plot options\nggplot2 package."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#content",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#content",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Content",
+    "text": "Content\nWhat will you learn from this lesson?\n\nUnderstand the characteristics of multidimensional data\nVisual analytics techniques and tools for visualising and analysing multidimensional continuous data\nVisual analytics techniques and tools for visualising and analysing multidimensional categorical data\nSensing both categorical and continuous multidimensional data\nMultidimensional data analysis best practices\n\n\nIn this lesson, I am going to share with you a collection of visual multivariate analysis techniques."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#visual-analytics-techniques",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#visual-analytics-techniques",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Visual analytics techniques",
+    "text": "Visual analytics techniques\n\nScatterplot Matrix\nTernary plot\nGlyphs\nParallel coordinates\nHeatmap\n\n\nThere are many Visual Multivariate Analysis technqiues. In this lesson, I am going share with you five popular one. They are:"
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#introducing-multidimensional-data",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#introducing-multidimensional-data",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Introducing Multidimensional Data",
+    "text": "Introducing Multidimensional Data\nWine data set\nThere are 13 variables in this data set. 11 of them are in continuous data type, one in ordinal scale and one in nominal scale.\n\n\n\n\n\n \n  \n    fixed acidity \n    volatile acidity \n    citric acid \n    residual sugar \n    chlorides \n    free sulfur dioxide \n    total sulfur dioxide \n    density \n    pH \n    sulphates \n    alcohol \n    quality \n    type \n  \n \n\n  \n    7.4 \n    0.70 \n    0.00 \n    1.9 \n    0.076 \n    11 \n    34 \n    0.9978 \n    3.51 \n    0.56 \n    9.4 \n    5 \n    red \n  \n  \n    7.8 \n    0.88 \n    0.00 \n    2.6 \n    0.098 \n    25 \n    67 \n    0.9968 \n    3.20 \n    0.68 \n    9.8 \n    5 \n    red \n  \n  \n    7.8 \n    0.76 \n    0.04 \n    2.3 \n    0.092 \n    15 \n    54 \n    0.9970 \n    3.26 \n    0.65 \n    9.8 \n    5 \n    red \n  \n  \n    11.2 \n    0.28 \n    0.56 \n    1.9 \n    0.075 \n    17 \n    60 \n    0.9980 \n    3.16 \n    0.58 \n    9.8 \n    6 \n    red \n  \n  \n    7.4 \n    0.70 \n    0.00 \n    1.9 \n    0.076 \n    11 \n    34 \n    0.9978 \n    3.51 \n    0.56 \n    9.4 \n    5 \n    red \n  \n  \n    7.4 \n    0.66 \n    0.00 \n    1.8 \n    0.075 \n    13 \n    40 \n    0.9978 \n    3.51 \n    0.56 \n    9.4 \n    5 \n    red \n  \n\n\n\n\n\n\n\nSource: UCI Machine Learning Repository\n\n\nTable in this slide shows a typical multivariate data sets. This is the popular wine quality data from UCI Machine Learning Repository. It consists of 13 variables in this data set. The first 11 variables are in continuous data type. The quality and type variables are in ordinal scale and nominal scale respectively."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#scatterplot-matrix",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#scatterplot-matrix",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Scatterplot Matrix",
+    "text": "Scatterplot Matrix\n\n\n\nScatterplot matrix (also known as correlation matrix) is a graphical method used to reveal the relationship between multiple variables pairwisely.\n\n\n\n\n\n\nEach black dot in the scatterplot matrix represents an observation in the data table."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#correlogram",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#correlogram",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Correlogram",
+    "text": "Correlogram\n\n\n\nCorrelogram uses visual geometrics such as ellipse, circle, square, and bars to replace the scatterplot in correlation matrix.\nIt is very useful to reveal pair-relationships between variables in a large correlation matrix.\nIn this plot, correlation coefficients is colored according to the value.\n\n\n\n\n\n\nFor positive correlation, the colour intensity change from light blue to dark blue when the correlation coefficient values increases from 0 to 1. For negative correlation, the colour intensity change from light red to dark red when the correlation coefficient values increase from 0 to -1. Besides colour, the shape and direction of the ellipse also used to map the correlation coefficient. For example, the direction of the ellipses indicate positive or negative correlation and thin ellipses are shown paired variables with strong linear correlation."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#beyond-visualising-variables-pairwisely",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#beyond-visualising-variables-pairwisely",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Beyond Visualising Variables Pairwisely",
+    "text": "Beyond Visualising Variables Pairwisely\nThe data"
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#ternary-plot",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#ternary-plot",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Ternary Plot",
+    "text": "Ternary Plot\n\n\n\nA ternary plot (also known as ternary graph, triangle plot, simplex plot, Gibbs triangle or de Finetti diagram) is a barycentric plot on three variables which sum to a constant, usually in percentage.\nIt graphically depicts the ratios of the three variables as positions in an equilateral triangle."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#visualising-and-analysing-multivariate-data-heatmap-method",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#visualising-and-analysing-multivariate-data-heatmap-method",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Visualising and Analysing Multivariate Data: Heatmap method",
+    "text": "Visualising and Analysing Multivariate Data: Heatmap method\n\n\n\nA heat map (or heatmap) is a graphical representation of data where the individual values contained in a matrix are represented as colors.\n\n\n\n\n\n\n\nWhen applied to a tabular format, heatmaps are useful for cross-examining multivariate data, through placing variables in the columns and observation (or records) in row and colouring the cells within the table.\nHeatmaps are good for showing variance across multiple variables, revealing any patterns, displaying whether any variables are similar to each other, and for detecting if any correlations exist in-between them.\nIt is important to note that when the values are all positive or all negative, a colour scheme with different intensity should be used. On the other hand, if the values are in both positive and negative, then, diverging colour scheme should be used."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#visualising-and-analysing-multivariate-data",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#visualising-and-analysing-multivariate-data",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Visualising and Analysing Multivariate Data",
+    "text": "Visualising and Analysing Multivariate Data\nParallel Coordinates Plot Method\nParallel Coordinates plot or Parallel plot allows to compare the feature of several individual observations on a set of numeric variables.\n\n\nEach vertical bar represents a variable and usually has its own scale. (The units can even be different). Values are then plotted as series of lines connected across each axis. Similar to heatmap, interactivity should be used to complete the data exploration and analysis when using parallel coordinates plot."
+  },
+  {
+    "objectID": "lesson/Lesson05/Lesson05-VMA.html#reference",
+    "href": "lesson/Lesson05/Lesson05-VMA.html#reference",
+    "title": "Lesson 5: Visual Multivariate Analysis",
+    "section": "Reference",
+    "text": "Reference\n\nRadar Chart.\nTernary plot, this and this.\nFriendly, M (2002) “Corrgrams: Exploratory Displays for Correlation Matrices” The American Statistician, Vol. 56, No. 4, pp. 316-324."
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html",
+    "href": "take-home_ex/TH_EX03.html",
+    "title": "Take-home Exercise 3",
+    "section": "",
+    "text": "In this take-home exercise, you are required to uncover the salient patterns of the resale prices of public housing property by residential towns and estates in Singapore by using appropriate analytical visualisation techniques learned in Lesson 4: Fundamentals of Visual Analytics. Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences.\nFor the purpose of this study, the focus should be on 3-ROOM, 4-ROOM and 5-ROOM types. You can choose to focus on either one housing type or multiple housing types. The study period should be on 2022."
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html#the-data",
+    "href": "take-home_ex/TH_EX03.html#the-data",
+    "title": "Take-home Exercise 3",
+    "section": "The Data",
+    "text": "The Data\nResale flat princes based on registration date from Jan-2017 onwards should be used to prepare the analytical visualisation. It is available at Data.gov.sg."
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html#the-designing-tool",
+    "href": "take-home_ex/TH_EX03.html#the-designing-tool",
+    "title": "Take-home Exercise 3",
+    "section": "The Designing Tool",
+    "text": "The Designing Tool\nFor the purpose of this take-home exercise, ggplot2 and its extension should be used to design the analytical visualisation. tidyverse family of packages should be used to prepare the data."
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html#submission-instructions",
+    "href": "take-home_ex/TH_EX03.html#submission-instructions",
+    "title": "Take-home Exercise 3",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nThis is an individual assignment. You are required to work on the take-home exercises and prepare submission individually.\nThe specific submission instructions are as follows:\n\nThe analytical visualisation must be prepared by using R and appropriate R packages.\nThe write-up of the take-home exercise must be in Quarto html document format. You are required to publish the write-up on Netlify.\nProvide the links to the Take-home Exercise write-up and github repository onto eLearn (i.e. Take-home Exercise section)"
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html#submission-date",
+    "href": "take-home_ex/TH_EX03.html#submission-date",
+    "title": "Take-home Exercise 3",
+    "section": "Submission date",
+    "text": "Submission date\nThe completed take-home exercise is due on 15th February 2023, by 11:59pm evening."
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html#peer-learning",
+    "href": "take-home_ex/TH_EX03.html#peer-learning",
+    "title": "Take-home Exercise 3",
+    "section": "Peer Learning",
+    "text": "Peer Learning"
+  },
+  {
+    "objectID": "take-home_ex/TH_EX03.html#the-write-up",
+    "href": "take-home_ex/TH_EX03.html#the-write-up",
+    "title": "Take-home Exercise 3",
+    "section": "The Write-up",
+    "text": "The Write-up\nThe write-up of the take-home exercise should include but not limited to the followings:\n\nDescribe the selection and designed consideration of the analytical data visualisation used. The discussion should limit to not more than 150 words each.\nA reproducible description of the procedures used to prepare the analytical visualisation. Please refer to the peer submission I shared.\nA write-up of not more than 100 words to discuss the patterns reveal by each analytical visualisation prepared."
   }
 ]
