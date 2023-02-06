@@ -26,7 +26,7 @@ editor: visual
 -   Handout of Hands-on Exercise 5
 
     -   [Building Ternary Plot with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-ternary.html).
-    -   [Visualising Correlation Matrix with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Corrgram.html).
+    -   [Visualising Correlation Matrices with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Corrgram.html).
     -   [Building Heatmap with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html).
     -   [Building Parallel Coordinates Plot with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html).
 
