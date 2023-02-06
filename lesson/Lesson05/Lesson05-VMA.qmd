@@ -446,3 +446,13 @@ In this slide, the colour and highlighting interativity function are used to hig
 -   [Radar Chart](http://en.wikipedia.org/wiki/Radar_chart).
 -   [Ternary plot](https://en.wikipedia.org/wiki/Ternary_plot), [this](http://csmres.jmu.edu/geollab/Fichter/SedRx/readternary.html) and [this](http://wvaughan.org/ternaryplots.html).
 -   Friendly, M (2002) "Corrgrams: Exploratory Displays for Correlation Matrices" The American Statistician, Vol. 56, No. 4, pp. 316-324.
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf(
+  from = "https://isss608-ay2022-23jan.netlify.app/lesson/Lesson05/Lesson05-VMA.html",
+  to = "../../_site/lesson/Lesson05/Lesson05-VMA.pdf"
+)
+```
+
