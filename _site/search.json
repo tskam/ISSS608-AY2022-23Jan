@@ -984,7 +984,7 @@
     "href": "outline/Lesson05_outline.html#lesson-slides-and-hands-on-notes",
     "title": "Lesson 5: Visual Multivariate Analysis",
     "section": "Lesson Slides and Hands-on Notes",
-    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 5\n\nBuilding Ternary Plot with R.\nVisualising Correlation Matrices with R.\nBuilding Heatmap with R.\nBuilding Parallel Coordinates Plot with R."
+    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 5\n\nBuilding Ternary Plot with R.\nVisualising Correlation Matrices with R.\nBuilding Heatmap for Visualising and Analysing Multivariate Data.\nBuilding Parallel Coordinates Plot with R."
   },
   {
     "objectID": "outline/Lesson05_outline.html#readings",
@@ -2438,77 +2438,77 @@
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "",
     "text": "Heatmaps visualise data through variations in colouring. When applied to a tabular format, heatmaps are useful for cross-examining multivariate data, through placing variables in the columns and observation (or records) in rowa and colouring the cells within the table. Heatmaps are good for showing variance across multiple variables, revealing any patterns, displaying whether any variables are similar to each other, and for detecting if any correlations exist in-between them.\nIn this hands-on exercise, you will gain hands-on experience on using R to plot static and interactive heatmap for visualising and analysing multivariate data."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#importing-the-data-set",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#importing-the-data-set",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Importing the data set",
     "text": "Importing the data set\nIn the code chunk below, read_csv() of readr is used to import WHData-2018.csv into R and parsed it into tibble R data frame format.\n\nwh <- read_csv(\"data/WHData-2018.csv\")\n\nThe output tibbled data frame is called wh."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#preparing-the-data",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#preparing-the-data",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Preparing the data",
     "text": "Preparing the data\nNext, we need to change the rows by country name instead of row number by using the code chunk below\n\nrow.names(wh) <- wh$Country\n\nNotice that the row number has been replaced into the country name."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#transforming-the-data-frame-into-a-matrix",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#transforming-the-data-frame-into-a-matrix",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Transforming the data frame into a matrix",
     "text": "Transforming the data frame into a matrix\nThe data was loaded into a data frame, but it has to be a data matrix to make your heatmap.\nThe code chunk below will be used to transform wh data frame into a data matrix.\n\nwh1 <- dplyr::select(wh, c(3, 7:12))\nwh_matrix <- data.matrix(wh)\n\nNotice that wh_matrix is in R matrix format."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#heatmap-of-r-stats",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#heatmap-of-r-stats",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "heatmap() of R Stats",
     "text": "heatmap() of R Stats\nIn this sub-section, we will plot a heatmap by using heatmap() of Base Stats. The code chunk is given below.\n\nwh_heatmap <- heatmap(wh_matrix,\n                      Rowv=NA, Colv=NA)\n\n\n\n\nNote:\n\nBy default, heatmap() plots a cluster heatmap. The arguments Rowv=NA and Colv=NA are used to switch off the option of plotting the row and column dendrograms.\n\nTo plot a cluster heatmap, we just have to use the default as shown in the code chunk below.\n\nwh_heatmap <- heatmap(wh_matrix)\n\n\n\n\nNote:\n\nThe order of both rows and columns is different compare to the native wh_matrix. This is because heatmap do a reordering using clusterisation: it calculates the distance between each pair of rows and columns and try to order them by similarity. Moreover, the corresponding dendrogram are provided beside the heatmap.\n\nHere, red cells denotes small values, and red small ones. This heatmap is not really informative. Indeed, the Happiness Score variable have relatively higher values, what makes that the other variables with small values all look the same. Thus, we need to normalize this matrix. This is done using the scale argument. It can be applied to rows or to columns following your needs.\nThe code chunk below normalises the matrix column-wise.\n\nwh_heatmap <- heatmap(wh_matrix,\n                      scale=\"column\",\n                      cexRow = 0.6, \n                      cexCol = 0.8,\n                      margins = c(10, 4))\n\n\n\n\nNotice that the values are scaled now. Also note that margins argument is used to ensure that the entire x-axis labels are displayed completely and, cexRow and cexCol arguments are used to define the font size used for y-axis and x-axis labels respectively."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#working-with-heatmaply",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#working-with-heatmaply",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Working with heatmaply",
     "text": "Working with heatmaply\n\nheatmaply(mtcars)\n\n\n\n\n\nThe code chunk below shows the basic syntax needed to create n interactive heatmap by using heatmaply package.\n\nheatmaply(wh_matrix[, -c(1, 2, 4, 5)])\n\n\n\n\n\nNote that:\n\nDifferent from heatmap(), for heatmaply() the default horizontal dendrogram is placed on the left hand side of the heatmap.\nThe text label of each raw, on the other hand, is placed on the right hand side of the heat map.\nWhen the x-axis marker labels are too long, they will be rotated by 135 degree from the north."
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#data-trasformation",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#data-trasformation",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Data trasformation",
     "text": "Data trasformation\nWhen analysing multivariate data set, it is very common that the variables in the data sets includes values that reflect different types of measurement. In general, these variables’ values have their own range. In order to ensure that all the variables have comparable values, data transformation are commonly used before clustering.\nThree main data transformation methods are supported by heatmaply(), namely: scale, normalise and percentilse.\n\nScaling method\n\nWhen all variables are came from or assumed to come from some normal distribution, then scaling (i.e.: subtract the mean and divide by the standard deviation) would bring them all close to the standard normal distribution.\n\nIn such a case, each value would reflect the distance from the mean in units of standard deviation.\nThe scale argument in heatmaply() supports column and row scaling.\n\nThe code chunk below is used to scale variable values columewise.\n\nheatmaply(wh_matrix[, -c(1, 2, 4, 5)],\n          scale = \"column\")\n\n\n\n\n\n\n\nNormalising method\n\nWhen variables in the data comes from possibly different (and non-normal) distributions, the normalize function can be used to bring data to the 0 to 1 scale by subtracting the minimum and dividing by the maximum of all observations.\nThis preserves the shape of each variable’s distribution while making them easily comparable on the same “scale”.\n\nDifferent from Scaling, the normalise method is performed on the input data set i.e. wh_matrix as shown in the code chunk below.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]))\n\n\n\n\n\n\n\nPercentising method\n\nThis is similar to ranking the variables, but instead of keeping the rank values, divide them by the maximal rank.\nThis is done by using the ecdf of the variables on their own values, bringing each value to its empirical percentile.\nThe benefit of the percentize function is that each value has a relatively clear interpretation, it is the percent of observations that got that value or below it.\n\nSimilar to Normalize method, the Percentize method is also performed on the input data set i.e. wh_matrix as shown in the code chunk below.\n\nheatmaply(percentize(wh_matrix[, -c(1, 2, 4, 5)]))"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#clustering-algorithm",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#clustering-algorithm",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Clustering algorithm",
     "text": "Clustering algorithm\nheatmaply supports a variety of hierarchical clustering algorithm. The main arguments provided are:\n\ndistfun: function used to compute the distance (dissimilarity) between both rows and columns. Defaults to dist. The options “pearson”, “spearman” and “kendall” can be used to use correlation-based clustering, which uses as.dist(1 - cor(t(x))) as the distance metric (using the specified correlation method).\nhclustfun: function used to compute the hierarchical clustering when Rowv or Colv are not dendrograms. Defaults to hclust.\ndist_method default is NULL, which results in “euclidean” to be used. It can accept alternative character strings indicating the method to be passed to distfun. By default distfun is “dist”” hence this can be one of “euclidean”, “maximum”, “manhattan”, “canberra”, “binary” or “minkowski”.\nhclust_method default is NULL, which results in “complete” method to be used. It can accept alternative character strings indicating the method to be passed to hclustfun. By default hclustfun is hclust hence this can be one of “ward.D”, “ward.D2”, “single”, “complete”, “average” (= UPGMA), “mcquitty” (= WPGMA), “median” (= WPGMC) or “centroid” (= UPGMC).\n\nIn general, a clustering model can be calibrated either manually or statistically.\n\nManual approach\nIn the code chunk below, the heatmap is plotted by using hierachical clustering algorithm with “Euclidean distance” and “ward.D” method.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          dist_method = \"euclidean\",\n          hclust_method = \"ward.D\")\n\n\n\n\n\n\n\nStatistical approach\nIn order to determine the best clustering method and number of cluster the dend_expend() and find_k() functions of dendextend package will be used.\nFirst, the dend_expend() will be used to determine the recommended clustering method to be used.\n\nwh_d <- dist(normalize(wh_matrix[, -c(1, 2, 4, 5)]), method = \"euclidean\")\ndend_expend(wh_d)[[3]]\n\n  dist_methods hclust_methods     optim\n1      unknown         ward.D 0.6137851\n2      unknown        ward.D2 0.6289186\n3      unknown         single 0.4774362\n4      unknown       complete 0.6434009\n5      unknown        average 0.6701688\n6      unknown       mcquitty 0.5020102\n7      unknown         median 0.5901833\n8      unknown       centroid 0.6338734\n\n\nThe output table shows that “average” method should be used because it gave the high optimum value.\nNext, find_k() is used to determine the optimal number of cluster.\n\nwh_clust <- hclust(wh_d, method = \"average\")\nnum_k <- find_k(wh_clust)\nplot(num_k)\n\n\n\n\nFigure above shows that k=3 would be good.\nWith reference to the statistical analysis results, we can prepare the code chunk as shown below.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          dist_method = \"euclidean\",\n          hclust_method = \"average\",\n          k_row = 3)"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#seriation",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#seriation",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "5.4 Seriation",
     "text": "5.4 Seriation\nOne of the problems with hierarchical clustering is that it doesn’t actually place the rows in a definite order, it merely constrains the space of possible orderings. Take three items A, B and C. If you ignore reflections, there are three possible orderings: ABC, ACB, BAC. If clustering them gives you ((A+B)+C) as a tree, you know that C can’t end up between A and B, but it doesn’t tell you which way to flip the A+B cluster. It doesn’t tell you if the ABC ordering will lead to a clearer-looking heatmap than the BAC ordering.\nheatmaply uses the seriation package to find an optimal ordering of rows and columns. Optimal means to optimize the Hamiltonian path length that is restricted by the dendrogram structure. This, in other words, means to rotate the branches so that the sum of distances between each adjacent leaf (label) will be minimized. This is related to a restricted version of the travelling salesman problem.\nHere we meet our first seriation algorithm: Optimal Leaf Ordering (OLO). This algorithm starts with the output of an agglomerative clustering algorithm and produces a unique ordering, one that flips the various branches of the dendrogram around so as to minimize the sum of dissimilarities between adjacent leaves. Here is the result of applying Optimal Leaf Ordering to the same clustering result as the heatmap above.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          seriate = \"OLO\")\n\n\n\n\n\nThe default options is “OLO” (Optimal leaf ordering) which optimizes the above criterion (in O(n^4)). Another option is “GW” (Gruvaeus and Wainer) which aims for the same goal but uses a potentially faster heuristic.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          seriate = \"GW\")\n\n\n\n\n\nThe option “mean” gives the output we would get by default from heatmap functions in other packages such as gplots::heatmap.2.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          seriate = \"mean\")\n\n\n\n\n\nThe option “none” gives us the dendrograms without any rotation that is based on the data matrix.\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          seriate = \"none\")"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#working-with-colour-palettes",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#working-with-colour-palettes",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "Working with colour palettes",
     "text": "Working with colour palettes\nThe default colour palette uses by heatmaply is viridis. heatmaply users, however, can use other colour palettes in order to improve the aestheticness and visual friendliness of the heatmap.\nIn the code chunk below, the Blues colour palette of rColorBrewer is used\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          seriate = \"none\",\n          colors = Blues)"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#the-finishing-touch",
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html#the-finishing-touch",
-    "title": "Hands-on Exercise 5: Heatmap",
+    "title": "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data",
     "section": "The finishing touch",
     "text": "The finishing touch\nBeside providing a wide collection of arguments for meeting the statistical analysis needs, heatmaply also provides many plotting features to ensure cartographic quality heatmap can be produced.\nIn the code chunk below the following arguments are used:\n\nk_row is used to produce 5 groups.\nmargins is used to change the top margin to 60 and row margin to 200.\nfontsizw_row and fontsize_col are used to change the font size for row and column labels to 4.\nmain is used to write the main title of the plot.\nxlab and ylab are used to write the x-axis and y-axis labels respectively.\n\n\nheatmaply(normalize(wh_matrix[, -c(1, 2, 4, 5)]),\n          Colv=NA,\n          seriate = \"none\",\n          colors = Blues,\n          k_row = 5,\n          margins = c(NA,200,60,NA),\n          fontsize_row = 4,\n          fontsize_col = 5,\n          main=\"World Happiness Score and Variables by Country, 2018 \\nDataTransformation using Normalise Method\",\n          xlab = \"World Happiness Indicators\",\n          ylab = \"World Countries\"\n          )"
   },
@@ -2518,5 +2518,117 @@
     "title": "Lesson 5: Visual Multivariate Analysis",
     "section": "",
     "text": "What will you learn from this lesson?\n\nUnderstand the characteristics of multidimensional data\nVisual analytics techniques and tools for visualising and analysing multidimensional continuous data\nVisual analytics techniques and tools for visualising and analysing multidimensional categorical data\nSensing both categorical and continuous multidimensional data\nMultidimensional data analysis best practices\n\n\nIn this lesson, I am going to share with you a collection of visual multivariate analysis techniques."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html",
+    "title": "Hands-on Exercise 5: Building Ternary Plot with R",
+    "section": "",
+    "text": "Ternary plots are a way of displaying the distribution and variability of three-part compositional data. (For example, the proportion of aged, economy active and young population or sand, silt, and clay in soil.) It’s display is a triangle with sides scaled from 0 to 1. Each side represents one of the three components. A point is plotted so that a line drawn perpendicular from the point to each leg of the triangle intersect at the component values of the point.\nIn this hands-on, you will learn how to build ternary plot programmatically using R for visualising and analysing population structure of Singapore.\nThe hands-on exercise consists of four steps:\n\nInstall and launch tidyverse and ggtern packages.\nDerive three new measures using mutate() function of dplyr package.\nBuild a static ternary plot using ggtern() function of ggtern package.\nBuild an interactive ternary plot using plot-ly() function of Plotly R package."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#the-data",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#the-data",
+    "title": "Hands-on Exercise 5: Building Ternary Plot with R",
+    "section": "The data",
+    "text": "The data\nFor the purpose of this hands-on exercise, the Singapore Residents by Planning AreaSubzone, Age Group, Sex and Type of Dwelling, June 2000-2018 data will be used. The data set has been downloaded and included in the data sub-folder of the hands-on exercise folder. It is called respopagsex2000to2018_tidy.csv and is in csv file format."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#importing-data",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#importing-data",
+    "title": "Hands-on Exercise 5: Building Ternary Plot with R",
+    "section": "Importing Data",
+    "text": "Importing Data\nTo important respopagsex2000to2018_tidy.csv into R, read_csv() function of readr package will be used.\n\npop_data <- read_csv(\"data/respopagsex2000to2018_tidy.csv\")"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#preparing-the-data",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#preparing-the-data",
+    "title": "Hands-on Exercise 5: Building Ternary Plot with R",
+    "section": "Preparing the Data",
+    "text": "Preparing the Data\nNext, use the mutate() function of dplyr package to derive three new measures, namely: young, active, and old.\n\nagpop_mutated <- pop_data %>%\n  mutate(`Year` = as.character(Year))%>%\n  spread(AG, Population) %>%\n  mutate(YOUNG = rowSums(.[4:8]))%>%\n  mutate(ACTIVE = rowSums(.[9:16]))  %>%\n  mutate(OLD = rowSums(.[17:21])) %>%\n  mutate(TOTAL = rowSums(.[22:24])) %>%\n  filter(Year == 2018)%>%\n  filter(TOTAL > 0)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#plotting-a-static-ternary-diagram",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#plotting-a-static-ternary-diagram",
+    "title": "Hands-on Exercise 5: Building Ternary Plot with R",
+    "section": "Plotting a static ternary diagram",
+    "text": "Plotting a static ternary diagram\nUse ggtern() function of ggtern package to create a simple ternary plot.\n\nggtern(data=agpop_mutated,aes(x=YOUNG,y=ACTIVE, z=OLD)) +\n  geom_point()\n\n\n\n\n\nggtern(data=agpop_mutated, aes(x=YOUNG,y=ACTIVE, z=OLD)) +\n  geom_point() +\n  labs(title=\"Population structure, 2015\") +\n  theme_rgbw()"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#plotting-an-interative-ternary-diagram",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#plotting-an-interative-ternary-diagram",
+    "title": "Hands-on Exercise 5: Building Ternary Plot with R",
+    "section": "Plotting an interative ternary diagram",
+    "text": "Plotting an interative ternary diagram\nThe code below create an interactive ternary plot using plot_ly() function of Plotly R.\n\nlabel <- function(txt) {\n  list(\n    text = txt, \n    x = 0.1, y = 1,\n    ax = 0, ay = 0,\n    xref = \"paper\", yref = \"paper\", \n    align = \"center\",\n    font = list(family = \"serif\", size = 15, color = \"white\"),\n    bgcolor = \"#b3b3b3\", bordercolor = \"black\", borderwidth = 2\n  )\n}\n\naxis <- function(txt) {\n  list(\n    title = txt, tickformat = \".0%\", tickfont = list(size = 10)\n  )\n}\n\nternaryAxes <- list(\n  aaxis = axis(\"Young\"), \n  baxis = axis(\"Active\"), \n  caxis = axis(\"Old\")\n)\n\nplot_ly(\n  agpop_mutated, \n  a = ~YOUNG, \n  b = ~ACTIVE, \n  c = ~OLD, \n  color = I(\"black\"), \n  type = \"scatterternary\"\n) %>%\n  layout(\n    annotations = label(\"Ternary Markers\"), \n    ternary = ternaryAxes\n  )"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "",
+    "text": "Parallel coordinates plot is a data visualisation specially designed for visualising and analysing multivariate, numerical data. It is ideal for comparing multiple variables together and seeing the relationships between them. For example, the variables contribute to Happiness Index. Parallel coordinates was invented by Alfred Inselberg in the 1970s as a way to visualize high-dimensional data. This data visualisation technique is more often found in academic and scientific communities than in business and consumer data visualizations. As pointed out by Stephen Few(2006), “This certainly isn’t a chart that you would present to the board of directors or place on your Web site for the general public. In fact, the strength of parallel coordinates isn’t in their ability to communicate some truth in the data to others, but rather in their ability to bring meaningful multivariate patterns and comparisons to light when used interactively for analysis.” For example, parallel coordinates plot can be used to characterise clusters detected during customer segmentation.\nBy the end of this hands-on exercise, you will gain hands-on experience on:\n\nplotting statistic parallel coordinates plots by using ggparcoord() of GGally package,\nplotting interactive parallel coordinates plots by using parcoords package, and\nplotting interactive parallel coordinates plots by using parallelPlot package.\n\n\n\nFor this exercise, the GGally, parcoords, parallelPlot and tidyverse packages will be used.\nThe code chunks below are used to install and load the packages in R.\n\npacman::p_load(GGally, parallelPlot, tidyverse)\n\n\n\n\nIn this hands-on exercise, the World Happinees 2018 (http://worldhappiness.report/ed/2018/) data will be used. The data set is download at https://s3.amazonaws.com/happiness-report/2018/WHR2018Chapter2OnlineData.xls. The original data set is in Microsoft Excel format. It has been extracted and saved in csv file called WHData-2018.csv.\nIn the code chunk below, read_csv() of readr package is used to import WHData-2018.csv into R and save it into a tibble data frame object called wh.\n\nwh <- read_csv(\"data/WHData-2018.csv\")"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#plotting-a-simple-parallel-coordinates",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#plotting-a-simple-parallel-coordinates",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Plotting a simple parallel coordinates",
+    "text": "Plotting a simple parallel coordinates\nCode chunk below shows a typical syntax used to plot a basic static parallel coordinates plot by using ggparcoord().\n\nggparcoord(data = wh, \n           columns = c(7:12))\n\n\n\n\nNotice that only two argument namely data and columns is used. Data argument is used to map the data object (i.e. wh) and columns is used to select the columns for preparing the parallel coordinates plot."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#plotting-a-parallel-coordinates-with-boxplot",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#plotting-a-parallel-coordinates-with-boxplot",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Plotting a parallel coordinates with boxplot",
+    "text": "Plotting a parallel coordinates with boxplot\nThe basic parallel coordinates failed to reveal any meaning understanding of the World Happiness measures. In this section, you will learn how to makeover the plot by using a collection of arguments provided by ggparcoord().\n\nggparcoord(data = wh, \n           columns = c(7:12), \n           groupColumn = 2,\n           scale = \"uniminmax\",\n           alphaLines = 0.2,\n           boxplot = TRUE, \n           title = \"Parallel Coordinates Plot of World Happines Variables\")\n\n\n\n\nThings to learn from the code chunk above.\n\ngroupColumn argument is used to group the observations (i.e. parallel lines) by using a single variable (i.e. Region) and colour the parallel coordinates lines by region name.\nscale argument is used to scale the variables in the parallel coordinate plot by using uniminmax method. The method univariately scale each variable so the minimum of the variable is zero and the maximum is one.\n\nalphaLines argument is used to reduce the intensity of the line colour to 0.2. The permissible value range is between 0 to 1.\nboxplot argument is used to turn on the boxplot by using logical TRUE. The default is FALSE.\ntitle argument is used to provide the parallel coordinates plot a title."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#parallel-coordinates-with-facet",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#parallel-coordinates-with-facet",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Parallel coordinates with facet",
+    "text": "Parallel coordinates with facet\nSince ggparcoord() is developed by extending ggplot2 package, we can combination use some of the ggplot2 function when plotting a parallel coordinates plot.\nIn the code chunk below, facet_wrap() of ggplot2 is used to plot 10 small multiple parallel coordinates plots. Each plot represent one geographical region such as East Asia.\n\nggparcoord(data = wh, \n           columns = c(7:12), \n           groupColumn = 2,\n           scale = \"uniminmax\",\n           alphaLines = 0.2,\n           boxplot = TRUE, \n           title = \"Multiple Parallel Coordinates Plots of World Happines Variables by Region\") +\n  facet_wrap(~ Region)\n\n\n\n\nOne of the aesthetic defect of the current design is that some of the variable names overlap on x-axis."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#rotating-x-axis-text-label",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#rotating-x-axis-text-label",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Rotating x-axis text label",
+    "text": "Rotating x-axis text label\nTo make the x-axis text label easy to read, let us rotate the labels by 30 degrees. We can rotate axis text labels using theme() function in ggplot2 as shown in the code chunk below\n\nggparcoord(data = wh, \n           columns = c(7:12), \n           groupColumn = 2,\n           scale = \"uniminmax\",\n           alphaLines = 0.2,\n           boxplot = TRUE, \n           title = \"Multiple Parallel Coordinates Plots of World Happines Variables by Region\") +\n  facet_wrap(~ Region) + \n  theme(axis.text.x = element_text(angle = 30))\n\n\n\n\nThing to learn from the code chunk above:\n\nTo rotate x-axis text labels, we use axis.text.x as argument to theme() function. And we specify element_text(angle = 30) to rotate the x-axis text by an angle 30 degree."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#adjusting-the-rotated-x-axis-text-label",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#adjusting-the-rotated-x-axis-text-label",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Adjusting the rotated x-axis text label",
+    "text": "Adjusting the rotated x-axis text label\nRotating x-axis text labels to 30 degrees makes the label overlap with the plot and we can avoid this by adjusting the text location using hjust argument to theme’s text element with element_text(). We use axis.text.x as we want to change the look of x-axis text.\n\nggparcoord(data = wh, \n           columns = c(7:12), \n           groupColumn = 2,\n           scale = \"uniminmax\",\n           alphaLines = 0.2,\n           boxplot = TRUE, \n           title = \"Multiple Parallel Coordinates Plots of World Happines Variables by Region\") +\n  facet_wrap(~ Region) + \n  theme(axis.text.x = element_text(angle = 30, hjust=1))"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#the-basic-plot",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#the-basic-plot",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "The basic plot",
+    "text": "The basic plot\nThe code chunk below plot an interactive parallel coordinates plot by using parallelPlot().\n\nwh <- wh %>%\n  select(\"Happiness score\", c(7:12))\nparallelPlot(wh,\n             width = 320,\n             height = 250)\n\n\n\n\n\nNotice that some of the axis labels are too long. You will learn how to overcome this problem in the next step."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#rotate-axis-label",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#rotate-axis-label",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Rotate axis label",
+    "text": "Rotate axis label\nIn the code chunk below, rotateTitle argument is used to avoid overlapping axis labels.\n\nparallelPlot(wh,\n             rotateTitle = TRUE)\n\n\n\n\n\nOne of the useful interactive feature of parallelPlot is we can click on a variable of interest, for example Happiness score, the monotonous blue colour (default) will change a blues with different intensity colour scheme will be used."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#changing-the-colour-scheme",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#changing-the-colour-scheme",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Changing the colour scheme",
+    "text": "Changing the colour scheme\nWe can change the default blue colour scheme by using continousCS argument as shown in the code chunl below.\n\nparallelPlot(wh,\n             continuousCS = \"YlOrRd\",\n             rotateTitle = TRUE)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#parallel-coordinates-plot-with-histogram",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html#parallel-coordinates-plot-with-histogram",
+    "title": "Hands-on Exercise 5: Creating Parallel Coordinates Plots with R",
+    "section": "Parallel coordinates plot with histogram",
+    "text": "Parallel coordinates plot with histogram\nIn the code chunk below, histoVisibility argument is used to plot histogram along the axis of each variables.\n\nhistoVisibility <- rep(TRUE, ncol(wh))\nparallelPlot(wh,\n             rotateTitle = TRUE,\n             histoVisibility = histoVisibility)"
   }
 ]

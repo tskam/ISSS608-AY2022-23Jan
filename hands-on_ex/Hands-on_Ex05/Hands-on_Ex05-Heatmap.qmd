@@ -1,5 +1,5 @@
 ---
-title: "Hands-on Exercise 5: Heatmap"
+title: "Hands-on Exercise 5: Building Heatmap for Visualising and Analysing Multivariate Data"
 author: "Dr. Kam Tin Seong"
 format: html
 date: "12 January 2023"
@@ -89,7 +89,8 @@ In this section, you will learn how to plot static heatmaps by using **heatmap()
 
 In this sub-section, we will plot a heatmap by using *heatmap()* of Base Stats.  The code chunk is given below.
 
-```{r echo=TRUE, eval=TRUE}
+```{r}
+#| fig-height: 5
 wh_heatmap <- heatmap(wh_matrix,
                       Rowv=NA, Colv=NA)
 ```
@@ -100,7 +101,8 @@ wh_heatmap <- heatmap(wh_matrix,
 
 To plot a cluster heatmap, we just have to use the default as shown in the code chunk below.
 
-```{r echo=TRUE, eval=TRUE}
+```{r}
+#| fig-height: 5
 wh_heatmap <- heatmap(wh_matrix)
 ```
 
@@ -125,7 +127,7 @@ Notice that the values are scaled now.  Also note that **margins** argument is u
 
 # Creating Interactive Heatmap
 
-**heatmaply** is an R package for building interactive cluster heatmap that can be shared online as a stand-alone HTML file.  It is designed and maintained by Tal Galili.
+[**heatmaply**](http://talgalili.github.io/heatmaply/index.html) is an R package for building interactive cluster heatmap that can be shared online as a stand-alone HTML file.  It is designed and maintained by Tal Galili.
 
 Before we get started, you should review the [Introduction to Heatmaply](https://cran.r-project.org/web/packages/heatmaply/vignettes/heatmaply.html) to have an overall understanding of the features and functions of Heatmaply package.  You are also required to have the [user manual](https://cran.r-project.org/web/packages/heatmaply/heatmaply.pdf)of the package handy with you for reference purposes. 
 
