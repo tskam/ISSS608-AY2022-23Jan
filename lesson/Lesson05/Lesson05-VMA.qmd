@@ -455,4 +455,3 @@ renderthis::to_pdf(
   to = "../../_site/lesson/Lesson05/Lesson05-VMA.pdf"
 )
 ```
-
