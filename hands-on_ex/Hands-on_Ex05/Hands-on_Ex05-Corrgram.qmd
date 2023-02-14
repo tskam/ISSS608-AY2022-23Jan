@@ -40,7 +40,7 @@ Before you get started, you are required:
 Next, you will use the code chunk below to install and launch **corrplot**, **ggpubr**, **plotly** and **tidyverse** in RStudio.
 
 ```{r}
-pacman::p_load(corrplot, tidyverse, ggstatsplot)
+pacman::p_load(corrplot, ggstatsplot, tidyverse)
 ```
 
 # Importing and Preparing The Data Set
@@ -396,4 +396,3 @@ renderthis::to_pdf(
   to = "D:/ISSS608_AY2022-23Jan/Hands-on_Ex/Hands-on_Ex05-Heatmap.pdf"
 )
 ```
-

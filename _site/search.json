@@ -2545,7 +2545,7 @@
     "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#preparing-the-data",
     "title": "Hands-on Exercise 5: Building Ternary Plot with R",
     "section": "Preparing the Data",
-    "text": "Preparing the Data\nNext, use the mutate() function of dplyr package to derive three new measures, namely: young, active, and old.\n\nagpop_mutated <- pop_data %>%\n  mutate(`Year` = as.character(Year))%>%\n  spread(AG, Population) %>%\n  mutate(YOUNG = rowSums(.[4:8]))%>%\n  mutate(ACTIVE = rowSums(.[9:16]))  %>%\n  mutate(OLD = rowSums(.[17:21])) %>%\n  mutate(TOTAL = rowSums(.[22:24])) %>%\n  filter(Year == 2018)%>%\n  filter(TOTAL > 0)"
+    "text": "Preparing the Data\nNext, use the mutate() function of dplyr package to derive three new measures, namely: young, active, and old.\n\nagpop_mutated <- pop_data %>%\n  mutate(`Year` = as.character(Year))%>%\n  pivot_wider(names_from = AG, \n              values_from = Population) %>%\n  mutate(YOUNG = rowSums(.[4:8]))%>%\n  mutate(ACTIVE = rowSums(.[9:16]))  %>%\n  mutate(OLD = rowSums(.[17:21])) %>%\n  mutate(TOTAL = rowSums(.[22:24])) %>%\n  filter(Year == 2018)%>%\n  filter(TOTAL > 0)"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Ternary.html#plotting-a-static-ternary-diagram",
