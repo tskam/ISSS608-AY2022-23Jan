@@ -108,7 +108,7 @@ This data visualisation is also a creation of William Playfair. It is make up of
 
 ### Bump Chart shows rank of the most populous cities at each census: 1790-1890
 
-![](img/image5-7.jpg)
+![](img/image5-7.jpg){width="800"}
 
 -   An interactive version [here](http://vallandingham.me/census_bump/)
 
@@ -117,6 +117,7 @@ This data visualisation shows rank of the most populous cities at each census 17
 :::
 
 ## A short visual history of time-series graphs
+
 ### Multiple charts showing records of the Weather in New York City for December, 1912.
 
 ![](img/image5-8.jpg)
@@ -128,6 +129,7 @@ This data visualisation shows record of the Weather in New York City for Decembe
 ------------------------------------------------------------------------
 
 ## Time-series graph that change public understading
+
 ### The Hockey Stick Chart
 
 ![](img/image5-45.jpg)
@@ -295,6 +297,7 @@ In this section, I am going to share with you some tips when we want to visualis
 :::
 
 ## Line graph design tips
+
 ### Multiple lines in a single graph is less effective than trellis line graph
 
 ::: columns
@@ -312,6 +315,7 @@ In order to support effective comparison, sometime trellis line graphs are more 
 :::
 
 ## Line graph design tips
+
 ### Not all time-series graphs have time on the x-axis
 
 ![](img/image5-44.jpg)
@@ -319,6 +323,7 @@ In order to support effective comparison, sometime trellis line graphs are more 
 ::: {style="font-size: 0.6em"}
 Source: [Are emerging economies deindustrializing too quickly?](https://ourworldindata.org/growth-and-structural-transformation-are-emerging-economies-industrializing-too-quickly).
 :::
+
 ::: notes
 The **connected scatter plot** below reveals changes over time by joining each time event points on the scatter plot. The historical trail can be a effective alternative to animation.
 :::
@@ -413,6 +418,7 @@ Slopegraphs compare changes usually over time for a list of nouns located on an 
 Reference: [Slopegraphs for comparing gradients: Slopegraph theory and practice](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk)
 :::
 :::
+
 ::: {.column width="60%"}
 ![](img/image5-28.jpg){width="750"}
 :::
@@ -579,3 +585,12 @@ Claus. O. Wilke (2019) **Fundamentals of Data Visualisation**, O'Reilly. USA. [C
 [Slopegraphs for comparing gradients: Slopegraph theory and practice](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk)
 
 [The Development of the Horizon Graph](http://www.stonesc.com/Vis08_Workshop/DVD/Reijner_submission.pdf)
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf(
+  from = "https://isss608-ay2022-23jan.netlify.app/lesson/Lesson06/Lesson06-VisTime.html",
+  to = "../../_site/lesson/Lesson06/Lesson06-VisTime.pdf"
+)
+```
