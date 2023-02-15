@@ -13,7 +13,6 @@ editor: visual
 -   Time-series data visualization Methods
     -   Line graph
     -   Control chart
-    -   Candlestick chart
     -   Slopegraph
     -   Cycle plot
     -   Horizon graph
@@ -38,14 +37,12 @@ editor: visual
 -   [Introduction to Cycle Plots](http://www.perceptualedge.com/articles/guests/intro_to_cycle_plots.pdf)
 -   [Visualizing Change: An Innovation in Time-Series Analysis](http://www.perceptualedge.com/articles/visual_business_intelligence/visualizing_change.pdf)
 -   [The Development of the Horizon Graph](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=08076DD0A1346CB0F3AE2A98A5FB17A0?doi=10.1.1.363.5396&rep=rep1&type=pdf)
--   [Candlestick chart](https://en.wikipedia.org/wiki/Candlestick_chart)
 
 ### Additional Readings
 
 -   [Slopegraph Update](http://charliepark.org/a-slopegraph-update/)
 -   [Time on the Horizon](http://www.perceptualedge.com/articles/visual_business_intelligence/time_on_the_horizon.pdf)
 -   [TimeSearcher](http://www.cs.umd.edu/hcil/timesearcher/)
--   [Understanding Basic Candlestick Charts](https://www.investopedia.com/trading/candlestick-charting-what-is-it/)
 -   [What is a slopegraph?](https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph) 
 -   Donahue, Rafe M.J. [*Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics*](https://byuistats.github.io/CSE150/files/FSCPD_Donahue_callcenter.pdf). This article provide a real world example of building truthful and functional time series graph.
 -   [Hockey stick graph](https://en.wikipedia.org/wiki/Hockey_stick_graph) at wiki.
@@ -57,8 +54,7 @@ editor: visual
 -   [Slopegraphs in Tableau](http://dataremixed.com/2013/12/slopegraphs-in-tableau/)
 -   [Horizon Graph](https://www.tableau.com/learn/tutorials/on-demand/horizon-charts)
 -   [Viz Variety Show: When to use heatmap calendars](https://www.tableau.com/about/blog/2017/2/viz-variety-show-heatmaps-66330)
--   [Creating a Candlestick chart](https://kb.tableau.com/articles/howto/creating-a-candlestick-chart)
--   [Candlestick Charts and Bollinger Bands](https://www.tableau.com/learn/tutorials/on-demand/candlestick-charts-and-bollinger-bands)
+
 
 
 

@@ -1005,7 +1005,7 @@
     "href": "outline/Lesson06_outline.html",
     "title": "It’s About Time",
     "section": "",
-    "text": "Characteristics of time-series data\nA short visual history of time-series graphs\nTime-series patterns\nTime-series data visualization Methods\n\nLine graph\nControl chart\nCandlestick chart\nSlopegraph\nCycle plot\nHorizon graph\nSunburst diagram\nCalendar Heatmap\nStream Graph\n\nInteractive techniques for time-series data visualisation\nAnimation techniques for time-series visualisation"
+    "text": "Characteristics of time-series data\nA short visual history of time-series graphs\nTime-series patterns\nTime-series data visualization Methods\n\nLine graph\nControl chart\nSlopegraph\nCycle plot\nHorizon graph\nSunburst diagram\nCalendar Heatmap\nStream Graph\n\nInteractive techniques for time-series data visualisation\nAnimation techniques for time-series visualisation"
   },
   {
     "objectID": "outline/Lesson06_outline.html#lesson-slides-and-hands-on-notes",
@@ -1019,14 +1019,14 @@
     "href": "outline/Lesson06_outline.html#readings",
     "title": "It’s About Time",
     "section": "Readings",
-    "text": "Readings\n\nCore Readings\n\nA taxonomy of temporal data visualization techniques\nEdward Tufte’s “Slopegraphs”\nIntroduction to Cycle Plots\nVisualizing Change: An Innovation in Time-Series Analysis\nThe Development of the Horizon Graph\nCandlestick chart\n\n\n\nAdditional Readings\n\nSlopegraph Update\nTime on the Horizon\nTimeSearcher\nUnderstanding Basic Candlestick Charts\nWhat is a slopegraph?\nDonahue, Rafe M.J. Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics. This article provide a real world example of building truthful and functional time series graph.\nHockey stick graph at wiki.\nMichael E. Mann, Raymond S. Bradley, Malcolm K. Hughes (1999) “Northern hemisphere temperatures during the past millennium: Inferences, uncertainties, and limitations”. Geophysical Research Letters, Vol. 26, No. pp. 759-762.\nThe Guardian (2010) “Hockey stick graph took pride of place in IPCC report, despite doubts”."
+    "text": "Readings\n\nCore Readings\n\nA taxonomy of temporal data visualization techniques\nEdward Tufte’s “Slopegraphs”\nIntroduction to Cycle Plots\nVisualizing Change: An Innovation in Time-Series Analysis\nThe Development of the Horizon Graph\n\n\n\nAdditional Readings\n\nSlopegraph Update\nTime on the Horizon\nTimeSearcher\nWhat is a slopegraph?\nDonahue, Rafe M.J. Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics. This article provide a real world example of building truthful and functional time series graph.\nHockey stick graph at wiki.\nMichael E. Mann, Raymond S. Bradley, Malcolm K. Hughes (1999) “Northern hemisphere temperatures during the past millennium: Inferences, uncertainties, and limitations”. Geophysical Research Letters, Vol. 26, No. pp. 759-762.\nThe Guardian (2010) “Hockey stick graph took pride of place in IPCC report, despite doubts”."
   },
   {
     "objectID": "outline/Lesson06_outline.html#all-about-tableau",
     "href": "outline/Lesson06_outline.html#all-about-tableau",
     "title": "It’s About Time",
     "section": "All About Tableau",
-    "text": "All About Tableau\n\nSlopegraphs in Tableau\nHorizon Graph\nViz Variety Show: When to use heatmap calendars\nCreating a Candlestick chart\nCandlestick Charts and Bollinger Bands"
+    "text": "All About Tableau\n\nSlopegraphs in Tableau\nHorizon Graph\nViz Variety Show: When to use heatmap calendars"
   },
   {
     "objectID": "outline/Lesson07_outline.html",
