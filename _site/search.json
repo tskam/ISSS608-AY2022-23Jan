@@ -2658,5 +2658,222 @@
     "title": "Hands-on Exercise 6: Visualising and Analysing Time-oriented Data",
     "section": "Cycle Plot",
     "text": "Cycle Plot\nIn this section, you will learn how to plot a cycle plot showing the time-series patterns and trend of visitor arrivals from Vietnam programmatically by using ggplot2 functions.\n\n\nData Preparation\n\nStep 1: Data Import\nFor the purpose of this hands-on exercise, arrivals_by_air.xlsx will be used.\nThe code chunk below imports arrivals_by_air.xlsx by using read_excel() of readxl package and save it as a tibble data frame called air.\n\nair <- read_excel(\"data/arrivals_by_air.xlsx\")\n\n\n\nStep 2: Deriving month and year fields\nNext, two new fields called month and year are derived from Month-Year field.\n\nair$month <- factor(month(air$`Month-Year`), \n                    levels=1:12, \n                    labels=month.abb, \n                    ordered=TRUE) \nair$year <- year(ymd(air$`Month-Year`))\n\n\n\nStep 4: Extracting the target country\nNext, the code chunk below is use to extract data for the target country (i.e. Vietnam)\n\nVietnam <- air %>% \n  select(`Vietnam`, \n         month, \n         year) %>%\n  filter(year >= 2010)\n\n\n\nStep 5: Computing year average arrivals by month\nThe code chunk below uses group_by() and summarise() of dplyr to compute year average arrivals by month.\n\nhline.data <- Vietnam %>% \n  group_by(month) %>%\n  summarise(avgvalue = mean(`Vietnam`))\n\n\n\n\nPlotting the cycle plot\nThe code chunk below is used to plot the cycle plot as shown in Slide 12/23.\n\nggplot() + \n  geom_line(data=Vietnam,\n            aes(x=year, \n                y=`Vietnam`, \n                group=month), \n            colour=\"black\") +\n  geom_hline(aes(yintercept=avgvalue), \n             data=hline.data, \n             linetype=6, \n             colour=\"red\", \n             size=0.5) + \n  facet_grid(~month) +\n  labs(axis.text.x = element_blank(),\n       title = \"Visitor arrivals from Vietnam by air, Jan 2010-Dec 2019\") +\n  xlab(\"\") +\n  ylab(\"No. of Visitors\")"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Characteristics of time-series data",
+    "text": "Characteristics of time-series data\nA typical time-series data table\n\n\nThe data table shows a typical time-series data. The first column contains the time series values in calender month and year. It is important to note that the values must not be in character data type. The next four columns are called time-series variables. They can be categorical or numeric data type."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data-1",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data-1",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Characteristics of time-series data",
+    "text": "Characteristics of time-series data\nNot so friendly time-series data\n\n\nThe data table in this slide is an example of time-series data which was not organised in machine understandable time-series manner. As shown on the slide earlier, a machine understandable time-series data must be organised in rows and columns whereby of of the column must contain the date/time values. In this example, the data need to be reformatted before they can be visualised."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data-2",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data-2",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Characteristics of time-series data",
+    "text": "Characteristics of time-series data\nNot so friendly time-series data\n\n\nThis slide shows a typical reporting table with many formatting features such as column sub-total, row sub-total, spacing, rows separators etc. Again, this table need to be tidied before it can be used to build tiem-series visualisation effectively."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data-3",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#characteristics-of-time-series-data-3",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Characteristics of time-series data",
+    "text": "Characteristics of time-series data\nNot so friendly time-series data\n\n\nThe table on the slide is another good example of not so friendly time-series data set. As you can see, the temporal field was splitted into three columns and the Year and Day fields are in numeric and Month field is in character. Also note that many rows for Year and Month fields were empty. In view of this, this data also need to be tidied before it can be used to build data visualisation."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "A short visual history of time-series graphs",
+    "text": "A short visual history of time-series graphs\nPlayfair’s Commercial and Political Atlas (1786)\n\n\nReference: William Playfair’s trade-balance time-series chart, Commercial and Political Atlas, 1786.\n\n\nIn this section, I am going share with you five very well designed time-series data visualisation and hope they inspired you. The first data visualisation is Playfair’s Commercial and Political Atlas (1786). This is not a typical time-series line graph. As you can see, the author put in conscious effort to shade the space between the import and export curve in order to reveal time interval with trade deficit and time interval with trade surplus."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs-1",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs-1",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "A short visual history of time-series graphs",
+    "text": "A short visual history of time-series graphs\nPlayfair’s Chewing at One View Chart (1821)\n\n\nReference: William Playfair’s Price of Wheat\n\n\nThis data visualisation is also a creation of William Playfair. It is make up of two graphical methods namely bar chart and line graph. Bar chart was used to show the price trend of the quarter of wheat and line graph was used to reveal wage trends of labour by the week."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs-2",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs-2",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "A short visual history of time-series graphs",
+    "text": "A short visual history of time-series graphs\nBump Chart shows rank of the most populous cities at each census: 1790-1890\n\n\nAn interactive version here\n\n\nThis data visualisation shows rank of the most populous cities at each census 1790-1890. Instead of using lines, this data visualisation using ellipses. The more recent times were on the left of the data visualisation and the earlier times were on the right. Note that the original data visualisation was static."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs-3",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#a-short-visual-history-of-time-series-graphs-3",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "A short visual history of time-series graphs",
+    "text": "A short visual history of time-series graphs\nMultiple charts showing records of the Weather in New York City for December, 1912.\n\n\nThis data visualisation shows record of the Weather in New York City for December, 1912. The bold line indicates temperature in degrees Fahrenheit. The light solid line shows wind velocity in miles per hour. The dotted line depicts relative humidity in percentage from readings taken at 8 a.m. and 8 p.m. Arrows portray the prevailing direction of the wind. Initials at the base of the chart show the weather conditions as follows: S, clear; PC, partly cloudy; C, cloudy; R, rain; Sn, snow."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#time-series-graph-that-change-public-understading",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#time-series-graph-that-change-public-understading",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Time-series graph that change public understading",
+    "text": "Time-series graph that change public understading\nThe Hockey Stick Chart\n\n\nReference: Michael E. Mann, Raymond S. Bradley, Malcolm K. Hughes (1999) “Northern hemisphere temperatures during the past millennium: Inferences, uncertainties, and limitations”. Geophysical Research Letters, Vol. 26, No. pp. 759-762.\n\n\nHockey stick graphs present the global or hemispherical mean temperature record of the past 500 to 2000 years as shown by quantitative climate reconstructions based on climate proxy records. These reconstructions have consistently shown a slow long term cooling trend changing into relatively rapid warming in the 20th century, with the instrumental temperature record by 2000 exceeding earlier temperatures. It is a good example of how data visualisation can be used to create global awareness of rapid warming in the 20th century."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#time-series-data-patterns",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#time-series-data-patterns",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Time-series data patterns",
+    "text": "Time-series data patterns\n\n\nTrend\nVariability\nRate of change\nCo-variation\nCycles\nExceptions\n\n\n\nIn this section, I am going share with you time-series characteristics reveal visually."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#time-series-patterns-cycles",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#time-series-patterns-cycles",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Time-series Patterns: Cycles",
+    "text": "Time-series Patterns: Cycles\n\n\n\nCycles are patterns that repeat at regular intervals.\nFrom the line graph, we can see that visitor arrivals from United Kingdom reach its peak on January and lowest on May every year."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Line graph design tips",
+    "text": "Line graph design tips\nNot all line graphs should start at zero!\n\n\n\n\n\n\n\n\nIn this section, I am going to share with you some tips when we want to visualise time-series data. This slide shows that by keeping the y-axis starts at zero might not be able to reveal time-series patterns or trends effectivelly. Hence, it is important to customise the y-axis in search a way that it can reveal the time-series patterns effectively like the line graph on the right of the slide."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-1",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-1",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Line graph design tips",
+    "text": "Line graph design tips\nMultiple lines in a single graph is less effective than trellis line graph\n\n\n\n\n\n\n\n\nIn order to support effective comparison, sometime trellis line graphs are more functional then a composite line graph as shown on the right of the slide."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-2",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-2",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Line graph design tips",
+    "text": "Line graph design tips\nNot all time-series graphs have time on the x-axis\n\n\nSource: Are emerging economies deindustrializing too quickly?.\n\n\nThe connected scatter plot below reveals changes over time by joining each time event points on the scatter plot. The historical trail can be a effective alternative to animation."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-3",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-3",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Line graph design tips",
+    "text": "Line graph design tips\nLabel line graph instead of using legend\n\n\n\n\n\n\n\n\nWhen ever possible, it is more effective to label on the line directly as shown on the line graph on the right instead of using legend."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-4",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-4",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Line graph design tips",
+    "text": "Line graph design tips\n\nIn order to support comparison over time effectively, reference line should be used.\n\n\n\nLine chart without reference line\n\n\nLine chart with reference line"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-5",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#line-graph-design-tips-5",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Line graph design tips",
+    "text": "Line graph design tips\nLine chart with reference band\n\n\nThe reference used don’t have to confine a single line. A confidence interval or quantile range can be used too."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#beyond-line-graph",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#beyond-line-graph",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Beyond Line Graph",
+    "text": "Beyond Line Graph\nControl Chart: An analytical line chart\n\n\nControl charts, also known as Shewhart charts (after Walter A. Shewhart) or process-behavior charts. They are a statistical process control tool used to determine if a manufacturing or business process is in a state of control. Beside the average line, there are two additional lines namely the upper control limit (UCL) and lower control limit (LCL). Any data points located beyond UCL or LCL will be flag out as anomalies."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-i-visualising-change-between-two-points-in-time",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-i-visualising-change-between-two-points-in-time",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge I: Visualising Change between Two Points in Time",
+    "text": "Challenge I: Visualising Change between Two Points in Time\nBar chart method"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#slopegraphs-come-to-rescue",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#slopegraphs-come-to-rescue",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Slopegraphs come to rescue!",
+    "text": "Slopegraphs come to rescue!\n\n\nSlopegraphs compare changes usually over time for a list of nouns located on an ordinal or interval scale.\n\nReference: Slopegraphs for comparing gradients: Slopegraph theory and practice"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-ii-visualising-cyclical-patterns",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-ii-visualising-cyclical-patterns",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge II: Visualising cyclical patterns",
+    "text": "Challenge II: Visualising cyclical patterns\nClassic line graph method"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-ii-visualising-cyclical-patterns-1",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-ii-visualising-cyclical-patterns-1",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge II: Visualising cyclical patterns",
+    "text": "Challenge II: Visualising cyclical patterns\nSolution: Cycle plot\n\n\nReference: Intro to Cycle Plot"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-ii-visualising-cyclical-patterns-2",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-ii-visualising-cyclical-patterns-2",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge II: Visualising cyclical patterns",
+    "text": "Challenge II: Visualising cyclical patterns\nSolution: Sunburst diagram method"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-iii-massive-time-series-data",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-iii-massive-time-series-data",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge III: Massive Time-series Data",
+    "text": "Challenge III: Massive Time-series Data\nClassic line graph method\n\n\nLine graph will not be effective to reveal high number of time series lines (for example 50)"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-iii-massive-time-series-data-1",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-iii-massive-time-series-data-1",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge III: Massive Time-series Data",
+    "text": "Challenge III: Massive Time-series Data\nSolution: Horizon graph\n\n\nBy dividing an area chart into consecutive layers, horizon graphs present time-series data in a compact space while preserving resolution.\n\n\n\nReference: Time on the Horizon"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#challenge-iv-distribution-over-time",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#challenge-iv-distribution-over-time",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Challenge IV: Distribution over time",
+    "text": "Challenge IV: Distribution over time\n\n\nLine graph method\n\n\nBoxplot method"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#alternative-time-series-data-visualisation-methods-calendar-heatmap",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#alternative-time-series-data-visualisation-methods-calendar-heatmap",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Alternative Time-series Data Visualisation methods: Calendar Heatmap",
+    "text": "Alternative Time-series Data Visualisation methods: Calendar Heatmap\n\n\nIt is a 2-dimensional calendar view that shows a value over time through color coding it, often with warmer colors indicating higher values (hence heatmap).\n\n\n\nSource: Calender heatmap"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#alternative-time-series-data-visualisation-methods",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#alternative-time-series-data-visualisation-methods",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Alternative Time-series Data Visualisation methods",
+    "text": "Alternative Time-series Data Visualisation methods\nStream Graph (also know as ThemeRiver)\n\n\nA streamgraph, or stream graph, is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape.\n\n\n\nReference: Steam graph"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#visualising-change-over-time",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#visualising-change-over-time",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "Visualising Change Over Time",
+    "text": "Visualising Change Over Time\nAnimated bubble plot (or motion chart)\n\n\nA motion chart displays changes over time by showing movement within the two-dimensional space and changes in the size and color of the bubbles."
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#references",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#references",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "References",
+    "text": "References\nClaus. O. Wilke (2019) Fundamentals of Data Visualisation, O’Reilly. USA. Chapter 13 Visualizing time series and other functions of an independent variable and Chapter 14 Visualizing trends\nIntroduction to Cycle Plots\nSlopegraphs for comparing gradients: Slopegraph theory and practice\nThe Development of the Horizon Graph"
+  },
+  {
+    "objectID": "lesson/Lesson06/Lesson06-VisTime.html#what-will-you-learn-from-this-lesson",
+    "href": "lesson/Lesson06/Lesson06-VisTime.html#what-will-you-learn-from-this-lesson",
+    "title": "Lesson 6: Visualising and Analysing Time-Oriented Data",
+    "section": "What will you learn from this lesson?",
+    "text": "What will you learn from this lesson?\n\n\nCharacteristics of time-series data\nClassic ways of graphing time\nTime-series patterns\nTime-series data visualization\nInteractive techniques for time-series data visualisation\n\n\n\nIn this lesson, I am going to share with you methods and best practice for visualising and analysing time-series data. It is organised into five main sections. First, we will examine different format of time series data. This is followed by a review of selected inspiring data visualisation for revealing time series patterns. In section three, we will examine different time-series patterns graphically. In section 4, I will introduce selected not so commonly used time-series data visualisation techniques. Lastly, in section 5, we will examine how interactivity and animation can be used to enhance visual time-series data discovery."
   }
 ]
