@@ -2,17 +2,18 @@
 title: "Take-home Exercise 4"
 description: "Putting Visual Analytics into Practical Use"
 date: "4 February 2023"
+date-modified: "`r Sys.Date()`"
 format: html
 editor: visual
 ---
 
 ## The Task
 
-In this take-home exercise, you are required to uncover the impact of COVID-19 as well as the global economic and political dynamic in 2022 on Singapore bi-lateral trade (i.e. Import, Export and Trade Balance) by using appropriate analytical visualisation techniques learned in **Lesson 6: It's About Time**. Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences.  
+In this take-home exercise, you are required to uncover the impact of COVID-19 as well as the global economic and political dynamic in 2022 on Singapore bi-lateral trade (i.e. Import, Export and Trade Balance) by using appropriate analytical visualisation techniques learned in **Lesson 6: It's About Time**. Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences.
 
 ## The Data
 
-For the purpose of this take-home exercise, Merchandise Trade provided by Department of Statistics, Singapore (DOS) will be used. The data are available under the sub-section of Merchandise Trade by Region/Market. You should download the data by clicking on the link **Download all in Excel** on the same webpage.  The study period should be between **January 2020 to December 2022**. 
+For the purpose of this take-home exercise, Merchandise Trade provided by Department of Statistics, Singapore (DOS) will be used. The data are available under the sub-section of Merchandise Trade by Region/Market. You should download the data by clicking on the link **Download all in Excel** on the same webpage. The study period should be between **January 2020 to December 2022**.
 
 ## The Designing Tool
 
@@ -44,12 +45,10 @@ The completed take-home exercise is due on **26th February 2023, by 11:59pm even
 
 ## Learning from senior
 
-- KELLY KOH KIA WOON
-DataViz Makeover write-up on [Netlify](https://kellykkw.netlify.app/posts/2021-05-15-dataviz-makeover-1/) and [Tableau Public link](https://public.tableau.com/app/profile/kelly2850/viz/DatavizMakeover1_16220368938730/Dashboard1). A must read submission. 
+-   KELLY KOH KIA WOON DataViz Makeover write-up on [Netlify](https://kellykkw.netlify.app/posts/2021-05-15-dataviz-makeover-1/) and [Tableau Public link](https://public.tableau.com/app/profile/kelly2850/viz/DatavizMakeover1_16220368938730/Dashboard1). A must read submission.
 
-- [How has Singapore changed since 2011?](https://rpubs.com/raymondteo/dataviz8) by Raymond TEO LIP PENG. This submission provides an useful reference on how to create animated motion plot by using time-oriented data.
+-   [How has Singapore changed since 2011?](https://rpubs.com/raymondteo/dataviz8) by Raymond TEO LIP PENG. This submission provides an useful reference on how to create animated motion plot by using time-oriented data.
 
-- [Singapore’s Demographic Composition Across Time](https://rpubs.com/deniseadele/584423) by DENISE ADELE CHUA HUI SHAN. This submission provides interesting approaches to reveal values change over time without having to use animation. 
-
+-   [Singapore's Demographic Composition Across Time](https://rpubs.com/deniseadele/584423) by DENISE ADELE CHUA HUI SHAN. This submission provides interesting approaches to reveal values change over time without having to use animation.
 
 ## Peer Learning
