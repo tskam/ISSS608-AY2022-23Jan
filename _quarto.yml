@@ -20,6 +20,8 @@ website:
           href: "take-home_ex/TH_EX02.html"
         - text: "Take-home Exercise 3"
           href: "take-home_ex/TH_EX03.html"
+        - text: "Take-home Exercise 4"
+          href: "take-home_ex/TH_EX04.html"
     - text: "Visual Analytics Project"
       href: VAproject.html
 
