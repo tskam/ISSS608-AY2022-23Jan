@@ -26,7 +26,7 @@ editor: visual
 
 -   Lesson slides in [html](../lesson/Lesson06/Lesson06-VisTime.html) and [pdf](../lesson/Lesson06/Lesson06-VisTime.pdf) formats
 
--   Handout of Hands-on Exercise 6 in [html](../Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06-TimeVis.html) and [pdf](../Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06-TimeVis.pdf) formats.
+-   Handout of Hands-on Exercise 6 in [html](../Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06-VisTime.html) format.
 
 ## Readings
 

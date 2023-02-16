@@ -15,16 +15,15 @@ editor: visual
 
 By the end of this hands-on exercise you will be able create the followings data visualisation by using R packages:
 
-- plotting a calender heatmap by using ggplot2 functions,
+-   plotting a calender heatmap by using ggplot2 functions,
 
-- plotting a cycle plot by using ggplot2 function, 
-- plotting a horizon chart
+-   plotting a cycle plot by using ggplot2 function,
+
+-   plotting a horizon chart
 
 ## Getting Started
 
-::: callout-info
-## Do It Yourself
-Write a code chunk to check, install and launch the following R packages: scales, viridis, lubridate, ggthemes, gridExtra, readxl, knitr, data.table and tidyverse. 
+::: callout-info \## Do It Yourself Write a code chunk to check, install and launch the following R packages: scales, viridis, lubridate, ggthemes, gridExtra, readxl, knitr, data.table and tidyverse.
 
 ```{r}
 #| code-fold: true
@@ -34,30 +33,30 @@ pacman::p_load(scales, viridis, lubridate, ggthemes, gridExtra, tidyverse, readx
 
 ## Plotting Calendar Heatmap
 
-In this section, you will learn how to plot a calender heatmap programmetically by using ggplot2 package.  
+In this section, you will learn how to plot a calender heatmap programmetically by using ggplot2 package.
 
 ![](img/image01.png)
 
 By the end of this section, you will be able to:
 
-- plot a calender heatmap by using ggplot2 functions and extension, 
-- to write function using R programming,
-- to derive specific date and time related field by using base R and lubridate packages 
-- to perform data preparation task by using tidyr and dplyr packages.  
+-   plot a calender heatmap by using ggplot2 functions and extension,
+-   to write function using R programming,
+-   to derive specific date and time related field by using base R and lubridate packages
+-   to perform data preparation task by using tidyr and dplyr packages.
 
 ### The Data
 
-For the purpose of this hands-on exercise, *eventlog.csv* file will be used.  This data file consists of 199,999 rows of time-series cyber attack records by country.  
+For the purpose of this hands-on exercise, *eventlog.csv* file will be used. This data file consists of 199,999 rows of time-series cyber attack records by country.
 
 ### Importing the data
 
-First, you will use the code chunk below to import *eventlog.csv* file into R environment and called the data frame as *attacks*. 
+First, you will use the code chunk below to import *eventlog.csv* file into R environment and called the data frame as *attacks*.
 
 ```{r}
 attacks <- read_csv("data/eventlog.csv")
 ```
 
-### Examining the data structure 
+### Examining the data structure
 
 It is always a good practice to examine the imported data frame before further analysis is performed.
 
@@ -67,23 +66,21 @@ For example, *kable()* can be used to review the structure of the imported data 
 kable(head(attacks))
 ```
 
-There are three columns, namely  *timestamp*, *source_country* and *tz*.  
+There are three columns, namely *timestamp*, *source_country* and *tz*.
 
-- *timestamp* field stores date-time values in POSIXct format.
-- *source_country* field stores the source of the attack.  It is in *ISO 3166-1 alpha-2* country code.  
-- *tz* field stores time zone of the source IP address.
-
+-   *timestamp* field stores date-time values in POSIXct format.
+-   *source_country* field stores the source of the attack. It is in *ISO 3166-1 alpha-2* country code.\
+-   *tz* field stores time zone of the source IP address.
 
 ```{r echo=FALSE}
 kable(head(attacks))
 ```
 
-
 ### Data Preparation
 
-Step 1: Deriving *weekday* and *hour of day* fields 
+Step 1: Deriving *weekday* and *hour of day* fields
 
-Before we can plot the calender heatmap, two new fields namely *wkday* and *hour* need to be derived.  In this step, we will write a function to perform the task.
+Before we can plot the calender heatmap, two new fields namely *wkday* and *hour* need to be derived. In this step, we will write a function to perform the task.
 
 ```{r}
 make_hr_wkday <- function(ts, sc, tz) {
@@ -155,14 +152,7 @@ theme(axis.ticks = element_blank(),
       legend.text = element_text(size = 6) )
 ```
 
-Things to learn from the code chunk:
-- a tibble data table called *grouped* is derived by aggregating the attack by *wkday* and *hour* fields.
-- a new field called *n* is derived by using `group_by()` and `count()` functions.
-- `na.omit()` is used to exclude missing value.
-- `geom_tile()` is used to plot tiles (grids) at each x and y position.  `color` and `size` arguments are used to specify the border color and line size of the tiles.
-- [`theme_tufte()`](https://jrnold.github.io/ggthemes/reference/theme_tufte.html) of  [**ggthemes**](https://jrnold.github.io/ggthemes/reference/index.html) package is used to remove unnecessary chart junk.  To learn which visual components of default ggplot2 have been excluded, you are encouraged to comment out this line to examine the default plot. 
-- `coord_equal()` is used to ensure the plot will have an aspect ratio of 1:1.
-- `scale_fill_gradient()` function is used to creates a two colour gradient (low-high).
+Things to learn from the code chunk: - a tibble data table called *grouped* is derived by aggregating the attack by *wkday* and *hour* fields. - a new field called *n* is derived by using `group_by()` and `count()` functions. - `na.omit()` is used to exclude missing value. - `geom_tile()` is used to plot tiles (grids) at each x and y position. `color` and `size` arguments are used to specify the border color and line size of the tiles. - [`theme_tufte()`](https://jrnold.github.io/ggthemes/reference/theme_tufte.html) of [**ggthemes**](https://jrnold.github.io/ggthemes/reference/index.html) package is used to remove unnecessary chart junk. To learn which visual components of default ggplot2 have been excluded, you are encouraged to comment out this line to examine the default plot. - `coord_equal()` is used to ensure the plot will have an aspect ratio of 1:1. - `scale_fill_gradient()` function is used to creates a two colour gradient (low-high).
 
 ```{r echo=FALSE}
 grouped <- attacks %>% 
@@ -204,9 +194,9 @@ Step 1: Deriving attack by country object
 
 In order to identify the top 4 countries with the highest number of attacks, you are required to do the followings:
 
-- count the number of attacks by country, 
-- calculate the percent of attackes by country, and
-- save the results in a tibble data frame.
+-   count the number of attacks by country,
+-   calculate the percent of attackes by country, and
+-   save the results in a tibble data frame.
 
 ```{r}
 attacks_by_country <- count(
@@ -258,7 +248,7 @@ ggplot(top4_attacks,
 
 ## Cycle Plot
 
-In this section, you will learn how to plot a cycle plot showing the time-series patterns and trend of visitor arrivals from Vietnam programmatically by using ggplot2 functions.    
+In this section, you will learn how to plot a cycle plot showing the time-series patterns and trend of visitor arrivals from Vietnam programmatically by using ggplot2 functions.
 
 ![](img/image03.png)
 
@@ -268,7 +258,7 @@ In this section, you will learn how to plot a cycle plot showing the time-series
 
 For the purpose of this hands-on exercise, *arrivals_by_air.xlsx* will be used.
 
-The code chunk below imports *arrivals_by_air.xlsx* by using `read_excel()` of **readxl** package and save it as a tibble data frame called *air*.  
+The code chunk below imports *arrivals_by_air.xlsx* by using `read_excel()` of **readxl** package and save it as a tibble data frame called *air*.
 
 ```{r}
 air <- read_excel("data/arrivals_by_air.xlsx")
@@ -285,7 +275,6 @@ air$month <- factor(month(air$`Month-Year`),
                     ordered=TRUE) 
 air$year <- year(ymd(air$`Month-Year`))
 ```
-
 
 #### Step 4: Extracting the target country
 
@@ -331,4 +320,3 @@ ggplot() +
   xlab("") +
   ylab("No. of Visitors")
 ```
-
