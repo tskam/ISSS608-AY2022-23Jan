@@ -1,7 +1,9 @@
 ---
 title: "Hands-on Exercise 6: Visualising and Analysing Time-oriented Data"
 author: "Dr. Kam Tin Seong"
-format: html
+format: 
+  html:
+    fontsize: 20px
 date: "14 February 2023"
 date-modified: "`r Sys.Date()`"
 execute:
@@ -19,16 +21,22 @@ By the end of this hands-on exercise you will be able create the followings data
 
 -   plotting a cycle plot by using ggplot2 function,
 
+-   plotting a slopegraph
+
 -   plotting a horizon chart
 
 ## Getting Started
 
-::: callout-info \## Do It Yourself Write a code chunk to check, install and launch the following R packages: scales, viridis, lubridate, ggthemes, gridExtra, readxl, knitr, data.table and tidyverse.
+::: callout-info
+## Do It Yourself
+
+Write a code chunk to check, install and launch the following R packages: scales, viridis, lubridate, ggthemes, gridExtra, readxl, knitr, data.table and tidyverse.
+:::
 
 ```{r}
 #| code-fold: true
 #| code-summary: "Show the code"
-pacman::p_load(scales, viridis, lubridate, ggthemes, gridExtra, tidyverse, readxl, knitr, data.table)
+pacman::p_load(scales, viridis, lubridate, ggthemes, gridExtra, readxl, knitr, data.table, CGPfunctions, ggHoriPlot, tidyverse)
 ```
 
 ## Plotting Calendar Heatmap
@@ -94,7 +102,10 @@ make_hr_wkday <- function(ts, sc, tz) {
   }
 ```
 
-Note: [`ymd_hms()`](https://lubridate.tidyverse.org/reference/ymd_hms.html) and [`hour()`](https://lubridate.tidyverse.org/reference/hour.html) are from [**lubridate**](https://lubridate.tidyverse.org/) package and [`weekdays()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/weekdays) is a **base** R function.
+::: callout-note
+-   [`ymd_hms()`](https://lubridate.tidyverse.org/reference/ymd_hms.html) and [`hour()`](https://lubridate.tidyverse.org/reference/hour.html) are from [**lubridate**](https://lubridate.tidyverse.org/) package, and
+-   [`weekdays()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/weekdays) is a **base** R function.
+:::
 
 Step 2: Deriving the attacks tibble data frame
 
@@ -116,7 +127,9 @@ attacks <- attacks %>%
       hour, levels = 0:23))
 ```
 
-Note: Beside extracting the necessary data into *attacks* data frame, `mutate()` of **dplyr** package is used to convert *wkday* and *hour* fields into **factor** so they'll be ordered when plotting
+::: callout-note
+Beside extracting the necessary data into *attacks* data frame, `mutate()` of **dplyr** package is used to convert *wkday* and *hour* fields into **factor** so they'll be ordered when plotting
+:::
 
 Table below shows the tidy tibble table after processing.
 
@@ -152,7 +165,17 @@ theme(axis.ticks = element_blank(),
       legend.text = element_text(size = 6) )
 ```
 
-Things to learn from the code chunk: - a tibble data table called *grouped* is derived by aggregating the attack by *wkday* and *hour* fields. - a new field called *n* is derived by using `group_by()` and `count()` functions. - `na.omit()` is used to exclude missing value. - `geom_tile()` is used to plot tiles (grids) at each x and y position. `color` and `size` arguments are used to specify the border color and line size of the tiles. - [`theme_tufte()`](https://jrnold.github.io/ggthemes/reference/theme_tufte.html) of [**ggthemes**](https://jrnold.github.io/ggthemes/reference/index.html) package is used to remove unnecessary chart junk. To learn which visual components of default ggplot2 have been excluded, you are encouraged to comment out this line to examine the default plot. - `coord_equal()` is used to ensure the plot will have an aspect ratio of 1:1. - `scale_fill_gradient()` function is used to creates a two colour gradient (low-high).
+::: callout-tip
+# Things to learn from the code chunk
+
+-   a tibble data table called *grouped* is derived by aggregating the attack by *wkday* and *hour* fields.
+-   a new field called *n* is derived by using `group_by()` and `count()` functions.
+-   `na.omit()` is used to exclude missing value.
+-   `geom_tile()` is used to plot tiles (grids) at each x and y position. `color` and `size` arguments are used to specify the border color and line size of the tiles.
+-   [`theme_tufte()`](https://jrnold.github.io/ggthemes/reference/theme_tufte.html) of [**ggthemes**](https://jrnold.github.io/ggthemes/reference/index.html) package is used to remove unnecessary chart junk. To learn which visual components of default ggplot2 have been excluded, you are encouraged to comment out this line to examine the default plot.
+-   `coord_equal()` is used to ensure the plot will have an aspect ratio of 1:1.
+-   `scale_fill_gradient()` function is used to creates a two colour gradient (low-high).
+:::
 
 ```{r echo=FALSE}
 grouped <- attacks %>% 
@@ -246,15 +269,13 @@ ggplot(top4_attacks,
         legend.text = element_text(size = 6) )
 ```
 
-## Cycle Plot
+## Plotting Cycle Plot
 
 In this section, you will learn how to plot a cycle plot showing the time-series patterns and trend of visitor arrivals from Vietnam programmatically by using ggplot2 functions.
 
 ![](img/image03.png)
 
-### Data Preparation
-
-#### Step 1: Data Import
+### Step 1: Data Import
 
 For the purpose of this hands-on exercise, *arrivals_by_air.xlsx* will be used.
 
@@ -264,7 +285,7 @@ The code chunk below imports *arrivals_by_air.xlsx* by using `read_excel()` of *
 air <- read_excel("data/arrivals_by_air.xlsx")
 ```
 
-#### Step 2: Deriving month and year fields
+### Step 2: Deriving month and year fields
 
 Next, two new fields called *month* and *year* are derived from *Month-Year* field.
 
@@ -276,7 +297,7 @@ air$month <- factor(month(air$`Month-Year`),
 air$year <- year(ymd(air$`Month-Year`))
 ```
 
-#### Step 4: Extracting the target country
+### Step 4: Extracting the target country
 
 Next, the code chunk below is use to extract data for the target country (i.e. Vietnam)
 
@@ -288,7 +309,7 @@ Vietnam <- air %>%
   filter(year >= 2010)
 ```
 
-#### Step 5: Computing year average arrivals by month
+### Step 5: Computing year average arrivals by month
 
 The code chunk below uses `group_by()` and `summarise()` of **dplyr** to compute year average arrivals by month.
 
@@ -298,7 +319,7 @@ hline.data <- Vietnam %>%
   summarise(avgvalue = mean(`Vietnam`))
 ```
 
-### Plotting the cycle plot
+### Srep 6: Plotting the cycle plot
 
 The code chunk below is used to plot the cycle plot as shown in Slide 12/23.
 
@@ -319,4 +340,90 @@ ggplot() +
        title = "Visitor arrivals from Vietnam by air, Jan 2010-Dec 2019") +
   xlab("") +
   ylab("No. of Visitors")
+```
+
+## Plotting Slopegraph
+
+In this section you will learn how to plot a [slopegraph](https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph) by using R.
+
+Before getting start, make sure that **CGPfunctions** has been installed and loaded onto R environment. Then, refer to [Using newggslopegraph](https://cran.r-project.org/web/packages/CGPfunctions/vignettes/Using-newggslopegraph.html) to learn more about the function. Lastly, read more about `newggslopegraph()` and its arguments by referring to this [link](https://www.rdocumentation.org/packages/CGPfunctions/versions/0.6.3/topics/newggslopegraph).
+
+### Step 1: Data Import
+
+Import the rice data set into R environment by using the code chunk below.
+
+```{r}
+rice <- read_csv("data/rice.csv")
+```
+
+### Step 2: Plotting the slopegraph
+
+Next, code chunk below will be used to plot a basic slopegraph as shown below.
+
+```{r}
+#| fig-height: 6
+rice %>% 
+  mutate(Year = factor(Year)) %>%
+  filter(Year %in% c(1961, 1980)) %>%
+  newggslopegraph(Year, Yield, Country,
+                Title = "Rice Yield of Top 11 Asian Counties",
+                SubTitle = "1961-1980",
+                Caption = "Prepared by: Dr. Kam Tin Seong")
+```
+
+::: callout-tip
+# Thing to learn from the code chunk above
+For effective data visualisation design, `factor()` is used convert the value type of *Year* field from numeric to factor. 
+:::
+
+## Plotting Horizon Plot
+
+In this section, you will learn how to plot a [horizon graph](http://www.perceptualedge.com/articles/visual_business_intelligence/time_on_the_horizon.pdf) by using [**ggHoriPlot**](https://rivasiker.github.io/ggHoriPlot/index.html) package.  
+
+Before getting start, make sure that **ggHoriPlot** has been included in the `pacman::p_load(...)` statement above. Then, refer to [Getting Started](https://rivasiker.github.io/ggHoriPlot/articles/ggHoriPlot.html) to learn more about the function. Lastly, read [`geom_horizon()`](https://rivasiker.github.io/ggHoriPlot/reference/geom_horizon.html to learn more about the usage ot its arguments.
+
+### Step 1: Data Import 
+
+For the purpose of this hands-on exercise, [Average Retail Prices Of Selected Consumer Items](https://tablebuilder.singstat.gov.sg/table/TS/M212891) will be used.  
+
+Use the code chunk below to import the AVERP.csv file into R environment.  
+
+```{r}
+averp <- read_csv("data/AVERP.csv") %>%
+  mutate(`Date` = dmy(`Date`))
+```
+
+::: callout-tip
+# Thing to learn from the code chunk above.
+- By default, read_csv will import data in Date field as Character data type.  [`dmy()`](https://lubridate.tidyverse.org/reference/ymd.html) of [**lubridate**](https://lubridate.tidyverse.org/index.html) package to palse the Date field into appropriate Date data type in R.     
+:::
+
+### Step 2: Plotting the horizon graph 
+
+Next, the code chunk below will be used to plot the horizon graph.
+
+```{r}
+#| fig-width: 10
+#| fig-height: 8
+averp %>% 
+  filter(Date >= "2018-01-01") %>%
+  ggplot() +
+  geom_horizon(aes(x = Date, y=Values), 
+               origin = "midpoint", 
+               horizonscale = 6)+
+  facet_grid(`Consumer Items`~.) +
+    theme_few() +
+  scale_fill_hcl(palette = 'RdBu') +
+  theme(panel.spacing.y=unit(0, "lines"), strip.text.y = element_text(
+    size = 5, angle = 0, hjust = 0),
+    legend.position = 'none',
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(size=7),
+    axis.title.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.border = element_blank()
+    ) +
+    scale_x_date(expand=c(0,0), date_breaks = "3 month", date_labels = "%b%y") +
+  ggtitle('Average Retail Prices of Selected Consumer Items (Jan 2018 to Dec 2022)')
 ```

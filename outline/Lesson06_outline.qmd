@@ -40,10 +40,11 @@ editor: visual
 
 ### Additional Readings
 
+-   [what is a slopegraph?](https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph)
 -   [Slopegraph Update](http://charliepark.org/a-slopegraph-update/)
 -   [Time on the Horizon](http://www.perceptualedge.com/articles/visual_business_intelligence/time_on_the_horizon.pdf)
 -   [TimeSearcher](http://www.cs.umd.edu/hcil/timesearcher/)
--   [What is a slopegraph?](https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph) 
+-   [What is a slopegraph?](https://www.storytellingwithdata.com/blog/2020/7/27/what-is-a-slopegraph)
 -   Donahue, Rafe M.J. [*Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics*](https://byuistats.github.io/CSE150/files/FSCPD_Donahue_callcenter.pdf). This article provide a real world example of building truthful and functional time series graph.
 -   [Hockey stick graph](https://en.wikipedia.org/wiki/Hockey_stick_graph) at wiki.
 -   Michael E. Mann, Raymond S. Bradley, Malcolm K. Hughes (1999) ["Northern hemisphere temperatures during the past millennium: Inferences, uncertainties, and limitations"](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/1999GL900070). *Geophysical Research Letters*, Vol. 26, No. pp. 759-762.
@@ -54,7 +55,3 @@ editor: visual
 -   [Slopegraphs in Tableau](http://dataremixed.com/2013/12/slopegraphs-in-tableau/)
 -   [Horizon Graph](https://www.tableau.com/learn/tutorials/on-demand/horizon-charts)
 -   [Viz Variety Show: When to use heatmap calendars](https://www.tableau.com/about/blog/2017/2/viz-variety-show-heatmaps-66330)
-
-
-
-
