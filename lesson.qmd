@@ -7,14 +7,14 @@ editor: visual
 ---
 
 | Lesson | Date | Venue          | Topic                                                                    | Remarks |
-|--------|:-----|----------------|:-------------------------------------------------------------------------|:--------|
+|---------|:--------|---------|:-----------------------------------|:--------|
 | 1      | 14/1 | SCIS1 SR B1-1  | [Introduction to Visual Analytics](outline/Lesson01_outline.html)        |         |
 | 2      | 21/1 | SCIS1 SR B1-1  | [Designing Graphs to Enlighten](outline/Lesson02_outline.html)           |         |
 | 3      | 28/1 | YPHSL SR B2-01 | [Interactivity in Visual Analytics](outline/Lesson03_outline.html)       |         |
 | 4      | 4/2  | YPHSL SR B2-01 | [Fundamentals of Visual Analytics](outline/Lesson04_outline.html)        |         |
 | 5      | 11/2 | SCIS1 SR B1-1  | [Visual Multivariate Analysis](outline/Lesson05_outline.html)            |         |
 | 6      | 18/2 | SCIS1 SR B1-1  | [It's About Time](outline/Lesson06_outline.html)                         |         |
-| 7      | 25/2 | SCIS1 SR B1-1  | [GeoVisual Analytics](outline/Lesson07_outline.html)                     |         |
+| 7      | 25/2 | SCIS1 SR B1-1  | [Visualising and Analysing Geographic Data](outline/Lesson07_outline.html)                     |         |
 |        | 4/3  | SCIS1 SR B1-1  | [Recess]()                                                               |         |
 | 8      | 11/3 | SCIS1 SR B1-1  | [Network Data Visualisation and Analysis](outline/Lesson08_outline.html) |         |
 | 9      | 18/3 | SCIS1 SR B1-1  | [Information Dashboard Design](outline/Lesson09_outline.html)            |         |

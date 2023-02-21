@@ -1684,7 +1684,7 @@
     "href": "lesson.html",
     "title": "Lesson Plan",
     "section": "",
-    "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nGeoVisual Analytics\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
+    "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nVisualising and Analysing Geographic Data\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
   },
   {
     "objectID": "outline/Lesson01_outline.html",
@@ -1913,35 +1913,35 @@
   {
     "objectID": "outline/Lesson07_outline.html",
     "href": "outline/Lesson07_outline.html",
-    "title": "Lesson 7: GeoVisual Analytics",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "",
     "text": "Introducing map\nProperties of geographical data\nTypology of map\nThematic mapping techniques\n\nProportional symbol map\nChoropleth map\nData Classification\n\nAlternative mapping techniques"
   },
   {
     "objectID": "outline/Lesson07_outline.html#lesson-slides-and-hands-on-notes",
     "href": "outline/Lesson07_outline.html#lesson-slides-and-hands-on-notes",
-    "title": "Lesson 7: GeoVisual Analytics",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Lesson Slides and Hands-on Notes",
     "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHands-on Exercises:\n\nHands-on Exercise 7: Basic Mapping in html and pdf formats.\nHands-on Exercise 7: MovementVis in html and pdf formats\n\nHandout of Hands-on Exercise 7: Analytical Mapping in html and pdf formats."
   },
   {
     "objectID": "outline/Lesson07_outline.html#readings",
     "href": "outline/Lesson07_outline.html#readings",
-    "title": "Lesson 7: GeoVisual Analytics",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Readings",
     "text": "Readings\n\nCore Reading\n\nThe Concept of Map Symbols\nProportional Symbols\nChoropleth map\nChoropleth Maps\nThe Basics of Data Classification\n\n\n\nAdditional Readings\n\nChoropleth Maps – A Guide to Data Classification\nBivariate Choropleth\nValue-by-alpha maps\nWhat to consider when creating choropleth maps\nChoropleth Mapping with Exploratory Data Analysis\nCartogram Maps: Data Visualization with Exaggeration\nCartogram\nWhen Maps Shouldn’t Be Maps\nWhat to consider when creating choropleth maps"
   },
   {
     "objectID": "outline/Lesson07_outline.html#visualising-geographic-data-tableau-methods",
     "href": "outline/Lesson07_outline.html#visualising-geographic-data-tableau-methods",
-    "title": "Lesson 7: GeoVisual Analytics",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Visualising Geographic Data: Tableau Methods",
     "text": "Visualising Geographic Data: Tableau Methods\n\nBasic Tutorial\n\nMaps and Geographic Data Analysis in Tableau. This chapter from the User Guide of Tableau provide a comprehensive overview of the mapping concepts and Tableau methods. I strongly recommend you to read the chapter at least once.\nLive Training: Mapping\nGetting Started with Mapping\nMaps in Tableau\nEditing Unrecognized Location\nSpatial Files\nThe Density Mark Type (Heat maps)\nExpanding Tableau’s Mapping Capabilities\nCustom Geocoding\nPolygon Maps\nBackground Images\n\n\n\nBeyond the Basic\n\nAdvanced Mapping with Tableau\n10 ways to add value to your dashboards with maps\n3 Ways to Make Magnificent Maps in Tableau\nHow to Make Trellis / Tile / Small Multiple Maps in Tableau"
   },
   {
     "objectID": "outline/Lesson07_outline.html#geovisual-analytics-r-methods",
     "href": "outline/Lesson07_outline.html#geovisual-analytics-r-methods",
-    "title": "Lesson 7: GeoVisual Analytics",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "GeoVisual Analytics: R methods",
     "text": "GeoVisual Analytics: R methods\n\nsf package\n\nSimple Features for R\nReading, Writing and Converting Simple Features\nManipulating Simple Feature Geometries\nManipulating Simple Features\nPlotting Simple Features\nMiscellaneous\nSpherical geometry in sf using s2geometry\n\n\n\nraster package\n\nraster reference\nraster package\n\n\n\nstars\n\nstars reference\nSpatiotemporal Arrays: Raster and Vector Datacubes\nIntroduction\nstars tidyverse methods\nStatistical modelling with stars objects\n\n\n\ntmap package\n\ntmap reference\ntmap: get started!\ntmap: what is changed in recent versions?\nTennekes, M., (2018)tmap: Thematic Maps in R, Journal of Statistical Software, 84(6), 1-39.\n\n\n\nmicromap package\n\nmicromap provides functions simplifies the creation of linked micromap plots.\nLinked Micromaps\n\n\n\ngeofacet package\n\ngeofacet provides geofaceting functionality for ggplot2. Geofaceting arranges a sequence of plots of data for different geographical entities into a grid that strives to preserve some of the original geographical orientation of the entities.\nIntroduction to geofacet"
   },

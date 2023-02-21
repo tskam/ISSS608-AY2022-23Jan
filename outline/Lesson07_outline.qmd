@@ -1,6 +1,7 @@
 ---
-title: "Lesson 7: GeoVisual Analytics"
-date: "`r Sys.Date()`"
+title: "Lesson 7: Visualising and Analysing Geographic Data"
+date: "30 December 2022"
+date-modified: "`r Sys.Date()`"
 format: html
 editor: visual
 ---
