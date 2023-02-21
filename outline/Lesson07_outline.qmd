@@ -23,10 +23,9 @@ editor: visual
 
 -   Hands-on Exercises:
 
-    -   Hands-on Exercise 7: Basic Mapping in [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-BasicMapping.html) and [pdf](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-BasicMapping.pdf) formats.
-    -   Hands-on Exercise 7: MovementVis in [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-MovementVis.html) and [pdf](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-MovementVis.pdf) formats
-
--   Handout of Hands-on Exercise 7: Analytical Mapping in [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-AMap.html) and [pdf](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-AMap.pdf) formats.
+  -   Hands-on Exercise 7: Choropleth Mapping in R [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Choropleth_Mapping.html)
+  -   Hands-on Exercise 7: Proportional Symbol Mapping in R [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Symbol_Mapping.html)
+  -   Handout of Hands-on Exercise 7: Analytical Mapping in [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Analytical_Mapping.html). 
 
 ## Readings
 

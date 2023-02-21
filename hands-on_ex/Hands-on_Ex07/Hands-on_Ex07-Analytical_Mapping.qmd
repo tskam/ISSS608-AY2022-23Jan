@@ -1,0 +1,364 @@
+---
+title: "Hands-on Exercise 7: Analytical Mapping"
+date: "16 January 2023" 
+date-modified: "`r Sys.Date()`"
+number-sections: true
+format: html
+execute:
+  echo: true
+  eval: true
+  warning: false
+editor: visual
+---
+
+## Overview
+
+### Objectives
+
+In this in-class exercise, you will gain hands-on experience on using appropriate R methods to plot analytical maps. 
+
+### Learning outcome
+
+By the end of this in-class exercise, you will be able to use appropriate functions of tmap and tidyverse to perform the following tasks:
+
+-   Importing geospatial data in rds format into R environment.
+-   Creating cartographic quality choropleth maps by using appropriate tmap functions.
+-   Creating rate map
+-   Creating percentile map
+-   Creating boxmap
+
+## Getting Started
+
+### Installing and loading packages
+
+::: callout-note
+## Your turn
+
+Using the steps you learned in previous lesson, install and load **sf**, **tmap** and **tidyverse** packages into R environment.
+:::
+
+::: {style="font-size: 1.2em"}
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+pacman::p_load(tmap, tidyverse, sf)
+```
+:::
+
+### Importing data
+
+For the purpose of this hands-on exercise, a prepared data set called *NGA_wp.rds* will be used.  The data set is a polygon feature data.frame providing information on water point of Nigeria at the LGA level.  You can find the data set in the *rds* sub-direct of the hands-on *data* folder. 
+
+::: callout-note
+# Do it Yourself
+Using appropriate sf function import *NGA_wp.rds* into R environment.
+:::
+
+::: {style="font-size: 1.2em"}
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+NGA_wp <- read_rds("data/rds/NGA_wp.rds")
+```
+:::
+
+## Basic Choropleth Mapping
+
+### Visualising distribution of non-functional water point
+
+::: callout-note
+## Your turn
+
+Plot a choropleth map showing the distribution of non-function water point by LGA
+:::
+
+::: {style="font-size: 1.2em"}
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+p1 <- tm_shape(NGA_wp) +
+  tm_fill("wp_functional",
+          n = 10,
+          style = "equal",
+          palette = "Blues") +
+  tm_borders(lwd = 0.1,
+             alpha = 1) +
+  tm_layout(main.title = "Distribution of functional water point by LGAs",
+            legend.outside = FALSE)
+```
+:::
+
+::: {style="font-size: 1.2em"}
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+p2 <- tm_shape(NGA_wp) +
+  tm_fill("total_wp",
+          n = 10,
+          style = "equal",
+          palette = "Blues") +
+  tm_borders(lwd = 0.1,
+             alpha = 1) +
+  tm_layout(main.title = "Distribution of total  water point by LGAs",
+            legend.outside = FALSE)
+```
+:::
+
+::: {style="font-size: 1.2em"}
+```{r}
+#| fig-width: 16
+tmap_arrange(p2, p1, nrow = 1)
+```
+:::
+
+## Choropleth Map for Rates
+
+In much of our readings we have now seen the importance to map rates rather than counts of things, and that is for the simple reason that water points are not equally distributed in space. That means that if we do not account for how many water points are somewhere, we end up mapping total water point size rather than our topic of interest.
+
+### Deriving Proportion of Functional Water Points and Non-Functional Water Points
+
+We will tabulate the proportion of functional water points and the proportion of non-functional water points in each LGA. In the following code chunk, `mutate(`) from **dplyr** package is used to derive two fields, namely *pct_functional* and *pct_nonfunctional*.
+
+::: {style="font-size: 1.2em"}
+```{r}
+NGA_wp <- NGA_wp %>%
+  mutate(pct_functional = wp_functional/total_wp) %>%
+  mutate(pct_nonfunctional = wp_nonfunctional/total_wp)
+```
+:::
+
+### Plotting map of rate
+
+::: callout-note
+## Your turn
+
+Plot a choropleth map showing the distribution of percentage functional water point by LGA
+:::
+
+::: {style="font-size: 1.2em"}
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+tm_shape(NGA_wp) +
+  tm_fill("pct_functional",
+          n = 10,
+          style = "equal",
+          palette = "Blues",
+          legend.hist = TRUE) +
+  tm_borders(lwd = 0.1,
+             alpha = 1) +
+  tm_layout(main.title = "Rate map of functional water point by LGAs",
+            legend.outside = TRUE)
+```
+:::
+
+## Extreme Value Maps
+
+Extreme value maps are variations of common choropleth maps where the classification is designed to highlight extreme values at the lower and upper end of the scale, with the goal of identifying outliers. These maps were developed in the spirit of spatializing EDA, i.e., adding spatial features to commonly used approaches in non-spatial EDA (Anselin 1994).
+
+### Percentile Map
+
+The percentile map is a special type of quantile map with six specific categories: 0-1%,1-10%, 10-50%,50-90%,90-99%, and 99-100%. The corresponding breakpoints can be derived by means of the base R quantile command, passing an explicit vector of cumulative probabilities as c(0,.01,.1,.5,.9,.99,1). Note that the begin and endpoint need to be included.
+
+#### Data Preparation
+
+Step 1: Exclude records with NA by using the code chunk below.
+
+::: {style="font-size: 1.2em"}
+```{r}
+NGA_wp <- NGA_wp %>%
+  drop_na()
+```
+:::
+
+Step 2: Creating customised classification and extracting values
+
+```{r}
+percent <- c(0,.01,.1,.5,.9,.99,1)
+var <- NGA_wp["pct_functional"] %>%
+  st_set_geometry(NULL)
+quantile(var[,1], percent)
+```
+
+::: callout-important
+When variables are extracted from an sf data.frame, the geometry is extracted as well. For mapping and spatial manipulation, this is the expected behavior, but many base R functions cannot deal with the geometry. Specifically, the `quantile()` gives an error. As a result `st_set_geomtry(NULL)` is used to drop geomtry field.
+:::
+
+#### Why writing functions?
+
+Writing a function has three big advantages over using copy-and-paste:
+
+-   You can give a function an evocative name that makes your code easier to understand.
+-   As requirements change, you only need to update code in one place, instead of many.
+-   You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another).
+
+Source: [Chapter 19: Functions](https://r4ds.had.co.nz/functions.html#functions) of **R for Data Science**.
+
+#### Creating the get.var function
+
+Firstly, we will write an R function as shown below to extract a variable (i.e. *wp_nonfunctional*) as a vector out of an sf data.frame.
+
+-   arguments:
+    -   vname: variable name (as character, in quotes)
+    -   df: name of sf data frame
+-   returns:
+    -   v: vector with values (without a column name)
+
+```{r}
+get.var <- function(vname,df) {
+  v <- df[vname] %>% 
+    st_set_geometry(NULL)
+  v <- unname(v[,1])
+  return(v)
+}
+```
+
+#### A percentile mapping function
+
+Next, we will write a percentile mapping function by using the code chunk below.
+
+```{r}
+percentmap <- function(vnam, df, legtitle=NA, mtitle="Percentile Map"){
+  percent <- c(0,.01,.1,.5,.9,.99,1)
+  var <- get.var(vnam, df)
+  bperc <- quantile(var, percent)
+  tm_shape(df) +
+  tm_polygons() +
+  tm_shape(df) +
+     tm_fill(vnam,
+             title=legtitle,
+             breaks=bperc,
+             palette="Blues",
+          labels=c("< 1%", "1% - 10%", "10% - 50%", "50% - 90%", "90% - 99%", "> 99%"))  +
+  tm_borders() +
+  tm_layout(main.title = mtitle, 
+            title.position = c("right","bottom"))
+}
+```
+
+#### Test drive the percentile mapping function
+
+To run the function, type the code chunk as shown below.
+
+```{r}
+percentmap("total_wp", NGA_wp)
+```
+
+Note that this is just a bare bones implementation. Additional arguments such as the title, legend positioning just to name a few of them, could be passed to customise various features of the map.
+
+### Box map
+
+In essence, a box map is an augmented quartile map, with an additional lower and upper category. When there are lower outliers, then the starting point for the breaks is the minimum value, and the second break is the lower fence. In contrast, when there are no lower outliers, then the starting point for the breaks will be the lower fence, and the second break is the minimum value (there will be no observations that fall in the interval between the lower fence and the minimum value).
+
+```{r}
+#| fig-width: 4
+ggplot(data = NGA_wp,
+       aes(x = "",
+           y = wp_nonfunctional)) +
+  geom_boxplot()
+```
+
+-   Displaying summary statistics on a choropleth map by using the basic principles of boxplot.
+
+-   To create a box map, a custom breaks specification will be used. However, there is a complication. The break points for the box map vary depending on whether lower or upper outliers are present.
+
+#### Creating the boxbreaks function
+
+The code chunk below is an R function that creating break points for a box map.
+
+-   arguments:
+    -   v: vector with observations
+    -   mult: multiplier for IQR (default 1.5)
+-   returns:
+    -   bb: vector with 7 break points compute quartile and fences
+
+```{r}
+boxbreaks <- function(v,mult=1.5) {
+  qv <- unname(quantile(v))
+  iqr <- qv[4] - qv[2]
+  upfence <- qv[4] + mult * iqr
+  lofence <- qv[2] - mult * iqr
+  # initialize break points vector
+  bb <- vector(mode="numeric",length=7)
+  # logic for lower and upper fences
+  if (lofence < qv[1]) {  # no lower outliers
+    bb[1] <- lofence
+    bb[2] <- floor(qv[1])
+  } else {
+    bb[2] <- lofence
+    bb[1] <- qv[1]
+  }
+  if (upfence > qv[5]) { # no upper outliers
+    bb[7] <- upfence
+    bb[6] <- ceiling(qv[5])
+  } else {
+    bb[6] <- upfence
+    bb[7] <- qv[5]
+  }
+  bb[3:5] <- qv[2:4]
+  return(bb)
+}
+```
+
+#### Creating the get.var function
+
+The code chunk below is an R function to extract a variable as a vector out of an sf data frame.
+
+-   arguments:
+    -   vname: variable name (as character, in quotes)
+    -   df: name of sf data frame
+-   returns:
+    -   v: vector with values (without a column name)
+
+```{r}
+get.var <- function(vname,df) {
+  v <- df[vname] %>% st_set_geometry(NULL)
+  v <- unname(v[,1])
+  return(v)
+}
+```
+
+#### Test drive the newly created function
+
+Let's test the newly created function
+
+```{r}
+var <- get.var("wp_nonfunctional", NGA_wp) 
+boxbreaks(var)
+```
+
+#### Boxmap function
+
+The code chunk below is an R function to create a box map. - arguments: - vnam: variable name (as character, in quotes) - df: simple features polygon layer - legtitle: legend title - mtitle: map title - mult: multiplier for IQR - returns: - a tmap-element (plots a map)
+
+```{r}
+boxmap <- function(vnam, df, 
+                   legtitle=NA,
+                   mtitle="Box Map",
+                   mult=1.5){
+  var <- get.var(vnam,df)
+  bb <- boxbreaks(var)
+  tm_shape(df) +
+    tm_polygons() +
+  tm_shape(df) +
+     tm_fill(vnam,title=legtitle,
+             breaks=bb,
+             palette="Blues",
+          labels = c("lower outlier", 
+                     "< 25%", 
+                     "25% - 50%", 
+                     "50% - 75%",
+                     "> 75%", 
+                     "upper outlier"))  +
+  tm_borders() +
+  tm_layout(main.title = mtitle, 
+            title.position = c("left",
+                               "top"))
+}
+```
+
+```{r}
+tmap_mode("plot")
+boxmap("wp_nonfunctional", NGA_wp)
+```
+
