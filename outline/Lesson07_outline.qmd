@@ -18,7 +18,7 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson07/Lesson07-GeoVA.html) and [pdf](../lesson/Lesson07/Lesson07-GeoVA.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson07/Lesson07-VisGeo.html) and [pdf](../lesson/Lesson07/Lesson07-VisGeo.pdf) formats
 
 -   Hands-on Exercises:
 

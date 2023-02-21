@@ -2707,5 +2707,173 @@
     "title": "Hands-on Exercise 6: Visualising and Analysing Time-oriented Data",
     "section": "Plotting Horizon Plot",
     "text": "Plotting Horizon Plot\nIn this section, you will learn how to plot a horizon graph by using ggHoriPlot package.\nBefore getting start, make sure that ggHoriPlot has been included in the pacman::p_load(...) statement above. Then, refer to Getting Started to learn more about the function. Lastly, read [geom_horizon()](https://rivasiker.github.io/ggHoriPlot/reference/geom_horizon.html to learn more about the usage ot its arguments.\n\nStep 1: Data Import\nFor the purpose of this hands-on exercise, Average Retail Prices Of Selected Consumer Items will be used.\nUse the code chunk below to import the AVERP.csv file into R environment.\n\naverp <- read_csv(\"data/AVERP.csv\") %>%\n  mutate(`Date` = dmy(`Date`))\n\n\n\n\n\n\n\nThing to learn from the code chunk above.\n\n\n\n\nBy default, read_csv will import data in Date field as Character data type. dmy() of lubridate package to palse the Date field into appropriate Date data type in R.\n\n\n\n\n\n\nStep 2: Plotting the horizon graph\nNext, the code chunk below will be used to plot the horizon graph.\n\naverp %>% \n  filter(Date >= \"2018-01-01\") %>%\n  ggplot() +\n  geom_horizon(aes(x = Date, y=Values), \n               origin = \"midpoint\", \n               horizonscale = 6)+\n  facet_grid(`Consumer Items`~.) +\n    theme_few() +\n  scale_fill_hcl(palette = 'RdBu') +\n  theme(panel.spacing.y=unit(0, \"lines\"), strip.text.y = element_text(\n    size = 5, angle = 0, hjust = 0),\n    legend.position = 'none',\n    axis.text.y = element_blank(),\n    axis.text.x = element_text(size=7),\n    axis.title.y = element_blank(),\n    axis.title.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    panel.border = element_blank()\n    ) +\n    scale_x_date(expand=c(0,0), date_breaks = \"3 month\", date_labels = \"%b%y\") +\n  ggtitle('Average Retail Prices of Selected Consumer Items (Jan 2018 to Dec 2022)')"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#what-will-you-learn-from-this-lesson",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#what-will-you-learn-from-this-lesson",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "What will you learn from this lesson?",
+    "text": "What will you learn from this lesson?\n\nIntroducing map\nProperties of geographical data\n\nGeographical data models\nMap projections\n\nTypology of maps\n\nReference maps\nThematic maps\n\nProportional Symbol Map\nChoropleth Map]"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#what-is-a-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#what-is-a-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "What is a Map?",
+    "text": "What is a Map?\nA map is a model of real world depict by a collection of cartographic symbols or/and visual abstraction."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#what-is-a-map-1",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#what-is-a-map-1",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "What is a Map?",
+    "text": "What is a Map?\nAn interface between geographical data and map users."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#a-map-and-geographical-data",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#a-map-and-geographical-data",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "A Map and Geographical Data",
+    "text": "A Map and Geographical Data"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#types-of-geographical-data",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#types-of-geographical-data",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Types of geographical data",
+    "text": "Types of geographical data"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "How location information are registered?",
+    "text": "How location information are registered?\n\nGeographic Coordinates Systems\nProjected Coordinates Systems"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-1",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-1",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "How location information are registered?",
+    "text": "How location information are registered?\nGeographic Coordinates Systems\n\n\n\nA geographic coordinate system defines two-dimensional coordinates based on the Earth’s surface. It has an angular unit of measure, prime meridian and datum (which contains the spheroid).\nFor example, WGS84, NAD27 and NAD83.\n\n\nSource: Geographic Coodinate Ststem@wiki"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-2",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-2",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "How location information are registered?",
+    "text": "How location information are registered?\nProjected Coordinates Systems\n\n\n\nA projected coordinate system is defined on a flat, two-dimensional surface.\nA projected coordinate system, unlike a geographic one, has the advantage that lengths, angles, and areas are constant across the two dimensions. This is not true when working in a geographic coordinate system.\nA projected coordinate system is always based on a geographic coordinate system that can use a sphere or spheroid.\n\n\n\n\nSource: Map Projection@wiki"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "The Purpose of a Map",
+    "text": "The Purpose of a Map\n\nTo serve as a piece of historical archive.\n\n\n\nSource: Battle of Singapore\n\n\nA map serves as a record of the physical and cultural environment at a particular time. For example, the map above shows Singapore in early February 1942; the disposition of Allied ground forces is in red. The main north–south transport corridor, formed by Woodlands Road and the railway, connecting the city centre (in the southeast) and The Causeway (central north), is the black line running through the centre of the island. Sarimbun is at the north west corner of the island; Bukit Timah is located close to the centre on the transport corridor; Pasir Panjang is between the city centre and the southwest corner of the island and the “Jurong Line” is the bracket-like shape in red, just west of Woodlands Roadland use allocation on Singapore Concept Plan in 2001."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-1",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-1",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "The Purpose of a Map",
+    "text": "The Purpose of a Map\n\nTo support navigation (i.e. Google Map)."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-2",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-2",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "The Purpose of a Map",
+    "text": "The Purpose of a Map\n\nTo support navigation (i.e. sea chart of Singapore)\n\n\n\nSource: Singapore electronic navigational chart"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-3",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-3",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "The Purpose of a Map",
+    "text": "The Purpose of a Map\n\nTo reveal spatial patterns.\n\n\n\nReference: John Snow Cholera Map"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-4",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-4",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "The Purpose of a Map",
+    "text": "The Purpose of a Map\n\nTo describe spatial relationship."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#typology-of-maps",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#typology-of-maps",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Typology of Maps",
+    "text": "Typology of Maps"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#thematic-mapping-principles-and-methods",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#thematic-mapping-principles-and-methods",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Thematic Mapping: Principles and Methods",
+    "text": "Thematic Mapping: Principles and Methods\n\nDisplaying\n\nQualitative data\nQuantitative data\n\nChoosing -Appropriate classification method for displaying data\n\nAppropriate number of classes\n\nTechniques in data analysis\n\nUsing the classification histogram\nNormalizing data"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-maps",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-maps",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Qualitative Thematic Maps",
+    "text": "Qualitative Thematic Maps\nVisual Variables and Cartographic Symbols\n\n\n\nQualitative visual variables are used for nominal scale data.\nThe goal of qualitative visual variables is to show how entities differ from each other.\nThe visual variables that do a good job of showing ordinal differences are: colour value, colour saturation, size and texture/grain.\n\nFigure on the right for examples of these four ordinal visual variables used each in point, linear and areal symbols."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Qualitative Thematic Map",
+    "text": "Qualitative Thematic Map\nPoint symbol map\n\n\n\nDifferent point symbols are used to represent school types."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-1",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-1",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Qualitative Thematic Map",
+    "text": "Qualitative Thematic Map\nLine symbol map\n\n\n\nA road map is an example of a thematic map. It shows the road network of an area. In this map, lines with different colour intensity and tickness are used to differentiate hierarchy of roads."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-2",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-2",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Qualitative Thematic Map",
+    "text": "Qualitative Thematic Map\nArea map\n\n\n\nLand use map below is a good example of a discrete thematic map. In this map, different colours are use to represent different land use types."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#quantitative-thematic-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#quantitative-thematic-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Quantitative Thematic Map",
+    "text": "Quantitative Thematic Map\nVisual Variables and Cartographic Symbols\n\n\n\nQuantitative visual variables are used to display ordinal, interval or ratio scale data.\n\nThe goal of the quantitative visual variable is to show relative magnitude or order between entities.\nThe visual variables that do a good job of showing ordinal differences are: colour value, colour saturation, size and texture/grain.\n\nFigure on the right shows of these four ordinal visual variables used each in point, linear and areal symbols."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#proportional-symbol-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#proportional-symbol-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Proportional Symbol Map",
+    "text": "Proportional Symbol Map\n\nThe proportional symbol technique uses symbols of different sizes to represent data associated with different areas or locations within the map.\n\n\n\nThe proportional symbol technique uses symbols of different sizes to represent data associated with different areas or locations within the map. For example, the proportional maps above use circle with different sizes to represent millions of people. There are two types of point features that are typically depicted with proportional symbols: features for which the data represents a geographic position directly (e.g., gallons of oil from individual oil wells), and features that are geographic areas to which data are aggregated and the data magnitudes are assigned to a representative point within the area (e.g., the geographic centroid of a state as in the examples above). In either case, the area of the symbol is scaled to represent the data magnitude, sometimes with a bit of exaggeration to adjust for a general tendency of human vision to underestimate differences in area. A variant on this direct data-to-symbol scaling groups values into categories first, then scales the symbol to represent the mean for the category, assigning a symbol to each place to represent the category range that the mean for the place falls within"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#dot-density-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#dot-density-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Dot Density Map",
+    "text": "Dot Density Map\nA dot-density map is a type of thematic map that uses dots or other symbols on the map to show the values of one or more numeric data fields. Each dot on a dot-density map represents some amount of data.\n\n\nOne dot represent 100 households.\n\n\nReference: Dot distribution map at wiki and Dot Density Maps"
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#choropleth-map",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#choropleth-map",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Choropleth Map",
+    "text": "Choropleth Map\nA choropleth map is a type of thematic map in which areas are shaded or patterned in proportion to a statistical variable that represents an aggregate summary of a geographic characteristic within each area, such as population or per capita income."
+  },
+  {
+    "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#reference",
+    "href": "lesson/Lesson07/Lesson07-VisGeo.html#reference",
+    "title": "Lesson 7: Visualising and Analysing Geographic Data",
+    "section": "Reference",
+    "text": "Reference\nProportional Symbols\nChoropleth Maps\nDot Density Maps\nThe Basics of Data Classification\nShould a map be interactive?\nMap interaction"
   }
 ]
