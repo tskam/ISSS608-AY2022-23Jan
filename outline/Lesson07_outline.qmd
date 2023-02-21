@@ -24,7 +24,7 @@ editor: visual
 -   Hands-on Exercises:
 
   -   Hands-on Exercise 7: Choropleth Mapping in R [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Choropleth_Mapping.html)
-  -   Hands-on Exercise 7: Proportional Symbol Mapping in R [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Symbol_Mapping.html)
+  -   Hands-on Exercise 7: Visualising Geospatial Point Data [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Point_Mapping.html)
   -   Handout of Hands-on Exercise 7: Analytical Mapping in [html](../Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Analytical_Mapping.html). 
 
 ## Readings
