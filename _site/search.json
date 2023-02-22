@@ -2006,7 +2006,7 @@
     "href": "outline/Lesson10_outline.html#lesson-slides-and-hands-on-notes",
     "title": "Lesson 10: Financial Data Visualisation and Analysis",
     "section": "Lesson Slides and Hands-on Notes",
-    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 10 in html and pdf formats."
+    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 10 in html format."
   },
   {
     "objectID": "Quarto.html",
@@ -3167,6 +3167,76 @@
     "objectID": "hands-on_ex/Hands-on_Ex09/Hands-on_Ex09-Information_Dashboard_Design.html#reference",
     "href": "hands-on_ex/Hands-on_Ex09/Hands-on_Ex09-Information_Dashboard_Design.html#reference",
     "title": "Hands-on Exercise 9: Information Dashboard Design: R methods",
+    "section": "Reference",
+    "text": "Reference"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "",
+    "text": "By the end of this hands-on exercise, you will be able to:\n\nextract stock price data from financial portal such as Yahoo Finance by using tidyquant package\nplot horizon graph by using ggHoriPlot package,\nplot static and interactive stock prices line graph(s) by ggplot2 and plotly R packages,\n\nplot static candlestick chart by using tidyquant package,\nplot static bollinger bands by using tidyquant, and\nplot interactive candlestick chart by using ggplot2 and plotly R."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#getting-started",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#getting-started",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Getting started",
+    "text": "Getting started\nFor the purpose of this hands-on exercise, the following R packages will be used.\n\n\nShow the code\npacman::p_load(lubridate, tidyquant, ggHoriPlot,\n               timetk, ggthemes, plotly, tidyverse)\n\n\n\ntidyverse provides a collection of functions for performing data science task such as importing, tidying, wrangling data and visualising data. It is not a single package but a collection of modern R packages including but not limited to readr, tidyr, dplyr, ggplot, tibble, stringr, forcats and purrr.\nlubridate provides functions to work with dates and times more efficiently.\ntidyquant bringing business and financial analysis to the ‘tidyverse’. It provides a convenient wrapper to various ‘xts’, ‘zoo’, ‘quantmod’, ‘TTR’ and ‘PerformanceAnalytics’ package functions and returns the objects in the tidy ‘tibble’ format.\nggHoriPlot: A user-friendly, highly customisable R package for building horizon plots in the ‘ggplot2’ environment."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#data-extraction-with-tidyquant",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#data-extraction-with-tidyquant",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Data Extraction with tidyquant",
+    "text": "Data Extraction with tidyquant\ntidyquant integrates resources for collecting and analysing financial data with the tidy data infrastructure of the tidyverse, allowing for seamless interaction between each.\nIn this section, you will learn how to extract the daily stock values of a selected stocks from Yahoo Finance by using tidyquant.\nStep 1: We will import a pre-prepared company list called companySG.csv onto R. The list consists of top 45 companies by market capitalisation in Singapore. However, we just want the top 40.\n\n\nShow the code\ncompany <- read_csv(\"data/companySG.csv\")\nTop40 <- company %>% \n  slice_max(`marketcap`, n=40) %>% \n  select(symbol)\n\n\nStep 2: tq_get() method will be used to extract daily values of these stocks from Yahoo Finance via APIs. The time period for the data was set from 1st January 2020 to 31st March 2021. The data are specified to be returned in daily intervals.\n\n\nShow the code\nStock40_daily <- Top40 %>%\n  tq_get(get = \"stock.prices\", \n         from = \"2020-01-01\", \n         to = \"2022-03-31\") %>%\n  group_by(symbol) %>%\n  tq_transmute(select = NULL, \n               mutate_fun = to.period, \n               period  = \"days\")\n\n\n]"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-a-horizon-graph",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-a-horizon-graph",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Plotting a horizon graph",
+    "text": "Plotting a horizon graph\nIn this section, you will learn how to plot a horizon graph by using geom_horizon() of ggHoriPlot package.\n\n\nShow the code\nStock40_daily %>% \n  ggplot() +\n  geom_horizon(aes(x = date, y=adjusted), origin = \"midpoint\", horizonscale = 6)+\n  facet_grid(symbol~.)+\n  theme_few() +\n  scale_fill_hcl(palette = 'RdBu') +\n  theme(panel.spacing.y=unit(0, \"lines\"), strip.text.y = element_text(\n    size = 5, angle = 0, hjust = 0),\n    legend.position = 'none',\n    axis.text.y = element_blank(),\n    axis.text.x = element_text(size=7),\n    axis.title.y = element_blank(),\n    axis.title.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    panel.border = element_blank()\n    ) +\n  scale_x_date(expand=c(0,0), date_breaks = \"1 month\", date_labels = \"%b%y\") +\n  ggtitle('Daily Adjusted Prices (Jan 2020 to Mar 2022)') \n\n\n\n\n\n\nHorizon graph makeover\n\nInstead of showing stock code, the stock name will be displayed.\nAdding reference lines\n\nStep 1: left_join() of dplyr package is used to append fields from company data.frame onto Stock_daily data.frame. Next select() is used to select columns 1 to 8 and 11 to 12.\n\n\nShow the code\nStock40_daily <- Stock40_daily %>%\n  left_join(company) %>%\n  select(1:8, 11:12)\n\n\nStep 2: geom_vline() is used to add the vertical reference lines.\n\n\nShow the code\nStock40_daily %>% \n  ggplot() +\n  geom_horizon(aes(x = date, y=adjusted), origin = \"midpoint\", horizonscale = 6)+\n  facet_grid(Name~.)+ #<<\n  geom_vline(xintercept = as.Date(\"2020-03-11\"), colour = \"grey15\", linetype = \"dashed\", size = 0.5)+ #<<\n  geom_vline(xintercept = as.Date(\"2020-12-14\"), colour = \"grey15\", linetype = \"dashed\", size = 0.5)+ #<<\n  theme_few() +\n  scale_fill_hcl(palette = 'RdBu') +\n  theme(panel.spacing.y=unit(0, \"lines\"),\n        strip.text.y = element_text(size = 5, angle = 0, hjust = 0),\n    legend.position = 'none',\n    axis.text.y = element_blank(),\n    axis.text.x = element_text(size=7),\n    axis.title.y = element_blank(),\n    axis.title.x = element_blank(),\n    axis.ticks.y = element_blank(),\n    panel.border = element_blank()\n    ) +\n  scale_x_date(expand=c(0,0), date_breaks = \"1 month\", date_labels = \"%b%y\") +\n  ggtitle('Daily Adjusted Prices (Jan 2020 to Mar 2022)')"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-stock-price-line-graph-ggplot-methods",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-stock-price-line-graph-ggplot-methods",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Plotting Stock Price Line Graph: ggplot methods",
+    "text": "Plotting Stock Price Line Graph: ggplot methods\nIn the code chunk below, geom_line() of ggplot2 is used to plot the stock prices.\n\n\nShow the code\nStock40_daily %>%\n  filter(symbol == \"DBSDF\") %>%\n  ggplot(aes(x = date, y = close)) +\n    geom_line() +\n    labs(title = \"DBS Group Holdings Ltd (DBSDF) Daily Stock Price\", \n         y = \"Closing Price\", x = \"\") + \n    theme_tq()"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-interactive-stock-price-line-graphs",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-interactive-stock-price-line-graphs",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Plotting interactive stock price line graphs",
+    "text": "Plotting interactive stock price line graphs\nIn this section, we will create interactive line graphs for four selected stocks.\nStep 1: Selecting the four stocks of interest.\n\n\nShow the code\nselected_stocks <-  Stock40_daily %>%\n  filter (`symbol` == c(\"C09.SI\", \"SINGF\", \"SNGNF\", \"C52.SI\"))\n\n\nStep 2: Plotting the line graphs by using ggplot2 functions and ggplotly() of plotly R package\n\n\nShow the code\np <- ggplot(selected_stocks, \n            aes(x = date, y = adjusted)) + \n  scale_y_continuous() +\n  geom_line() +\n  facet_wrap(~Name, scales = \"free_y\",) +\n  theme_tq() +\n  labs(title = \"Daily stock prices of selected weak stocks\", \n       x = \"\", y = \"Adjusted Price\") + \n  theme(axis.text.x = element_text(size = 6), \n        axis.text.y = element_text(size = 6))\n\nggplotly(p)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-candlestick-chart-tidyquant-method",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-candlestick-chart-tidyquant-method",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Plotting Candlestick Chart: tidyquant method",
+    "text": "Plotting Candlestick Chart: tidyquant method\nIn this section, you will learn how to plot candlestick chart by using geom_candlestick() of tidyquant package.\nBefore plotting the candlesticks, the code chunk below will be used to define the end data parameter. It will be used when setting date limits throughout the examples.\n\n\nShow the code\nend <- as_date(\"2022-03-31\")\n\n\nNow we are ready to plot the candlesticks by using the code chunk below.\n\n\nShow the code\nStock40_daily %>%\n  filter(symbol == \"DBSDF\") %>%\n  ggplot(aes(\n    x = date, y = close)) +\n  geom_candlestick(aes(\n    open = open, high = high, \n    low = low, close = close)) +\n  geom_line(size = 0.5)+\n    coord_x_date(xlim = c(end - weeks(12), \n                          end),\n                 ylim = c(20, 35),\n                 expand = TRUE) +\n  labs(title = \"DBS Group Holdings Ltd (DBSDF) Daily Stock Price\", \n       y = \"Closing Price\", x = \"\") + \n  theme_tq()\n\n\n\n\n\n\nPlotting candlestick chart and MA lines: tidyquant method\n\n\nShow the code\nStock40_daily %>%\n  filter(symbol == \"DBSDF\") %>%\n  ggplot(aes(\n    x = date, y = close)) +\n  geom_candlestick(aes(\n    open = open, high = high, \n    low = low, close = close)) +\n  geom_line(size = 0.5)+\n  geom_ma(color = \"darkgreen\", n = 20) +\n  geom_ma(color = \"lightgreen\", n = 5) + \n    coord_x_date(xlim = c(end - weeks(12), \n                          end),\n                 ylim = c(20, 35),\n                 expand = TRUE) +\n  labs(title = \"DBS Group Holdings Ltd (DBSDF) Daily Stock Price\",\n       subtitle = \"darkgreen = 1-day MA, lightgreen = 5-day MA\",\n       y = \"Closing Price\", x = \"\") + \n  theme_tq()\n\n\n\n\n\nThings to learn from the code chunk:\n\ngeom_MA is used to add the moving average line. It is a wrapper function of SMA() from the TTR package."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-bollinger-bands-tidyquant-method",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-bollinger-bands-tidyquant-method",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Plotting Bollinger Bands: tidyquant method",
+    "text": "Plotting Bollinger Bands: tidyquant method\nIn this section, you will learn how to plot bollinger bands by using geom_bbands() of tidyquant package.\n\n\nShow the code\nStock40_daily %>%\n  filter(symbol == \"DBSDF\") %>% \n  ggplot(aes(x=date, y=close))+\n  geom_line(size=0.5)+\n  geom_bbands(aes(\n    high = high, low = low, close = close), \n    ma_fun = SMA, sd = 2, n = 20,\n    size = 0.75, color_ma = \"royalblue4\", \n    color_bands = \"red1\")+\n    coord_x_date(xlim = c(\"2020-02-01\", \n                          \"2022-03-31\"), \n                 expand = TRUE)+\n    labs(title = \"DBS Group Holdings Ltd (DBSDF) Daily Stock Price\",\n         subtitle = \"dotted red lines = bollinger bands\",\n         x = \"Date\", y =\"Price\") +\ntheme(legend.position=\"none\")\n\n\n\n\n\nThings you can learn from the code chunk:\n\ngeom_bbands() plots a range around a moving average typically two standard deviations up and down. The moving average functions used are specified in SMA() from the TTR package."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-interactive-candlesticks-chart-ggplot2-and-plotly-r-method",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#plotting-interactive-candlesticks-chart-ggplot2-and-plotly-r-method",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
+    "section": "Plotting Interactive Candlesticks Chart: ggplot2 and plotly R method",
+    "text": "Plotting Interactive Candlesticks Chart: ggplot2 and plotly R method\nFirst, a candleStick_plot function is written as follows:\n\n\nShow the code\ncandleStick_plot<-function(symbol, from, to){\n  tq_get(symbol, from = from, to = to, warnings = FALSE) %>% \n    mutate(greenRed=ifelse(open-close>0, \"Red\", \"Green\")) %>% \n    ggplot()+\n    geom_segment(\n      aes(x = date, xend=date, y =open, yend =close, colour=greenRed), \n      size=3)+\n    theme_tq()+\n    geom_segment(\n      aes(x = date, xend=date, y =high, yend =low, colour=greenRed))+\n    scale_color_manual(values=c(\"ForestGreen\",\"Red\"))+\n    ggtitle(paste0(symbol,\" (\",from,\" - \",to,\")\"))+\n    theme(legend.position =\"none\",\n          axis.title.y = element_blank(),\n          axis.title.x=element_blank(),\n          axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=1),\n          plot.title= element_text(hjust=0.5))\n}\n\n\nCredit: I learned this trick from RObservations #12: Making a Candlestick plot with the ggplot2 and tidyquant packages\n\n\nShow the code\np <- candleStick_plot(\"DBSDF\",\n                      from = '2022-01-01',\n                      to = today())\nggplotly(p)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#reference",
+    "href": "hands-on_ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html#reference",
+    "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
     "section": "Reference",
     "text": "Reference"
   }
