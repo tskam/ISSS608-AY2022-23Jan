@@ -17,7 +17,7 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson10/Lesson10.html) and [pdf](../lesson/Lesson10/Lesson10.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson09/Lesson09-IDD.html) and [pdf](../lesson/Lesson09/Lesson09-IDD.pdf) formats
 
 -   Handout of Hands-on Exercise 9 in [html](../Hands-on_Ex/Hands-on_Ex09/Hands-on_Ex09-Information_Dashboard_Design.html) format.
 

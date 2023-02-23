@@ -3456,5 +3456,82 @@
     "title": "Lesson 8: Visualising and Analysing Network Data",
     "section": "Geospatial Network Visualisation",
     "text": "Geospatial Network Visualisation\n\nThis site provides an outstanding overview and survey of various geospatial network visualisations."
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#content",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#content",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Content",
+    "text": "Content\n\nIntroducing information dashboard\nInformation dashboard design best practices\nCommon mistakes in dashboard design\nIdeal graphs for information dashboard\n\nBullet graph\nSparklines\nBandlines"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#introducing-information-dashboard",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#introducing-information-dashboard",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Introducing information dashboard",
+    "text": "Introducing information dashboard"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#best-practices-for-dashboard-design",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#best-practices-for-dashboard-design",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Best Practices for Dashboard Design",
+    "text": "Best Practices for Dashboard Design\n\n\n\nPreparing stage\n\nTarget the user\nKnow what value your dashboard will add\nDisplay only actionable information\n\nDesign stage\n\nRight tool for the right job\nContext\nLayout and clarity\nVisual aesthetics"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#preparing-stage-user-centered-design-process",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#preparing-stage-user-centered-design-process",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Preparing stage: User-centered Design Process",
+    "text": "Preparing stage: User-centered Design Process\n\nReference: Developing and Applying a User-Centered Model for the Design and Implementation of Information Visualisation"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#ideal-graphs-for-information-dashboard-bullet-graphs",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#ideal-graphs-for-information-dashboard-bullet-graphs",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Ideal graphs for information dashboard: Bullet Graphs",
+    "text": "Ideal graphs for information dashboard: Bullet Graphs\n\nBullet graphs to replace gauges."
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#ideal-graphs-for-information-dashboard-bullet-graphs-sparklines",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#ideal-graphs-for-information-dashboard-bullet-graphs-sparklines",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Ideal graphs for information dashboard: Bullet Graphs: Sparklines",
+    "text": "Ideal graphs for information dashboard: Bullet Graphs: Sparklines\n\nA sparkline is a very small line chart, typically drawn without axes or coordinates.\n\n.center[ \nreference: Sparklines"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#best-practices-for-dashboard-design-1",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#best-practices-for-dashboard-design-1",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Best Practices for Dashboard Design",
+    "text": "Best Practices for Dashboard Design\nCommon mistakes in dashboard design\n\nExceeding the boundaries of a single page\nSupplying inadequate context for the data\nDisplaying excessive detail or precision\nExposing measure indirectly\nChoosing inappropriate display media\nIntroducing meaningless variety\nUsing poorly designed display media\nEncoding quantitative data inaccurately"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#references",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#references",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "References",
+    "text": "References\nDashboard Design\n\nA Guide to Creating Dashboards People Love to Use\n5 Best Practices for Creating Effective Dashboards\nThe Must Do’s of Marketing Dashboards\nMaking Flow Happen\nWith Dashboards: Formatting and layout Definitely Matter\nDashboard Design for real-Time Situation Awareness"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#references-1",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#references-1",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "References",
+    "text": "References\nDashboard Design\n\nDashboard Design for Rich and Rapid Monitoring\nPervasive Hurdles to Effective Dashboard Design\nWhy Most Dashboards Fail\nDashboard Confusion\nDashboard Confusion Revisited\nDashboard Design for at-a-glance monitoring"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#references-2",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#references-2",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "References",
+    "text": "References\nBullet Chart & Sparklines\n\nBullet graph @wiki\nBullet Graph Design Specification\nSparkline theory and practice\nBest Practices for Scaling Sparklines in Dashboard\nIntroducing Bandlines"
+  },
+  {
+    "objectID": "lesson/Lesson09/Lesson09-IDD.html#ideal-graphs-for-information-dashboard-sparklines",
+    "href": "lesson/Lesson09/Lesson09-IDD.html#ideal-graphs-for-information-dashboard-sparklines",
+    "title": "Lesson 9: Information Dashboard Design",
+    "section": "Ideal graphs for information dashboard: Sparklines",
+    "text": "Ideal graphs for information dashboard: Sparklines\n\nA sparkline is a very small line chart, typically drawn without axes or coordinates.\n\n\n\nReference: Sparklines"
   }
 ]
