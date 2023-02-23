@@ -37,7 +37,7 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson08/Lesson08-NetworkVA.html) and [pdf](../lesson/Lesson08/Lesson08-NetworkVA.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson08/Lesson08-NetworkVis.html) and [pdf](../lesson/Lesson08/Lesson08-NetworkVis.pdf) formats
 
 -   Handout of Hands-on Exercise 8 in [html](../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08-NetworkVis.html) format.
 
