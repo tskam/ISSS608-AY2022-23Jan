@@ -3239,5 +3239,222 @@
     "title": "Hands-on Exercise 10: Financial Data Visualisation and Analysis",
     "section": "Reference",
     "text": "Reference"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#content",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#content",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Content",
+    "text": "Content\n\nIntroduction to Graph Visual Analytics\nGraph Visualisation in Actions\nBasic Principles of Graph\nNetwork data sets\n\nGraph data format\n\nNetwork Visualisation and Analysis\n\nNetwork visualisation and analysis process model\nGraph layouts and visual attributes\nNetwork metrics"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#introduction-to-graph-analytics",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#introduction-to-graph-analytics",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Introduction to Graph Analytics",
+    "text": "Introduction to Graph Analytics\n\nWhat is Graph Analytics?\nBasic concepts of graph\nNetwork in Real World\nGraph Visualisation in Actions"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#what-is-graph-analytics-1",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#what-is-graph-analytics-1",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "What is Graph Analytics?",
+    "text": "What is Graph Analytics?\n\nFor example, in a graph representing relationships (such as “liking” or “friending” another individual’s profile or site) between individuals, graph analytics can help answer questions like the following:\n\nHow many other individuals does the average individual “friend” with?\nWhat is the maximum number of “friends” any one individual has?\nHow interconnected are groups of users with one another?\nHow many “friend” relationships does it take to get from one user to another user?\nAre there isolated groups of individuals who are connected to each other but not to individuals not in their group?\n\nApplications of Graph Analytics include clustering, partitioning, search, shortest path solution, widest path solution, finding connected components, and page rank."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#basic-principles-of-graph",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#basic-principles-of-graph",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Basic Principles of Graph",
+    "text": "Basic Principles of Graph\n\nBasic Graph\nDirect and Undirected Graphs\nWeighted Graph\nEgo-centric Graph\nBipartite Graph\nMultimodel Graph"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#network-in-real-world",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#network-in-real-world",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Network in real World",
+    "text": "Network in real World\n\nPhysical\n\nTransportation (i.e. road, port, rail, etc)\nUtility (electricity, water, gas, network cable, etc)\nNatural (river, etc)\n\nAbstract\n\nSocial media (i.e. e-mail, Facebook, Twitter, Wikipedia, etc)\nOrganisation (i.e. NGO, politics, customer-company, staff-to-staff, criminal, terrorist, disease, etc)"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-visualisation-in-action-1",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-visualisation-in-action-1",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Graph Visualisation in action 1",
+    "text": "Graph Visualisation in action 1\nUsing graph visualisation to understand business networks.\n\n\nSource: Exxon Secrets"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-visualisation-in-action-2",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-visualisation-in-action-2",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Graph Visualisation in action 2",
+    "text": "Graph Visualisation in action 2\nGraph visualisation is used to reveal voting patterns among United States senators.\n\n\nSource: Social Action"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#to-learn-more-go-to-visual-complexity",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#to-learn-more-go-to-visual-complexity",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "To learn more, go to Visual Complexity",
+    "text": "To learn more, go to Visual Complexity\n]\n\nSource: Transportation Network"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-data",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-data",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Graph Data",
+    "text": "Graph Data\n\nWhat is graph data?\nStoring graph data\n\nfile-based\ndatabase management system\nR object"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nNode and Link Data Sets\n\n\n\nFlight Stats.\nThe record indicates the city pair (that is, a link), such as ORD–LGA or LAX–ATL. Note that this particular data has directed links. ORD–LGA is a flight that starts in Chicago’s O’Hare Airport and ends at LaGuardia Airport in New York City and is different from LGA–ORD, which is a flight going in the other direction. Both links are valid."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-1",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-1",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nLink Records\n\n\n\nSometimes only links are identified in a data set. One example is network log files. Although log files may seem arcane, they contain a wealth of interesting information—for example, from where people are connecting into a corporate network, when and where big files are transferred out, patterns of regular activity (such as network backup), and patterns of irregular activity (such as hackers attempting to break in)."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-2",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-2",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nTransaction Records\n\n\n\nBy looking at the items that co-exist in a transaction, you can construct a graph. Nodes are the items, and links are the co-occurrence of items within any transaction. Examples of this type of graph include a wide variety of social networking (including e‑mail data, as well as multiple authors of documents such as books, news stories, or reports."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-3",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-3",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nSequence Data\n\n\n\nSequence data is very similar to transaction data with explicit time stamps on each record."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-4",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-4",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nUnstructured Data (for Example, Tweets)\n\n\n\nUnstructured data can also be processed to extract nodes and links.\nA means to identify nodes and identify links is required. For example, tweets are short, 140-character messages publicly broadcast on Twitter. Tweets are a rich data source from which you can mine different kinds of nodes and links by looking for co-occurrence of hash tags (that is, user-defined topics), usernames, or stock symbols within tweets, and you can extract these to form graphs."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-5",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-5",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nMatrix (for Example, Trade, Migration)\n\n\n\nSometimes a matrix of data contains the same entries in both the first column and first row. For example, global trade flows between countries can be represented as a table of numbers (http://stats.oecd.org)."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-6",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-6",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nStatistical Correlation (for Example, Stocks, News Stories)\n\n\n\nGraphs can also be created statistically."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-7",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-7",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nTwo Data Types (for Example, Board Memberships)\n\n\n\nA bipartite graph has two different types of nodes, with linkages between the different types. For example, a graph analysis of executives and their board memberships reveals the connections between companies via board members. The two different data types in this example are people and companies. These are the nodes. The board memberships are the links that connect a person to a company."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-8",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#potential-graph-data-sources-8",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Potential Graph Data Sources",
+    "text": "Potential Graph Data Sources\nMany Data Types (for Example, Social Links)\n\n\n\nPeople can be connected through many kinds of commonalities, for example, LinkedIn builds connections via companies, friendships, educational institutions, group memberships, and so on."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#popular-graph-data-file-formats",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#popular-graph-data-file-formats",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Popular Graph Data File Formats",
+    "text": "Popular Graph Data File Formats\n\nGraphML, an XML-based file format for graphs.\nGXL, graph exchange format based on XML.\nTrivial Graph Format, simple text based format.\nGML is another widely used graph exchange format.\nDGML, Directed Graph Markup Language from Microsoft.\nXGMML, an XML-based graph markup language closely related to GML.\n[Dot Language](https://en.wikipedia.org/wiki/DOT_(graph_description_language), a format for describing graphs and their presentation, for the Graphviz set of tools."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-database",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#graph-database",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Graph database",
+    "text": "Graph database\nNeo4j (Network Exploration and Optimization 4 Java) is a graph database management system developed by Neo4j, Inc.\n\n\nSource: neo4j Get Started"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#r-graph-objects",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#r-graph-objects",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "R Graph Objects",
+    "text": "R Graph Objects\n\nnetwork: Classes for Relational Data\nigraph: Network Analysis and Visualization. There is also R CRAN version of documentation. .\ntidygraph: A Tidy API for Graph Manipulation. Refer to these two articles for more information:\n\nIntroducing tidygraph\ntidygraph 1.1 – A tidy hope"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#introducing-tidygraph",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#introducing-tidygraph",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Introducing tidygraph",
+    "text": "Introducing tidygraph\n\nA tidy API for graph/network manipulation in R\nIt provides a way to switch between node and edge tables.\nIt provides dplyr verbs for manipulating node and edge tables.\nIt provides access to a lot of graph algorithms with return values that facilitate their use in a tidy workflow.\nThe full reference guide is available at this link."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#network-graph-visualisation-and-analysis",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#network-graph-visualisation-and-analysis",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Network Graph Visualisation and Analysis",
+    "text": "Network Graph Visualisation and Analysis\n\nLayouts\nVisual Attributes\nNetwork Geometrics"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#basic-visual-attributes",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#basic-visual-attributes",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Basic Visual Attributes",
+    "text": "Basic Visual Attributes"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#network-visualisation-and-analysis-process-model",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#network-visualisation-and-analysis-process-model",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Network Visualisation and Analysis Process Model",
+    "text": "Network Visualisation and Analysis Process Model\n\n\nSource: Hansen, D. L. et. al. 2009"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#network-analytics-methods",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#network-analytics-methods",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Network Analytics Methods",
+    "text": "Network Analytics Methods\n\nMapping relationships\nIdentifying hierarchies\nDetecting communities\nAnalysing flow"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#swiss-knife-for-graph-visualisation-and-analysis-i",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#swiss-knife-for-graph-visualisation-and-analysis-i",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Swiss Knife for Graph Visualisation and Analysis I",
+    "text": "Swiss Knife for Graph Visualisation and Analysis I\nNodeXL, an open-source template for Microsoft® Excel® 2007 and 2010 that makes it easy to explore network graphs."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#swiss-knife-for-graph-visualisation-and-analysis-ii",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#swiss-knife-for-graph-visualisation-and-analysis-ii",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Swiss Knife for Graph Visualisation and Analysis II",
+    "text": "Swiss Knife for Graph Visualisation and Analysis II\nGephi, an open source network graph visualisation and analysis toolkit."
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#r-package-for-network-visualisation-and-analysis",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#r-package-for-network-visualisation-and-analysis",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "R Package for Network Visualisation and Analysis",
+    "text": "R Package for Network Visualisation and Analysis\n\nNetwork analysis centric\n\nigraph\nsna\nNetwork\ntidygraph\n\nNetwork visualization centric\n\nggraph\nvizNetwork\nggnet2\ngeomnet\nggnetwork"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#references",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#references",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "References",
+    "text": "References\nHighly Recommended:\n\nRichard Brath and David Jonker (2015) Graph Analysis and Visualization: Discovering Business Opportunity in Linked Data, John Wiley & Sons. This book is available online at smu digital library.\nLuke, Douglas A. (2015) A user’s guide to network analysis in R, Springer. This book is available online at smu digital library.\n\nAdditional readings\n\nIan McCulloh, Helen Armstrong, and Anthony Johnson (2013) Social Network Analysis with Applications, Chapter 1-3. This book is available online at smu digital library.\nScott, John (2017) Social network analysis (4th Edition). This book is available online at smu digital library.)"
+  },
+  {
+    "objectID": "lesson/Lesson08/Lesson08-NetworkVis.html#geospatial-network-visualisation",
+    "href": "lesson/Lesson08/Lesson08-NetworkVis.html#geospatial-network-visualisation",
+    "title": "Lesson 8: Visualising and Analysing Network Data",
+    "section": "Geospatial Network Visualisation",
+    "text": "Geospatial Network Visualisation\n\nThis site provides an outstanding overview and survey of various geospatial network visualisations."
   }
 ]

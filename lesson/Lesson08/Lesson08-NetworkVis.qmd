@@ -1,0 +1,1047 @@
+---
+title: "Lesson 8: Visualising and Analysing Network Data"
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems (Practice)"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    show-notes: false
+    slide-number: true
+    show-slide-number: 'all'
+date-format: "DD MMM YYYY"
+execute: 
+  echo: true
+  eval: true
+  warning: false
+editor: visual
+---
+
+## Content
+
+-   Introduction to Graph Visual Analytics
+
+-   Graph Visualisation in Actions
+
+-   Basic Principles of Graph
+
+-   Network data sets
+
+    -   Graph data format
+
+-   Network Visualisation and Analysis
+
+    -   Network visualisation and analysis process model
+    -   Graph layouts and visual attributes
+    -   Network metrics
+
+## Introduction to Graph Analytics
+
+-   What is Graph Analytics?
+
+-   Basic concepts of graph
+
+-   Network in Real World
+
+-   Graph Visualisation in Actions
+
+------------------------------------------------------------------------
+
+### What is Graph Analytics?
+
+::: columns
+::: {.column width="50%"}
+-   The study and analysis of data that can be transformed into a graph representation consisting of nodes and links.
+
+-   Analytic tools used to determine strength and direction of relationships between objects in a graph.
+
+-   The focus of graph analytics is on pairwise relationship between two objects at a time and structural characteristics of the graph as a whole.
+:::
+
+::: {.column width="50%"}
+![](img/image9-1.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Using Social Network Analysis Measures](https://cambridge-intelligence.com/using-social-network-analysis-measures/)
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## What is Graph Analytics?
+
+-   For example, in a graph representing relationships (such as "liking" or "friending" another individual's profile or site) between individuals, graph analytics can help answer questions like the following:
+    -   How many other individuals does the average individual "friend" with?
+    -   What is the maximum number of "friends" any one individual has?
+    -   How interconnected are groups of users with one another?
+    -   How many "friend" relationships does it take to get from one user to another user?
+    -   Are there isolated groups of individuals who are connected to each other but not to individuals not in their group?
+-   Applications of Graph Analytics include clustering, partitioning, search, shortest path solution, widest path solution, finding connected components, and page rank.
+
+------------------------------------------------------------------------
+
+### Graph Analytics in History: Classical Graph Theory
+
+The Seven Bridges of Königsberg is a historically notable problem in mathematics. Its negative resolution by Leonhard Euler in 1735 laid the foundations of graph theory and prefigured the idea of topology.
+
+![](img/image9-2.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [The Seven Bridges of Königsberg](http://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg)
+:::
+
+------------------------------------------------------------------------
+
+### Graph Analytics in History: Sociogram
+
+A sociogram is a tool for charting the relationships within a group. It's a visual representation of the social links and preferences that each person has -- valuable data for leaders.
+
+![](img/image9-3.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: Valdis Krebs (2010) "Your Choice Reveal Who You Are: Mining and Visualizing Social Patterns" in **Beautiful Visualization**.
+:::
+
+------------------------------------------------------------------------
+
+### Where are Graphs used
+
+-   Graphs are sometimes used in surprising ways. There are many problems which may not initially appear to take the form of graphs but can be solved more quickly if they are transformed into a graph:
+
+    -   Partitioning large physical volumes into smaller physical volumes as part of high performance simulations on supercomputers.
+    -   Parsing speech to determine what is the most likely sequence of words that matches a given set of sounds.
+    -   Analyzing the way different parts of a complex software program interact in order to proactively find and remove bugs.
+
+## Basic Principles of Graph
+
+-   Basic Graph
+
+-   Direct and Undirected Graphs
+
+-   Weighted Graph
+
+-   Ego-centric Graph
+
+-   Bipartite Graph
+
+-   Multimodel Graph
+
+------------------------------------------------------------------------
+
+### A Complete Graph
+
+::: columns
+::: {.column width="50%"}
+A complete graph is a simple **undirected** graph in which every pair of distinct **vertices** (also known as **nodes**) are connected by an unique **edge** (also known as **link**).
+:::
+
+::: {.column width="50%"}
+![](img/image9-4.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### A Directed Graph
+
+::: columns
+::: {.column width="50%"}
+Have a clear origin and destination. Also known as *asymmetric edges*. Suitable for representing network with non reciprocal relationships such as Twitter.
+:::
+
+::: {.column width="50%"}
+![](img/image9-5.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Graph representation
+
+On the left is a normal graph, in the centre is a graph in which each edge is given a numerical value, and to the right is a directed graph.
+
+![](img/image9-6.jpg)
+
+------------------------------------------------------------------------
+
+### A weighted graph
+
+::: columns
+::: {.column width="50%"}
+-   A weighted edge includes values associated with each edge that indicate the strength or frequency of tie. For example, numbers of calls between two staffs.
+:::
+
+::: {.column width="50%"}
+![](img/image9-7.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### A weighted graph
+
+::: columns
+::: {.column width="50%"}
+-   Edges with different thickness are used to represent the monthly calls by staffs.
+:::
+
+::: {.column width="50%"}
+![](img/image9-8.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### An ego-centric graph
+
+::: columns
+::: {.column width="50%"}
+-   Network consisting of an individual and their immediate peers (Heer & Boyd, 2005).
+:::
+
+::: {.column width="50%"}
+![](img/image9-9.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Bipartite Graph
+
+::: columns
+::: {.column width="50%"}
+-   A graph whose vertices can be divided into two disjoint sets U and V such that every edge connects a vertex in U to one in V; that is, U and V are independent sets.
+
+-   Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles.
+:::
+
+::: {.column width="50%"}
+![](img/image9-10.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Affiliation Networks - Bipartite Graph
+
+::: columns
+::: {.column width="50%"}
+![](img/image9-11a.jpg){width="389"}
+
+::: {style="font-size: 0.65em"}
+Source: Valdis Krebs (2010) "Your Choice Reveal Who You Are: Mining and Visualizing Social Patterns" in **Beautiful Visualization**.
+:::
+:::
+
+::: {.column width="50%"}
+![](img/image9-11b.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### A Multimodel Graph
+
+::: columns
+::: {.column width="50%"}
+Social network connecting different types of vertices. For example, a network may connect peers to discussion forums and blog posts they have commented on.
+:::
+
+::: {.column width="50%"}
+![](img/image9-12.jpg)
+:::
+:::
+
+## Network in real World
+
+-   Physical
+    -   Transportation (i.e. road, port, rail, etc)
+    -   Utility (electricity, water, gas, network cable, etc)
+    -   Natural (river, etc)
+-   Abstract
+    -   Social media (i.e. e-mail, Facebook, Twitter, Wikipedia, etc)
+    -   Organisation (i.e. NGO, politics, customer-company, staff-to-staff, criminal, terrorist, disease, etc)
+
+------------------------------------------------------------------------
+
+### Real world network - Land transport
+
+![](img/image9-13.jpg)
+
+------------------------------------------------------------------------
+
+### Real world network - Maritime transport
+
+![](img/image9-14.jpg)
+
+------------------------------------------------------------------------
+
+### Real world network - Air transport
+
+![](img/image9-15.jpg)
+
+------------------------------------------------------------------------
+
+### Real world network - Life line
+
+![](img/image9-16.jpg)
+
+------------------------------------------------------------------------
+
+### Real world network - Social network
+
+![](img/image9-17.jpg)
+
+## Graph Visualisation in action 1
+
+Using graph visualisation to understand business networks.
+
+![](img/image9-19.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Exxon Secrets](https://exxonsecrets.org/maps.php)
+:::
+
+------------------------------------------------------------------------
+
+## Graph Visualisation in action 2
+
+Graph visualisation is used to reveal voting patterns among United States senators.
+
+![](img/image9-20.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Social Action](http://www.cs.umd.edu/hcil/socialaction/users/umd/socialaction.jnlp)
+:::
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 3
+
+Graph visualisation is used to understand online social network.
+
+![](img/image9-21.jpg)
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 4
+
+Graph visualisation is used to show how the news are all connected by degrees of separation.
+
+![](img/image9-22.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Link](http://whichlight.github.io/reddit-network-vis/?discussion=http://reddit.com/r/gaming/comments/3d2ewz/nintendo_president_satoru_iwata_passes_away/)
+:::
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 5
+
+Application of network analysis in project management.
+
+![](img/image9-23.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: Pryke, S.D."Analysing construction project coalitions: exploring the application of social network analysis", **Construction Management and Economics**, (2004), 22. pp. 787-797.
+:::
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 6
+
+SecViz: Application of network graph in security.
+
+(a) Similarity graph of log entries and (b) Similarity graph of network scans
+
+![](img/image9-24.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: Graph Drawing for Security Visualization.
+:::
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 7
+
+Alumni network.
+
+-   Networks of the below universities are expanded in a breadth first manner up to the depth of 2, (showing university, alumni and companies they are associated with through employment, investment or other activities)
+-   Size of the node reflects degree of the node (scaled logarithmically).
+
+![](img/image9-25.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Article](http://www.innovation-ecosystems.org/wp-content/uploads/2010/12/209.educon.pdf)
+:::
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 8
+
+Public Transport Network Analysis.
+
+-   Degree centrality indexes for nodes in the existing (2006) and proposed (2020) public transport networks in Melbourne's north-east
+
+![](img/image9-26.jpg)
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 9
+
+-   Maritime Port Network Analysis:
+    -   Maritime degree, centrality and vulnerability: Port hierarchies and emerging areas in containerized transport (2008--2010)
+
+![](img/image9-27.jpg)
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 10
+
+-   Firm Network Analysis
+    -   S&T cooperation network diagram of cities in China
+
+![](img/image9-28.jpg){fig-align="left" width="518"}
+
+------------------------------------------------------------------------
+
+### Graph Visualisation in action 11- UN Voting in Europe
+
+-   An interesting visual analytics product contributes to [tidytuesday](https://github.com/rfordatascience/tidytuesday). The code is available at this [github repository](https://github.com/jack-davison/TidyTuesday/blob/master/R/2021_03_23_unvotes.R).
+
+![](img/image9-75.jpg)
+
+## To learn more, go to Visual Complexity
+
+![](img/image9-29.jpg)\]
+
+::: {style="font-size: 0.65em"}
+Source: [Transportation Network](http://www.visualcomplexity.com/vc/index.cfm?domain=Transportation%20Networks)
+:::
+
+## Graph Data
+
+-   What is graph data?
+
+-   Storing graph data
+
+    -   file-based
+    -   database management system
+    -   R object
+
+## Potential Graph Data Sources
+
+### Node and Link Data Sets
+
+::: columns
+::: {.column with="50%"}
+-   [Flight Stats](http://transtats.bts.gov).
+
+-   The record indicates the city pair (that is, a link), such as ORD--LGA or LAX--ATL. Note that this particular data has directed links. ORD--LGA is a flight that starts in Chicago's O'Hare Airport and ends at LaGuardia Airport in New York City and is different from LGA--ORD, which is a flight going in the other direction. Both links are valid.
+:::
+
+::: {.column width="50%"}
+![](img/image9-30.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Link Records
+
+::: columns
+::: {.column width="50%"}
+-   Sometimes only links are identified in a data set. One example is network log files. Although log files may seem arcane, they contain a wealth of interesting information---for example, from where people are connecting into a corporate network, when and where big files are transferred out, patterns of regular activity (such as network backup), and patterns of irregular activity (such as hackers attempting to break in).
+:::
+
+::: {.column width="50%"}
+![](img/image9-31.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Transaction Records
+
+::: columns
+::: {.column width="50%"}
+-   By looking at the items that co-exist in a transaction, you can construct a graph. Nodes are the items, and links are the co-occurrence of items within any transaction. Examples of this type of graph include a wide variety of social networking (including e‑mail data, as well as multiple authors of documents such as books, news stories, or reports.
+:::
+
+::: {.column width="50%"}
+![](img/image9-32.jpg){width="750"}
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Potential Graph Data Sources
+
+### Sequence Data
+
+::: columns
+::: {.column width="50%"}
+-   Sequence data is very similar to transaction data with explicit time stamps on each record.
+:::
+
+::: {.column width="50%"}
+![](img/image9-33.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Unstructured Data (for Example, Tweets)
+
+::: columns
+::: {.column width="50%"}
+-   Unstructured data can also be processed to extract nodes and links.
+-   A means to identify nodes and identify links is required. For example, tweets are short, 140-character messages publicly broadcast on Twitter. Tweets are a rich data source from which you can mine different kinds of nodes and links by looking for co-occurrence of hash tags (that is, user-defined topics), usernames, or stock symbols within tweets, and you can extract these to form graphs.
+:::
+
+::: {.column width="50%"}
+![](img/image9-34.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Matrix (for Example, Trade, Migration)
+
+::: columns
+::: {.column width="50%"}
+-   Sometimes a matrix of data contains the same entries in both the first column and first row. For example, global trade flows between countries can be represented as a table of numbers (http://stats.oecd.org).
+:::
+
+::: {.column width="50%"}
+![](img/image9-35.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Statistical Correlation (for Example, Stocks, News Stories)
+
+::: columns
+::: {.column width="40%"}
+-   Graphs can also be created statistically.
+:::
+
+::: {.column width="60%"}
+![](img/image9-36.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Two Data Types (for Example, Board Memberships)
+
+::: columns
+::: {.column width="50%"}
+-   A *bipartite* graph has two different types of nodes, with linkages between the different types. For example, a graph analysis of executives and their board memberships reveals the connections between companies via board members. The two different data types in this example are people and companies. These are the nodes. The board memberships are the links that connect a person to a company.
+:::
+
+::: {.column width="50%"}
+![](img/image9-37.jpg){width="750"}
+:::
+:::
+
+## Potential Graph Data Sources
+
+### Many Data Types (for Example, Social Links)
+
+::: columns
+::: {.column width="50%"}
+-   People can be connected through many kinds of commonalities, for example, LinkedIn builds connections via companies, friendships, educational institutions, group memberships, and so on.
+:::
+
+::: {.column width="50%"}
+![](img/image9-38.jpg){width="569"}
+:::
+:::
+
+## Popular Graph Data File Formats
+
+-   [GraphML](https://en.wikipedia.org/wiki/GraphML), an XML-based file format for graphs.
+-   [GXL](https://en.wikipedia.org/wiki/GXL), graph exchange format based on XML.
+-   [Trivial Graph Format](https://en.wikipedia.org/wiki/Trivial_Graph_Format), simple text based format.
+-   [GML](https://en.wikipedia.org/wiki/Graph_Modelling_Language) is another widely used graph exchange format.
+-   [DGML](https://en.wikipedia.org/wiki/DGML), Directed Graph Markup Language from Microsoft.
+-   [XGMML](https://en.wikipedia.org/wiki/XGMML), an XML-based graph markup language closely related to GML.
+-   \[Dot Language\](https://en.wikipedia.org/wiki/DOT\_(graph_description_language), a format for describing graphs and their presentation, for the Graphviz set of tools.
+
+## Graph database
+
+[Neo4j (Network Exploration and Optimization 4 Java)](https://en.wikipedia.org/wiki/Neo4j) is a graph database management system developed by [Neo4j, Inc.](https://neo4j.com/)
+
+![](img/image9-39.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [neo4j Get Started](http://neo4j.com/developer/get-started/)
+:::
+
+## R Graph Objects
+
+-   [network](https://cran.r-project.org/web/packages/network/index.html): Classes for Relational Data
+
+-   [igraph](https://igraph.org/r/): Network Analysis and Visualization. There is also R [CRAN version](https://cran.r-project.org/web/packages/igraph/index.html) of documentation. .
+
+-   [tidygraph](https://cran.r-project.org/web/packages/tidygraph/index.html): A Tidy API for Graph Manipulation. Refer to these two articles for more information:
+
+    -   [Introducing tidygraph](https://www.data-imaginist.com/2017/introducing-tidygraph/)
+    -   [tidygraph 1.1 -- A tidy hope](https://www.data-imaginist.com/2018/tidygraph-1-1-a-tidy-hope/)
+
+## Introducing **tidygraph**
+
+-   A tidy API for graph/network manipulation in R
+
+-   It provides a way to switch between node and edge tables.
+
+-   It provides dplyr verbs for manipulating node and edge tables.
+
+-   It provides access to a lot of graph algorithms with return values that facilitate their use in a tidy workflow.
+
+-   The full reference guide is available at this [link](https://tidygraph.data-imaginist.com/).
+
+## Network Graph Visualisation and Analysis
+
+-   Layouts
+
+-   Visual Attributes
+
+-   Network Geometrics
+
+------------------------------------------------------------------------
+
+### Graph Layouts
+
+::: columns
+::: {.column width="50%"}
+Graph layouts are algorithms that return coordinates for each node in a network graph.
+
+-   Showing node-edge relationship.
+
+-   Very challenging for large graph.
+:::
+
+::: {.column width="50%"}
+![](img/image9-41.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Node-and-Link Layouts
+
+One common method for drawing graphs is to draw nodes as markers and edges as lines connecting them (also referred to as links)
+
+![](img/image9-42.jpg)
+
+------------------------------------------------------------------------
+
+### Node-and-Link Layouts
+
+![](img/image9-43.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [flare.prefuse.org](https://flare.prefuse.org/demo/)
+:::
+
+------------------------------------------------------------------------
+
+### Force-Directed Layout
+
+::: columns 
+::: {.column width="50%"} 
+- Force-directed graph drawing algorithms are a class of algorithms for drawing graphs in an aesthetically-pleasing way. 
+- Their purpose is to position the nodes of a graph in two-dimensional or three-dimensional space so that all the edges are of more or less equal length and there are as few crossing edges as possible, by assigning forces among the set of edges and the set of nodes, based on their relative positions, and then using these forces either to simulate the motion of the edges and nodes or to minimize their energy.
+
+::: {style="font-size: 0.65em"}
+Source: [Force-directed Graph Drawing](https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
+:::
+:::
+
+::: {.column width="50%"} 
+![](img/image9-44.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Observable](http://bl.ocks.org/mbostock/4062045)
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+### BiPartite Layout
+
+![](img/image9-46.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [BiPartite Layout](https://rpubs.com/pjmurphy/317838)
+:::
+
+------------------------------------------------------------------------
+
+### Node-Only Layout
+
+![](img/image9-47.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [2013 Budget Proposal Graphic](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
+:::
+
+------------------------------------------------------------------------
+
+### Time-Oriented Layout
+
+![](img/image9-48.jpg)
+
+------------------------------------------------------------------------
+
+### Radial Hierarchical Layout
+
+![](img/image9-49.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Cluster](http://mbostock.github.io/d3/talk/20111018/cluster.html)
+:::
+
+------------------------------------------------------------------------
+
+### Tree Hierarchical Layout
+
+![](img/image9-50.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Tree](http://mbostock.github.io/d3/talk/20111018/tree.html)
+:::
+
+------------------------------------------------------------------------
+
+### Geographic Layout
+
+![](img/image9-51.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [ShniyNet](https://wiki.smu.edu.sg/1617t3isss608g1/ShinyNET_Data_Prep_Report)
+:::
+
+------------------------------------------------------------------------
+
+### Chord Diagrams
+
+![](img/image9-52.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Migration Analyticss](https://davidten.shinyapps.io/migrationanalytics2/)
+:::
+
+------------------------------------------------------------------------
+
+### Sankey Diagrams
+
+![](img/image9-53.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Sankey Diagram](https://observablehq.com/@d3/sankey-diagram)
+:::
+
+------------------------------------------------------------------------
+
+### Hive Plot (https://academic.oup.com/bib/article/13/5/627/412507)
+
+![](img/image9-54.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Hiveplot](http://www.hiveplot.net/)
+:::
+
+------------------------------------------------------------------------
+
+### Hive Plot of Network of Individuals at Risk of HIV
+
+![](img/image9-56.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [hiveplot](https://konstantinkashin.com/assets/data/hiveplot.html)
+:::
+
+------------------------------------------------------------------------
+
+### Hive Plot in **ggraph**
+
+![](img/image9-55.jpg)
+
+::: {style="font-size: 0.65em"}
+Soure: [ggraph layout](https://www.data-imaginist.com/2017/ggraph-introduction-layouts/)
+:::
+
+------------------------------------------------------------------------
+
+### [Adjacency Matrix](https://en.wikipedia.org/wiki/Adjacency_matrix)
+
+![](img/image9-57.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Adjacency Matrix](https://matthewlincoln.net/2014/12/20/adjacency-matrix-plots-with-r-and-ggplot2.html)
+:::
+
+## Basic Visual Attributes
+
+![](img/image9-58.jpg)
+
+------------------------------------------------------------------------
+
+### Additional Visual Attributes
+
+![](img/image9-59.jpg)
+
+------------------------------------------------------------------------
+
+### Combining Visual Attributes
+
+![](img/image9-60.jpg)
+
+## Network Visualisation and Analysis Process Model
+
+![](img/image9-61.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Hansen, D. L. et. al. 2009]()
+:::
+
+------------------------------------------------------------------------
+
+### Network Metrics: Measures of Power and Influence
+
+::: columns
+::: {.column width="50%"}
+-   A collection of statistical measures to report:
+    -   the connectivity of a node within a network,
+    -   the complexity of a network,
+    -   the clusters or sub-groups within a network.
+:::
+
+::: {.column width="50%"}
+![](img/image9-62.jpg)
+:::
+:::
+
+---
+
+### Network Metrics: Degree
+
+::: columns
+::: {.column width="50%"}
+-   **Degree**, the number of direct connections a node has.
+
+-   Degree is often interpreted in terms of the immediate risk of node for catching whatever is flowing through the network (such as a virus, or some information).
+:::
+
+::: {.column width="50%"}
+![](img/image9-63.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Network Metrics: In-degree & Out-degree
+
+::: columns
+::: {.column width="50%"}
+-   If the network is **directed** (meaning that ties have direction), then we usually define two separate measures of degree centrality, namely **indegree** and **outdegree**.
+
+-   **Indegree** is a count of the number of ties directed to the node, and **outdegree** is the number of ties that the node directs to others.
+
+-   For positive relations such as friendship or advice, we normally interpret indegree as a form of popularity, and outdegree as gregariousness.
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Network Metrics: Betweenness centrality
+
+::: columns
+::: {.column width="50%"}
+-   **Betweenness** is a centrality measure of a vertex within a graph (there is also edge betweenness, which is not discussed here).
+
+-   Vertices that occur on many shortest paths between other vertices have higher betweenness than those that do not.
+:::
+
+::: {.column width="50%"}
+![](img/image9-64.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Network Metrics: Closeness Centrality
+
+::: columns
+::: {.column width="50%"}
+-   In graph theory closeness is a centrality measure of a vertex within a graph. Vertices that are 'shallow' to other vertices (that is, those that tend to have short geodesic distances to other vertices with in the graph) have higher closeness.
+
+-   **Closeness** is preferred in network analysis to mean shortest-path length, as it gives higher values to more central vertices, and so is usually positively associated with other measures such as degree.
+:::
+
+::: {.column width="50%"}
+![](img/image9-65.jpg)\]
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Network Metrics: Eigenvector Centrality
+
+::: columns
+::: {.column width="50%"}
+-   A measure of the importance of a node in a network.
+
+-   It assigns relative scores to all nodes in the network based on the principle that connections to high-scoring nodes contribute more to the score of the node in question than equal connections to low-scoring nodes.
+:::
+
+::: {.column width="50%"}
+![](img/image9-66.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Network Metrics: Clustering Coefficient
+
+::: columns
+::: {.column width="50%"}
+-   A measure on how connected a vertex's neighbours are to one another. More specifically, it is the number of edges connecting a vertex's neighbours divided by the total number of possible edges between the vertex's neighbour.
+:::
+
+::: {.column width="50%"}
+![](img/image9-67.jpg)
+:::
+:::
+
+## Network Analytics Methods
+
+-   Mapping relationships
+
+-   Identifying hierarchies
+
+-   Detecting communities
+
+-   Analysing flow
+
+------------------------------------------------------------------------
+
+### Analysing Spatial Networks Relationship
+
+![](img/image9-69.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Link](http://www.snamuts.com/melbourne.html)
+:::
+
+------------------------------------------------------------------------
+
+### Analysing Hierarchy of Spatial Network
+
+![](img/image9-70.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Link](http://onlinelibrary.wiley.com/doi/10.1111/j.1471-0374.2011.00355.x/pdf)
+:::
+
+------------------------------------------------------------------------
+
+### Detecting communities
+
+![](img/image9-71.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Link](http://arxiv.org/pdf/0906.0612.pdf)
+:::
+
+------------------------------------------------------------------------
+
+### Spatial Networks for Flow Analysis
+
+Arteries of the City.
+
+![](img/image9-72.jpg)
+
+::: {style="font-size: 0.65em"}
+Source: [Arteries of the City](http://2013.sopawards.com/wp-content/uploads/2013/05/697-South-China-Morning-Post-Arteries-of-the-City.pdf)
+:::
+
+## Swiss Knife for Graph Visualisation and Analysis I
+
+[NodeXL](http://nodexl.codeplex.com/), an open-source template for Microsoft® Excel® 2007 and 2010 that makes it easy to explore network graphs.
+
+![](img/image9-73.jpg)
+
+## Swiss Knife for Graph Visualisation and Analysis II
+
+[Gephi](https://gephi.org/), an open source network graph visualisation and analysis toolkit.
+
+![](img/image9-74.jpg)
+
+------------------------------------------------------------------------
+
+## R Package for Network Visualisation and Analysis
+
+-   Network analysis centric
+
+    -   [igraph](https://cran.r-project.org/web/packages/igraph/index.html)
+    -   [sna](https://cran.r-project.org/web/packages/sna/)
+    -   [Network](https://cran.r-project.org/web/packages/network/)
+    -   [tidygraph](https://github.com/thomasp85/tidygraph)
+
+-   Network visualization centric
+
+    -   [ggraph](https://cran.r-project.org/web/packages/ggraph/index.html)
+    -   [vizNetwork](https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html)
+    -   [ggnet2](https://briatte.github.io/ggnet/)
+    -   [geomnet](https://cran.r-project.org/web/packages/geomnet/index.html)
+    -   [ggnetwork](https://briatte.github.io/ggnetwork/)
+
+------------------------------------------------------------------------
+
+### Web enabled Graph Visualisation Libraries
+
+-   Graph
+    -   [Sigma.js](http://sigmajs.org/)
+    -   [Cytoscape.js](http://js.cytoscape.org/)
+-   Generic
+    -   [Vis.js](http://visjs.org/index.html)
+    -   [JavaScript InfoVis Toolkit](http://philogb.github.io/jit/demos.html)
+    -   [D3.js](http://d3js.org/)
+
+## References
+
+### Highly Recommended:
+
+-   Richard Brath and David Jonker (2015) **Graph Analysis and Visualization: Discovering Business Opportunity in Linked Data**, John Wiley & Sons. This book is available [online](https://library-books24x7-com.libproxy.smu.edu.sg/toc.aspx?site=DJI6C&bookid=80765) at smu digital library.
+
+-   Luke, Douglas A. (2015) **A user's guide to network analysis in R**, Springer. This book is available [online](https://link-springer-com.libproxy.smu.edu.sg/book/10.1007%2F978-3-319-23883-8) at smu digital library.
+
+Additional readings
+
+-   Ian McCulloh, Helen Armstrong, and Anthony Johnson (2013) **Social Network Analysis with Applications**, Chapter 1-3. This book is available [online](https://ebookcentral-proquest-com.libproxy.smu.edu.sg/lib/smu/detail.action?pq-origsite=primo&docID=1211931) at smu digital library.
+
+-   Scott, John (2017) **Social network analysis** (4th Edition). This book is available [online](https://methods-sagepub-com.libproxy.smu.edu.sg/book/social-network-analysis-4e) at smu digital library.)
+
+## Geospatial Network Visualisation
+
+![](img/image9-76.jpg)
+
+This [site](https://geonetworks.github.io/) provides an outstanding overview and survey of various geospatial network visualisations.
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf(
+  from = "https://isss608-ay2022-23jan.netlify.app/lesson/Lesson08/Lesson08-NetworkVis.html",
+  to = "../../_site/lesson/Lesson08/Lesson08-NetworkVis.pdf"
+)
+```
+
