@@ -3,7 +3,9 @@ title: "Hands-on Exercise 7: Analytical Mapping"
 date: "16 January 2023" 
 date-modified: "`r Sys.Date()`"
 number-sections: true
-format: html
+format: 
+  html:
+    fontsize: 18px
 execute:
   echo: true
   eval: true
@@ -15,7 +17,7 @@ editor: visual
 
 ### Objectives
 
-In this in-class exercise, you will gain hands-on experience on using appropriate R methods to plot analytical maps. 
+In this in-class exercise, you will gain hands-on experience on using appropriate R methods to plot analytical maps.
 
 ### Learning outcome
 
@@ -47,10 +49,11 @@ pacman::p_load(tmap, tidyverse, sf)
 
 ### Importing data
 
-For the purpose of this hands-on exercise, a prepared data set called *NGA_wp.rds* will be used.  The data set is a polygon feature data.frame providing information on water point of Nigeria at the LGA level.  You can find the data set in the *rds* sub-direct of the hands-on *data* folder. 
+For the purpose of this hands-on exercise, a prepared data set called *NGA_wp.rds* will be used. The data set is a polygon feature data.frame providing information on water point of Nigeria at the LGA level. You can find the data set in the *rds* sub-direct of the hands-on *data* folder.
 
 ::: callout-note
 # Do it Yourself
+
 Using appropriate sf function import *NGA_wp.rds* into R environment.
 :::
 
@@ -360,5 +363,14 @@ boxmap <- function(vnam, df,
 ```{r}
 tmap_mode("plot")
 boxmap("wp_nonfunctional", NGA_wp)
+```
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf(
+  from = "https://isss608-ay2022-23jan.netlify.app/hands-on_ex/hands-on_ex07/hands-on_ex07-analytical_mapping.html",
+  to = "../../_site/hands-on_ex/hands-on_ex07/hands-on_ex07-analytical_mapping.pdf"
+)
 ```
 

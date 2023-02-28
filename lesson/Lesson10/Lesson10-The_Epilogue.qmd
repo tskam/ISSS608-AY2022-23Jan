@@ -1,0 +1,141 @@
+---
+title: "Lesson10: The Epilogue"
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems (Practice)"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    show-notes: false
+    slide-number: true
+    show-slide-number: 'all'
+date-format: "DD MMM YYYY"
+execute: 
+  echo: true
+  eval: true
+  warning: false
+editor: visual
+---
+
+## ISSS608: Visual Analytics and Applications
+
+![](img/image10-1.jpg)
+
+## Motivation of Visual Analytics
+
+### The World is full of charts that lie!
+
+![](img/image10-2.jpg)
+
+**We need to get smarter about visual information**
+
+## Motivation of Visual Analytics
+
+### Is there a place for Visual Analytics in knowledge discovery?
+
+![](img/image10-3.jpg)
+
+## What is Visual Analytics?
+
+### Visual Analytics must be Reprducible
+
+![](img/image10-4.jpg)
+
+Reference: [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285#s9)
+
+## A Gentle Reminder
+
+### Data Visualization: Clarity or Aesthetics?
+
+::: columns
+::: {.column width="50%"}
+![](img/image10-5a.png)
+:::
+
+::: {.column width="50%"}
+![](img/image10-5b.png)
+:::
+:::
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-6.jpg)
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-6.jpg)
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-7.jpg)
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-8.jpg)
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-9.jpg)
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-10.jpg)
+
+## A Gentle Reminder
+
+### Avoiding junk charts
+
+![](img/image10-11.jpg)
+
+## A Gentle Reminder
+
+### Show the world the good visual design priciples
+
+![](img/image10-12.jpg)
+
+## A Gentle Reminder
+
+### Show the world the good visual design priciples
+
+![](img/image10-13.jpg)
+
+## The bumper ride of R rollercoaster
+
+![](img/image10-14.png)
+
+## The bumper ride of R rollercoaster
+
+![](img/image10-15.png)
+
+## The bumper ride of R rollercoaster
+
+![](img/image10-16.png)
+
+## The bumper ride of R rollercoaster
+
+![](img/image10-17.png)
+
+## The bumper ride of R rollercoaster
+
+![](img/image10-18.png)
+
+## Time to Say Goodbye
+
+![](img/image10-19.jpg)
+
+::: {style="text-align: center"}
+### Let's Build a Better World with Visual Analytics
+:::

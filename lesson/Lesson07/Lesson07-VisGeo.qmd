@@ -503,7 +503,7 @@ Figure below provided a mathematical method to determine number of classes used 
 
 Geofacet takes data representing different geographic entities and apply a visualization method to the data for each entity, with the resulting set of visualizations being laid out in a grid that mimics the original geographic topology as closely as possible.
 
-![](img/image6-25.jpg){width="800"} 
+![](img/image6-25.jpg){width="800"}
 
 ::: {style="font-size: 0.65em"}
 Source: [Singapore Property Market Watch](https://joannetyy.shinyapps.io/SGPrivateProperty/)

@@ -524,3 +524,14 @@ tm_shape(mpsz_pop2020[mpsz_pop2020$REGION_N=="CENTRAL REGION", ])+
 -   [dplyr](https://dplyr.tidyverse.org/)
 -   [Tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
 -   [tidyr: Easily Tidy Data with 'spread()' and 'gather()' Functions](https://cran.r-project.org/web/packages/tidyr/tidyr.pdf)
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf(
+  from = "https://isss608-ay2022-23jan.netlify.app/Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Choropleth_Mapping.html",
+  to = "../../_site/Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07-Choropleth_Mapping.pdf"
+)
+```
+
+

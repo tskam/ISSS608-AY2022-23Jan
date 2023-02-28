@@ -1866,7 +1866,7 @@
     "href": "outline/Lesson05_outline.html#lesson-slides-and-hands-on-notes",
     "title": "Lesson 5: Visual Multivariate Analysis",
     "section": "Lesson Slides and Hands-on Notes",
-    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 5\n\nBuilding Ternary Plot with R.\nVisualising Correlation Matrices with R.\nBuilding Heatmap for Visualising and Analysing Multivariate Data.\nBuilding Parallel Coordinates Plot with R."
+    "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 5\n\nBuilding Ternary Plot with R.\nVisualising Correlation Matrices with R.\nBuilding Heatmap for Visualising and Analysing Multivariate Data.\nBuilding Parallel Coordinates Plot with R.\nBuilding Treemap Visualisation with R"
   },
   {
     "objectID": "outline/Lesson05_outline.html#readings",
@@ -2755,14 +2755,14 @@
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-1",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "How location information are registered?",
-    "text": "How location information are registered?\n\nGeographic Coordinates Systems\n\n\n\nA geographic coordinate system defines two-dimensional coordinates based on the Earth’s surface. It has an angular unit of measure, prime meridian and datum (which contains the spheroid).\nFor example, WGS84, NAD27 and NAD83.\n\n\nSource: Geographic Coodinate Ststem@wiki"
+    "text": "How location information are registered?\nGeographic Coordinates Systems\n\n\n\nA geographic coordinate system defines two-dimensional coordinates based on the Earth’s surface. It has an angular unit of measure, prime meridian and datum (which contains the spheroid).\nFor example, WGS84, NAD27 and NAD83.\n\n\nSource: Geographic Coodinate Ststem@wiki"
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-2",
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#how-location-information-are-registered-2",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "How location information are registered?",
-    "text": "How location information are registered?\n\nProjected Coordinates Systems\n\n\n\nA projected coordinate system is defined on a flat, two-dimensional surface.\nA projected coordinate system, unlike a geographic one, has the advantage that lengths, angles, and areas are constant across the two dimensions. This is not true when working in a geographic coordinate system.\nA projected coordinate system is always based on a geographic coordinate system that can use a sphere or spheroid.\n\n\n\n\nSource: Map Projection@wiki"
+    "text": "How location information are registered?\nProjected Coordinates Systems\n\n\n\nA projected coordinate system is defined on a flat, two-dimensional surface.\nA projected coordinate system, unlike a geographic one, has the advantage that lengths, angles, and areas are constant across the two dimensions. This is not true when working in a geographic coordinate system.\nA projected coordinate system is always based on a geographic coordinate system that can use a sphere or spheroid.\n\n\n\n\nSource: Map Projection@wiki"
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map",
@@ -2790,7 +2790,7 @@
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-3",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "The Purpose of a Map",
-    "text": "The Purpose of a Map\n\nTo reveal spatial patterns.\n\n\n\n\n\n\n\nReference: John Snow Cholera Map"
+    "text": "The Purpose of a Map\n\nTo reveal spatial patterns.\n\n\n\nReference: John Snow Cholera Map"
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#the-purpose-of-a-map-4",
@@ -2804,7 +2804,7 @@
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#typology-of-maps",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Typology of Maps",
-    "text": "Typology of Maps\n\n\n\nReference maps\n\n\n\nReference maps emphasize the location of spatial phenomena, such buildings, roads, vegetations, rivers, etc. Some of popular reference maps are topographical map and internet map such as Google map.\n\n\n\n\n\n\nTopographic maps are detailed, accurate graphic representations of features that appear on the Earth’s surface. These features include: cultural: roads, buildings, urban development, railways, airports, names of places and geographic features, administrative boundaries, state and international borders, reserves hydrography: lakes, rivers, streams, swamps, coastal flats relief: mountains, valleys, slopes, depressions vegetation: wooded and cleared areas, vineyards and orchards.\nA map legend (or key) lists the features shown on that map, and their corresponding symbols. Topographic maps usually show a geographic graticule and a coordinate grid, so you can determine relative and absolute positions of mapped features.\nIt is important to note that a map is merely a two or three dimensional representation of the physical environment at a given time. Therefore, a map will never be entirely up to date. Changes to the landscape and cultural features regularly occur (such as roads, vegetation, and buildings), resulting in maps becoming dated, although the rate of obsolescence varies depending upon location. Traditionally present in paper printed format.\n\n\n\n\nThematic Map\n\n\n\nThematic maps emphasize the spatial pattern of geographic attributes or statistics about places and relationships between places such as Life in Los Angeles.\n\n\nSource: Life in Los Angeles"
+    "text": "Typology of Maps"
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#thematic-mapping-principles-and-methods",
@@ -2818,42 +2818,42 @@
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-maps",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Qualitative Thematic Maps",
-    "text": "Qualitative Thematic Maps\n\nVisual Variables and Cartographic Symbols\n\n\n\nQualitative visual variables are used for nominal scale data.\nThe goal of qualitative visual variables is to show how entities differ from each other.\nThe visual variables that do a good job of showing ordinal differences are: colour value, colour saturation, size and texture/grain.\n\nFigure on the right for examples of these four ordinal visual variables used each in point, linear and areal symbols."
+    "text": "Qualitative Thematic Maps\nVisual Variables and Cartographic Symbols\n\n\n\nQualitative visual variables are used for nominal scale data.\nThe goal of qualitative visual variables is to show how entities differ from each other.\nThe visual variables that do a good job of showing ordinal differences are: colour value, colour saturation, size and texture/grain.\n\nFigure on the right for examples of these four ordinal visual variables used each in point, linear and areal symbols."
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map",
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Qualitative Thematic Map",
-    "text": "Qualitative Thematic Map\n\nPoint symbol map\n\n\n\nDifferent point symbols are used to represent school types."
+    "text": "Qualitative Thematic Map\nPoint symbol map\n\n\n\nDifferent point symbols are used to represent school types."
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-1",
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-1",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Qualitative Thematic Map",
-    "text": "Qualitative Thematic Map\n\nLine symbol map\n\n\n\nA road map is an example of a thematic map. It shows the road network of an area. In this map, lines with different colour intensity and tickness are used to differentiate hierarchy of roads."
+    "text": "Qualitative Thematic Map\nLine symbol map\n\n\n\nA road map is an example of a thematic map. It shows the road network of an area. In this map, lines with different colour intensity and tickness are used to differentiate hierarchy of roads."
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-2",
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#qualitative-thematic-map-2",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Qualitative Thematic Map",
-    "text": "Qualitative Thematic Map\n\nArea map\n\n\n\nLand use map below is a good example of a discrete thematic map. In this map, different colours are use to represent different land use types."
+    "text": "Qualitative Thematic Map\nArea map\n\n\n\nLand use map below is a good example of a discrete thematic map. In this map, different colours are use to represent different land use types."
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#quantitative-thematic-map",
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#quantitative-thematic-map",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Quantitative Thematic Map",
-    "text": "Quantitative Thematic Map\n\nVisual Variables and Cartographic Symbols\n\n\n\nQuantitative visual variables are used to display ordinal, interval or ratio scale data.\n\nThe goal of the quantitative visual variable is to show relative magnitude or order between entities.\nThe visual variables that do a good job of showing ordinal differences are: colour value, colour saturation, size and texture/grain.\n\nFigure on the right shows of these four ordinal visual variables used each in point, linear and areal symbols."
+    "text": "Quantitative Thematic Map\nVisual Variables and Cartographic Symbols\n\n\n\nQuantitative visual variables are used to display ordinal, interval or ratio scale data.\n\nThe goal of the quantitative visual variable is to show relative magnitude or order between entities.\nThe visual variables that do a good job of showing ordinal differences are: colour value, colour saturation, size and texture/grain.\n\nFigure on the right shows of these four ordinal visual variables used each in point, linear and areal symbols."
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#proportional-symbol-map",
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#proportional-symbol-map",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Proportional Symbol Map",
-    "text": "Proportional Symbol Map\n\nThe proportional symbol technique uses symbols of different sizes to represent data associated with different areas or locations within the map.\n\n\n\nThe proportional symbol technique uses symbols of different sizes to represent data associated with different areas or locations within the map. For example, the proportional maps above use circle with different sizes to represent millions of people. There are two types of point features that are typically depicted with proportional symbols: features for which the data represents a geographic position directly (e.g., gallons of oil from individual oil wells), and features that are geographic areas to which data are aggregated and the data magnitudes are assigned to a representative point within the area (e.g., the geographic centroid of a state as in the examples above). In either case, the area of the symbol is scaled to represent the data magnitude, sometimes with a bit of exaggeration to adjust for a general tendency of human vision to underestimate differences in area. A variant on this direct data-to-symbol scaling groups values into categories first, then scales the symbol to represent the mean for the category, assigning a symbol to each place to represent the category range that the mean for the place falls within\n\n\n\nHow to size circles incorrectly and correctly?\nFigure below explains how attribute values are map on circles. One strategy to overcome this problem is to use square instead of circle.\n\n\n\n\nHow to make proportional symbol maps clearer?\nWhen designing a proportional symbol map, one of the important consideration is to avoid the circles blocking each other. One possible strategy to overcome this problem is to applying opacity (also known as transparency).\n\n\n\n\nProportional Symbol Map: Pie Chart Map\nOne important characteristic of proportional symbols is that they can easily be designed to represent more than one data value per location. Among the most common example is a pie chart map in which a circle is scaled proportionally to some total, and the size of wedges within the circle is scaled to depict a proportion of a total for two or more sub-categories.\n\n\nOne important characteristic of proportional symbols is that they can easily be designed to represent more than one data value per location. Among the most common example is a “pie chart map” in which a circle is scaled proportionally to some total, and the size of wedges within the circle is scaled to depict a proportion of a total for two or more sub-categories. The map above uses circle size to depict total sales in each city, and the pie slices then depict proportion of the three shipping modes, namely: delivery truck, express air and regular air.\n\n\n\n\nProportional Symbol Map: Bar Chart Map\nProportional side-by-side bar map places side-by-side bar chart on a map based on the location of the observations.\n\n\n\n\nProportional Symbol Map - Junk Map\nWhen preparing a proportional symbol map, it is important to ensure that the geographical level used is the same.\n\n\nSource: COVID-19 Dashboard\n\n\n\n\nAltertive of Proportional Symbol Map: Bricks Map\nBricks Map aims to provide better ways to encode quantitative information graphically—ways that can be easily, efficiently, and accurately decoded.\n\n\nSource: Building insight with bricks.\n\n\n\n\nBricks Map versus Proportional Symbol Map\nBy plotting a proportional symbol map and a bricks map side-by-side as shown below, it is clear that bubbles of graduated sizes proportional to the value ranges that they represent can be difficult to distinguish than the bricks."
+    "text": "Proportional Symbol Map\n\nThe proportional symbol technique uses symbols of different sizes to represent data associated with different areas or locations within the map.\n\n\n\nThe proportional symbol technique uses symbols of different sizes to represent data associated with different areas or locations within the map. For example, the proportional maps above use circle with different sizes to represent millions of people. There are two types of point features that are typically depicted with proportional symbols: features for which the data represents a geographic position directly (e.g., gallons of oil from individual oil wells), and features that are geographic areas to which data are aggregated and the data magnitudes are assigned to a representative point within the area (e.g., the geographic centroid of a state as in the examples above). In either case, the area of the symbol is scaled to represent the data magnitude, sometimes with a bit of exaggeration to adjust for a general tendency of human vision to underestimate differences in area. A variant on this direct data-to-symbol scaling groups values into categories first, then scales the symbol to represent the mean for the category, assigning a symbol to each place to represent the category range that the mean for the place falls within"
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#dot-density-map",
@@ -2867,7 +2867,7 @@
     "href": "lesson/Lesson07/Lesson07-VisGeo.html#choropleth-map",
     "title": "Lesson 7: Visualising and Analysing Geographic Data",
     "section": "Choropleth Map",
-    "text": "Choropleth Map\nA choropleth map is a type of thematic map in which areas are shaded or patterned in proportion to a statistical variable that represents an aggregate summary of a geographic characteristic within each area, such as population or per capita income.\n\n\n\nClassified choropleth map\n\nA choropleth map can be either classified or unclassified.\nA classed choropleth map combines areal units into a smaller number of groups. Interval levels may vary, but typically 4 to 7 are used in a map. There is different classification techniques used to divide up the intervals.\n\n\n\n\n\nUnclassified choropleth map\n\nAn unclassified choropleth map is similar to a classed choropleth map; however, an unclassed choropleth maps do not have an averaged statistic towards each particular colour.\n\n\n\n\n\nChoropleth mapping technique - Number of classes\nThe readability of a choropleth map will be affected by the number of classes used.\n\n\n\nWhen a small number of classes is used, the spatial distribution reveals will be very limited.\n\n\n\n\nWhen an appropriate number of classes is used, the spatial distribution reveals will be clear.\n\n\n\n\n\n\n\nChoropleth mapping technique: Number of classes\nFigure below provided a mathematical method to determine number of classes used for preparing a choropleth map.\n\n\n\n\nChoropleth mapping technique: Methods of choosing classification scheme\n\nBased on the nature of the distribution\n\nquantile, equal interval, natural breaks, standard deviations, defined interval\n\nArbitrary\n\nCan be based on round numbers.\nExamples: Grouping according to age or census housing categories\nCan result in empty categories\n\n\n\n\n\nData classification method: Equal interval\n\nDivides the range of attribute values into equally sized classes.\n\n\n\n\n\nData classification method: Quantitle\n\nSame number of features per class.\n\n\n\n\n\n\n\n\n\nData classification method: Jenks (also known as Natural breaks)\n\nDefault Jenk’s statistical optimization by finds natural groupings in the data.\n\n\n\n\n\nData classification method: Standard deviation\n\nA measure of dispersion. Use if the distribution approximates a normal distribution.\n\n\n\n\n\nChoropleth map - Colour scheme\nColorBrewer is an online tool designed to help people select good color schemes for maps and other graphics.\n\n\n\n\nColour Scheme Tip\n\nAvoiding multiple colours in choropleth mapping\nStick with a single hue (or a small set of closely related hues) and vary intensity from pale colours for low values to increasingly darker and brighter colours for high values.\n\n\n\n\n\nTrellis choropleth map\n\n\n\nTrellis maps , also known as small multiple maps, are composed of many maps arrange side-by-side, and sometimes stacked vertically.\nSmall multiple maps enable the visualisation of how spatial relationships change with respect to another variable, such as time.\n\n\n\n\n\n\n\n\nGeofacet\nGeofacet takes data representing different geographic entities and apply a visualization method to the data for each entity, with the resulting set of visualizations being laid out in a grid that mimics the original geographic topology as closely as possible.\n\n\nSource: Singapore Property Market Watch"
+    "text": "Choropleth Map\nA choropleth map is a type of thematic map in which areas are shaded or patterned in proportion to a statistical variable that represents an aggregate summary of a geographic characteristic within each area, such as population or per capita income."
   },
   {
     "objectID": "lesson/Lesson07/Lesson07-VisGeo.html#reference",
@@ -3533,5 +3533,215 @@
     "title": "Lesson 9: Information Dashboard Design",
     "section": "Ideal graphs for information dashboard: Sparklines",
     "text": "Ideal graphs for information dashboard: Sparklines\n\nA sparkline is a very small line chart, typically drawn without axes or coordinates.\n\n\n\nReference: Sparklines"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#isss608-visual-analytics-and-applications",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#isss608-visual-analytics-and-applications",
+    "title": "Lesson10: The Epilogue",
+    "section": "ISSS608: Visual Analytics and Applications",
+    "text": "ISSS608: Visual Analytics and Applications"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#motivation-of-visual-analytics",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#motivation-of-visual-analytics",
+    "title": "Lesson10: The Epilogue",
+    "section": "Motivation of Visual Analytics",
+    "text": "Motivation of Visual Analytics\nThe World is full of charts that lie!\n\nWe need to get smarter about visual information"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#motivation-of-visual-analytics-1",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#motivation-of-visual-analytics-1",
+    "title": "Lesson10: The Epilogue",
+    "section": "Motivation of Visual Analytics",
+    "text": "Motivation of Visual Analytics\nIs there a place for Visual Analytics in knowledge discovery?"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#what-is-visual-analytics",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#what-is-visual-analytics",
+    "title": "Lesson10: The Epilogue",
+    "section": "What is Visual Analytics?",
+    "text": "What is Visual Analytics?\nVisual Analytics must be Reprducible\n\nReference: Ten Simple Rules for Reproducible Computational Research"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nData Visualization: Clarity or Aesthetics?"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-1",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-1",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-2",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-2",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-3",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-3",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-4",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-4",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-5",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-5",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-6",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-6",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-7",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-7",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nAvoiding junk charts"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-8",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-8",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nShow the world the good visual design priciples"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-9",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#a-gentle-reminder-9",
+    "title": "Lesson10: The Epilogue",
+    "section": "A Gentle Reminder",
+    "text": "A Gentle Reminder\nShow the world the good visual design priciples"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster",
+    "title": "Lesson10: The Epilogue",
+    "section": "The bumper ride of R rollercoaster",
+    "text": "The bumper ride of R rollercoaster"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-1",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-1",
+    "title": "Lesson10: The Epilogue",
+    "section": "The bumper ride of R rollercoaster",
+    "text": "The bumper ride of R rollercoaster"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-2",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-2",
+    "title": "Lesson10: The Epilogue",
+    "section": "The bumper ride of R rollercoaster",
+    "text": "The bumper ride of R rollercoaster"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-3",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-3",
+    "title": "Lesson10: The Epilogue",
+    "section": "The bumper ride of R rollercoaster",
+    "text": "The bumper ride of R rollercoaster"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-4",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#the-bumper-ride-of-r-rollercoaster-4",
+    "title": "Lesson10: The Epilogue",
+    "section": "The bumper ride of R rollercoaster",
+    "text": "The bumper ride of R rollercoaster"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#time-to-say-goodbye",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#time-to-say-goodbye",
+    "title": "Lesson10: The Epilogue",
+    "section": "Time to Say Goodbye",
+    "text": "Time to Say Goodbye\n\n\nLet’s Build a Better World with Visual Analytics"
+  },
+  {
+    "objectID": "lesson/Lesson10/Lesson10-The_Epilogue.html#lets-build-a-better-world-with-analytics",
+    "href": "lesson/Lesson10/Lesson10-The_Epilogue.html#lets-build-a-better-world-with-analytics",
+    "title": "Lesson10: The Epilogue",
+    "section": "Let’s Build a Better World with Analytics",
+    "text": "Let’s Build a Better World with Analytics"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "",
+    "text": "In this hands-on exercise, you will gain hands-on experiences on designing treemap using appropriate R packages. The hands-on exercise consists of three main section. First, you will learn how to manipulate transaction data into a treemap strcuture by using selected functions provided in dplyr package. Then, you will learn how to plot static treemap by using treemap package. In the third section, you will learn how to design interactive treemap by using d3treeR package."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#importing-the-data-set",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#importing-the-data-set",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Importing the data set",
+    "text": "Importing the data set\nIn the code chunk below, read_csv() of readr is used to import realis2018.csv into R and parsed it into tibble R data.frame format.\n\nrealis2018 <- read_csv(\"data/realis2018.csv\")\n\nThe output tibbled data.frame is called realis2018."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#data-wrangling-and-manipulation",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#data-wrangling-and-manipulation",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Data Wrangling and Manipulation",
+    "text": "Data Wrangling and Manipulation\nThe data.frame realis2018 is in trasaction record form, which is highly disaggregated and not appropriate to be used to plot a treemap. In this section, we will perform the following steps to manipulate and prepare a data.frtame that is appropriate for treemap visualisation:\n\ngroup transaction records by Project Name, Planning Region, Planning Area, Property Type and Type of Sale, and\ncompute Total Unit Sold, Total Area, Median Unit Price and Median Transacted Price by applying appropriate summary statistics on No. of Units, Area (sqm), Unit Price ($ psm) and Transacted Price ($) respectively.\n\nTwo key verbs of dplyr package, namely: group_by() and summarize() will be used to perform these steps.\ngroup_by() breaks down a data.frame into specified groups of rows. When you then apply the verbs above on the resulting object they’ll be automatically applied “by group”.\nGrouping affects the verbs as follows:\n\ngrouped select() is the same as ungrouped select(), except that grouping variables are always retained.\ngrouped arrange() is the same as ungrouped; unless you set .by_group = TRUE, in which case it orders first by the grouping variables.\nmutate() and filter() are most useful in conjunction with window functions (like rank(), or min(x) == x). They are described in detail in vignette(“window-functions”).\nsample_n() and sample_frac() sample the specified number/fraction of rows in each group.\nsummarise() computes the summary for each group.\n\nIn our case, group_by() will used together with summarise() to derive the summarised data.frame.\nRecommendation:\n\nStudents who are new to dplyr methods should consult Introduction to dplyr before moving on to the next section.\n\n\nGrouped summaries without the Pipe\nThe code chank below shows a typical two lines code approach to perform the steps.\n\nrealis2018_grouped <- group_by(realis2018, `Project Name`,\n                               `Planning Region`, `Planning Area`, \n                               `Property Type`, `Type of Sale`)\nrealis2018_summarised <- summarise(realis2018_grouped, \n                          `Total Unit Sold` = sum(`No. of Units`, na.rm = TRUE),\n                          `Total Area` = sum(`Area (sqm)`, na.rm = TRUE),\n                          `Median Unit Price ($ psm)` = median(`Unit Price ($ psm)`, na.rm = TRUE), \n                          `Median Transacted Price` = median(`Transacted Price ($)`, na.rm = TRUE))\n\nNote:\n\nAggregation functions such as sum() and meadian() obey the usual rule of missing values: if there’s any missing value in the input, the output will be a missing value. The argument na.rm = TRUE removes the missing values prior to computation.\n\nThe code chunk above is not very efficient because we have to give each intermediate data.frame a name, even though we don’t have to care about it.\n\n\nGrouped summaries with the pipe\nThe code chunk below shows a more efficient way to tackle the same processes by using the pipe, %>%:\nRecommendation:\n\nTo learn more about Pipe, visit this excellent article: Pipes in R Tutorial For Beginners.\n\n\nrealis2018_summarised <- realis2018 %>% \n  group_by(`Project Name`,`Planning Region`, `Planning Area`, `Property Type`, `Type of Sale`) %>%\n  summarise(`Total Unit Sold` = sum(`No. of Units`, na.rm = TRUE), \n            `Total Area` = sum(`Area (sqm)`, na.rm = TRUE),\n            `Median Unit Price ($ psm)` = median(`Unit Price ($ psm)`, na.rm = TRUE),\n            `Median Transacted Price` = median(`Transacted Price ($)`, na.rm = TRUE))"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#designing-a-static-treemap",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#designing-a-static-treemap",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Designing a static treemap",
+    "text": "Designing a static treemap\nIn this section, treemap() of Treemap package is used to plot a treemap showing the distribution of median unit prices and total unit sold of resale condominium by geographic hierarchy in 2017.\nFirst, we will select records belongs to resale condominium property type from realis2018_selected data frame.\n\nrealis2018_selected <- realis2018_summarised %>%\n  filter(`Property Type` == \"Condominium\", `Type of Sale` == \"Resale\")\n\n\nUsing the basic arguments\nThe code chunk below designed a treemap by using three core arguments of treemap(), namely: index, vSize and vColor.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )\n\n\n\n\nThings to learn from the three arguments used:\n\nindex\n\nThe index vector must consist of at least two column names or else no hierarchy treemap will be plotted.\nIf multiple column names are provided, such as the code chunk above, the first name is the highest aggregation level, the second name the second highest aggregation level, and so on.\n\nvSize\n\nThe column must not contain negative values. This is because it’s vaues will be used to map the sizes of the rectangles of the treemaps.\n\n\nWarning:\nThe treemap above was wrongly coloured. For a correctly designed treemap, the colours of the rectagles should be in different intensity showing, in our case, median unit prices.\nFor treemap(), vColor is used in combination with the argument type to determines the colours of the rectangles. Without defining type, like the code chunk above, treemap() assumes type = index, in our case, the hierarchy of planning areas.\n\n\nWorking with vColor and type arguments\nIn the code chunk below, type argument is define as value.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type = \"value\",\n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )\n\n\n\n\nThinking to learn from the conde chunk above.\n\nThe rectangles are coloured with different intensity of green, reflecting their respective median unit prices.\n\nThe legend reveals that the values are binned into ten bins, i.e. 0-5000, 5000-10000, etc. with an equal interval of 5000."
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#colours-in-treemap-package",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#colours-in-treemap-package",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Colours in treemap package",
+    "text": "Colours in treemap package\nThere are two arguments that determine the mapping to color palettes: mapping and palette. The only difference between “value” and “manual” is the default value for mapping. The “value” treemap considers palette to be a diverging color palette (say ColorBrewer’s “RdYlBu”), and maps it in such a way that 0 corresponds to the middle color (typically white or yellow), -max(abs(values)) to the left-end color, and max(abs(values)), to the right-end color. The “manual” treemap simply maps min(values) to the left-end color, max(values) to the right-end color, and mean(range(values)) to the middle color.\n\nThe “value” type treemap\nThe code chunk below shows a value type treemap.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type=\"value\",\n        palette=\"RdYlBu\", \n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )\n\n\n\n\nThing to learn from the code chunk above:\n\nalthough the colour palette used is RdYlBu but there are no red rectangles in the treemap above. This is because all the median unit prices are positive.\nThe reason why we see only 5000 to 45000 in the legend is because the range argument is by default c(min(values, max(values)) with some pretty rounding.\n\n\n\nThe “manual” type treemap\nThe “manual” type does not interpret the values as the “value” type does. Instead, the value range is mapped linearly to the colour palette.\nThe code chunk below shows a manual type treemap.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type=\"manual\",\n        palette=\"RdYlBu\", \n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )\n\n\n\n\nThings to learn from the code chunk above:\n\nThe colour scheme used is very copnfusing. This is because mapping = (min(values), mean(range(values)), max(values)). It is not wise to use diverging colour palette such as RdYlBu if the values are all positive or negative\n\nTo overcome this problem, a single colour palette such as Blues should be used.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type=\"manual\",\n        palette=\"Blues\", \n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#treemap-layout",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#treemap-layout",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Treemap Layout",
+    "text": "Treemap Layout\ntreemap() supports two popular treemap layouts, namely: “squarified” and “pivotSize”. The default is “pivotSize”.\nThe squarified treemap algorithm (Bruls et al., 2000) produces good aspect ratios, but ignores the sorting order of the rectangles (sortID). The ordered treemap, pivot-by-size, algorithm (Bederson et al., 2002) takes the sorting order (sortID) into account while aspect ratios are still acceptable.\n\nWorking with algorithm argument\nThe code chunk below plots a squarified treemap by changing the algorithm argument.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type=\"manual\",\n        palette=\"Blues\", \n        algorithm = \"squarified\",\n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )\n\n\n\n\n\n\nUsing sortID\nWhen “pivotSize” algorithm is used, sortID argument can be used to dertemine the order in which the rectangles are placed from top left to bottom right.\n\ntreemap(realis2018_selected,\n        index=c(\"Planning Region\", \"Planning Area\", \"Project Name\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type=\"manual\",\n        palette=\"Blues\", \n        algorithm = \"pivotSize\",\n        sortID = \"Median Transacted Price\",\n        title=\"Resale Condominium by Planning Region and Area, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#designing-a-basic-treemap",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#designing-a-basic-treemap",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Designing a basic treemap",
+    "text": "Designing a basic treemap\n\nggplot(data=realis2018_selected, \n       aes(area = `Total Unit Sold`,\n           fill = `Median Unit Price ($ psm)`),\n       layout = \"scol\",\n       start = \"bottomleft\") + \n  geom_treemap() +\n  scale_fill_gradient(low = \"light blue\", high = \"blue\")\n\n\n\n\n\nDefining hierarchy\nGroup by Planning Region\n\nggplot(data=realis2018_selected, \n       aes(area = `Total Unit Sold`,\n           fill = `Median Unit Price ($ psm)`,\n           subgroup = `Planning Region`),\n       start = \"topleft\") + \n  geom_treemap()\n\n\n\n\nGroup by Planning Area\n\nggplot(data=realis2018_selected, \n       aes(area = `Total Unit Sold`,\n           fill = `Median Unit Price ($ psm)`,\n           subgroup = `Planning Region`,\n           subgroup2 = `Planning Area`)) + \n  geom_treemap()\n\n\n\n\nAdding boundary line\n\nggplot(data=realis2018_selected, \n       aes(area = `Total Unit Sold`,\n           fill = `Median Unit Price ($ psm)`,\n           subgroup = `Planning Region`,\n           subgroup2 = `Planning Area`)) + \n  geom_treemap() +\n  geom_treemap_subgroup2_border(colour = \"gray40\",\n                                size = 2) +\n  geom_treemap_subgroup_border(colour = \"gray20\")"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#installing-d3treer-package",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#installing-d3treer-package",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Installing d3treeR package",
+    "text": "Installing d3treeR package\nThis slide shows you how to install a R package which is not available in cran.\n\nIf this is the first time you install a package from github, you should install devtools package by using the code below or else you can skip this step.\n\n\ninstall.packages(\"devtools\")\n\n\nNext, you will load the devtools library and install the package found in github by using the codes below.\n\n\nlibrary(devtools)\ninstall_github(\"timelyportfolio/d3treeR\")\n\n\nNow you are ready to launch d3treeR package\n\n\nlibrary(d3treeR)"
+  },
+  {
+    "objectID": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#designing-an-interactive-treemap",
+    "href": "hands-on_ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html#designing-an-interactive-treemap",
+    "title": "Hands-on Exercise 5: Treemap Visualisation with R",
+    "section": "Designing An Interactive Treemap",
+    "text": "Designing An Interactive Treemap\nThe codes below perform two processes.\n\ntreemap() is used to build a treemap by using selected variables in condominium data.frame. The treemap created is save as object called tm.\n\n\ntm <- treemap(realis2018_summarised,\n        index=c(\"Planning Region\", \"Planning Area\"),\n        vSize=\"Total Unit Sold\",\n        vColor=\"Median Unit Price ($ psm)\",\n        type=\"value\",\n        title=\"Private Residential Property Sold, 2017\",\n        title.legend = \"Median Unit Price (S$ per sq. m)\"\n        )\n\n\n\n\n\nThen d3tree() is used to build an interactive treemap.\n\n\nd3tree(tm,rootname = \"Singapore\" )"
   }
 ]

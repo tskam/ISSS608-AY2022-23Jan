@@ -29,6 +29,8 @@ editor: visual
     -   [Visualising Correlation Matrices with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Corrgram.html).
     -   [Building Heatmap for Visualising and Analysing Multivariate Data](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Heatmap.html).
     -   [Building Parallel Coordinates Plot with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-pcp.html).
+    -   [Building Treemap Visualisation with R](../Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05-Treemap.html)
+    
 
 ## Readings
 
@@ -120,6 +122,3 @@ editor: visual
 -   [sunburstR](https://cran.r-project.org/web/packages/sunburstR/)
 -   [Sunburst 2.0.0](https://cran.r-project.org/web/packages/sunburstR/vignettes/sunburst-2-0-0.html)
 -   [Create Basic Sunburst Graphs with ggplot2](https://medium.com/optima-blog/create-basic-sunburst-graphs-with-ggplot2-7d7484d92c61)
-
-
-
