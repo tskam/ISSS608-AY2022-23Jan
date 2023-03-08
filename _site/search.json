@@ -1684,7 +1684,7 @@
     "href": "lesson.html",
     "title": "Lesson Plan",
     "section": "",
-    "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nVisualising and Analysing Geographic Data\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisualising Financial Data"
+    "text": "Lesson\nDate\nVenue\nTopic\nRemarks\n\n\n\n\n1\n14/1\nSCIS1 SR B1-1\nIntroduction to Visual Analytics\n\n\n\n2\n21/1\nSCIS1 SR B1-1\nDesigning Graphs to Enlighten\n\n\n\n3\n28/1\nYPHSL SR B2-01\nInteractivity in Visual Analytics\n\n\n\n4\n4/2\nYPHSL SR B2-01\nFundamentals of Visual Analytics\n\n\n\n5\n11/2\nSCIS1 SR B1-1\nVisual Multivariate Analysis\n\n\n\n6\n18/2\nSCIS1 SR B1-1\nIt’s About Time\n\n\n\n7\n25/2\nSCIS1 SR B1-1\nVisualising and Analysing Geographic Data\n\n\n\n\n4/3\nSCIS1 SR B1-1\nRecess\n\n\n\n8\n11/3\nSCIS1 SR B1-1\nNetwork Data Visualisation and Analysis\n\n\n\n9\n18/3\nSCIS1 SR B1-1\nInformation Dashboard Design\n\n\n\n10\n25/3\nSCIS1 SR B1-1\nVisual Analytics of Financial Data"
   },
   {
     "objectID": "outline/Lesson01_outline.html",
@@ -1997,14 +1997,14 @@
   {
     "objectID": "outline/Lesson10_outline.html",
     "href": "outline/Lesson10_outline.html",
-    "title": "Lesson 10: Financial Data Visualisation and Analysis",
+    "title": "Lesson 10: Visual Analytics of Financial Data",
     "section": "",
     "text": "Introduction Financial Data\n\nTime-series financial data\n\nFinancial Data Visualisation and Analysis Methods\n\nTreemap\nHorizon Graph\nCandlestick"
   },
   {
     "objectID": "outline/Lesson10_outline.html#lesson-slides-and-hands-on-notes",
     "href": "outline/Lesson10_outline.html#lesson-slides-and-hands-on-notes",
-    "title": "Lesson 10: Financial Data Visualisation and Analysis",
+    "title": "Lesson 10: Visual Analytics of Financial Data",
     "section": "Lesson Slides and Hands-on Notes",
     "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 10 in html format."
   },

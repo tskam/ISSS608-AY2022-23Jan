@@ -1,5 +1,5 @@
 ---
-title: "Lesson 10: Financial Data Visualisation and Analysis"
+title: "Lesson 10: Visual Analytics of Financial Data"
 date: "30 December 2022"
 date-modified: "`r Sys.Date()`"
 format: html
