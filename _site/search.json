@@ -1948,28 +1948,28 @@
   {
     "objectID": "outline/Lesson08_outline.html",
     "href": "outline/Lesson08_outline.html",
-    "title": "Lesswon 8: Network Data Visualisation and Analysis",
+    "title": "Lesson 8: Network Data Visualisation and Analysis",
     "section": "",
     "text": "Introduction to Graph Data Visualisation\n\nBasic principles of network graph\nGraph data visualisation in actions\n\nNetwork Graph Data\n\nNetwork data sets\nGraph data format\nGraph Database\n\nNetwork Graph Visualisation Tools\nDesigner toolkit\n\nGephi\n\nProgrammer toolkit\n\nR packages\n\nGraph layouts\n\nNode-and-link layouts\nForce-directed layout\nNode-only layout\nAdjacency matrix\n\nVisual Attributes\n\nKey node attributes\nKey edge attributes\nBundles, shapes, images, and more\n\nVisual Analysis of Network Graphs\n\nRelationships\nHierarchies\nCommunities\n\nFlows\nSpatial networks"
   },
   {
     "objectID": "outline/Lesson08_outline.html#lesson-slides-and-hands-on-notes",
     "href": "outline/Lesson08_outline.html#lesson-slides-and-hands-on-notes",
-    "title": "Lesswon 8: Network Data Visualisation and Analysis",
+    "title": "Lesson 8: Network Data Visualisation and Analysis",
     "section": "Lesson Slides and Hands-on Notes",
     "text": "Lesson Slides and Hands-on Notes\n\nLesson slides in html and pdf formats\nHandout of Hands-on Exercise 8 in html format."
   },
   {
     "objectID": "outline/Lesson08_outline.html#readings",
     "href": "outline/Lesson08_outline.html#readings",
-    "title": "Lesswon 8: Network Data Visualisation and Analysis",
+    "title": "Lesson 8: Network Data Visualisation and Analysis",
     "section": "Readings",
     "text": "Readings\n\nVisual Analysis of Complex Networks for Business Intelligence with Gephi\nGraph Drawing\nGraph Analytics - Lesson Learned and Challenges Ahead\nLearning to Read and Interpret Network Graph Data Visualizations\nThe Visualization of Networks\nViZster: Visualizing Online Social Networks\nAdam Perer. “Finding Beautiful Insights in the Chaos of Social Network Visualizations”. In ’‘’Beautiful Visualization’’’. O’Reilly Press.\nVisual Complexity"
   },
   {
     "objectID": "outline/Lesson08_outline.html#all-about-r",
     "href": "outline/Lesson08_outline.html#all-about-r",
-    "title": "Lesswon 8: Network Data Visualisation and Analysis",
+    "title": "Lesson 8: Network Data Visualisation and Analysis",
     "section": "All About R",
     "text": "All About R\n\nWrangling Network Data\n\ntidygraph\ntidygraph 1.1 – A tidy hope\ntidygraph\n\n\n\nVisualisation and Analysis\nggraph\n\nggraph\nAnnouncing ggraph\n1 giraffe, 2 giraffe, GO!\nLayouts\nNodes\nEdges\ntidygraph and ggraph\n\nvizNetwork\n\nvisNetwork: Network Visualization using ‘vis.js’ Library\nIntroduction to visNetwork\nvisNetwork, an R package for interactive network visualization\n\nCircular Plot\n\ncirclize: circular visualization in R\nCircular Visualization in R"
   },
