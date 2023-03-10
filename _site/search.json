@@ -3042,7 +3042,7 @@
     "href": "hands-on_ex/Hands-on_Ex08/Hands-on_Ex08-NetworkVis.html#getting-started",
     "title": "Hands-on Exercise 8: Modelling, Visualising and Analysing Network Data with R",
     "section": "Getting Started",
-    "text": "Getting Started\n\nInstalling and launching R packages\nIn this hands-on exercise, four network data modelling and visualisation packages will be installed and launched. They are igraph, tidygraph, ggraph and visNetwork. Beside these four packages, tidyverse and lubridate, an R package specially designed to handle and wrangling time data will be installed and launched too.\nThe code chunk:\n\n\nShow the code\npackages = c('igraph', 'tidygraph', \n             'ggraph', 'visNetwork', \n             'lubridate', 'clock',\n             'tidyverse', 'graphlayouts')\n\nfor(p in packages){\n  if(!require(p, character.only = T)){\n    install.packages(p)\n  }\n  library(p, character.only = T)\n}"
+    "text": "Getting Started\n\nInstalling and launching R packages\nIn this hands-on exercise, four network data modelling and visualisation packages will be installed and launched. They are igraph, tidygraph, ggraph and visNetwork. Beside these four packages, tidyverse and lubridate, an R package specially designed to handle and wrangling time data will be installed and launched too.\nThe code chunk:\n\n\nShow the code\npacman::p_load(igraph, tidygraph, ggraph, \n               visNetwork, lubridate, clock,\n               tidyverse, graphlayouts)"
   },
   {
     "objectID": "hands-on_ex/Hands-on_Ex08/Hands-on_Ex08-NetworkVis.html#the-data",
