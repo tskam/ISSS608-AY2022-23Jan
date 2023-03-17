@@ -8,24 +8,23 @@ editor: visual
 
 ## The Task
 
-In this take-home exercise, you are required to uncover the salient patterns of the resale prices of public housing property by residential towns and estates in Singapore by using appropriate analytical visualisation techniques learned in **Lesson 4: Fundamentals of Visual Analytics**.  Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences. 
+In this take-home exercise, you are required to uncover the salient patterns of the resale prices of public housing property by residential towns and estates in Singapore by using appropriate analytical visualisation techniques learned in **Lesson 4: Fundamentals of Visual Analytics**. Students are encouraged to apply appropriate interactive techniques to enhance user and data discovery experiences.
 
-For the purpose of this study, the focus should be on **3-ROOM, 4-ROOM and 5-ROOM types**.  You can choose to focus on either one housing type or multiple housing types.  The study period should be on **2022**. 
+For the purpose of this study, the focus should be on **3-ROOM, 4-ROOM and 5-ROOM types**. You can choose to focus on either one housing type or multiple housing types. The study period should be on **2022**.
 
 ## The Data
 
 *Resale flat princes based on registration date from Jan-2017 onwards* should be used to prepare the analytical visualisation. It is available at [Data.gov.sg](https://data.gov.sg/).
 
- 
 ## The Designing Tool
 
-For the purpose of this take-home exercise, ggplot2 and its extension should be used to design the analytical visualisation.  tidyverse family of packages should be used to prepare the data.
+For the purpose of this take-home exercise, ggplot2 and its extension should be used to design the analytical visualisation. tidyverse family of packages should be used to prepare the data.
 
 ## The Write-up
 
 The write-up of the take-home exercise should include but not limited to the followings:
 
--   Describe the selection and designed consideration of the analytical data visualisation used.  The discussion should limit to not more than 150 words each.    
+-   Describe the selection and designed consideration of the analytical data visualisation used. The discussion should limit to not more than 150 words each.
 
 -   A reproducible description of the procedures used to prepare the analytical visualisation. Please refer to the peer submission I shared.
 
@@ -47,5 +46,45 @@ The completed take-home exercise is due on **15th February 2023, by 11:59pm even
 
 ## Peer Learning
 
+# Peer Learning
 
+-   [AISHWARYA SANJAY MALOO](https://isss608-ay-2022-23-aishwaryamaloo.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [ANICA CLARICE ANTONELLA PASCUAL GALANO](https://acapvisualano.netlify.app/take-home_ex/take-home_ex2/take-home_ex2)
+-   [ARIANA TAN RUI MIN](https://arianatan-jan23isss608.netlify.app/takehome_ex/takehome_ex_03/takehome_ex_03)
+-   [BHAIRAVI VAIRAVELU](https://isss608-ay2022-23t2-vb.netlify.app/take_home_ex/take_home_ex03/take_home_ex03)
+-   [BRYANT PHILIPPE LEE](https://isss608-2023-bsl.netlify.app/take-home_ex/take-home_ex03)
+-   [CHAN JING WEI MAGDALENE](https://magdalenechan-iss608.netlify.app/take_home_ex/take_home_ex03/take_home_ex03)
+-   [CHANG XIN XIN EDA](https://isss608-edachang.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [CHEN YIMAN](https://yimanchen-isss608.netlify.app/inclass/inclass03/inclass03.html)
+-   [CHERYL JEANNE CHIEW](https://cheryljeanne-isss608-ay2223.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [CHOI SUNHAM](https://aashleychoii.netlify.app/take-home-exercise/take-home-exercise_03)
+-   [FARRAH BINTE MOHD FADIL](https://farrahmf.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [HOANG HUY](https://isss608-thomashoang.netlify.app/takehomeex/takehomeex03)
+-   [HOU TAO](https://isss608-vaa-ht.netlify.app/takehome_ex/takehome_ex03/takehome_ex03)
+-   [HUO DA](https://isss608-ay2022-23-huoda.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [KHOO WEI LUN](https://isss608-khooweilun.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [LAU ZHI YONG WILLIE](https://isss608-willielau.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [LAW MAN LONG](https://mllaw-isss608-ay21-22jan.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [LAW SHIANG ROU](https://isss608-shiangrou.netlify.app/take_home_exercise/take_home_exercise_3/take_home_exercise_3)
+-   [LI XINGYUN](https://isss608-lixingyun.netlify.app/takehomeexercises/exercise3/exercise3)
+-   [LI YIXUAN](https://isss608-daisy.netlify.app/take-home-ex/take-home-3/takehome3.html)
+-   [LI ZIYI](https://visual-analytics-applications-lzy.netlify.app/take-home_ex/ex03/take-home_ex03)
+-   [LIANG MINGHAO](https://isss608-2023-minghao.netlify.app/takehome_3/takehome_3.html)
+-   [LIM EN HUI CHRISTIANA](https://visualanalytics-christianalim-jan2023.netlify.app/take%20home%20exercises/take-home-exercise-3)
+-   [LUO ZHENG](https://zoeluvrisss608.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [PRACHI RAJENDRA ASHANI](https://isss608-ay2022-23-prachi.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [SHI CHEE LIANG](https://isss608scl.netlify.app/takehomeex/takehomeex02/takehomeex02)
+-   [SIDDHARTH SINGH](https://siddharthsingh-isss608-ay2022-23t1.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [SRIVATSAN MADAPUZI SRINIVASAN](https://vaa-mssri-2022-23.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [TAN ZEXEONG](https://visual-analytics-jephostan.netlify.app/takehome/th_ex3/th_ex3)
+-   [TAN ZHI HAO](https://isss608-ay2022-23t2-tanzhihao.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [TAO MEIZHU](https://isss608-vaa-meizhu.netlify.app/take-home%20exercise/take-home%20exercise%203/take-home%20exercise%203)
+-   [TASAPORN VISAWAMETEEKUL](https://isss608-tasapornv.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [WANG KUNRUI]()
+-   [WANG RUIPENG](https://isss608-rp.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [XU JIAJIE](https://isss608-ay2022-23t1.netlify.app/take-home_ex/takehome_ex03/takehome_ex03)
+-   [YIN HANG](https://isss608-ay2022-23t2.netlify.app/)
+-   [YUN SHWE YEE KYAW](https://isss608-vaa-2022.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [ZHU FANGYUAN](https://608vaa.netlify.app/take-home_ex3/take-home_ex3)
 
