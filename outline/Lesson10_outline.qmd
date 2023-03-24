@@ -17,6 +17,6 @@ editor: visual
 
 ## Lesson Slides and Hands-on Notes
 
--   Lesson slides in [html](../lesson/Lesson10/Lesson10a-FinVA.html) and [pdf](../lesson/Lesson10/Lesson10-FinVA.pdf) formats
+-   Lesson slides in [html](../lesson/Lesson10/Lesson10-The_Epilogue.html) and [pdf](../lesson/Lesson10/Lesson10-The_Epilogue.pdf) formats
 
 -   Handout of Hands-on Exercise 10 in [html](../Hands-on_Ex/Hands-on_Ex10/Hands-on_Ex10-FinVis.html) format.
