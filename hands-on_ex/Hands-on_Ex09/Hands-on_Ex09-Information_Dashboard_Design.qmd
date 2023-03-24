@@ -18,9 +18,9 @@ editor: visual
 
 By the end of this hands-on exercise, you will be able to:
 
-- create bullet chart by using ggplot2,
-- create sparklines by using ggplot2  ,
-- build industry standard dashboard by using R Shiny. 
+-   create bullet chart by using ggplot2,
+-   create sparklines by using ggplot2 ,
+-   build industry standard dashboard by using R Shiny.
 
 ## Getting started
 
@@ -31,20 +31,22 @@ pacman::p_load(lubridate, ggthemes, reactable,
 reactablefmtr, gt, gtExtras, tidyverse)
 ```
 
-+ [tidyverse](https://www.tidyverse.org/) provides a collection of functions for performing data science task such as importing, tidying, wrangling data and visualising data.  It is not a single package but a collection of modern R packages including but not limited to [readr](https://readr.tidyverse.org/), [tidyr](https://tidyr.tidyverse.org/), [dplyr](https://dplyr.tidyverse.org/), [ggplot](https://ggplot2.tidyverse.org/), [tibble](https://tibble.tidyverse.org/), [stringr](https://stringr.tidyverse.org/), [forcats](https://forcats.tidyverse.org/) and [purrr](https://purrr.tidyverse.org/).
-+ [lubridate]() provides functions to work with dates and times more efficiently.
-+ [ggthemes]() is an extension of ggplot2. It provides additional [themes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/) beyond the basic themes of ggplot2.
-+ [gtExtras](https://jthomasmock.github.io/gtExtras/index.html) provides some additional helper functions to assist in creating beautiful tables with [gt](https://gt.rstudio.com/), an R package specially designed for anyone to make wonderful-looking tables using the R programming language. 
-+ [reactablefmtr](https://kcuilla.github.io/reactablefmtr/index.html) provides various features to streamline and enhance the styling of interactive reactable tables with easy-to-use and highly-customizable functions and themes. 
+-   [tidyverse](https://www.tidyverse.org/) provides a collection of functions for performing data science task such as importing, tidying, wrangling data and visualising data. It is not a single package but a collection of modern R packages including but not limited to [readr](https://readr.tidyverse.org/), [tidyr](https://tidyr.tidyverse.org/), [dplyr](https://dplyr.tidyverse.org/), [ggplot](https://ggplot2.tidyverse.org/), [tibble](https://tibble.tidyverse.org/), [stringr](https://stringr.tidyverse.org/), [forcats](https://forcats.tidyverse.org/) and [purrr](https://purrr.tidyverse.org/).
+-   [lubridate]() provides functions to work with dates and times more efficiently.
+-   [ggthemes]() is an extension of ggplot2. It provides additional [themes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/) beyond the basic themes of ggplot2.
+-   [gtExtras](https://jthomasmock.github.io/gtExtras/index.html) provides some additional helper functions to assist in creating beautiful tables with [gt](https://gt.rstudio.com/), an R package specially designed for anyone to make wonderful-looking tables using the R programming language.
+-   [reactable](https://glin.github.io/reactable/index.html) provides functions to create interactive data tables for R, based on the [React Table](https://github.com/tanstack/table/tree/v7) library and made with [reactR](https://github.com/react-R/reactR).
+-   [reactablefmtr](https://kcuilla.github.io/reactablefmtr/index.html) provides various features to streamline and enhance the styling of interactive reactable tables with easy-to-use and highly-customizable functions and themes.
 
 ## Importing Microsoft Access database
+
 ### The data set
 
 For the purpose of this study, a personal database in Microsoft Access mdb format called *Coffee Chain* will be used.
 
 ### Importing database into R
 
-In the code chunk below, `odbcConnectAccess()` of [**RODBC**](https://cran.r-project.org/web/packages/RODBC/index.html) package is used used to import a database query table into R. 
+In the code chunk below, `odbcConnectAccess()` of [**RODBC**](https://cran.r-project.org/web/packages/RODBC/index.html) package is used used to import a database query table into R.
 
 ```{r}
 #| eval: false
@@ -55,11 +57,11 @@ write_rds(coffeechain, "data/CoffeeChain.rds")
 odbcClose(con)
 ```
 
-Note: Before running the code chunk, you need to change the R system to 32bit version.  This is because the `odbcConnectAccess()` is based on 32bit and not 64bit 
+Note: Before running the code chunk, you need to change the R system to 32bit version. This is because the `odbcConnectAccess()` is based on 32bit and not 64bit
 
 ### Data Preparation
 
-The code chunk below is used to import *CoffeeChain.rds* into R. 
+The code chunk below is used to import *CoffeeChain.rds* into R.
 
 ```{r}
 coffeechain <- read_rds("data/CoffeeChain.rds")
@@ -81,7 +83,7 @@ product <- coffeechain %>%
   ungroup()
 ```
 
-### Bullet chart in ggplot2 
+### Bullet chart in ggplot2
 
 The code chunk below is used to plot the bullet charts using ggplot2 functions.
 
@@ -134,7 +136,7 @@ ends <- group_by(sales_report, Product) %>%
 
 ```
 
-The code chunk below is used to compute the 25 and 75 quantiles.  
+The code chunk below is used to compute the 25 and 75 quantiles.
 
 ```{r}
 quarts <- sales_report %>%
@@ -152,6 +154,8 @@ quarts <- sales_report %>%
 The code chunk used.
 
 ```{r}
+#| fig-width: 14
+#| fig-height: 12
 ggplot(sales_report, aes(x=Month, y=Sales)) + 
   facet_grid(Product ~ ., scales = "free_y") + 
   geom_ribbon(data = quarts, aes(ymin = quart1, max = quart2), 
@@ -162,7 +166,7 @@ ggplot(sales_report, aes(x=Month, y=Sales)) +
   geom_text(data = mins, aes(label = Sales), vjust = -1) +
   geom_text(data = maxs, aes(label = Sales), vjust = 2.5) +
   geom_text(data = ends, aes(label = Sales), hjust = 0, nudge_x = 0.5) +
-  geom_text(data = ends, aes(label = Product), hjust = 0, nudge_x = 1) +
+  geom_text(data = ends, aes(label = Product), hjust = 0, nudge_x = 1.0) +
   expand_limits(x = max(sales_report$Month) + 
                   (0.25 * (max(sales_report$Month) - min(sales_report$Month)))) +
   scale_x_continuous(breaks = seq(1, 12, 1)) +
@@ -174,11 +178,11 @@ ggplot(sales_report, aes(x=Month, y=Sales)) +
 
 ## Static Information Dashboard Design: gt and gtExtras methods
 
-In this section, you will learn how to create static information dashboard by using [gt](https://gt.rstudio.com/index.html) and [gtExtras](https://jthomasmock.github.io/gtExtras/index.html) packages.  Before getting started, it is highly recommended for you to visit the webpage of these two packages and review all the materials provided on the webpages at least once.  You done not have to understand and remember everything provided but at least have an overview of the purposes and functions provided by them.
+In this section, you will learn how to create static information dashboard by using [gt](https://gt.rstudio.com/index.html) and [gtExtras](https://jthomasmock.github.io/gtExtras/index.html) packages. Before getting started, it is highly recommended for you to visit the webpage of these two packages and review all the materials provided on the webpages at least once. You done not have to understand and remember everything provided but at least have an overview of the purposes and functions provided by them.
 
 ### Plotting a simple bullet chart
 
-In this section, you will learn how to prepare a bullet chart report by using functions of gt and gtExtras packages.   
+In this section, you will learn how to prepare a bullet chart report by using functions of gt and gtExtras packages.
 
 ```{r}
 product %>%
@@ -208,7 +212,7 @@ report <- coffeechain %>%
 
 ```
 
-It is important to note that one of the requirement of gtExtras functions is that almost exclusively they require you to pass data.frame with list columns. In view of this, code chunk below will be used to convert the report data.frame into list columns. 
+It is important to note that one of the requirement of gtExtras functions is that almost exclusively they require you to pass data.frame with list columns. In view of this, code chunk below will be used to convert the report data.frame into list columns.
 
 ```{r}
 report %>%
@@ -217,7 +221,7 @@ report %>%
             .groups = "drop")
 ```
 
-### Plotting Coffechain Sales report 
+### Plotting Coffechain Sales report
 
 ```{r eval=FALSE}
 report %>%
@@ -225,7 +229,8 @@ report %>%
   summarize('Monthly Sales' = list(Sales), 
             .groups = "drop") %>%
    gt() %>%
-   gt_plt_sparkline('Monthly Sales')
+   gt_plt_sparkline('Monthly Sales',
+                    same_limit = FALSE)
 ```
 
 ### Adding statistics
@@ -256,7 +261,6 @@ spark <- report %>%
 
 ```
 
-
 ```{r}
 sales <- report %>% 
   group_by(Product) %>% 
@@ -275,7 +279,8 @@ sales_data = left_join(sales, spark)
 ```{r}
 sales_data %>%
   gt() %>%
-  gt_plt_sparkline('Monthly Sales')
+  gt_plt_sparkline('Monthly Sales',
+                   same_limit = FALSE)
 ```
 
 ### Combining bullet chart and sparklines
@@ -310,7 +315,7 @@ sales_data %>%
 
 ## Interactive Information Dashboard Design: reactable and reactablefmtr methods
 
-In this section, you will learn how to create interactive information dashboard by using [reactable](https://glin.github.io/reactable/index.html) and [reactablefmtr](https://kcuilla.github.io/reactablefmtr/index.html) packages.  Before getting started, it is highly recommended for you to visit the webpage of these two packages and review all the materials provided on the webpages at least once.  You done not have to understand and remember everything provided but at least have an overview of the purposes and functions provided by them.
+In this section, you will learn how to create interactive information dashboard by using [reactable](https://glin.github.io/reactable/index.html) and [reactablefmtr](https://kcuilla.github.io/reactablefmtr/index.html) packages. Before getting started, it is highly recommended for you to visit the webpage of these two packages and review all the materials provided on the webpages at least once. You done not have to understand and remember everything provided but at least have an overview of the purposes and functions provided by them.
 
 In order to build an interactive sparklines, we need to install dataui R package by using the code chunk below.
 
@@ -327,7 +332,7 @@ library(dataui)
 
 ### Plotting interactive sparklines
 
-Similar to gtExtras, to plot an interactive sparklines by using reactablefmtr package we need to prepare the list field by using the code chunk below. 
+Similar to gtExtras, to plot an interactive sparklines by using reactablefmtr package we need to prepare the list field by using the code chunk below.
 
 ```{r}
 report <- report %>%
@@ -335,7 +340,7 @@ report <- report %>%
   summarize(`Monthly Sales` = list(Sales))
 ```
 
-Next, [react_sparkline](https://kcuilla.github.io/reactablefmtr/reference/react_sparkline.html) will be to plot the sparklines as shown below. 
+Next, [react_sparkline](https://kcuilla.github.io/reactablefmtr/reference/react_sparkline.html) will be to plot the sparklines as shown below.
 
 ```{r}
 reactable(
@@ -351,7 +356,7 @@ reactable(
 
 ### Changing the pagesize
 
-By default the pagesize is 10.  In the code chunk below, arguments defaultPageSize is used to change the default setting.  
+By default the pagesize is 10. In the code chunk below, arguments defaultPageSize is used to change the default setting.
 
 ```{r}
 reactable(
@@ -457,4 +462,8 @@ reactable(
 ```
 
 ## Reference
+
+
+
+
 
