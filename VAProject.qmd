@@ -17,11 +17,10 @@ A project may involve developing new methods or implementing visual analytics sy
 
 The followings are possible topic and data sources:
 
-- [Landslide Prevention and Innovation Challenge](https://zindi.africa/competitions/landslide-prevention-and-innovation-challenge)
-- [Data Science Nigeria Challenge #1: Loan Default Prediction](https://zindi.africa/competitions/data-science-nigeria-challenge-1-loan-default-prediction)
-- [Fraud Detection in Electricity and Gas Consumption Challenge](https://zindi.africa/competitions/ai-hack-tunisia-4-predictive-analytics-challenge-1)
--	[AgriFieldNet India Challenge](https://zindi.africa/competitions/agrifieldnet-india-challenge)
- 
+-   [Landslide Prevention and Innovation Challenge](https://zindi.africa/competitions/landslide-prevention-and-innovation-challenge)
+-   [Data Science Nigeria Challenge #1: Loan Default Prediction](https://zindi.africa/competitions/data-science-nigeria-challenge-1-loan-default-prediction)
+-   [Fraud Detection in Electricity and Gas Consumption Challenge](https://zindi.africa/competitions/ai-hack-tunisia-4-predictive-analytics-challenge-1)
+-   [AgriFieldNet India Challenge](https://zindi.africa/competitions/agrifieldnet-india-challenge)
 
 ## Project Management
 
@@ -179,18 +178,38 @@ Note that the following examples are for references purposes. You are urge to us
     -   Group 5: [How to spot a Golden Goose (a.k.a. Profitable Rental Property) in Singapore](https://singaporegoldengoose.netlify.app/index.html)
     -   Group 6: [ShinyCoin](https://shinycoin.netlify.app/).
 
-# AY2021-2022 April Term: Project Grouping
+- AY2021-2022 April Term: Project Grouping
 
--   [Group 1](https://isss698-vast-challenge-group8.netlify.app/)
--   [Group 2](https://visual-analysis-project-g2.netlify.app/)
--   [Group 3](https://wealthcheckup.netlify.app/)
--   [Group 4](https://isss608group4.netlify.app/)
--   [Group 5](https://isss608-project-group5.netlify.app/)
--   [Group 6](https://isss608-group06.netlify.app/)
--   [Group 7](https://isss608group7.shinyapps.io/Group_7/)
--   [Group 9](https://vaprojectgroup9.netlify.app/)
--   [Group 10](https://group10-vast-challenge-2022-project.netlify.app/)
--   [Group 11](https://projectgroup11.netlify.app/)
--   [Group 12](https://group12-va-project.netlify.app/)
+  -   [Group 1](https://isss698-vast-challenge-group8.netlify.app/)
+  -   [Group 2](https://visual-analysis-project-g2.netlify.app/)
+  -   [Group 3](https://wealthcheckup.netlify.app/)
+  -   [Group 4](https://isss608group4.netlify.app/)
+  -   [Group 5](https://isss608-project-group5.netlify.app/)
+  -   [Group 6](https://isss608-group06.netlify.app/)
+  -   [Group 7](https://isss608group7.shinyapps.io/Group_7/)
+  -   [Group 9](https://vaprojectgroup9.netlify.app/)
+  -   [Group 10](https://group10-vast-challenge-2022-project.netlify.app/)
+  -   [Group 11](https://projectgroup11.netlify.app/)
+  -   [Group 12](https://group12-va-project.netlify.app/)
+
+## AY2022-2023 April Term: Project Grouping
+
+- [Group 1: SG Bus Commute Pattern](https://isss608-sg-bus-commuting-pattern.netlify.app/)
+- [Group2: Exploring Trends in Video Games Distributed by Steam](https://letsplay-isss608-proj.netlify.app/)
+- [Group 3: Tanzania Tourism Analysis](https://thehabaritanzania.netlify.app/)
+- [Group 4: HotelViz](https://visual-analytics-2023jan-group1.netlify.app/)
+- [Group 5: Loan Default Prediction](https://isss608-vaa-project-2023.netlify.app/)
+- [Group 6: Electricity Price Analysis in Europe](https://isss608visual-group6.netlify.app/)
+- [Group 7: Water is Life](https://waterislife.netlify.app/about.html)
+- [Group 8: BidBetter: Leveraging Visual Insights for Smarter Tender Bidding](https://bidbetter-app.netlify.app/)
+- [Group 9: Power Analytics - Uncovering household electricity consumption patterns in Singapore](https://teampoweranalytics.netlify.app/)
+- [Group 10: Visitor Arrival Analysis](https://isss608-visitorarrivalanalysis.netlify.app/)
+- [Group 11: Swim Analytica](https://swimanalytica.netlify.app/)
+- [Group 12: Loan Default Prediction](https://isss608-2022-23gp12.netlify.app/)
+- [Group 13: Movie Analysis and Prediction](https://isss608-vaa-ay2022-23-movie-project.netlify.app/)
+
+
+
+
 
 # Q & A
