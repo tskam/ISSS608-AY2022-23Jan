@@ -46,7 +46,7 @@ Your completed take-home exercise is due on **22nd January 2023, by 11:59pm even
 # Peer Learning
 
 -   [AISHWARYA SANJAY MALOO](https://public.tableau.com/app/profile/aishwarya.maloo7070/viz/Take-Home_Ex01/Dashboard1?publish=yes)
--   [ANICA CLARICE ANTONELLA PASCUAL GALANO]()
+-   [ANICA CLARICE ANTONELLA PASCUAL GALANO](https://public.tableau.com/app/profile/anica.galano/viz/Take-home_Ex1_1/SGPAAge-SexPyramid?publish=yes)
 -   [ARIANA TAN RUI MIN](https://public.tableau.com/app/profile/ariana.tan6501/viz/VATakeHome1/Sheet13)
 -   [BHAIRAVI VAIRAVELU](https://public.tableau.com/app/profile/bhairavi.vairavelu/viz/Take_Home_Exercise_01/Top9PlanningAreasDashboard)
 -   [BRYANT PHILIPPE LEE](https://public.tableau.com/views/DataVizMakeover01_16743910439700/TotalSingapore?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
