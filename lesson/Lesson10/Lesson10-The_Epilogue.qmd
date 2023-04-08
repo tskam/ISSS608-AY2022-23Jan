@@ -139,3 +139,7 @@ Reference: [Ten Simple Rules for Reproducible Computational Research](https://jo
 ::: {style="text-align: center"}
 ### Let's Build a Better World with Visual Analytics
 :::
+
+## Things end but memories last forever! 
+
+![](img/image10-20.jpg)
