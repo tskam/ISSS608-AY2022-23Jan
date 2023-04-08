@@ -2,7 +2,8 @@
 title: "Take-home Exercise 2"
 description: |
   Creating data visualisation beyond default
-date: "`r Sys.Date()`"
+date: "14 January 2023"
+date-modified: "`r Sys.Date()`"
 format: html
 editor: visual
 ---
@@ -41,7 +42,7 @@ Your completed take-home exercise is due on **29th January 2023, by 11:59pm even
 # Peer Learning
 
 -   [AISHWARYA SANJAY MALOO](https://isss608-ay-2022-23-aishwaryamaloo.netlify.app/take-home_ex/take-home_ex02/take-home_ex02)
--   [ANICA CLARICE ANTONELLA PASCUAL GALANO](https://acapvisualano.netlify.app/take-home_ex/take-home_ex2/take-home_ex2)
+-   [ANICA CLARICE ANTONELLA PASCUAL GALANO](https://acapvisualano.netlify.app/take-home_ex/take-home_ex2/take-home_ex2). ![](img/thumbup1.jpg) This submission provides the makeover incrementally. Each makeover is high reproducible. Able to provide constructive critics on the original design and provide appropriate alternative designs.\
 -   [ARIANA TAN RUI MIN](https://arianatan-jan23isss608.netlify.app/takehome_ex/takehome_ex_02/takehome_ex_02)
 -   [BHAIRAVI VAIRAVELU](https://isss608-ay2022-23t2-vb.netlify.app/take_home_ex/take_home_ex02/take_home_ex02)
 -   [BRYANT PHILIPPE LEE](https://isss608-2023-bsl.netlify.app/take-home_ex/take-home_ex02)
@@ -64,7 +65,7 @@ Your completed take-home exercise is due on **29th January 2023, by 11:59pm even
 -   [LIANG MINGHAO](https://isss608-2023-minghao.netlify.app/takehome_2/takehome_2.html)
 -   [LIM EN HUI CHRISTIANA](https://visualanalytics-christianalim-jan2023.netlify.app/take%20home%20exercises/take-home-exercise-2)
 -   [LUO ZHENG](https://zoeluvrisss608.netlify.app/take-home_ex/take-home_ex02/take-home_ex02)
--   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex02/take-home_ex02)
+-   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex02/take-home_ex02) ![](img/thumbup1.jpg). Managed to use appropriate sketches to critics and describe the alternative design. The descriptions of the alternative data visualisation are comprehensive and reproducible. Wraping up to submission with proper conclusion.\
 -   [PRACHI RAJENDRA ASHANI](https://isss608-ay2022-23-prachi.netlify.app/take-home_ex/take-home_ex02/take-home_ex02)
 -   [SHI CHEE LIANG](https://isss608scl.netlify.app/takehomeex/takehomeex02/takehomeex02)
 -   [SIDDHARTH SINGH](https://siddharthsingh-isss608-ay2022-23t1.netlify.app/take-home_ex/take-home_ex02/take-home_ex02)

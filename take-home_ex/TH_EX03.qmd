@@ -2,6 +2,7 @@
 title: "Take-home Exercise 3"
 description: "Putting Visual Analytics into Practical Use"
 date: "4 February 2023"
+date-modified: "`r Sys.Date()`"
 format: html
 editor: visual
 ---
@@ -48,12 +49,12 @@ The completed take-home exercise is due on **15th February 2023, by 11:59pm even
 
 # Peer Learning
 
--   [AISHWARYA SANJAY MALOO](https://isss608-ay-2022-23-aishwaryamaloo.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [AISHWARYA SANJAY MALOO](https://isss608-ay-2022-23-aishwaryamaloo.netlify.app/take-home_ex/take-home_ex03/take-home_ex03) ![](img/thumbup1.jpg) Two interesting data visualisation you should not missed, namely: [ridge plot](https://www.data-to-viz.com/graph/ridgeline.html) in sub-section 4.1.1 and 4.2.1 and [treemap](http://www.cs.umd.edu/hcil/treemap-history/) in sub-section 4.2.2. For further improvement, change vSize = total units sold.  
 -   [ANICA CLARICE ANTONELLA PASCUAL GALANO](https://acapvisualano.netlify.app/take-home_ex/take-home_ex3/take-home_ex3)
 -   [ARIANA TAN RUI MIN](https://arianatan-jan23isss608.netlify.app/takehome_ex/takehome_ex_03/takehome_ex_03)
 -   [BHAIRAVI VAIRAVELU](https://isss608-ay2022-23t2-vb.netlify.app/take_home_ex/take_home_ex03/take_home_ex03)
 -   [BRYANT PHILIPPE LEE](https://isss608-2023-bsl.netlify.app/take-home_ex/take-home_ex03)
--   [CHAN JING WEI MAGDALENE](https://magdalenechan-iss608.netlify.app/take_home_ex/take_home_ex03/take_home_ex03)
+-   [CHAN JING WEI MAGDALENE](https://magdalenechan-iss608.netlify.app/take_home_ex/take_home_ex03/take_home_ex03) ![](img/thumbup1.jpg) The data visualisation in subsection Normality Assumption is very well-designed. Putting ggplots functions into good used to design an elegant and yet functional data visualisation.   
 -   [CHANG XIN XIN EDA](https://isss608-edachang.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
 -   [CHEN YIMAN](https://yimanchen-isss608.netlify.app/takehome/takehome03/takehome03)
 -   [CHERYL JEANNE CHIEW](https://cheryljeanne-isss608-ay2223.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
@@ -72,7 +73,7 @@ The completed take-home exercise is due on **15th February 2023, by 11:59pm even
 -   [LIANG MINGHAO](https://isss608-2023-minghao.netlify.app/takehome_3/takehome_3.html)
 -   [LIM EN HUI CHRISTIANA](https://visualanalytics-christianalim-jan2023.netlify.app/take%20home%20exercises/take-home-exercise-3)
 -   [LUO ZHENG](https://zoeluvrisss608.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
--   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
+-   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex03/take-home_ex03) ![](img/thumbup1.jpg) Effective data preparation is the pre-requisite of creating elegant and functional data visualisation.  *2. Data Preparation* of this submission serves as a good example. 
 -   [PRACHI RAJENDRA ASHANI](https://isss608-ay2022-23-prachi.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)
 -   [SHI CHEE LIANG](https://isss608scl.netlify.app/takehomeex/takehomeex03/takehomeex03)
 -   [SIDDHARTH SINGH](https://siddharthsingh-isss608-ay2022-23t1.netlify.app/take-home_ex/take-home_ex03/take-home_ex03)

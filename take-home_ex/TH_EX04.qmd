@@ -61,11 +61,11 @@ The completed take-home exercise is due on **26th February 2023, by 11:59pm even
 -   [CHAN JING WEI MAGDALENE](https://magdalenechan-iss608.netlify.app/take_home_ex/take_home_ex04/take_home_ex04)
 -   [CHANG XIN XIN EDA](https://isss608-edachang.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
 -   [CHEN YIMAN](https://yimanchen-isss608.netlify.app/takehome/takehome04/takehome04)
--   [CHERYL JEANNE CHIEW](https://cheryljeanne-isss608-ay2223.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
+-   [CHERYL JEANNE CHIEW](https://cheryljeanne-isss608-ay2223.netlify.app/take-home_ex/take-home_ex04/take-home_ex04) ![](img/thumbup1.jpg) Sub-section *TREEMAP ANIMATION: BY COUNTRIES* of this submission provides an interesting use case of [treemap](http://www.cs.umd.edu/hcil/treemap-history/). Suggestion for further improvement: (1) assign area = total trade and fill = either import or export, and (2) area = total trade and fill = trade banlance.  
 -   [CHOI SUNHAM](https://aashleychoii.netlify.app/take-home-exercise/take-home-exercise_04)
 -   [FARRAH BINTE MOHD FADIL](https://farrahmf.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
 -   [HOANG HUY](https://isss608-thomashoang.netlify.app/takehomeex/takehomeex04)
--   [HOU TAO](https://isss608-vaa-ht.netlify.app/takehome_ex/takehome_ex04/takehome_ex04)
+-   [HOU TAO](https://isss608-vaa-ht.netlify.app/takehome_ex/takehome_ex04/takehome_ex04) ![](img/thumbup1.jpg) In this submission, you will learn how to put R function programming into data visualisation design.
 -   [HUO DA](https://isss608-ay2022-23-huoda.netlify.app/take-home_ex/take-home_ex04/take_home_ex04)
 -   [KHOO WEI LUN](https://isss608-khooweilun.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
 -   [LAU ZHI YONG WILLIE](https://isss608-willielau.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
@@ -77,7 +77,8 @@ The completed take-home exercise is due on **26th February 2023, by 11:59pm even
 -   [LIANG MINGHAO](https://isss608-2023-minghao.netlify.app/takehome_4/takehome_4.html)
 -   [LIM EN HUI CHRISTIANA](https://visualanalytics-christianalim-jan2023.netlify.app/take%20home%20exercises/take-home-exercise-4)
 -   [LUO ZHENG](https://zoeluvrisss608.netlify.app/take-home_ex/take-home_ex04/take-home_ex04_draft)
--   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
+-   [MICHAEL KEVIN WIRATAMA DJOHAN](https://isss608-michaeldj.netlify.app/take-home_ex/take-home_ex04/take-home_ex04) ![](img/thumbup1.jpg) Effective data preparation is the pre-requisite of creating elegant and functional data visualisation.  There are a lot can be learned from *2. Data Preparation* of this submission. For Data Visualisation design, I strongly recommend Section *3. Visualisation* where by the design consideration and steps implemented were comprehensively discussed.  
+
 -   [PRACHI RAJENDRA ASHANI](https://isss608-ay2022-23-prachi.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
 -   [SHI CHEE LIANG](https://isss608scl.netlify.app/takehomeex/takehomeex04/takehomeex04)
 -   [SIDDHARTH SINGH](https://siddharthsingh-isss608-ay2022-23t1.netlify.app/take-home_ex/take-home_ex04/take-home_ex04)
