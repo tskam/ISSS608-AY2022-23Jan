@@ -140,6 +140,17 @@ Reference: [Ten Simple Rules for Reproducible Computational Research](https://jo
 ### Let's Build a Better World with Visual Analytics
 :::
 
-## Things end but memories last forever! 
+## Things end but memories last forever!
 
 ![](img/image10-20.jpg)
+
+
+```{r}
+#| echo: false
+#| eval: false
+renderthis::to_pdf(
+  from = "https://isss608-ay2022-23jan.netlify.app/lesson/Lesson10/Lesson10-The_Epilogue.html",
+  to = "../../_site/lesson/Lesson10/Lesson10-The_Epilogue.pdf"
+)
+```
+

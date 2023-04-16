@@ -7,6 +7,7 @@ format:
   html:
     code-fold: true
     code-summary: "Show the code"
+    fontsize: 18pt
 execute: 
   eval: true
   echo: true
@@ -69,7 +70,6 @@ Stock40_daily <- Top40 %>%
                mutate_fun = to.period, 
                period  = "days")
 ```
-
 
 ## Plotting a horizon graph
 
